@@ -1,0 +1,298 @@
+//============KIRIN CUIRASS===============
+	"item_kirin_cuirass_lv_0"
+	{
+		"ID"              "6320"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_assault"
+		"ItemCost"            "5000"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1150"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "750"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist"  "200"
+			}
+		}
+	}
+	"item_kirin_cuirass_lv_1"
+	{
+		"ID"              "6321"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_assault"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1250"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "800"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist"  "212"
+			}
+		}
+	}
+	"item_kirin_cuirass_lv_2"
+	{
+		"ID"              "6322"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_assault"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1350"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "850"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist"  "224"
+			}
+		}
+	}
+	"item_kirin_cuirass_lv_3"
+	{
+		"ID"              "6323"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_assault"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1450"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "900"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist"  "236"
+			}
+		}
+	}
+	"item_kirin_cuirass_lv_4"
+	{
+		"ID"              "6324"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_assault"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1550"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "950"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist"  "248"
+			}
+		}
+	}
+	"item_kirin_cuirass_lv_5"
+	{
+		"ID"              "6325"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_assault"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1650"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "1000"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist"  "260"
+			}
+		}
+	}
+	"item_kirin_cuirass_lv_6"
+	{
+		"ID"              "6326"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_assault"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1750"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "1050"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist"  "272"
+			}
+		}
+	}
+	"item_kirin_cuirass_lv_7"
+	{
+		"ID"              "6327"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_assault"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1850"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "1100"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist"  "284"
+			}
+		}
+	}
+	"item_kirin_cuirass_lv_8"
+	{
+		"ID"              "6328"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_assault"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1950"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "1150"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist"  "296"
+			}
+		}
+	}

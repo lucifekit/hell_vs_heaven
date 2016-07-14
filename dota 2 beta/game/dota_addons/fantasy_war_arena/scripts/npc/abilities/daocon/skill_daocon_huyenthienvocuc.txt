@@ -1,0 +1,34 @@
+"skill_daocon_huyenthienvocuc"
+{
+   "ID"  "15103"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "7"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "faceless_void_time_lock"
+   "ScriptFile"          "heroes_abilities/daocon/skill_daocon_huyenthienvocuc"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // TEMPEST AURA
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"damage_negate"  "40"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"damage_negate_max"  "2.0 2.5 3.0 3.5 4.0"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"reflect_damage_resist"  "17 24 31 38 45"
+		}
+	}
+   
+}

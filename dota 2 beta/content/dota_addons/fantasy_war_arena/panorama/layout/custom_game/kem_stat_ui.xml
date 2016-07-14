@@ -1,0 +1,200 @@
+<root>
+  <styles>
+    <include src="s2r://panorama/styles/dotastyles.vcss_c" />
+    <include src="s2r://panorama/styles/custom_game/kem_stat_ui.vcss_c" />
+  </styles>
+  <scripts>
+    <include src="file://{resources}/scripts/custom_game/kem_stat_ui.js" />
+  
+  </scripts>
+
+
+  
+  <Panel hittest="false" class="KemUIPlayerStat">
+      <Panel id="StatPanelToggleButtonContainer">
+          <Button id="StatPanelToggleButton" onactivate="OnTogglePanel()">
+            
+            <Image id="StatPanelButtonImage" src="file://{resources}/images/icons/Attribute_Bonus_icon.png"/>
+            <Label id="StatPointLabel" text="" />
+            <Label id="StatHotKey" text="L" />
+            <!--<Label id="StatPanelButtonLabel" text="Stat" />-->
+
+          </Button>
+      </Panel>
+      <Panel id="StatPanel" class="hidden">
+        <Panel id="StatHeader" class="StatRow">
+             <DOTAHeroImage id="HeroImage" />
+             <Label id="HeroName" text="Loading..."/>
+        </Panel>
+
+
+
+        <Panel id="StatBasicInfo" class="StatRow">
+          <Panel id="KemUI_Stat_HP" class="kem_ui_stat">
+            <Label text="HP" class="kem_ui_stat_label narrow" />
+            <Label id="StatHP" text="0" class="kem_ui_stat_label wide"  />
+
+          </Panel>
+          <Panel id="KemUI_Stat_MP" class="kem_ui_stat">
+            <Label text="MP" class="kem_ui_stat_label  narrow" />
+            <Label id="StatMP" text="0" class="kem_ui_stat_label wide"  />
+          </Panel>
+
+          <Panel id="KemUI_Stat_AS" class="kem_ui_stat">
+            <Label text="AS" class="kem_ui_stat_label  narrow" />
+            <Label id="StatAS" text="0" class="kem_ui_stat_label normal"  />
+          </Panel>
+
+          <Panel id="KemUI_Stat_MS" class="kem_ui_stat">
+            <Label text="MS" class="kem_ui_stat_label  narrow" />
+            <Label id="StatMS" text="0" class="kem_ui_stat_label normal"  />
+          </Panel>
+        </Panel>
+
+
+
+        <Panel id="StatBasicStatAndDefense" class="StatRow">
+
+          <Panel id="StatBasicStat">
+            <Panel id="KemUI_Skill_Point" class="kem_ui_stat">
+              <Label text="Stat points : " class="kem_ui_stat_label" />
+              <Label id="StatStatPoint" text="0" class="kem_ui_stat_label"  />
+              <Button id="AutoStat" class="upstatBtn" onactivate="AutoStat()">
+                  <Image src="file://{images}/custom_game/kem_ui/plus.png" />
+              </Button>
+            </Panel>
+
+            <Panel id="KemUI_Stat_SM" class="kem_ui_stat">
+              <Label text="#strength" class="kem_ui_stat_label" />
+              <Label id="StatSM" text="0" class="kem_ui_stat_label upable" />
+              <Button id="StatUpSM" class="upstatBtn" onactivate="OnUpStat(0)">
+
+              </Button>
+            </Panel>
+
+            <Panel  id="KemUI_Stat_TP" class="kem_ui_stat">
+              <Label text="#dexterity" class="kem_ui_stat_label" />
+              <Label id="StatTP" text="0" class="kem_ui_stat_label upable" />
+              <Button id="StatUpTP" class="upstatBtn" onactivate="OnUpStat(1)">
+
+              </Button>
+            </Panel>
+
+            <Panel id="KemUI_Stat_SK" class="kem_ui_stat">
+              <Label text="#vitality" class="kem_ui_stat_label" />
+              <Label id="StatSK" text="0" class="kem_ui_stat_label upable"  />
+              <Button id="StatUpSK" class="upstatBtn" onactivate="OnUpStat(2)">
+
+              </Button>
+            </Panel>
+
+            <Panel id="KemUI_Stat_NC" class="kem_ui_stat">
+              <Label text="#intelligence" class="kem_ui_stat_label" />
+              <Label id="StatNC" text="0" class="kem_ui_stat_label upable"  />
+              <Button id="StatUpNC" class="upstatBtn" onactivate="OnUpStat(3)">
+
+              </Button>
+            </Panel>
+          </Panel><!--end basicstat-->
+          
+          <Panel id="StatBasicDefense">
+            <Panel id="KemUI_Stat_ResistMetal" class="kem_ui_stat">
+              <Label text="PTVL : " class="kem_ui_stat_label fc" />
+              <Label id="StatResistMetal" text="0" class="kem_ui_stat_label" />
+            </Panel>
+
+            <Panel id="KemUI_Stat_ResistWood" class="kem_ui_stat">
+              <Label text="Poison resist : " class="kem_ui_stat_label fc" />
+              <Label id="StatResistWood" text="0" class="kem_ui_stat_label" />
+            </Panel>
+
+            <Panel  id="KemUI_Stat_ResistFire" class="kem_ui_stat">
+              <Label text="Flame resist : " class="kem_ui_stat_label fc" />
+              <Label id="StatResistFire" text="0" class="kem_ui_stat_label" />
+            </Panel>
+
+            <Panel id="KemUI_Stat_ResistWater" class="kem_ui_stat">
+              <Label text="Ice resist : " class="kem_ui_stat_label fc" />
+              <Label id="StatResistWater" text="0" class="kem_ui_stat_label"  />
+            </Panel>
+
+            <Panel id="KemUI_Stat_ResistEarth" class="kem_ui_stat">
+              <Label text="Lightning resist : " class="kem_ui_stat_label fc" />
+              <Label id="StatResistEarth" text="0" class="kem_ui_stat_label"  />
+            </Panel>
+          </Panel><!--end basicstat-->
+
+        </Panel><!--end basicstat and defense-->
+        <Panel id="StatAdvanceStat" class="StatRow">
+            <Panel  id="KemUI_Stat_Maim" class="kem_ui_stat">
+              <Label text="Maim effect : " class="kem_ui_stat_label fc" />
+              <Label id="StatMaim" text="N/A" class="kem_ui_stat_label" />
+            </Panel>
+            <Panel  id="KemUI_Stat_Weak" class="kem_ui_stat">
+              <Label text="Weak effect : " class="kem_ui_stat_label fc" />
+              <Label id="StatWeak" text="N/A" class="kem_ui_stat_label" />
+            </Panel>
+            <Panel  id="KemUI_Stat_Burn" class="kem_ui_stat">
+              <Label text="Burn effect : " class="kem_ui_stat_label fc" />
+              <Label id="StatBurn" text="N/A" class="kem_ui_stat_label" />
+            </Panel>
+            <Panel  id="KemUI_Stat_Slow" class="kem_ui_stat">
+              <Label text="Slow effect : " class="kem_ui_stat_label fc" />
+              <Label id="StatSlow" text="N/A" class="kem_ui_stat_label" />
+            </Panel>
+            <Panel  id="KemUI_Stat_Stun" class="kem_ui_stat">
+              <Label text="Stun effect : " class="kem_ui_stat_label fc" />
+              <Label id="StatStun" text="N/A" class="kem_ui_stat_label" />
+            </Panel>
+            <Panel class="StatRowHalfContainer">
+                <Panel id="StatAdvanceStatLeft" class="kem_ui_stat StatRowHalf">
+                    <Panel  id="KemUI_Stat_Accuracy" class="kem_ui_stat">
+                      <Label text="Accuracy : " class="kem_ui_stat_label fc" />
+                      <Label id="StatAccuracy" text="N/A" class="kem_ui_stat_label" />
+                    </Panel>
+                    <Panel  id="KemUI_Stat_Evade" class="kem_ui_stat">
+                      <Label text="Evade : " class="kem_ui_stat_label fc" />
+                      <Label id="StatEvade" text="N/A" class="kem_ui_stat_label" />
+                    </Panel>
+                    <Panel  id="KemUI_Stat_CritChance" class="kem_ui_stat">
+                      <Label text="Critical chance : " class="kem_ui_stat_label fc" />
+                      <Label id="StatCriticalChance" text="N/A" class="kem_ui_stat_label" />
+                    </Panel>
+                    <Panel  id="KemUI_Stat_CritDamage" class="kem_ui_stat">
+                      <Label text="Critical damage : " class="kem_ui_stat_label fc" />
+                      <Label id="StatCriticalDamage" text="N/A" class="kem_ui_stat_label" />
+                    </Panel>
+              </Panel>
+              <Panel id="StatAdvanceStatRight" class="kem_ui_stat StatRowHalf">
+                  <Panel  id="KemUI_Stat_ElementDamage" class="kem_ui_stat">
+                  <Label text="Element damage : " class="kem_ui_stat_label fc" />
+                  <Label id="StatElementDamage" text="N/A" class="kem_ui_stat_label" />
+                </Panel>
+
+                <Panel  id="KemUI_Stat_PhysicalDamage" class="kem_ui_stat">
+                  <Label text="Physical damage : " class="kem_ui_stat_label fc" />
+                  <Label id="StatPhysicalDamage" text="N/A" class="kem_ui_stat_label" />
+                </Panel>
+
+                <Panel  id="KemUI_Stat_PoisonDamage" class="kem_ui_stat">
+                  <Label text="Poison damage : " class="kem_ui_stat_label fc" />
+                  <Label id="StatPoisonDamage" text="N/A" class="kem_ui_stat_label" />
+                </Panel>
+
+
+                <Panel  id="KemUI_Stat_PhysicalAmplify" class="kem_ui_stat">
+                  <Label text="Physical amplify : " class="kem_ui_stat_label fc" />
+                  <Label id="StatPhysicalAmplify" text="N/A" class="kem_ui_stat_label" />
+                </Panel>
+                <Panel  id="KemUI_Stat_BasicDamage" class="kem_ui_stat">
+                  <Label text="Basic damage : " class="kem_ui_stat_label fc" />
+                  <Label id="StatBasicDamage" text="N/A" class="kem_ui_stat_label" />
+                </Panel>
+              </Panel>
+            </Panel>
+             
+        </Panel>
+      </Panel>
+      
+  </Panel>
+</root>

@@ -1,0 +1,40 @@
+<root>
+	<styles>
+	    <include src="s2r://panorama/styles/dotastyles.vcss_c" />
+	    <include src="s2r://panorama/styles/custom_game/kem_abilities_ui.vcss_c" />
+	  </styles>
+   <scripts>
+	    <include src="s2r://panorama/scripts/custom_game/ability_book.vjs_c" /> 
+   </scripts>
+   <Panel>
+		<Panel id="AbilityBooks" class="hidden">
+		  	<Panel id="AbilityHeader">
+		      <Label id="skill_header" text="Skills"/>
+		      <Label id="skill_avail" text="Available : "/>
+		      <Label id="skill_point" text="0"/>
+		    </Panel>
+		      
+		  	<Panel id="ability_panel_container"  draggable="true">
+		  		<Panel class="ability_container">
+		  			<Panel id="active_ability_list" />
+		  		</Panel>
+		  		<Panel class="ability_container">
+		  			<Panel id="passive_ability_list" />
+		  		</Panel>
+		  	</Panel>
+		  </Panel>
+
+
+
+
+		  <Panel class="AbilityToggleButtonContainer">
+		      <Button id="AbilityToggleButton" onactivate="OnTogglePanel()">
+		        <DOTAAbilityImage id="AbilityToggleButtonImage" abilityname="oracle_fates_edict" />
+		        <!--<Image id="StatPanelButtonImage" src="file://{resources}/images/icons/Skills_icon.png"/>-->
+		        <Label id="AbilityPointLabel" text="" />
+		        <Label id="AbilityHotKey" text="K" />
+		        <!--<Label id="AbilityToggleButtonLabel" text="Skills" />-->
+		      </Button>
+		  </Panel>
+	</Panel>
+ </root>

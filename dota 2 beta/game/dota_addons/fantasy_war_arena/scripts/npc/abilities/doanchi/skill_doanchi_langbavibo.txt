@@ -1,0 +1,36 @@
+"skill_doanchi_langbavibo"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "14354"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "FightRecapLevel"       "1"
+    "BaseClass"             "ability_lua"
+    "RequiredLevel"          "12"
+    "MaxLevel"				 "7"
+    "LevelsBetweenUpgrades"  "1"
+    
+    "CastFilterRejectCaster" "1"
+    "HotKeyOverride"    "E" 
+    "AbilityTextureName"      "ancient_apparition_cold_feet"
+    "ScriptFile"          "heroes_abilities/doanchi/skill_doanchi_langbavibo"
+    // Unit Targeting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_BOTH"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags"    ""
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"        "700"
+    "AbilityCastPoint"        "0.2"
+    "AbilityCooldown"       "10"
+    "AbilityManaCost"       "2"
+    
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "precache"
+        {
+            "particle" 						"particles/edited_particle/kiem_doan/skill_kiemdoan_phongvanbienhuyen.vpcf"
+        }
+  }

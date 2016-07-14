@@ -1,0 +1,51 @@
+"effect_kunkka"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE|DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE|DOTA_ABILITY_BEHAVIOR_ITEM"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityTextureName"			"kunkka_tidebringer"
+	"AbilityType"					"DOTA_ABILITY_TYPE_HIDDEN"
+	"IsHidden"						"1"
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"0"
+
+	
+	// Data driven
+	//-------------------------------------------------------------------------------------------------------------
+	"Modifiers"
+	{
+		"precache"
+		{
+			"particle"					"particles/units/heroes/hero_kunkka/kunkka_weapon_tidebringer.vpcf"
+		}
+	
+		"modifier_kunkka_sword"
+		{
+			"Passive"					"1"
+			"IsHidden"					"1"
+			"IsPurgable"				"0"
+			
+			"OnCreated"
+			{
+			
+				"AttachEffect"
+				{
+					"Target"			"CASTER"
+					"EffectName"		"particles/units/heroes/hero_kunkka/kunkka_weapon_tidebringer.vpcf"
+					"EffectAttachType"	"start_at_customorigin"
+					"ControlPointEntities"
+					{
+						"CASTER"		"attach_sword"
+						"CASTER"		"attach_sword"
+						"CASTER"		"attach_sword"
+					}
+				}
+			}
+			
+		}
+	}
+}

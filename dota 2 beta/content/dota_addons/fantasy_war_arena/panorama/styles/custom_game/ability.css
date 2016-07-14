@@ -1,0 +1,73 @@
+.AbilityPanel{
+	width:200px;
+	padding:5px;
+	height:74px;
+	/*background-color: green;*/
+	/*background-color:white;
+	border:1px solid #f00;*/
+	flow-children:right;
+
+}
+#AbilityButtonContainer{
+	width:64px;
+	height:100%;
+	
+	/*background-color: black;*/
+
+}
+
+#AbilityInfo{
+	width:fill-parent-flow(1);
+	height:100%;
+	margin-left:5px;
+	/*background-color: yellow;*/
+	flow-children:down;
+}
+#AbilityName{
+	color:#fff;
+}
+#AbilityText{
+	line-height: 19px;
+	height:42px;
+}
+#HotkeyText{
+	line-height: 19px;	
+}
+#UpgradeButton{
+	width:24px;
+	height:24px;
+	margin-left:40px;
+	margin-top:40px;
+}
+#UpgradeButton:hover{
+	brightness: 2;
+}
+.no_upgrade #AbilityImage{
+	border:2px solid #000;
+	
+	/*brightness: 0.2;*/
+	/*clip: rect( 10%, 90%, 90%, 10% );bug do cai nay*/
+	/*contrast: 0.5;*/
+	saturation: 0.2;
+	
+	wash-color: #cccccc;
+}
+#passive_ability_list #AbilityButtonContainer #AbilityImage{
+	border:2px solid #000;
+}
+.max_level #AbilityImage{
+	border:2px solid gold;
+}
+#passive_ability_list .max_level #AbilityButtonContainer #AbilityImage{
+	border:2px solid gold;
+}
+.other #AbilityImage{
+	
+}
+.no_upgrade #UpgradeButton,.max_level #UpgradeButton,.other #UpgradeButton{
+	visibility: collapse;
+}
+.no_skill_point #UpgradeButton{
+	visibility: collapse;	
+}
+

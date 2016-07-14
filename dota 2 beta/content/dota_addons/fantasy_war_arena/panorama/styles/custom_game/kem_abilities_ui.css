@@ -1,0 +1,130 @@
+.ability_panel_wrapper{
+	width:fit-children;
+	height:fit-children;
+	margin-top:180px;
+	margin-left:20px;
+}
+.hidden{
+	visibility:collapse;
+}
+#AbilityBooks{
+	width:500px;
+	height:fit-children;
+	min-height: 510px;
+	margin-left:100px;
+    flow-children:  down;
+    border:1px solid #222;
+
+	background-image: url("s2r://panorama/images/textures/miniprofile_rock_psd.vtex");
+	background-position: 0px 0px;
+	background-repeat: repeat-y;
+}
+#AbilityHeader{
+	text-align:center;
+	color:#0099ff;
+	width:100%;
+	height:40px;
+	line-height:32px;
+	background-color:#000000c8;
+	flow-children:right;
+}
+#skill_header{
+	width:fill-parent-flow(1);
+	text-align: center;
+}
+#skill_avail{
+	width:fit-children;
+}
+#skill_point{
+	width:20px;	
+
+}
+#ability_panel_container{
+	width:100%;
+	height:100%;
+	/*background-color:blue;*/
+	flow-children:  right;
+}
+.ability_container{
+	width:50%;
+	height:100%;
+	/*background-color:red;*/
+	
+}
+#active_ability_list{
+    flow-children:  down;
+    height:100%;
+    width:250px;
+    border-right:1px solid #cccccc11;
+}
+#passive_ability_list{
+	flow-children:  down;
+	width:250px;
+}
+
+#AbilityToggleButtonContainer{
+	width:88px;
+	height:fit-children;
+	flow-children:none;
+	/*background-color: pink;*/
+	/*flow-children:  down;*/
+}
+#AbilityToggleButton{
+/*flow-children:  down;	*/
+	width:64px;
+	height:64px;
+}
+
+#AbilityPointLabel{
+	horizontal-align:right;
+	text-align: center;
+	padding-left:3px;
+	padding-right:3px;
+	
+	/*margin-left:64px;*/
+	/*vertical-align:middle;*/
+	line-height: 22px;
+	height: 26px;	
+	width:40px;
+	vertical-align: bottom;
+	color: #ffff80;
+	background-color: rgba(1,1,1,200);
+	/*right:0;*/
+}
+
+
+#AbilityHotKey{
+	background-color:#000;
+	horizontal-align:left;
+	border: 1px solid #333;
+	width: 26px;
+	height:26px;
+	text-align: center;
+	/*vertical-align:bottom;*/
+	margin-top: 28px;
+	
+	vertical-align: bottom;
+}
+
+#AbilityToggleButtonImage{
+	width:64px;
+	height:64px;
+	border:3px solid #000;
+}
+#AbilityToggleButton:hover #SkillBooksItem{
+	border: 1px solid #666;
+}
+#AbilityToggleButton:hover #AbilityToggleButtonLabel{
+	visibility: visible;
+}
+#SkillBooksItem{
+	width:88px;
+	height:fit-children;
+	background-color: black;
+}
+#AbilityToggleButtonLabel{
+	text-align: center;
+	visibility: collapse;
+	color:#000;
+	width:100%;
+}

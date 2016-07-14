@@ -1,0 +1,45 @@
+"skill_thuongthien_doanhonthich"
+{
+   "ID"  "11203"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "7"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "phantom_lancer_phantom_edge"
+   "ScriptFile"          "heroes_abilities/thuongthien/skill_thuongthien_doanhonthich"
+   "HotKeyOverride"    "W"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    ""
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "1400"
+   "precache"
+   {
+   }
+   // DASH
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_maim"  "31 37 43 49 55"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time"  "1"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_immobile"  "45 55 65 75 85"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"immobile_time"  "2"
+		}
+	}
+   
+}

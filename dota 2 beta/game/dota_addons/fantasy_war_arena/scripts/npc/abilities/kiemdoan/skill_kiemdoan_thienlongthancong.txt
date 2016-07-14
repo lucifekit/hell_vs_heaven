@@ -1,0 +1,37 @@
+"skill_kiemdoan_thienlongthancong"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "14308"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    "FightRecapLevel"       "1"
+    "BaseClass"             "ability_lua"
+    "RequiredLevel"          "40"
+    "MaxLevel"				 "10"
+    "LevelsBetweenUpgrades"  "1"
+    
+    "CastFilterRejectCaster" "1"
+    "HotKeyOverride"    "" 
+    "AbilityTextureName"      "morphling_waveform"
+    "ScriptFile"          "heroes_abilities/kiemdoan/skill_kiemdoan_thienlongthancong"
+	// EXPERTTALENT
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"attack_speed"  "11.5 13.0 14.5 16.0 17.5 19.0 20.5 22.0 23.5 25.0"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"slow_chance_increase"  "28 36 44 52 60 68 76 84 92 100"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"burn_chance_reduce"  "42 54 66 78 90 102 114 126 138 150"
+		}
+	}
+	
+  }

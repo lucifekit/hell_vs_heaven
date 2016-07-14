@@ -1,0 +1,191 @@
+//============REGENERATION HEADDRESS===============
+	"item_hood_lv_0"
+	{
+		"ID"              "6140"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_headdress"
+		"ItemCost"            "200"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "100"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "100"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp_regen"  "10"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp_regen"  "5"
+			}
+		}
+	}
+	"item_hood_lv_1"
+	{
+		"ID"              "6141"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_headdress"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "200"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "140"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp_regen"  "12"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp_regen"  "6"
+			}
+		}
+	}
+	"item_hood_lv_2"
+	{
+		"ID"              "6142"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_headdress"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "300"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "180"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp_regen"  "14"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp_regen"  "7"
+			}
+		}
+	}
+	"item_hood_lv_3"
+	{
+		"ID"              "6143"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_headdress"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "400"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "220"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp_regen"  "16"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp_regen"  "8"
+			}
+		}
+	}
+	"item_hood_lv_4"
+	{
+		"ID"              "6144"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_headdress"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "500"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "260"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp_regen"  "18"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp_regen"  "9"
+			}
+		}
+	}

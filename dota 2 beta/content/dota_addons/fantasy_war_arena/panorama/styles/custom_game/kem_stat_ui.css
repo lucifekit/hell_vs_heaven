@@ -1,0 +1,203 @@
+.KemUIPlayerStat{
+	width:fit-children;
+	height:fit-children;
+    margin-top: 180px;
+    flow-children:  right;
+    
+}
+
+.hidden{
+	visibility: collapse;
+}
+.fc{
+	width: fit-children;
+}
+.kem_ui_stat_label.fc{
+	width:fit-children;
+}
+#StatPanelToggleButtonContainer{
+	width:64px;
+	margin-right:36px;
+	height:64px;
+	margin-left: 20px;
+	margin-top:100px;
+}
+#StatPanelToggleButton{
+	/*flow-children:down;	*/
+	flow-children:none;
+	width: 64px;
+	height:64px;
+}
+#StatPointLabel{
+	horizontal-align:right;
+	text-align: center;
+	padding-left:3px;
+	padding-right:3px;
+	font-size: 16px;
+	/*margin-left:64px;*/
+	/*vertical-align:middle;*/
+	line-height: 22px;
+	height: 26px;	
+	width:40px;
+
+	vertical-align: bottom;
+	color: #ffff80;
+	background-color: rgba(1,1,1,200);
+	/*right:0;*/
+}
+#StatHotKey{
+	background-color:#000;
+	horizontal-align:left;
+	border: 1px solid #333;
+	width: 26px;
+	height:26px;
+	text-align: center;
+	/*vertical-align:bottom;*/
+	vertical-align: bottom;
+}
+
+#StatPanelButtonLabel{
+	width:100%;
+	text-align: center;
+	visibility: collapse;
+	color:#000;
+}
+#StatPanelButtonImage{
+	height:64px;
+	
+	border:3px solid #000;
+}
+#StatPanelToggleButtonContainer:hover #StatPanelButtonImage{
+	border:1px solid #000;
+}
+#StatPanelToggleButtonContainer:hover #StatPanelButtonLabel{
+	visibility: visible;
+}
+
+
+
+#StatPanel{	
+	width:500px;
+
+    margin-left:1000px;
+	flow-children:down;
+	height:fit-children;
+	background-color: gradient( linear, 0% 0%, 0% 5%, from( #232326 ), to( #111111 ) );
+
+	background-image: url("s2r://panorama/images/textures/miniprofile_rock_psd.vtex");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+
+    opacity: 0.6;
+    transition-property: opacity;
+    transition-duration: 0.24s;
+
+}
+#StatPanel:hover{
+	opacity: 0.95;
+}
+.StatRow{
+	width:100%;
+	border-bottom:1px solid #cccccc29;
+	min-height: 40px;
+	height: fit-children;
+	background-image: url("s2r://panorama/images/textures/miniprofile_rock_psd.vtex");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	padding:5px 15px 5px 15px;
+}
+#StatHeader{
+	width:100%;
+	padding:0;
+	background-color:#000000f8;
+	flow-children:right;
+
+}
+#StatHeader Label{
+	color:#fff;
+	padding-left:15px;
+}
+#StatBasicStatAndDefense{
+	flow-children:right;
+}
+#StatBasicStat{
+	width: 280px;
+	border-right:1px solid #cccccc29;
+	flow-children:down;
+}
+#StatBasicDefense{
+	flow-children:down;	
+	padding-left:15px;
+}
+.kem_ui_stat{
+	height:30px;
+	margin-right:2px;
+	margin-bottom: 2px;
+	flow-children:  right;
+}
+
+.kem_ui_stat_label{
+	line-height: 26px;
+
+	width:120px;
+	color:#fff;
+
+}
+.kem_ui_stat_label.narrow{
+	width:40px;
+}
+.kem_ui_stat_label.normal{
+	width:60px;
+}
+.kem_ui_stat_label.wide{
+	width:90px;
+
+}
+.kem_ui_stat_label.upable{
+	background-color: #00000088;
+	padding-left:10px;
+	margin-right:5px;
+}
+.upstatBtn{
+	background-color: red;
+	background-image: url("s2r://panorama/images/control_icons/plus_png.vtex");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 70% 70%;
+    width:24px;
+    height:24px;
+    margin-top:3px;
+    background-color: gradient( linear, 0% 100%, 0% 0%, from( #3E4B51 ), to( #5C9C68 ) );
+    border: 1px solid black;
+	border-radius: 3px;
+	
+	transition-property: width, height, background-color, wash-color, transform, opacity-mask, opacity;
+    transition-duration: 0.35s;
+    transition-timing-function: ease-in-out;
+}
+#AutoStat{
+	background-image: none;
+}
+.upstatBtn:hover{
+	brightness: 2;
+}
+#StatBasicInfo{
+	flow-children:right;
+}
+
+#StatAdvanceStat{
+	flow-children:down;
+}
+#HeroImage,#HeroName{
+	padding:5px;
+}
+.StatRowHalfContainer{
+	flow-children:right;
+	width:100%;
+	height: fit-children;
+}
+.StatRowHalf{
+	width:50%;
+	flow-children:down;
+	height: fit-children;
+}

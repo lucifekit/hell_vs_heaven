@@ -1,0 +1,34 @@
+"skill_thuongthien_thiencanhchienkhi"
+{
+   "ID"  "11208"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "40"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "ogre_magi_bloodlust"
+   "ScriptFile"          "heroes_abilities/thuongthien/skill_thuongthien_thiencanhchienkhi"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // EXPERT HEROIC PEEK
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"hp_regen_speed"  "6.5 8.0 9.5 11.0 12.5 14.0 15.5 17.0 18.5 20.0"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"accuracy_chance"  "55 60 65 70 75 80 85 90 95 100"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"weak_chance_resist"  "24 38 52 66 80 94 108 122 136 150"
+		}
+	}
+   
+}

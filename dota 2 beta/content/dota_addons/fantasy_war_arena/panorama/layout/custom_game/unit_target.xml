@@ -1,0 +1,25 @@
+<root>
+  <styles>
+    <include src="s2r://panorama/styles/dotastyles.vcss_c" />
+    <include src="s2r://panorama/styles/custom_game/target.vcss_c" />
+  </styles>
+  <scripts>
+    <include src="file://{resources}/scripts/custom_game/unit_target.js" />
+  
+  </scripts>
+
+
+  
+  <Panel hittest="false" class="KemUITarget" >
+  		<Panel id="TargetContainer">
+			   <DOTAHeroImage id="TargetHeroImage"/>
+         <Panel id="TargetInfo">
+            <Label id="TargetName" text=""/>
+            <Label id="TargetHP" text=""/>
+            <Label id="TargetDamage" text=""/>
+         </Panel>
+	  		
+  		</Panel>
+  		
+  </Panel>
+</root>

@@ -1,0 +1,334 @@
+//============SWIFT KNIFE===============
+	"item_swift_knife_lv_0"
+	{
+		"ID"              "6010"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_butterfly"
+		"ItemCost"            "5000"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "15"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "375"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "75"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "110"
+			}
+		}
+	}
+	"item_swift_knife_lv_1"
+	{
+		"ID"              "6011"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_butterfly"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "16.5"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "405"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "88"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "135"
+			}
+		}
+	}
+	"item_swift_knife_lv_2"
+	{
+		"ID"              "6012"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_butterfly"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "18"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "435"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "101"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "160"
+			}
+		}
+	}
+	"item_swift_knife_lv_3"
+	{
+		"ID"              "6013"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_butterfly"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "19.5"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "465"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "114"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "185"
+			}
+		}
+	}
+	"item_swift_knife_lv_4"
+	{
+		"ID"              "6014"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_butterfly"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "21"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "495"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "127"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "210"
+			}
+		}
+	}
+	"item_swift_knife_lv_5"
+	{
+		"ID"              "6015"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_butterfly"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "22.5"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "525"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "140"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "235"
+			}
+		}
+	}
+	"item_swift_knife_lv_6"
+	{
+		"ID"              "6016"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_butterfly"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "24"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "555"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "153"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "260"
+			}
+		}
+	}
+	"item_swift_knife_lv_7"
+	{
+		"ID"              "6017"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_butterfly"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "25.5"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "585"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "166"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "285"
+			}
+		}
+	}
+	"item_swift_knife_lv_8"
+	{
+		"ID"              "6018"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_butterfly"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "27"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "615"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "179"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "310"
+			}
+		}
+	}

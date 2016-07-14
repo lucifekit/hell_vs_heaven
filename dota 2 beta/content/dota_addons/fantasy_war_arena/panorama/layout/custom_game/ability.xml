@@ -1,0 +1,47 @@
+<root>
+  <styles>
+    <include src="s2r://panorama/styles/dotastyles.vcss_c" />
+    <include src="s2r://panorama/styles/custom_game/ability.vcss_c" />
+  </styles>
+  <scripts>
+    <include src="s2r://panorama/scripts/custom_game/ability.vjs_c" /> 
+  </scripts>
+  <Panel class="AbilityPanel">
+  		<Panel id="AbilityButtonContainer">
+  			<Panel id="ButtonAndLevel">
+				<Panel id="UpgradeBorder">
+					<Panel id="AbilityStatusBorder">
+						<Panel id="AbilityButton"
+								onmouseover="AbilityShowTooltip()"
+								onmouseout="AbilityHideTooltip()"
+								>
+							<DOTAAbilityImage id="AbilityImage" />
+							<Panel id="Cooldown">
+								<Panel id="CooldownOverlay" />
+								<Label id="CooldownTimer" />
+							</Panel>
+							<Panel id="ActiveAbility" />
+							<Label id="ManaCost" />
+							<Button id="UpgradeButton" onactivate="UpgradeAbility()">
+								<Image src="file://{images}/custom_game/kem_ui/plus.png" />
+							</Button>
+						</Panel>
+					</Panel>
+				</Panel>
+				<Panel hittest="false" id="AbilityLevelContainer" />
+			</Panel>
+  		</Panel>
+		<Panel id="AbilityInfo">
+			<Panel class="AbilityInfoLine">
+				<Label id="AbilityText" />
+			</Panel>
+			<Panel  class="AbilityInfoLine">
+				<Label id="HotkeyText" html="true" />
+			</Panel>
+			<Panel  class="AbilityInfoLine">
+				<Label id="LevelText" />
+			</Panel>
+		</Panel>
+		
+	</Panel>
+</root>

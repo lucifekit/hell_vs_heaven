@@ -1,0 +1,24 @@
+"skill_kiemminh_dikhiphieutung"
+  {
+  	"ID"  "12303"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+ 
+    "FightRecapLevel"       "1"
+    "BaseClass"             "ability_lua"
+    "RequiredLevel"          "7"
+    "AbilityTextureName"      "undying_soul_rip"
+    "ScriptFile"          "heroes_abilities/kiemminh/skill_kiemminh_dikhiphieutung"
+    "MaxLevel"                      "5"
+    "AnimationPlaybackRate" "2"
+
+    // ANTI-MAGIC BODY
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"magic_dodge"  "5 10 15 20 25"
+		}
+	}
+    
+  }

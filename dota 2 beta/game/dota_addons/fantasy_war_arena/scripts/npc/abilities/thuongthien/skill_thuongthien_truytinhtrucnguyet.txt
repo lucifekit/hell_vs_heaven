@@ -1,0 +1,61 @@
+"skill_thuongthien_truytinhtrucnguyet"
+{
+   "ID"  "11209"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "45"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "phantom_lancer_spirit_lance"
+   "ScriptFile"          "heroes_abilities/thuongthien/skill_thuongthien_truytinhtrucnguyet"
+   "HotKeyOverride"    "D"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    ""
+   "AbilityCastPoint"        "0.01"
+   "AbilityCastRange"        "150"
+   "precache"
+   {
+   	"soundfile"	"soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
+   }
+   // RAPID STRIKE
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_damage_amplify"  "87 92 97 102 107 112 117 122 127 132"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "427 451 475 499 523 547 571 595 619 643"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "523 553 583 613 643 673 703 733 763 793"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "47 49 51 53 55 57 59 61 63 65"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_maim"  "16.5 18 19.5 21 22.5 24 25.5 27 28.5 30"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time"  "1"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "3"
+		}
+	}
+   
+}

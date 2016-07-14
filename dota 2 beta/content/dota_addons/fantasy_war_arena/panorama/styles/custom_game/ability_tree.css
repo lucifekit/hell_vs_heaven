@@ -1,0 +1,158 @@
+.individual_ability_level_overlay{
+	width:68px;/*76*/
+	height:20px;
+	background-color: gradient( linear, 0px 0%, 84px 0%, from( #1D1D1D ), to( #313131 ) );
+	/*background-color:red;*/
+	/*box-shadow: 0px 0px 3px #555555;*/
+}
+.AspectRatio5x4 .individual_ability_level_overlay{
+	width: 62px;
+}
+.ability_level_overlay_text{
+	color:white;
+	/*background-color:blue;*/
+	width:100%;
+	text-align:center;
+	font-size:16px;
+	text-shadow:0px 0px 1px #222222;
+}
+.ability_level_overlay{
+	vertical-align: bottom;
+	horizontal-align:right;
+	margin-bottom: 17px;
+	margin-right: 592px;
+	/*background-color: green;*/
+	width:456px;
+}
+
+.AspectRatio16x10 .ability_level_overlay{
+	margin-right:466px;//kem
+}
+.AspectRatio16x9 .ability_level_overlay{
+	width:456px;
+	/*background-color: green;*/
+	margin-right:552px;//kem xong
+}
+
+.AspectRatio5x4 .ability_level_overlay{
+	margin-right:278px;
+}
+
+.AspectRatio4x3 .ability_level_overlay{
+	margin-right:326px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#ability_level_overlay2{
+	margin-left: 105px;
+}
+
+#ability_level_overlay3{
+	margin-left: 210px;
+}
+
+#ability_level_overlay4{
+	margin-left: 315px;
+}
+
+#ability_level_overlay5{
+	margin-left: 420px;
+}
+
+#ability_level_overlay6{
+	margin-left: 525px;
+}
+
+.AspectRatio16x10 #ability_level_overlay2{
+	margin-left: 76px;
+}
+
+.AspectRatio16x10 #ability_level_overlay3{
+	margin-left: 152px;
+}
+
+.AspectRatio16x10 #ability_level_overlay4{
+	margin-left: 228px;
+}
+
+.AspectRatio16x10 #ability_level_overlay5{
+	margin-left: 304px;
+}
+
+.AspectRatio16x10 #ability_level_overlay6{
+	margin-left: 378px;
+	/*background-color:red;*/
+}
+
+
+
+
+.AspectRatio5x4 #ability_level_overlay2{
+	margin-left: 71px;
+}
+
+.AspectRatio5x4 #ability_level_overlay3{
+	margin-left: 142px;
+}
+
+.AspectRatio5x4 #ability_level_overlay4{
+	margin-left: 213px;
+}
+.AspectRatio5x4 #ability_level_overlay5{
+	margin-left: 284px;
+}
+.AspectRatio5x4 #ability_level_overlay6{
+	margin-left: 355px;
+}
+
+.AspectRatio16x9 #ability_level_overlay2{
+	margin-left: 76px;
+}
+
+.AspectRatio16x9 #ability_level_overlay3{
+	margin-left: 152px;
+}
+
+.AspectRatio16x9 #ability_level_overlay4{
+	margin-left: 228px;
+}
+
+.AspectRatio16x9 #ability_level_overlay5{
+	margin-left: 304px;
+}
+
+.AspectRatio16x9 #ability_level_overlay6{
+	margin-left: 378px;
+	/*background-color:red;*/
+}
+
+.AspectRatio4x3 #ability_level_overlay2{
+	margin-left: 76px;
+}
+
+.AspectRatio4x3 #ability_level_overlay3{
+	margin-left: 152px;
+}
+
+.AspectRatio4x3 #ability_level_overlay4{
+	margin-left: 228px;
+}
+
+.AspectRatio4x3 #ability_level_overlay5{
+	margin-left: 304px;
+}
+
+.AspectRatio4x3 #ability_level_overlay6{
+	margin-left: 378px;
+	/*background-color:red;*/
+}

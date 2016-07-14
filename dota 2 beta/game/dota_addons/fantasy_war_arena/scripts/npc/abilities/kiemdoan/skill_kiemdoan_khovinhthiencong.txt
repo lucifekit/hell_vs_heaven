@@ -1,0 +1,64 @@
+"skill_kiemdoan_khovinhthiencong"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "14307"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    "FightRecapLevel"       "1"
+    "BaseClass"             "ability_lua"
+    "RequiredLevel"          "35"
+    "MaxLevel"				 "10"
+    "LevelsBetweenUpgrades"  "1"
+    
+    "CastFilterRejectCaster" "1"
+    "HotKeyOverride"    "" 
+    "AbilityTextureName"      "morphling_replicate"
+    "ScriptFile"          "heroes_abilities/kiemdoan/skill_kiemdoan_khovinhthiencong"
+  	
+  	// ZEN FORCE
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"attack_speed"  "12 14 16 18 20 22 24 26 28 30"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage"  "60 120 180 240 300 360 420 480 540 600"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"burn_chance_reduce"  "42 54 66 78 90 102 114 126 138 150"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"active_attack_speed_reduce"  "2 4 6 8 10 12 14 16 18 20"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"active_element_damage_reduce"  "30 60 90 120 150 180 210 240 270 300"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"active_regen_hp"  "12 14 16 18 20 22 24 26 28 30"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"active_damage_reduce"  "22 24 26 28 30 32 34 36 38 40"
+		}
+		"08"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"active_duration"  "10"
+		}
+	}
+  	
+	
+  }

@@ -1,0 +1,459 @@
+"item_flying_nimbus_inactive"
+  {
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"5003" 
+	
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"Model"							"models/props_gameplay/boots_of_speed.mdl"
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"item_flying_nimbus_inactive"
+	"AbilityCooldown" "3"
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"2000"
+	"ItemShopTags"					"move_speed"
+	"ItemQuality"					"component"
+	"ItemAliases"					"flying nimbus"
+	"SideShop"						"1"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"350"
+		}
+	}
+	"OnSpellStart"
+	{		
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/items/flyingnimbus.lua"
+			"Function"				"ActiveFlyingNimbus"
+		}	
+		"FireSound"
+		{
+			"EffectName"		"DOTA_Item.PhaseBoots.Activate"
+			"Target"			"CASTER"
+		}
+	}
+	"Modifiers"
+	{
+		"modifier_flying_nimbus"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			//"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_health"
+			}
+		}
+	}
+	"precache"
+    {
+      "particle"              "particles/edited_particle/flying_nimbus.vpcf"      
+    }
+  }
+"item_flying_nimbus"
+  {
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"5004" 
+	
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"Model"							"models/props_gameplay/boots_of_speed.mdl"
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"item_flying_nimbus_item"
+	"AbilityCooldown" "3"
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"500"
+	"ItemShopTags"					"move_speed"
+	"ItemQuality"					"component"
+	"ItemAliases"					"flying nimbus"
+	"SideShop"						"1"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"350"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_movement_speed"		"150"
+		}
+	}
+	"OnSpellStart"
+	{		
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/items/flyingnimbus.lua"
+			"Function"				"DeActiveFlyingNimbus"
+		}	
+	}
+	"Modifiers"
+	{
+		"modifier_flying_nimbus"
+		{
+			"Passive"			"1"
+			"IsHidden"			"0"
+			"OverrideAnimation"	"ACT_DOTA_IDLE"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_health"
+
+				"MODIFIER_PROPERTY_VISUAL_Z_DELTA"				"200"
+
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
+			}
+			"States"
+			{
+				"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
+
+			}
+			"OnCreated"
+            {
+                "AttachEffect"
+                {
+                    "Target"			"CASTER"                    
+                    "EffectName"		"particles/edited_particle/flying_nimbus.vpcf"                    
+                    "EffectAttachType"	"follow_origin"
+                }
+            }
+		}
+	}
+	"precache"
+    {
+      "particle"              "particles/edited_particle/flying_nimbus.vpcf"      
+    }
+  }
+  "item_flying_nimbus_no_disable"
+  {
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"5005" 
+	
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"Model"							"models/props_gameplay/boots_of_speed.mdl"
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"item_flying_nimbus_item"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"500"
+	"ItemShopTags"					"move_speed"
+	"ItemQuality"					"component"
+	"ItemAliases"					"flying nimbus"
+	"SideShop"						"1"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"350"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_movement_speed"		"150"
+		}
+	}
+	"OnSpellStart"
+	{		
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/items/flyingnimbus.lua"
+			"Function"				"DeActiveFlyingNimbus"
+		}	
+	}
+	"Modifiers"
+	{
+		"modifier_flying_nimbus"
+		{
+			"Passive"			"1"
+			"IsHidden"			"0"
+			"OverrideAnimation"	"ACT_DOTA_DISABLED"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_health"
+
+				"MODIFIER_PROPERTY_VISUAL_Z_DELTA"				"200"
+
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
+			}
+			"OnCreated"
+            {
+                
+                //"AttachEffect"
+                //{
+                //    "Target"			"CASTER"
+                //    "EffectName"		"particles/edited_particle/flying_nimbus.vpcf"
+                //    "EffectAttachType"	"follow_origin"
+                //}
+            }
+		}
+	}
+	"precache"
+    {
+      "particle"              "particles/edited_particle/flying_nimbus.vpcf"      
+    }
+  }
+  
+  "item_dummy"
+  {
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"5005" 
+	}
+	
+	
+	
+	
+	
+	// SKY WING
+	
+	
+	
+	
+	
+	
+	
+	
+	"item_skywing_inactive"
+  {
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"5006" 
+	
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"Model"							"models/props_gameplay/boots_of_speed.mdl"
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"item_skywing_inactive"
+	"AbilityCooldown" "3"
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"5000"
+	"ItemShopTags"					"move_speed"
+	"ItemQuality"					"component"
+	"ItemAliases"					"flying nimbus"
+	"SideShop"						"1"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"650"
+		}
+	}
+	"OnSpellStart"
+	{		
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/items/flyingnimbus.lua"
+			"Function"				"ActiveSkywing"
+		}	
+		"FireSound"
+		{
+			"EffectName"		"DOTA_Item.PhaseBoots.Activate"
+			"Target"			"CASTER"
+		}
+	}
+	"Modifiers"
+	{
+		"modifier_skywing_inactive"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			//"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_health"
+			}
+		}
+	}
+	"precache"
+    {
+      "particle"              "particles/edited_particle/flying_nimbus.vpcf"      
+    }
+  }
+"item_skywing"
+  {
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"5007" 
+	
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"Model"							"models/props_gameplay/boots_of_speed.mdl"
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"item_skywing_active"
+	"AbilityCooldown" "3"
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"500"
+	"ItemShopTags"					"move_speed"
+	"ItemQuality"					"component"
+	"ItemAliases"					"flying nimbus"
+	"SideShop"						"1"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+
+			"bonus_health"			"650"
+
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_movement_speed"		"200"
+		}
+	}
+	"OnSpellStart"
+	{		
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/items/flyingnimbus.lua"
+			"Function"				"DeActiveSkywing"
+		}	
+	}
+	"Modifiers"
+	{
+		"modifier_skywing"
+		{
+			"Passive"			"1"
+			"IsHidden"			"0"
+			"OverrideAnimation"	"ACT_DOTA_IDLE"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_health"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
+
+				"MODIFIER_PROPERTY_VISUAL_Z_DELTA"				"200"
+
+			}
+			"States"
+			{
+				"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
+
+			}
+			"OnCreated"
+            {
+                "AttachEffect"
+                {
+                    "Target"			"CASTER"
+                    "EffectName"		"particles/edited_particle/skywing.vpcf"
+                    "EffectAttachType"	"follow_origin"
+                }
+            }
+		}
+	}
+	"precache"
+    {
+      "particle"              "particles/edited_particle/flying_nimbus.vpcf"      
+    }
+  }
+  "item_skywing_no_disable"
+  {
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"5008" 
+	
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"Model"							"models/items/vengefulspirit/forsaken_wings_shoulder/forsaken_wings_shoulder.mdl"
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"item_skywing_active"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"500"
+	"ItemShopTags"					"move_speed"
+	"ItemQuality"					"component"
+	"ItemAliases"					"flying nimbus"
+	"SideShop"						"1"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"650"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_movement_speed"		"200"
+		}
+	}
+	"OnSpellStart"
+	{		
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/items/flyingnimbus.lua"
+			"Function"				"DeActiveSkywing"
+		}	
+	}
+	"Modifiers"
+	{
+		"modifier_skywing_no_disable"
+		{
+			"Passive"			"1"
+			"IsHidden"			"0"
+			"OverrideAnimation"	"ACT_DOTA_DISABLED"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_health"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
+
+				"MODIFIER_PROPERTY_VISUAL_Z_DELTA"				"200"
+
+			}
+			"OnCreated"
+            {
+                
+                //"AttachEffect"
+                //{
+                //    "Target"			"CASTER"
+                //    "EffectName"		"particles/edited_particle/flying_nimbus.vpcf"
+                //    "EffectAttachType"	"follow_origin"
+                //}
+            }
+		}
+	}
+	"precache"
+    {
+      "particle"              "particles/edited_particle/flying_nimbus.vpcf"      
+    }
+  }
+  

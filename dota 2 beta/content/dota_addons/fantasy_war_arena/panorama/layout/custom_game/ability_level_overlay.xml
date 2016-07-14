@@ -1,0 +1,35 @@
+<root>
+  <styles>
+    <include src="s2r://panorama/styles/dotastyles.vcss_c" />
+    <include src="s2r://panorama/styles/custom_game/ability_tree.vcss_c" />
+  </styles>
+  <scripts>
+    <include src="s2r://panorama/scripts/custom_game/ability_level_overlay.vjs_c" /> 
+    <!--
+    <include src="s2r://panorama/scripts/custom_game/ability_tree.vjs_c" /> 
+    <include src="s2r://panorama/scripts/custom_game/action_bar_ability.vjs_c" />
+  -->
+  </scripts>
+  <Panel hittest="false" class="ability_level_overlay">
+  	<Panel id="ability_level_overlay_container">
+	  	<Panel hittest="false" class="individual_ability_level_overlay" id="ability_level_overlay1">
+        <Label class="ability_level_overlay_text" id="ability_level_overlay_text1"></Label>
+	  	</Panel>
+	  	<Panel hittest="false" class="individual_ability_level_overlay" id="ability_level_overlay2">
+        <Label class="ability_level_overlay_text" id="ability_level_overlay_text2"></Label>
+	  	</Panel>
+	  	<Panel hittest="false" class="individual_ability_level_overlay" id="ability_level_overlay3">
+        <Label class="ability_level_overlay_text" id="ability_level_overlay_text3"></Label>
+	  	</Panel>
+	  	<Panel hittest="false" class="individual_ability_level_overlay" id="ability_level_overlay4">
+        <Label class="ability_level_overlay_text" id="ability_level_overlay_text4" text=""></Label>
+	  	</Panel>
+      <Panel hittest="false" class="individual_ability_level_overlay" id="ability_level_overlay5">
+        <Label class="ability_level_overlay_text" id="ability_level_overlay_text5"></Label>
+      </Panel>
+      <Panel hittest="false" class="individual_ability_level_overlay" id="ability_level_overlay6">
+        <Label class="ability_level_overlay_text" id="ability_level_overlay_text6" text="Jump"></Label>
+      </Panel>
+  	</Panel>
+  </Panel>
+</root>

@@ -1,0 +1,42 @@
+"skill_kiemdoan_thiennambophap"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "14304"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "FightRecapLevel"       "1"
+    "BaseClass"             "ability_lua"
+    "RequiredLevel"          "8"
+    "MaxLevel"				 "10"
+    "LevelsBetweenUpgrades"  "1"
+    
+    "CastFilterRejectCaster" "1"
+    "HotKeyOverride"    "E" 
+    "AbilityTextureName"      "ancient_apparition_cold_feet"
+    "ScriptFile"          "heroes_abilities/kiemdoan/skill_kiemdoan_thiennambophap"
+    "AbilityCastPoint"        "0.03"
+    
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "precache"
+        {
+            
+            "particle"						"particles/edited_particle/kiem_doan/modifier_thiennambophap.vpcf"
+        }
+        
+        // COLD FEET
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"movement_speed"  "26 32 38 44 50 56 62 68 74 80"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"burn_time_reduce"  "17 34 51 68 85 102 119 136 153 170"
+		}
+	}
+        
+  }

@@ -1,0 +1,46 @@
+"skill_kiemdoan_bacminhthancong"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "14303"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    "FightRecapLevel"       "1"
+    "BaseClass"             "ability_lua"
+    "RequiredLevel"          "7"
+    "MaxLevel"				 "5"
+    "LevelsBetweenUpgrades"  "1"
+    
+    "CastFilterRejectCaster" "1"
+    "AbilityTextureName"      "storm_spirit_electric_vortex"
+    "ScriptFile"          "heroes_abilities/kiemdoan/skill_kiemdoan_bacminhthancong"
+    // RELIEF AURA
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"paralize_resist_chance"  "200 400 600 800 1000"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"fear_resist_chance"  "200 400 600 800 1000"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"knockback_resist_chance"  "200 400 600 800 1000"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"damage_negate"  "30"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"damage_negate_max_based_on_hp"  "1.0 1.5 2.0 2.5 3.0"
+		}
+	}
+    
+  }

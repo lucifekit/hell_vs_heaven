@@ -1,0 +1,37 @@
+"skill_manhan_xikhongmadiem"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "13208"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    "FightRecapLevel"       "1"
+    "BaseClass"             "ability_lua"
+    "RequiredLevel"          "40"
+    "MaxLevel"				 "10"
+    "LevelsBetweenUpgrades"  "1"
+    
+    "CastFilterRejectCaster" "1"
+    "HotKeyOverride"    "" 
+    "AbilityTextureName"      "warlock_golem_flaming_fists"
+    "ScriptFile"          "heroes_abilities/manhan/skill_manhan_xikhongmadiem"
+// EXPERT TALENT
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"attack_speed"  "12.5 14.0 15.5 17.0 18.5 20.0 21.5 23.0 24.5 26.0"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"burn_chance_increase"  "42 54 66 78 90 102 114 126 138 150"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_chance_reduce"  "42 54 66 78 90 102 114 126 138 150"
+		}
+	}
+
+  }

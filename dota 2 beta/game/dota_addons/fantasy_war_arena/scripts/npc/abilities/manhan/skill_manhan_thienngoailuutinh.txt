@@ -1,0 +1,99 @@
+"skill_manhan_thienngoailuutinh"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "13209"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET  |DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+   
+    "FightRecapLevel"       "1"
+    "RequiredLevel"          "45"
+    "BaseClass"             "ability_lua"
+    "AbilityTextureName"      "sniper_shrapnel"
+    "ScriptFile"          "heroes_abilities/manhan/skill_manhan_thienngoailuutinh"
+    "MaxLevel"                      "10"
+    "HotKeyOverride"    "D" 
+    "CastFilterRejectCaster" "1"
+    // Unit Targeting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags"    ""
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"        "900"
+    "AbilityCastPoint"        "0.03"
+    
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "precache"
+    {
+      "particle"        "particles/units/heroes/hero_invoker/invoker_chaos_meteor.vpcf"
+      "particle"        "particles/units/heroes/hero_invoker/invoker_chaos_meteor_fly.vpcf"
+      "particle"        "particles/units/heroes/hero_invoker/invoker_chaos_meteor_burn_debuff.vpcf"
+
+      "particle"		"particles/edited_particle/ma_nhan/thienngoailuutinh.vpcf"
+      "particle"		"particles/edited_particle/ma_nhan/thienngoailuutinh_ground.vpcf"
+      "soundfile"       "soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts"
+    }
+   // METEOR CALLDOWN
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "61 64 67 70 73 76 79 82 85 88"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "495 540 585 630 675 720 765 810 855 900"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "605 660 715 770 825 880 935 990 1045 1100"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_burn"  "16.5 18.0 19.5 21.0 22.5 24.0 25.5 27.0 28.5 30.0"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"burn_time"  "2"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"ground_basic_damage"  "6.5 7.0 7.5 8.0 8.5 9.0 9.5 10.0 10.5 11.0"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"ground_damage_min"  "99 108 117 126 135 144 153 162 171 180"
+		}
+		"08"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"ground_damage_max"  "120 132 144 156 168 180 192 204 216 228"
+		}
+		"09"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"ground_chance_to_burn"  "7 9 11 13 15 17 19 21 23 25"
+		}
+		"10"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"ground_burn_time"  "0.5"
+		}
+		"11"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "7"
+		}
+	}
+   
+  }

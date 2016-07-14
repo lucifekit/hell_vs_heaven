@@ -1,0 +1,433 @@
+//============GENBU GUARD===============
+	"item_genbu_guard_lv_0"
+	{
+		"ID"              "6310"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_shivas_guard"
+		"ItemCost"            "5000"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1150"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "750"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_physical"  "228"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_poison"  "228"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_lightning"  "228"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "75"
+			}
+		}
+	}
+	"item_genbu_guard_lv_1"
+	{
+		"ID"              "6311"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_shivas_guard"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1250"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "800"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_physical"  "244"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_poison"  "244"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_lightning"  "244"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "80"
+			}
+		}
+	}
+	"item_genbu_guard_lv_2"
+	{
+		"ID"              "6312"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_shivas_guard"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1350"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "850"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_physical"  "260"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_poison"  "260"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_lightning"  "260"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "85"
+			}
+		}
+	}
+	"item_genbu_guard_lv_3"
+	{
+		"ID"              "6313"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_shivas_guard"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1450"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "900"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_physical"  "276"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_poison"  "276"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_lightning"  "276"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "90"
+			}
+		}
+	}
+	"item_genbu_guard_lv_4"
+	{
+		"ID"              "6314"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_shivas_guard"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1550"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "950"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_physical"  "292"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_poison"  "292"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_lightning"  "292"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "95"
+			}
+		}
+	}
+	"item_genbu_guard_lv_5"
+	{
+		"ID"              "6315"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_shivas_guard"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1650"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "1000"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_physical"  "308"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_poison"  "308"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_lightning"  "308"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "100"
+			}
+		}
+	}
+	"item_genbu_guard_lv_6"
+	{
+		"ID"              "6316"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_shivas_guard"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1750"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "1050"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_physical"  "324"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_poison"  "324"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_lightning"  "324"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "105"
+			}
+		}
+	}
+	"item_genbu_guard_lv_7"
+	{
+		"ID"              "6317"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_shivas_guard"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1850"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "1100"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_physical"  "340"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_poison"  "340"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_lightning"  "340"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "110"
+			}
+		}
+	}
+	"item_genbu_guard_lv_8"
+	{
+		"ID"              "6318"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_shivas_guard"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1950"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "1150"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_physical"  "356"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_poison"  "356"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_lightning"  "356"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "115"
+			}
+		}
+	}

@@ -1,0 +1,56 @@
+"dieptinh"
+{
+
+   "ID"  "90010"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "1"
+   "MaxLevel"        "1"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+   "ScriptFile"          "bosses/dieptinh"
+   
+}
+"boss_dieptinh_get_out"
+{
+   "ID"  "90011"
+   "BaseClass"             "ability_datadriven"
+   "RequiredLevel"          "1"
+   "MaxLevel"        "1"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+"boss_dieptinh_frozen_moon"
+{
+   "ID"  "90012"
+   "BaseClass"             "ability_datadriven"
+   "RequiredLevel"          "1"
+   "MaxLevel"        "1"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+
+"boss_dieptinh_massage"
+{
+   "ID"  "90013"
+   "BaseClass"             "ability_datadriven"
+   "RequiredLevel"          "1"
+   "MaxLevel"        "1"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+
+
+"boss_dieptinh_true_love"
+{
+   "ID"  "90014"
+   "BaseClass"             "ability_datadriven"
+   "RequiredLevel"          "1"
+   "MaxLevel"        "1"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+
+"boss_dieptinh_nova"
+{
+   "ID"  "90015"
+   "BaseClass"             "ability_datadriven"
+   "RequiredLevel"          "1"
+   "MaxLevel"        "1"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}

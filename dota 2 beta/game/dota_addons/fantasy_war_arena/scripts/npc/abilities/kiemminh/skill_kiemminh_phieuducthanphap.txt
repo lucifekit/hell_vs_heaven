@@ -1,0 +1,30 @@
+"skill_kiemminh_phieuducthanphap"
+  {
+  	"ID"  "12304"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+ 
+    "FightRecapLevel"       "1"
+    "BaseClass"             "ability_lua"
+    "RequiredLevel"          "8"
+    "AbilityTextureName"      "death_prophet_exorcism"
+    "ScriptFile"          "heroes_abilities/kiemminh/skill_kiemminh_phieuducthanphap"
+    "MaxLevel"                      "10"
+    "AnimationPlaybackRate" "2"
+
+    // GHOST FORM
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"movement_speed"  "26 32 38 44 50 56 62 68 74 80"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"stun_time_reduce"  "13 27 40 54 67 81 94 108 121 135"
+		}
+	}
+    
+
+  }

@@ -1,0 +1,68 @@
+"skill_kiemminh_thanhhoalieunguyen"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "13209"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  |DOTA_ABILITY_BEHAVIOR_UNIT_TARGET  | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags"    ""
+    "FightRecapLevel"       "1"
+    "RequiredLevel"          "45"
+    "BaseClass"             "ability_lua"
+    "AbilityTextureName"      "alchemist_acid_spray"
+    "ScriptFile"          "heroes_abilities/kiemminh/skill_kiemminh_thanhhoalieunguyen"
+    "MaxLevel"                      "10"
+    "HotKeyOverride"    "D" 
+    "CastFilterRejectCaster" "1"
+    // Unit Targeting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags"    ""
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"        "900"
+    "AbilityCastPoint"        "0.03"
+    
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "precache"
+    {
+      "soundfile"		"soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts"
+      "soundfile"		"soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
+    }
+
+   // TOXIC RAIN
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "96 102 108 114 120 126 132 138 144 150"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"poison_damage"  "923 978 1033 1088 1143 1198 1253 1308 1363 1418"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_weaken"  "29 33 37 41 45 49 53 57 61 65"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"weak_time"  "4"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"radius"  "55 60 65 70 75 80 85 90 95 100"
+		}
+	}
+
+   
+  }

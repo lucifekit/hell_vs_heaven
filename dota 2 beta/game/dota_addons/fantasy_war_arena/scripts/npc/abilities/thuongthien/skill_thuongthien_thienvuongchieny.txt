@@ -1,0 +1,49 @@
+"skill_thuongthien_thienvuongchieny"
+{
+   "ID"  "11207"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "35"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "nevermore_shadowraze1"
+   "ScriptFile"          "heroes_abilities/thuongthien/skill_thuongthien_thienvuongchieny"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // WAR AURA
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_amplify"  "30 50 70 90 110 130 150 170 190 210"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"critical_chance"  "14 18 22 26 30 34 38 42 46 50"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_chance"  "17 24 31 38 45 52 59 66 73 80"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"allies_physical_amplify"  "15 20 25 30 35 40 45 50 55 60"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"allies_critical_chance"  "12 14 16 18 20 22 24 26 28 30"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"allies_maim_chance"  "13.5 17.0 20.5 24.0 27.5 31.0 34.5 38.0 41.5 45.0"
+		}
+	}
+   
+}

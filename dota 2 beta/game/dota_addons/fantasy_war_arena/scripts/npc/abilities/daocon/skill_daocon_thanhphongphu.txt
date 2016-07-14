@@ -1,0 +1,40 @@
+"skill_daocon_thanhphongphu"
+{
+   "ID"  "15104"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "8"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "brewmaster_storm_dispel_magic"
+   "ScriptFile"          "heroes_abilities/daocon/skill_daocon_thanhphongphu"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    ""
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "700"
+   "precache"
+   {
+   }
+   // BLUE WIND
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"movement_speed"  "26 32 38 44 50 56 62 68 74 80"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"duration"  "300"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"slow_time_reduce"  "22.5 35.0 47.5 60.0 72.5 85.0 97.5 110.0 122.5 135.0"
+		}
+	}
+   
+}

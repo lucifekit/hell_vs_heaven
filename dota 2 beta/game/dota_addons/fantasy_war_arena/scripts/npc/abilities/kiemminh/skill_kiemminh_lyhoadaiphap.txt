@@ -1,0 +1,39 @@
+"skill_kiemminh_lyhoadaiphap"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "12308"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    "FightRecapLevel"       "1"
+    "BaseClass"             "ability_lua"
+    "RequiredLevel"          "40"
+    "MaxLevel"				 "10"
+    "LevelsBetweenUpgrades"  "1"
+    
+    "CastFilterRejectCaster" "1"
+    "HotKeyOverride"    "" 
+    "AbilityTextureName"      "necrolyte_death_pulse"
+    "ScriptFile"          "heroes_abilities/kiemminh/skill_kiemminh_lyhoadaiphap"
+    
+
+	// EXPERT TALENT
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"weak_chance_increase"  "28 36 44 52 60 68 76 84 92 100"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"stun_chance_reduce"  "42 54 66 78 90 102 114 126 138 150"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"attack_speed"  "11 13 14 16 18 19 21 22 24 26"
+		}
+	}
+	
+  }

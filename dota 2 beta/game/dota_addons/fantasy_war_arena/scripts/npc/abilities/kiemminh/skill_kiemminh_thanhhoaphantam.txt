@@ -1,0 +1,66 @@
+  "skill_kiemminh_thanhhoaphantam"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "12301"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  |DOTA_ABILITY_BEHAVIOR_UNIT_TARGET  | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+    "FightRecapLevel"       "1"
+    "BaseClass"             "ability_lua"
+    "RequiredLevel"          "1"
+    "MaxLevel"         "10"
+    "LevelsBetweenUpgrades"  "1"
+    
+    "CastFilterRejectCaster" "1"
+    "HotKeyOverride"    "Q" 
+    "AbilityTextureName"      "venomancer_venomous_gale"
+    "ScriptFile"          "heroes_abilities/kiemminh/skill_kiemminh_thanhhoaphantam"
+    // Unit Targeting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags"    ""
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"        "700"
+    "AbilityCastPoint"        "0.2"
+    
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "precache"
+        {
+            "particle"            "particles/edited_particle/kiem_minh/thanhhoaphantam.vpcf"
+        }
+
+    // TOXIC FLAME
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "100"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"poison_damage"  "50 63 76 89 102 115 128 141 154 167"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_weaken"  "18.5 22.0 25.5 29.0 32.5 36.0 39.5 43.0 46.5 50.0"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"weak_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "2 2 2 2 3 3 3 3 3 4"
+		}
+	}
+    
+
+  }

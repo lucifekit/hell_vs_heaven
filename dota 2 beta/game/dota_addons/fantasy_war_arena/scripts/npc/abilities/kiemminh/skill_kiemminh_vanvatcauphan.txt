@@ -1,0 +1,79 @@
+"skill_kiemminh_vanvatcauphan"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "12305"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  |DOTA_ABILITY_BEHAVIOR_UNIT_TARGET  | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_CREEP"
+    "FightRecapLevel"       "1"
+    "RequiredLevel"          "18"
+    "BaseClass"             "ability_lua"
+    "AbilityTextureName"      "pugna_nether_blast"
+    "ScriptFile"          "heroes_abilities/kiemminh/skill_kiemminh_vanvatcauphan"
+    "MaxLevel"                      "10"
+    "HotKeyOverride"    "W" 
+    "CastFilterRejectCaster" "1"
+    // Unit Targeting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags"    ""
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"        "700"
+
+    "AbilityCastPoint"        "0.03"
+
+    
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "PreCache"
+    {
+            "particle"                      "particles/units/heroes/hero_venomancer/venomancer_venomous_gale.vpcf"
+			"particle"  					"particles/units/heroes/hero_venomancer/venomancer_poison_nova.vpcf"
+            "soundfile"			"soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
+    }
+
+    // TOXIC BOMB
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "100"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"poison_damage"  "520 551 582 613 644 675 706 737 768 799"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_weaken"  "16.5 18.0 19.5 21.0 22.5 24.0 25.5 27.0 28.5 30.0"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"weak_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "2 2 2 2 2 2 2 2 2 3"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"explode_poison"  "390 413 436 459 482 505 528 551 574 597"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"explode_max_target"  "2"
+		}
+	}
+
+  }

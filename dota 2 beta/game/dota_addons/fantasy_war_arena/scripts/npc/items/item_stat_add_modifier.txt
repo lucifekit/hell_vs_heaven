@@ -1,0 +1,37 @@
+"item_stat_add_modifier"
+{
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass"						"item_datadriven"
+
+	"Modifiers"
+	{
+
+		"modifier_health_bonus_add"
+		{
+			"IsHidden"			"1"  
+
+			"IsPurgable"			"0"
+
+			"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT"
+			"Properties"
+			{
+				
+				"MODIFIER_PROPERTY_HEALTH_BONUS"	"1"
+			}
+		}
+
+		"modifier_mana_bonus_add"
+		{
+			"IsHidden"			"1"  
+
+			"IsPurgable"			"0"
+
+			"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT"
+			"Properties"
+			{
+				
+				"MODIFIER_PROPERTY_MANA_BONUS"	"1"
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+"skill_manhan_lemadoathon"
+  {
+  	"ID"  "13203"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    "BaseClass"             "ability_lua"
+    "RequiredLevel"          "7"
+    "AbilityTextureName"      "ursa_enrage"
+    "ScriptFile"          "heroes_abilities/manhan/skill_manhan_lemadoathon"
+    "MaxLevel"                      "5"
+    "AnimationPlaybackRate" "2"
+    "HotKeyOverride"    "" 
+    "CastFilterRejectCaster" "1"
+   
+    //-------------------------------------------------------------------------------------------------------------
+    "PreCache"
+    {
+       "particle"						"particles/edited_particle/ma_nhan/fx_lemadoathon.vpcf"
+    }
+    // SOUL STEALER
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_simplify"  "65 80 95 110 125"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"movement_speed_reduce"  "28 36 44 52 60"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "3 3 4 4 5"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"cooldown"  "5"
+		}
+	}
+    
+  }

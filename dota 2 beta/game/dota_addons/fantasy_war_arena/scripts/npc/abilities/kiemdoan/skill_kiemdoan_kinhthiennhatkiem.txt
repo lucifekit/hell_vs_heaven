@@ -1,0 +1,70 @@
+"skill_kiemdoan_kinhthiennhatkiem"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "14311"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET  | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+    "FightRecapLevel"       "1"
+    "BaseClass"             "ability_lua"
+    "RequiredLevel"          "55"
+    "MaxLevel"				 "5"
+    "LevelsBetweenUpgrades"  "1"
+    
+    "CastFilterRejectCaster" "1"
+    "HotKeyOverride"    "D" 
+    "AbilityTextureName"      "ancient_apparition_chilling_touch"
+    "ScriptFile"          "heroes_abilities/kiemdoan/skill_kiemdoan_kinhthiennhatkiem"
+	// Unit Targeting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags"    ""
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"        "700"
+    "AbilityCastPoint"        "0.4"
+    "AbilityCooldown"       "10"
+    "AbilityManaCost"       "2"
+    
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "precache"
+        {
+            "particle"		"particles/edited_particle/kiem_doan/skill_kiemdoan_kimngocmanduong.vpcf"
+            "particle"		"particles/edited_particle/kiem_doan/skill_kiemdoan_lmtk_blue.vpcf"
+            "particle"		"particles/edited_particle/kiem_doan/skill_kiemdoan_lmtk_green.vpcf"
+            "particle"		"particles/edited_particle/kiem_doan/skill_kiemdoan_lmtk_yellow.vpcf"
+            "particle"		"particles/edited_particle/kiem_doan/skill_kiemdoan_lmtk_grey.vpcf"
+            "particle"		"particles/edited_particle/kiem_doan/skill_kiemdoan_lmtk_orange.vpcf"
+            "particle"		"particles/edited_particle/kiem_doan/skill_kiemdoan_lmtk_red.vpcf"
+            
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_kunkka.vsndevts"
+			"particle"					"particles/units/heroes/hero_wisp/wisp_tether_hit.vpcf"
+        }
+        // TIDAL WAVE
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_slow"  "100"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"slow_time"  "2.4 2.8 3.2 3.6 4.0"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_knockback"  "100"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"knockback_distance"  "96"
+		}
+	}
+        
+  }

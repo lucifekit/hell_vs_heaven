@@ -1,0 +1,141 @@
+// Rewrite of Healing Salve
+// Author: Rook
+// Date: January 25, 2015
+"item_hp_small"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"5000"  //Valve's version of this item uses the ID "39".
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"Model"							"models/props_gameplay/salve.mdl"
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"item_flask"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"              "0"
+	"AbilityCooldown"				"0"
+	"AbilityManaCost"				"0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"30"
+	"ItemShopTags"					"consumable"
+	"ItemQuality"					"consumable"
+	"ItemAliases"					"healing salve"
+	"ItemStackable"					"50"
+	"ItemPermanent"					"0"
+	"ItemInitialCharges"			"1"
+	
+	
+	
+	"OnSpellStart"
+	{		
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/items/regen.lua"
+			"Function"				"HpSmall"
+		}	
+		"FireSound"
+		{
+			"EffectName"			"DOTA_Item.HealingSalve.Activate"
+		}
+		"SpendCharge"
+		{}
+	}
+	
+}
+"item_hp_big"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"5001"  //Valve's version of this item uses the ID "39".
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"Model"							"models/props_gameplay/smoke.mdl"
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+
+	"AbilityTextureName"			"item_greater_salve"
+
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"              "0"
+	"AbilityCooldown"				"0"
+	"AbilityManaCost"				"0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"100"
+	"ItemShopTags"					"consumable"
+	"ItemQuality"					"consumable"
+	"ItemAliases"					"healing salve"
+	"ItemStackable"					"150"
+	"ItemPermanent"					"0"
+	"ItemInitialCharges"			"1"
+	
+	
+	
+	"OnSpellStart"
+	{		
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/items/regen.lua"
+			"Function"				"HpBig"
+		}	
+		"FireSound"
+		{
+			"EffectName"			"DOTA_Item.HealingSalve.Activate"
+		}
+		"SpendCharge"
+		{}
+	}
+	
+}
+
+"item_mango"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"5002"  //Valve's version of this item uses the ID "39".
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"Model"							"models/props_gameplay/mango.mdl"
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"item_enchanted_mango"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"              "0"
+	"AbilityCooldown"				"0"
+	"AbilityManaCost"				"0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"10"
+	"ItemShopTags"					"consumable"
+	"ItemQuality"					"consumable"
+	"ItemAliases"					"mango"
+	"ItemStackable"					"50"
+	"ItemPermanent"					"0"
+	"ItemInitialCharges"			"1"
+	
+	
+	
+	"OnSpellStart"
+	{		
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/items/regen.lua"
+			"Function"				"Mango"
+		}	
+		"FireSound"
+		{
+			"EffectName"			"DOTA_Item.HealingSalve.Activate"
+		}
+		"SpendCharge"
+		{}
+	}
+	
+}

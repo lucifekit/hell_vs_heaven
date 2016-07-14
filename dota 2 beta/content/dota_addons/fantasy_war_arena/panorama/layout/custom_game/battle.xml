@@ -1,0 +1,20 @@
+<root>
+  <styles>
+    <include src="s2r://panorama/styles/dotastyles.vcss_c" />
+    <include src="s2r://panorama/styles/custom_game/battle.vcss_c" />
+  </styles>
+  <scripts>
+    <include src="file://{resources}/scripts/custom_game/battle.js" />
+  
+  </scripts>
+
+
+  
+  <Panel hittest="false" class="KemBattle">
+      <Panel id="BattleTimeProgressPanel">
+        <ProgressBar id="BattleProgressBar">
+        </ProgressBar>
+        <Label id="BattleProgressBarLabel" text="N/A"></Label>
+      </Panel>
+  </Panel>
+</root>

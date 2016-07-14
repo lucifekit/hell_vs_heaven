@@ -1,0 +1,37 @@
+"skill_kiemdoan_doangiakhikiem"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "14310"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    "FightRecapLevel"       "1"
+    "BaseClass"             "ability_lua"
+    "RequiredLevel"          "50"
+    "MaxLevel"				 "5"
+    "LevelsBetweenUpgrades"  "1"
+    
+    "CastFilterRejectCaster" "1"
+    "HotKeyOverride"    "" 
+    "AbilityTextureName"      "mirana_starfall"
+    "ScriptFile"          "heroes_abilities/kiemdoan/skill_kiemdoan_doangiakhikiem"
+	// MASTER TALENT
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "2 4 6 8 10"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"slow_time_increase"  "16 32 48 64 80"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"burn_time_reduce"  "24 48 72 96 120"
+		}
+	}
+	
+  }

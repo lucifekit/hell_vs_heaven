@@ -1,0 +1,388 @@
+//============REGEN BOOT===============
+	"item_regen_boot_lv_0"
+	{
+		"ID"              "6200"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_tranquil_boots"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"move_speed"  "40"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "250"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "200"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp_regen"  "10"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"damage_to_mp"  "15"
+			}
+		}
+	}
+	"item_regen_boot_lv_1"
+	{
+		"ID"              "6201"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_tranquil_boots"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"move_speed"  "45"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "330"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "275"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp_regen"  "12"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"damage_to_mp"  "15"
+			}
+		}
+	}
+	"item_regen_boot_lv_2"
+	{
+		"ID"              "6202"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_tranquil_boots"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"move_speed"  "50"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "410"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "350"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp_regen"  "14"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"damage_to_mp"  "15"
+			}
+		}
+	}
+	"item_regen_boot_lv_3"
+	{
+		"ID"              "6203"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_tranquil_boots"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"move_speed"  "55"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "490"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "425"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp_regen"  "16"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"damage_to_mp"  "15"
+			}
+		}
+	}
+	"item_regen_boot_lv_4"
+	{
+		"ID"              "6204"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_tranquil_boots"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"move_speed"  "60"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "570"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "500"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp_regen"  "18"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"damage_to_mp"  "15"
+			}
+		}
+	}
+	"item_regen_boot_lv_5"
+	{
+		"ID"              "6205"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_tranquil_boots"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"move_speed"  "65"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "650"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "575"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp_regen"  "20"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"damage_to_mp"  "15"
+			}
+		}
+	}
+	"item_regen_boot_lv_6"
+	{
+		"ID"              "6206"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_tranquil_boots"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"move_speed"  "70"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "730"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "650"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp_regen"  "22"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"damage_to_mp"  "15"
+			}
+		}
+	}
+	"item_regen_boot_lv_7"
+	{
+		"ID"              "6207"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_tranquil_boots"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"move_speed"  "75"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "810"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "725"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp_regen"  "24"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"damage_to_mp"  "15"
+			}
+		}
+	}
+	"item_regen_boot_lv_8"
+	{
+		"ID"              "6208"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_tranquil_boots"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"move_speed"  "80"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "890"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "800"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp_regen"  "26"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"damage_to_mp"  "15"
+			}
+		}
+	}

@@ -1,0 +1,343 @@
+//============FLAME SWORD===============
+	"item_flame_sword_lv_0"
+	{
+		"ID"              "6050"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_bloodthorn"
+		"ItemCost"            "5000"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "15"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "80"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "75"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_element_damage"  "650"
+			}
+		}
+	}
+	"item_flame_sword_lv_1"
+	{
+		"ID"              "6051"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_bloodthorn"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "16.5"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "105"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "88"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_element_damage"  "830"
+			}
+		}
+	}
+	"item_flame_sword_lv_2"
+	{
+		"ID"              "6052"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_bloodthorn"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "18"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "130"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "101"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_element_damage"  "1010"
+			}
+		}
+	}
+	"item_flame_sword_lv_3"
+	{
+		"ID"              "6053"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_bloodthorn"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "19.5"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "155"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "114"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_element_damage"  "1190"
+			}
+		}
+	}
+	"item_flame_sword_lv_4"
+	{
+		"ID"              "6054"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_bloodthorn"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "21"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "180"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "127"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_element_damage"  "1370"
+			}
+		}
+	}
+	"item_flame_sword_lv_5"
+	{
+		"ID"              "6055"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_bloodthorn"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "22.5"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "205"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "140"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_element_damage"  "1550"
+			}
+		}
+	}
+	"item_flame_sword_lv_6"
+	{
+		"ID"              "6056"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_bloodthorn"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "24"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "230"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "153"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_element_damage"  "1730"
+			}
+		}
+	}
+	"item_flame_sword_lv_7"
+	{
+		"ID"              "6057"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_bloodthorn"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "25.5"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "255"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "166"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_element_damage"  "1910"
+			}
+		}
+	}
+	"item_flame_sword_lv_8"
+	{
+		"ID"              "6058"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_bloodthorn"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"atk_speed"  "27"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "280"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "179"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_element_damage"  "2090"
+			}
+		}
+	}

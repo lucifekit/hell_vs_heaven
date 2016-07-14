@@ -1,0 +1,343 @@
+//============PHANTOM PARTISAN===============
+	"item_phantom_partisan_lv_0"
+	{
+		"ID"              "6040"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_javelin"
+		"ItemCost"            "5000"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "80"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "375"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "75"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_physical_damage"  "650"
+			}
+		}
+	}
+	"item_phantom_partisan_lv_1"
+	{
+		"ID"              "6041"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_javelin"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "105"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "405"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "88"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_physical_damage"  "830"
+			}
+		}
+	}
+	"item_phantom_partisan_lv_2"
+	{
+		"ID"              "6042"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_javelin"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "130"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "435"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "101"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_physical_damage"  "1010"
+			}
+		}
+	}
+	"item_phantom_partisan_lv_3"
+	{
+		"ID"              "6043"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_javelin"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "155"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "465"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "114"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_physical_damage"  "1190"
+			}
+		}
+	}
+	"item_phantom_partisan_lv_4"
+	{
+		"ID"              "6044"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_javelin"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "180"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "495"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "127"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_physical_damage"  "1370"
+			}
+		}
+	}
+	"item_phantom_partisan_lv_5"
+	{
+		"ID"              "6045"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_javelin"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "205"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "525"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "140"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_physical_damage"  "1550"
+			}
+		}
+	}
+	"item_phantom_partisan_lv_6"
+	{
+		"ID"              "6046"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_javelin"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "230"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "555"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "153"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_physical_damage"  "1730"
+			}
+		}
+	}
+	"item_phantom_partisan_lv_7"
+	{
+		"ID"              "6047"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_javelin"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "255"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "585"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "166"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_physical_damage"  "1910"
+			}
+		}
+	}
+	"item_phantom_partisan_lv_8"
+	{
+		"ID"              "6048"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_javelin"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "280"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "615"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "179"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_physical_damage"  "2090"
+			}
+		}
+	}

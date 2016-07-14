@@ -1,0 +1,166 @@
+//============BOOT===============
+	"item_boot_lv_0"
+	{
+		"ID"              "6110"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_boots"
+		"ItemCost"            "200"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"move_speed"  "30"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "50"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "50"
+			}
+		}
+	}
+	"item_boot_lv_1"
+	{
+		"ID"              "6111"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_boots"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"move_speed"  "35"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "125"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "90"
+			}
+		}
+	}
+	"item_boot_lv_2"
+	{
+		"ID"              "6112"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_boots"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"move_speed"  "40"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "200"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "130"
+			}
+		}
+	}
+	"item_boot_lv_3"
+	{
+		"ID"              "6113"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_boots"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"move_speed"  "45"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "275"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "170"
+			}
+		}
+	}
+	"item_boot_lv_4"
+	{
+		"ID"              "6114"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_boots"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"move_speed"  "50"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "350"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "210"
+			}
+		}
+	}

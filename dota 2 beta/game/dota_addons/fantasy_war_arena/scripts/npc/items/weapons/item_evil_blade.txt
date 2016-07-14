@@ -1,0 +1,349 @@
+//============EVIL BLADE===============
+	"item_evil_blade_lv_0"
+	{
+		"ID"              "6030"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_demon_edge"
+		"ItemCost"            "5000"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "80"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "375"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "75"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "110"
+			}
+		}
+	}
+	"item_evil_blade_lv_1"
+	{
+		"ID"              "6031"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_demon_edge"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "105"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "405"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "88"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "135"
+			}
+		}
+	}
+	"item_evil_blade_lv_2"
+	{
+		"ID"              "6032"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_demon_edge"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "130"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "435"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "101"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "160"
+			}
+		}
+	}
+	"item_evil_blade_lv_3"
+	{
+		"ID"              "6033"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_demon_edge"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "155"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "465"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "114"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "185"
+			}
+		}
+	}
+	"item_evil_blade_lv_4"
+	{
+		"ID"              "6034"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_demon_edge"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "180"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "495"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "127"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "210"
+			}
+		}
+	}
+	"item_evil_blade_lv_5"
+	{
+		"ID"              "6035"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_demon_edge"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "205"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "525"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "140"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "235"
+			}
+		}
+	}
+	"item_evil_blade_lv_6"
+	{
+		"ID"              "6036"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_demon_edge"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "230"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "555"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "153"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "260"
+			}
+		}
+	}
+	"item_evil_blade_lv_7"
+	{
+		"ID"              "6037"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_demon_edge"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "255"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "585"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "166"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "285"
+			}
+		}
+	}
+	"item_evil_blade_lv_8"
+	{
+		"ID"              "6038"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_demon_edge"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "280"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "615"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "179"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "310"
+			}
+		}
+	}

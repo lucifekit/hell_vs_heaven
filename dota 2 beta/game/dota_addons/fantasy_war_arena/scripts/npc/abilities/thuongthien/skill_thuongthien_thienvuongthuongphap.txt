@@ -1,0 +1,34 @@
+"skill_thuongthien_thienvuongthuongphap"
+{
+   "ID"  "11202"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "6"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "clinkz_searing_arrows"
+   "ScriptFile"          "heroes_abilities/thuongthien/skill_thuongthien_thienvuongthuongphap"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // BASIC HEROIC PEEK
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"accuracy_chance"  "67 84 101 118 135"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_amplify"  "22 40 58 76 94"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"critical_chance"  "30 34 38 42 46"
+		}
+	}
+   
+}

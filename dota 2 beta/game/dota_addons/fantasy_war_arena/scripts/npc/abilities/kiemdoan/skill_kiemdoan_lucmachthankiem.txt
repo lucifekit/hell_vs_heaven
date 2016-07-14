@@ -1,0 +1,134 @@
+"skill_kiemdoan_lucmachthankiem"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "14309"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_TYPE_ULTIMATE| DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+    "FightRecapLevel"       "1"
+    "BaseClass"             "ability_lua"
+    "RequiredLevel"          "45"
+    "MaxLevel"				 "10"
+    "LevelsBetweenUpgrades"  "1"
+    
+    "CastFilterRejectCaster" "1"
+    "HotKeyOverride"    "D" 
+    
+	"AbilityTextureName"			"skill_kiemdoan_lucmachthankiem_starfall"
+    "ScriptFile"          "heroes_abilities/kiemdoan/skill_kiemdoan_lucmachthankiem"
+    // Unit Targeting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags"    ""
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"        "900"
+    "AbilityCastPoint"        "0.03"
+    "AbilityCooldown"       "10"
+    "AbilityManaCost"       "2"
+    
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "precache"
+        {
+            //"particle" 						"particles/units/heroes/hero_vengeful/vengeful_base_attack.vpcf"
+            //"particle"						"particles/units/heroes/hero_sven/sven_spell_storm_bolt.vpcf"
+            //"particle"						"particles/units/heroes/hero_invoker/invoker_deafening_blast.vpcf"
+            
+            "particle"	 "particles/edited_particle/kiem_doan/skill_kiemdoan_lmtk_blue.vpcf"
+		"particle"	"particles/edited_particle/kiem_doan/skill_kiemdoan_lmtk_grey.vpcf"
+		"particle"	"particles/edited_particle/kiem_doan/skill_kiemdoan_lmtk_red.vpcf"
+		"particle"	 "particles/edited_particle/kiem_doan/skill_kiemdoan_lmtk_yellow.vpcf"
+		"particle"	"particles/edited_particle/kiem_doan/skill_kiemdoan_lmtk_orange.vpcf"
+		"particle"	"particles/edited_particle/kiem_doan/skill_kiemdoan_lmtk_green.vpcf"
+		"particle"	"particles/units/heroes/hero_wisp/wisp_tether_hit.vpcf"
+        }
+        
+        
+        // RAINBOW BEAM
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "23 24 25 26 27 28 29 30 31 32"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "317 334 351 368 385 402 419 436 453 470"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "394 414 434 454 474 494 514 534 554 574"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"ultima_basic_damage"  "28.5 30.0 31.5 33.0 34.5 36.0 37.5 39.0 40.5 42.0"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"ultima_damage_min"  "401 421 441 461 481 501 521 541 561 581"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"ultima_damage_max"  "490 515 540 565 590 615 640 665 690 715"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_maim"  "6 7 8 9 10 11 12 13 14 15"
+		}
+		"08"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time"  "1"
+		}
+		"09"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_slow"  "18.5 22.0 25.5 29.0 32.5 36.0 39.5 43.0 46.5 50.0"
+		}
+		"10"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"slow_time"  "2.5"
+		}
+		"11"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_burn"  "5.5 6.0 6.5 7.0 7.5 8.0 8.5 9.0 9.5 10.0"
+		}
+		"12"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"burn_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+		}
+		"13"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_weaken"  "5.5 6.0 6.5 7.0 7.5 8.0 8.5 9.0 9.5 10.0"
+		}
+		"14"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"weak_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+		}
+		"15"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_stun"  "5.5 6.0 6.5 7.0 7.5 8.0 8.5 9.0 9.5 10.0"
+		}
+		"16"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"stun_time"  "1"
+		}
+	}
+        
+  }

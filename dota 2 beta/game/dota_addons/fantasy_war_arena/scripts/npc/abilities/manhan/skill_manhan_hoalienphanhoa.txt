@@ -1,0 +1,65 @@
+"skill_manhan_hoalienphanhoa"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "13206"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL "
+    "FightRecapLevel"       "1"
+    "RequiredLevel"          "30"
+    "BaseClass"             "ability_lua"
+    "AbilityTextureName"      "jakiro_liquid_fire"
+    "ScriptFile"          "heroes_abilities/manhan/skill_manhan_hoalienphanhoa"
+    "MaxLevel"                      "5"
+    "CastFilterRejectCaster" "1"
+    "HotKeyOverride"    "E" 
+    // Unit Targeting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags"    ""
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"        "700"
+    "AbilityCastPoint"        "0.03"
+    
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "PreCache"
+    {
+            "particle"                      "particles/edited_particle/ma_nhan/hoalienphanhoa.vpcf"
+            "particle"						"particles/edited_particle/ma_nhan/fx_hoalienphanhoa_start.vpcf"
+            "soundfile" 					"soundevents/game_sounds_heroes/game_sounds_enigma.vsndevts"
+            "soundfile"						"soundevents/game_sounds_custom.vsndevts"
+    }
+    // FLAME VORTEX
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"pull_duration"  "6"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"pull_chance"  "40 50 60 70 80"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"pull_radius"  "300"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"burn_chance"  "10 12 14 16 18"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"burn_time"  "2.5"
+		}
+	}
+    
+  }

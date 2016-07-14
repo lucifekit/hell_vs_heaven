@@ -1,0 +1,64 @@
+"skill_thuongthien_hoiphonglacnhan"
+{
+   "ID"  "11201"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "1"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "FightRecapLevel"       "1"
+   "CastFilterRejectCaster" "1"
+   "AbilityTextureName"      "queenofpain_shadow_strike"
+   "ScriptFile"          "heroes_abilities/thuongthien/skill_thuongthien_hoiphonglacnhan"
+   "HotKeyOverride"    "Q"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    ""
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "150"
+   "precache"
+   {
+   }
+   // DOUBLE STRIKE
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_damage_amplify"  "20 40 60 80 100 120 140 160 180 200"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "40 66 92 118 144 170 196 222 248 274"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "49 81 113 145 177 209 241 273 305 337"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_maim"  "17 19 21 23 25 27 29 31 33 35"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time"  "1"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "3"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "50"
+		}
+	}
+
+
+
+}

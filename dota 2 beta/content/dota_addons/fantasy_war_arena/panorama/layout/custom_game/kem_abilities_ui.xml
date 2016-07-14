@@ -1,0 +1,15 @@
+<root>
+  <styles>
+    <include src="s2r://panorama/styles/dotastyles.vcss_c" />
+    <include src="s2r://panorama/styles/custom_game/kem_abilities_ui.vcss_c" />
+  </styles>
+  <scripts>
+    <include src="s2r://panorama/scripts/custom_game/kem_abilities_ui.vjs_c" /> 
+  </scripts>
+  <Panel hittest="false" class="ability_panel_wrapper">
+      <Panel id="AbilityBookList">
+
+      </Panel>
+      
+  </Panel>
+</root>

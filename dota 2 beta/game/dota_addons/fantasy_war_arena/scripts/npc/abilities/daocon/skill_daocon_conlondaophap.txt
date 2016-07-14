@@ -1,0 +1,39 @@
+"skill_daocon_conlondaophap"
+{
+   "ID"  "15102"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "6"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "sven_great_cleave"
+   "ScriptFile"          "heroes_abilities/daocon/skill_daocon_conlondaophap"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // BASIC TALENT
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"accuracy_chance"  "70 90 110 130 150"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_amplify"  "25 45 65 85 105"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"critical_chance"  "30 35 40 45 50"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"attack_speed"  "7 9 11 13 15"
+		}
+	}
+   
+}

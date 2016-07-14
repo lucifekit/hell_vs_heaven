@@ -1,0 +1,32 @@
+"skill_manhan_kimthienthoatxac"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "13204"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    "FightRecapLevel"       "1"
+    "BaseClass"             "ability_lua"
+    "RequiredLevel"          "8"
+    "MaxLevel"				 "10"
+    "LevelsBetweenUpgrades"  "1"
+    
+    "CastFilterRejectCaster" "1"
+    "HotKeyOverride"    "" 
+    "AbilityTextureName"      "warlock_rain_of_chaos"
+    "ScriptFile"          "heroes_abilities/manhan/skill_manhan_kimthienthoatxac"
+    // EVASION
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_evade"  "2 4 6 8 10 12 14 16 18 20"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time_reduce"  "17 34 51 68 85 102 119 136 153 170"
+		}
+	}
+   
+  }

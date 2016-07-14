@@ -1,0 +1,35 @@
+"AddonInfo"
+{
+  "TeamCount" "1"
+  "maps"      "arena"
+  "IsPlayable"  "1"
+  "battle"
+  {
+          "MaxPlayers"                    "10"
+  }
+  "Default_Keys"
+  {
+      "01"
+      {
+          "Key"       "L"
+          "Command"   "+CloseStat"
+          "Name"      "Close Stat"
+      }
+      "02"
+      {
+          "Key"       "K"
+          "Command"   "+CloseBook"
+          "Name"      "Close Book"
+      }
+  }
+//  "desert_duo"
+//  {
+//          "MaxPlayers"                    "10"
+//  }
+//  "forest_solo"
+//  {
+//          "MaxPlayers"                    "10"
+//  }
+
+
+}

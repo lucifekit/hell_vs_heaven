@@ -1,0 +1,51 @@
+
+if GameMode == nil then
+    _G.GameMode = class({})
+end
+require('libraries/timers')
+require('internal/gamemode')
+require('internal/events')
+require('settings')
+require('events')
+function GameMode:InitGameMode()
+  GameMode = self
+  GameMode:_InitGameMode()
+  self._tPlayerHeroInitStatus = {}
+  self._tJSInitedStatus = {}
+  self._tPlayerDeservesTPAtSpawn = {}
+  for nPlayerID = 0, DOTA_MAX_PLAYERS do
+    self._tPlayerHeroInitStatus[ nPlayerID ] = false
+    self._tJSInitedStatus[nPlayerID] = false
+    self._tPlayerDeservesTPAtSpawn[ nPlayerID ] = false
+  end
+end
+function GameMode:OnHeroInGame(hero)
+  --DebugPrint("[BAREBONES] Hero spawned in game for first time -- " .. hero:GetUnitName())
+  --------------------
+  
+  
+end
+function GameMode:OnFirstPlayerLoaded()
+  DebugPrint("[BAREBONES] First Player has loaded")
+end
+function GameMode:OnAllPlayersLoaded()
+  DebugPrint("[BAREBONES] All Players have loaded into the game")
+    --chay timer damage system
+    
+    
+end
+function GameMode:OnGameInProgress()
+  DebugPrint("[BAREBONES] The game has officially begun")
+  --GameBegun()
+  
+  
+end
+
+function GameMode:PostLoadPrecache()
+  DebugPrint("[BAREBONES] Performing Post-Load precache")    
+  --PrecacheItemByNameAsync("item_example_item", function(...) end)
+  --PrecacheItemByNameAsync("example_ability", function(...) end)
+  
+  --PrecacheUnitByNameAsync("npc_dota_hero_viper", function(...) end)
+  --PrecacheUnitByNameAsync("npc_dota_hero_enigma", function(...) end)
+end

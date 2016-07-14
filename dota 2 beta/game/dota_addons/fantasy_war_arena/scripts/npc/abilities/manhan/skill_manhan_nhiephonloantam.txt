@@ -1,0 +1,54 @@
+"skill_manhan_nhiephonloantam"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "13207"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET  | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL "
+    "FightRecapLevel"       "1"
+    "RequiredLevel"          "35"
+    "BaseClass"             "ability_lua"
+    "AbilityTextureName"      "warlock_fatal_bonds"
+    "ScriptFile"          "heroes_abilities/manhan/skill_manhan_nhiephonloantam"
+    "MaxLevel"                      "10"
+    "CastFilterRejectCaster" "1"
+    "HotKeyOverride"    "R" 
+    
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags"    ""
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"        "800"
+    "AbilityCastPoint"        "0.03"
+    
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "PreCache"
+    {
+            "particle"                      "particles/edited_particle/ma_nhan/hoalienphanhoa.vpcf"
+            "particle"						"particles/edited_particle/ma_nhan/fx_hoalienphanhoa_start.vpcf"
+            "soundfile" 					"soundevents/game_sounds_heroes/game_sounds_enigma.vsndevts"
+            "soundfile"						"soundevents/game_sounds_custom.vsndevts"
+    }
+    // PARALYZED
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"paralyzed_duration"  "1.7 1.8 2.0 2.1 2.3 2.4 2.6 2.7 2.9 3.0"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"paralyzed_chance"  "39 43 47 51 55 59 63 67 71 75"
+		}
+			"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "3 3 3 4 4 4 5 5 5 6"
+		}
+	}
+    
+  }

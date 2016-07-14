@@ -1,0 +1,58 @@
+"skill_kiemdoan_luckiemtephat"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "14306"   
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    "FightRecapLevel"       "1"
+    "BaseClass"             "ability_lua"
+    "RequiredLevel"          "30"
+    "MaxLevel"				 "5"
+    "LevelsBetweenUpgrades"  "1"
+    
+    "CastFilterRejectCaster" "1"
+    "HotKeyOverride"    "" 
+    "AbilityTextureName"      "keeper_of_the_light_chakra_magic"
+    "ScriptFile"          "heroes_abilities/kiemdoan/skill_kiemdoan_luckiemtephat"
+    // Unit Targeting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags"    ""
+	"precache"
+	
+	{
+		"particle" "particles/units/heroes/hero_morphling/morphling_adaptive_strike.vpcf"
+	}
+	
+	// HEXAGRAM FORCE
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_proc"  "20 30 40 50 60"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"life_steal"  "100"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "53 56 59 62 65"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "561 602 643 684 725"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "662 714 766 818 870"
+		}
+	}
+	
+  }

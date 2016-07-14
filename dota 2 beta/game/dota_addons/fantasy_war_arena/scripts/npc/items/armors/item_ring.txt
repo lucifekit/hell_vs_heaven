@@ -1,0 +1,216 @@
+//============FOCUS RING===============
+	"item_ring_lv_0"
+	{
+		"ID"              "6130"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_ring_of_protection"
+		"ItemCost"            "200"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "20"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "200"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"evade"  "50"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "50"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "50"
+			}
+		}
+	}
+	"item_ring_lv_1"
+	{
+		"ID"              "6131"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_ring_of_protection"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "30"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "300"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"evade"  "70"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "100"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "70"
+			}
+		}
+	}
+	"item_ring_lv_2"
+	{
+		"ID"              "6132"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_ring_of_protection"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "40"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "400"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"evade"  "90"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "150"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "90"
+			}
+		}
+	}
+	"item_ring_lv_3"
+	{
+		"ID"              "6133"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_ring_of_protection"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "50"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "500"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"evade"  "110"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "200"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "110"
+			}
+		}
+	}
+	"item_ring_lv_4"
+	{
+		"ID"              "6134"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_ring_of_protection"
+		"ItemCost"            "0"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "armors"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "60"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_point"  "600"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"evade"  "130"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "250"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "130"
+			}
+		}
+	}
