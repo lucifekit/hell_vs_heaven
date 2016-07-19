@@ -7,7 +7,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_crimson_guard"
-		"ItemCost"            "5000"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -33,17 +35,22 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_poison"  "228"
+				"resist_physical"  "228"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_physical"  "228"
+				"resist_poison"  "228"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "600"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "50"
 			}
 		}
 	}
@@ -55,10 +62,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_crimson_guard"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -84,17 +90,22 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_poison"  "244"
+				"resist_physical"  "244"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_physical"  "244"
+				"resist_poison"  "244"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "650"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "60"
 			}
 		}
 	}
@@ -106,10 +117,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_crimson_guard"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -135,17 +145,22 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_poison"  "260"
+				"resist_physical"  "260"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_physical"  "260"
+				"resist_poison"  "260"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "700"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "70"
 			}
 		}
 	}
@@ -157,10 +172,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_crimson_guard"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -186,17 +200,22 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_poison"  "276"
+				"resist_physical"  "276"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_physical"  "276"
+				"resist_poison"  "276"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "750"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "80"
 			}
 		}
 	}
@@ -208,10 +227,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_crimson_guard"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -237,17 +255,22 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_poison"  "292"
+				"resist_physical"  "292"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_physical"  "292"
+				"resist_poison"  "292"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "800"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "90"
 			}
 		}
 	}
@@ -259,10 +282,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_crimson_guard"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -288,17 +310,22 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_poison"  "308"
+				"resist_physical"  "308"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_physical"  "308"
+				"resist_poison"  "308"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "850"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "100"
 			}
 		}
 	}
@@ -310,10 +337,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_crimson_guard"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -339,17 +365,22 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_poison"  "324"
+				"resist_physical"  "324"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_physical"  "324"
+				"resist_poison"  "324"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "900"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "110"
 			}
 		}
 	}
@@ -361,10 +392,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_crimson_guard"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -390,21 +420,26 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_poison"  "340"
+				"resist_physical"  "340"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_physical"  "340"
+				"resist_poison"  "340"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "950"
 			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "120"
+			}
 		}
 	}
-	"item_suzaku_guard_lv_8"
+	"item_suzaku_guard_max"
 	{
 		"ID"              "6338"
 		"BaseClass"           	  "item_lua"
@@ -412,10 +447,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_crimson_guard"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -441,17 +475,29 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_poison"  "356"
+				"resist_physical"  "356"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_physical"  "356"
+				"resist_poison"  "356"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "1000"
 			}
+		}
+	}
+	"item_recipe_suzaku_guard"
+	{
+		"ID"              "6339"
+		"BaseClass"           "item_datadriven"
+		"ItemRecipe"          "1"
+		"ItemCost"            "0"
+		"ItemResult"          "item_suzaku_guard"
+		"ItemRequirements"
+		{
+			"01"  "item_armor_max;item_fire_bottle_max;item_physical_bottle_max;item_poison_bottle_max;"
 		}
 	}

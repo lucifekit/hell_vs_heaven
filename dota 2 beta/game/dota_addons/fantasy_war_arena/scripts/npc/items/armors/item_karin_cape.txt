@@ -7,7 +7,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_glimmer_cape"
-		"ItemCost"            "5000"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -18,14 +20,11 @@
 			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
-
 				"hp"  "1150"
-
 			}
 			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
-
 				"mp"  "750"
 			}
 			"03"
@@ -36,17 +35,22 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_water"  "228"
+				"resist_fire"  "228"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_lightning"  "228"
+				"resist_water"  "228"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"evade"  "180"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "50"
 			}
 		}
 	}
@@ -58,10 +62,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_glimmer_cape"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -72,16 +75,12 @@
 			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
-
 				"hp"  "1250"
-
 			}
 			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
-
 				"mp"  "800"
-
 			}
 			"03"
 			{
@@ -91,17 +90,22 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_water"  "244"
+				"resist_fire"  "244"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_lightning"  "244"
+				"resist_water"  "244"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"evade"  "190"
+				"evade"  "200"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "60"
 			}
 		}
 	}
@@ -113,10 +117,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_glimmer_cape"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -127,16 +130,12 @@
 			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
-
 				"hp"  "1350"
-
 			}
 			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
-
 				"mp"  "850"
-
 			}
 			"03"
 			{
@@ -146,17 +145,22 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_water"  "260"
+				"resist_fire"  "260"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_lightning"  "260"
+				"resist_water"  "260"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"evade"  "200"
+				"evade"  "220"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "70"
 			}
 		}
 	}
@@ -168,10 +172,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_glimmer_cape"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -182,16 +185,12 @@
 			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
-
 				"hp"  "1450"
-
 			}
 			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
-
 				"mp"  "900"
-
 			}
 			"03"
 			{
@@ -201,17 +200,22 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_water"  "276"
+				"resist_fire"  "276"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_lightning"  "276"
+				"resist_water"  "276"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"evade"  "210"
+				"evade"  "240"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "80"
 			}
 		}
 	}
@@ -223,10 +227,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_glimmer_cape"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -237,16 +240,12 @@
 			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
-
 				"hp"  "1550"
-
 			}
 			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
-
 				"mp"  "950"
-
 			}
 			"03"
 			{
@@ -256,17 +255,22 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_water"  "292"
+				"resist_fire"  "292"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_lightning"  "292"
+				"resist_water"  "292"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"evade"  "220"
+				"evade"  "260"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "90"
 			}
 		}
 	}
@@ -278,10 +282,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_glimmer_cape"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -292,16 +295,12 @@
 			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
-
 				"hp"  "1650"
-
 			}
 			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
-
 				"mp"  "1000"
-
 			}
 			"03"
 			{
@@ -311,17 +310,22 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_water"  "308"
+				"resist_fire"  "308"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_lightning"  "308"
+				"resist_water"  "308"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"evade"  "230"
+				"evade"  "280"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "100"
 			}
 		}
 	}
@@ -333,10 +337,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_glimmer_cape"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -347,16 +350,12 @@
 			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
-
 				"hp"  "1750"
-
 			}
 			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
-
 				"mp"  "1050"
-
 			}
 			"03"
 			{
@@ -366,17 +365,22 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_water"  "324"
+				"resist_fire"  "324"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_lightning"  "324"
+				"resist_water"  "324"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"evade"  "240"
+				"evade"  "300"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "110"
 			}
 		}
 	}
@@ -388,10 +392,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_glimmer_cape"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -402,16 +405,12 @@
 			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
-
 				"hp"  "1850"
-
 			}
 			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
-
 				"mp"  "1100"
-
 			}
 			"03"
 			{
@@ -421,21 +420,26 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_water"  "340"
+				"resist_fire"  "340"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_lightning"  "340"
+				"resist_water"  "340"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"evade"  "250"
+				"evade"  "320"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "120"
 			}
 		}
 	}
-	"item_karin_cape_lv_8"
+	"item_karin_cape_max"
 	{
 		"ID"              "6308"
 		"BaseClass"           	  "item_lua"
@@ -443,10 +447,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_glimmer_cape"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -463,7 +466,6 @@
 			{
 				"var_type"  "FIELD_INTEGER"
 				"mp"  "1150"
-
 			}
 			"03"
 			{
@@ -473,17 +475,29 @@
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_water"  "356"
+				"resist_fire"  "356"
 			}
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"resist_lightning"  "356"
+				"resist_water"  "356"
 			}
 			"06"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"evade"  "260"
+				"evade"  "340"
 			}
+		}
+	}
+	"item_recipe_karin_cape"
+	{
+		"ID"              "6309"
+		"BaseClass"           "item_datadriven"
+		"ItemRecipe"          "1"
+		"ItemCost"            "0"
+		"ItemResult"          "item_karin_cape"
+		"ItemRequirements"
+		{
+			"01"  "item_armor_max;item_physical_bottle_max;item_ice_bottle_max;item_lightning_bottle_max;"
 		}
 	}

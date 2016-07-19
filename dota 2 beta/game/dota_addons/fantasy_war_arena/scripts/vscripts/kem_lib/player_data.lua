@@ -30,7 +30,7 @@ function UpdatePlayerData(playerID)
     
     hero:AddNewModifier(hero,nil,"modifier_game_speed",{})
     
-    
+    hero:CalculateStatBonus()
     local ready = HERO_READY[playerID]
     if ready then
 

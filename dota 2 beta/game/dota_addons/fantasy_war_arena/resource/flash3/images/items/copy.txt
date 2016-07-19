@@ -1,5 +1,6 @@
 for /l i in (start,step,end) do ....
 for /l i in (1,1,8) do copy file.png file_lv_%i.png
-for %f in ("mana_orb","fire_resist","water_resist") do for /l %i in (1,1,2) do copy %f.png %f_lv_%i.png
+for %f in (metal_lance) do for /l %i in (1,1,7) do copy "%f.png" "%f_lv_%i.png"
+for %f in (metal_lance) do copy "%f.png" "%f_max.png"
 "ItemCost"            "0"
 "SideShop" "1"  

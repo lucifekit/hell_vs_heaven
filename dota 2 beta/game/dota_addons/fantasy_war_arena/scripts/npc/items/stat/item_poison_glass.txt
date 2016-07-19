@@ -1,14 +1,13 @@
-//============POISON GLASS===============
-	"item_poison_resist"
+//============POISON BOTTLE===============
+	"item_poison_bottle"
 	{
 		"ID"              "6470"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_poison_resist"
-		"ItemCost" "500"  
-		"HomeShop"			"0"    
+		"AbilityTextureName"      "item_poison_bottle"
+		"ItemCost"            "0"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "stat"
@@ -21,20 +20,24 @@
 				"var_type"  "FIELD_INTEGER"
 				"resist_poison"  "100"
 			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "10"
+			}
 		}
 	}
-	"item_poison_resist_lv_1"
+	"item_poison_bottle_lv_1"
 	{
 		"ID"              "6471"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_poison_resist"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"AbilityTextureName"      "item_poison_bottle"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "stat"
@@ -47,20 +50,24 @@
 				"var_type"  "FIELD_INTEGER"
 				"resist_poison"  "125"
 			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "15"
+			}
 		}
 	}
-	"item_poison_resist_lv_2"
+	"item_poison_bottle_max"
 	{
 		"ID"              "6472"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_poison_resist"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"AbilityTextureName"      "item_poison_bottle"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "stat"

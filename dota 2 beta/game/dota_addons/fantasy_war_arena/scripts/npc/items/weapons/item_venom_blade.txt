@@ -5,9 +5,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_ethereal_blade"
-		"ItemCost"            "5000"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -35,6 +37,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "110"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "15"
+			}
 		}
 	}
 	"item_venom_blade_lv_1"
@@ -43,12 +50,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_ethereal_blade"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -76,6 +82,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "130"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "20"
+			}
 		}
 	}
 	"item_venom_blade_lv_2"
@@ -84,12 +95,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_ethereal_blade"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -117,6 +127,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "150"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "25"
+			}
 		}
 	}
 	"item_venom_blade_lv_3"
@@ -125,12 +140,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_ethereal_blade"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -158,6 +172,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "170"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "30"
+			}
 		}
 	}
 	"item_venom_blade_lv_4"
@@ -166,12 +185,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_ethereal_blade"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -199,6 +217,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "190"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "35"
+			}
 		}
 	}
 	"item_venom_blade_lv_5"
@@ -207,12 +230,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_ethereal_blade"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -240,6 +262,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "210"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "40"
+			}
 		}
 	}
 	"item_venom_blade_lv_6"
@@ -248,12 +275,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_ethereal_blade"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -281,6 +307,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "230"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "45"
+			}
 		}
 	}
 	"item_venom_blade_lv_7"
@@ -289,12 +320,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_ethereal_blade"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -322,20 +352,24 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "250"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "50"
+			}
 		}
 	}
-	"item_venom_blade_lv_8"
+	"item_venom_blade_max"
 	{
 		"ID"              "6068"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_ethereal_blade"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -363,5 +397,17 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "270"
 			}
+		}
+	}
+	"item_recipe_venom_blade"
+	{
+		"ID"              "6069"
+		"BaseClass"           "item_datadriven"
+		"ItemRecipe"          "1"
+		"ItemCost"            "0"
+		"ItemResult"          "item_venom_blade"
+		"ItemRequirements"
+		{
+			"01"  "item_speed_band_max;item_glove_max;item_poison_orb_max;"
 		}
 	}

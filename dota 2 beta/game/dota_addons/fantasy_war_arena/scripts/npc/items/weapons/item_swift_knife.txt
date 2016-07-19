@@ -5,11 +5,14 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_butterfly"
-		"ItemCost"            "5000"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
 		"ItemInitialCharges" "0"
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
@@ -34,6 +37,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "110"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "15"
+			}
 		}
 	}
 	"item_swift_knife_lv_1"
@@ -42,14 +50,14 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_butterfly"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
 		"ItemInitialCharges" "0"
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
@@ -74,6 +82,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "135"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "20"
+			}
 		}
 	}
 	"item_swift_knife_lv_2"
@@ -82,14 +95,14 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_butterfly"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
 		"ItemInitialCharges" "0"
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
@@ -114,6 +127,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "160"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "25"
+			}
 		}
 	}
 	"item_swift_knife_lv_3"
@@ -122,14 +140,14 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_butterfly"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
 		"ItemInitialCharges" "0"
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
@@ -154,6 +172,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "185"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "30"
+			}
 		}
 	}
 	"item_swift_knife_lv_4"
@@ -162,14 +185,14 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_butterfly"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
 		"ItemInitialCharges" "0"
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
@@ -194,6 +217,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "210"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "35"
+			}
 		}
 	}
 	"item_swift_knife_lv_5"
@@ -202,14 +230,14 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_butterfly"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
 		"ItemInitialCharges" "0"
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
@@ -234,6 +262,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "235"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "40"
+			}
 		}
 	}
 	"item_swift_knife_lv_6"
@@ -242,14 +275,14 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_butterfly"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
 		"ItemInitialCharges" "0"
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
@@ -274,6 +307,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "260"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "45"
+			}
 		}
 	}
 	"item_swift_knife_lv_7"
@@ -282,14 +320,14 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_butterfly"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
 		"ItemInitialCharges" "0"
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
@@ -314,22 +352,27 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "285"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "50"
+			}
 		}
 	}
-	"item_swift_knife_lv_8"
+	"item_swift_knife_max"
 	{
 		"ID"              "6018"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_butterfly"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
 		"ItemInitialCharges" "0"
 		"ItemDisplayCharges" "0"
 		"AbilitySpecial"
@@ -354,5 +397,17 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "310"
 			}
+		}
+	}
+	"item_recipe_swift_knife"
+	{
+		"ID"              "6019"
+		"BaseClass"           "item_datadriven"
+		"ItemRecipe"          "1"
+		"ItemCost"            "0"
+		"ItemResult"          "item_swift_knife"
+		"ItemRequirements"
+		{
+			"01"  "item_speed_band_max;item_glove_max;item_poison_orb_max;"
 		}
 	}

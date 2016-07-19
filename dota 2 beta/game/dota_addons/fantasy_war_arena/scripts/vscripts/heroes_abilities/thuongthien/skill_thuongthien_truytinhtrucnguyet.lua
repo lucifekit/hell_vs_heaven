@@ -81,13 +81,13 @@ local max_target = 3
         EffectName      = SETTING_SPEAR_EFFECT,
         Ability         = self,
         vSpawnOrigin    = caster_position-angleBetweenCasterAndTarget*50,
-        fDistance     = 200,
+        fDistance     = 250,
         Source        = caster,
         bHasFrontalCone   = true,
         bReplaceExisting  = false,
         fStartRadius    = 120,
         fEndRadius      = 120,
-        fExpireTime     = 0.3,
+        fExpireTime     = 1,
         GroundBehavior = PROJECTILES_NOTHING,
         UnitBehavior  = PROJECTILES_NOTHING,
         vVelocity     = angleBetweenCasterAndTarget*800,--angleBetweenCasterAndTarget,
@@ -102,7 +102,7 @@ local max_target = 3
         effect_time = maim_time,
         effect_chance = chance_to_maim*100,
         OnUnitHit = function(proj,unit)
-           --kemPrint("hit")
+           kemPrint("hit")
            if(proj.targetAllow>0) then
              proj.targetAllow = proj.targetAllow-1
              --damage

@@ -7,7 +7,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_assault"
-		"ItemCost"            "5000"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -30,6 +32,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"resist"  "200"
 			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "50"
+			}
 		}
 	}
 	"item_kirin_cuirass_lv_1"
@@ -40,10 +47,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_assault"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -66,6 +72,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"resist"  "212"
 			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "60"
+			}
 		}
 	}
 	"item_kirin_cuirass_lv_2"
@@ -76,10 +87,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_assault"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -102,6 +112,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"resist"  "224"
 			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "70"
+			}
 		}
 	}
 	"item_kirin_cuirass_lv_3"
@@ -112,10 +127,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_assault"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -138,6 +152,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"resist"  "236"
 			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "80"
+			}
 		}
 	}
 	"item_kirin_cuirass_lv_4"
@@ -148,10 +167,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_assault"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -174,6 +192,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"resist"  "248"
 			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "90"
+			}
 		}
 	}
 	"item_kirin_cuirass_lv_5"
@@ -184,10 +207,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_assault"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -210,6 +232,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"resist"  "260"
 			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "100"
+			}
 		}
 	}
 	"item_kirin_cuirass_lv_6"
@@ -220,10 +247,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_assault"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -246,6 +272,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"resist"  "272"
 			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "110"
+			}
 		}
 	}
 	"item_kirin_cuirass_lv_7"
@@ -256,10 +287,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_assault"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -282,9 +312,14 @@
 				"var_type"  "FIELD_INTEGER"
 				"resist"  "284"
 			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "120"
+			}
 		}
 	}
-	"item_kirin_cuirass_lv_8"
+	"item_kirin_cuirass_max"
 	{
 		"ID"              "6328"
 		"BaseClass"           	  "item_lua"
@@ -292,10 +327,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_assault"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -318,5 +352,17 @@
 				"var_type"  "FIELD_INTEGER"
 				"resist"  "296"
 			}
+		}
+	}
+	"item_recipe_kirin_cuirass"
+	{
+		"ID"              "6329"
+		"BaseClass"           "item_datadriven"
+		"ItemRecipe"          "1"
+		"ItemCost"            "0"
+		"ItemResult"          "item_kirin_cuirass"
+		"ItemRequirements"
+		{
+			"01"  "item_armor_max;item_armor_max;item_armor_max;"
 		}
 	}

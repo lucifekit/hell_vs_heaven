@@ -22,7 +22,7 @@ function modifier_manhan_madaothonthan:OnIntervalThink()
 end
 function modifier_manhan_madaothonthan:OnCreated( kv )
 
-  kemPrint("Created ma dao thon than"..self:GetParent():GetUnitName())
+  --kemPrint("Created ma dao thon than"..self:GetParent():GetUnitName())
   if(IsServer())then
     self.move_speed = 20+self:GetAbility():GetLevel()*8
     self.paralyze_chance = 3+self:GetAbility():GetLevel()

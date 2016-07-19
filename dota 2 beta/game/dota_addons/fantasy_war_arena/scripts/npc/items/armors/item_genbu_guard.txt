@@ -1,4 +1,4 @@
-//============GENBU GUARD===============
+//============GENBU ARMORS===============
 	"item_genbu_guard"
 	{
 		"ID"              "6310"
@@ -7,7 +7,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_shivas_guard"
-		"ItemCost"            "5000"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -45,6 +47,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"critical_chance"  "75"
 			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "50"
+			}
 		}
 	}
 	"item_genbu_guard_lv_1"
@@ -55,10 +62,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_shivas_guard"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -96,6 +102,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"critical_chance"  "80"
 			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "60"
+			}
 		}
 	}
 	"item_genbu_guard_lv_2"
@@ -106,10 +117,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_shivas_guard"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -147,6 +157,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"critical_chance"  "85"
 			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "70"
+			}
 		}
 	}
 	"item_genbu_guard_lv_3"
@@ -157,10 +172,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_shivas_guard"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -198,6 +212,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"critical_chance"  "90"
 			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "80"
+			}
 		}
 	}
 	"item_genbu_guard_lv_4"
@@ -208,10 +227,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_shivas_guard"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -249,6 +267,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"critical_chance"  "95"
 			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "90"
+			}
 		}
 	}
 	"item_genbu_guard_lv_5"
@@ -259,10 +282,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_shivas_guard"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -300,6 +322,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"critical_chance"  "100"
 			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "100"
+			}
 		}
 	}
 	"item_genbu_guard_lv_6"
@@ -310,10 +337,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_shivas_guard"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -351,6 +377,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"critical_chance"  "105"
 			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "110"
+			}
 		}
 	}
 	"item_genbu_guard_lv_7"
@@ -361,10 +392,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_shivas_guard"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -402,9 +432,14 @@
 				"var_type"  "FIELD_INTEGER"
 				"critical_chance"  "110"
 			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "120"
+			}
 		}
 	}
-	"item_genbu_guard_lv_8"
+	"item_genbu_guard_max"
 	{
 		"ID"              "6318"
 		"BaseClass"           	  "item_lua"
@@ -412,10 +447,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_shivas_guard"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -453,5 +487,17 @@
 				"var_type"  "FIELD_INTEGER"
 				"critical_chance"  "115"
 			}
+		}
+	}
+	"item_recipe_genbu_guard"
+	{
+		"ID"              "6319"
+		"BaseClass"           "item_datadriven"
+		"ItemRecipe"          "1"
+		"ItemCost"            "0"
+		"ItemResult"          "item_genbu_guard"
+		"ItemRequirements"
+		{
+			"01"  "item_armor_max;item_physical_bottle_max;item_poison_bottle_max;item_lightning_bottle_max;"
 		}
 	}

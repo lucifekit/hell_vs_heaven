@@ -1,14 +1,13 @@
-//============FLAME GLASS===============
-	"item_fire_resist"
+//============FLAME BOTTLE===============
+	"item_fire_bottle"
 	{
 		"ID"              "6480"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_fire_resist"
-		"ItemCost" "500"  
-		"HomeShop"			"0"    
+		"AbilityTextureName"      "item_fire_bottle"
+		"ItemCost"            "0"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "stat"
@@ -21,20 +20,24 @@
 				"var_type"  "FIELD_INTEGER"
 				"resist_fire"  "100"
 			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "10"
+			}
 		}
 	}
-	"item_fire_resist_lv_1"
+	"item_fire_bottle_lv_1"
 	{
 		"ID"              "6481"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_fire_resist"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"AbilityTextureName"      "item_fire_bottle_lv_1"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "stat"
@@ -47,20 +50,24 @@
 				"var_type"  "FIELD_INTEGER"
 				"resist_fire"  "125"
 			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "15"
+			}
 		}
 	}
-	"item_fire_resist_lv_2"
+	"item_fire_bottle_max"
 	{
 		"ID"              "6482"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_fire_resist"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"AbilityTextureName"      "item_fire_bottle_max"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "stat"

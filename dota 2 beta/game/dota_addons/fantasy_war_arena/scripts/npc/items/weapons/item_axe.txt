@@ -7,7 +7,7 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
 		"AbilityTextureName"      "item_quelling_blade"
-		"ItemCost"            "100"
+		"ItemCost"            "0"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -25,6 +25,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "100"
 			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "5"
+			}
 		}
 	}
 	"item_axe_lv_1"
@@ -35,10 +40,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
 		"AbilityTextureName"      "item_quelling_blade"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -56,6 +60,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "200"
 			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "10"
+			}
 		}
 	}
 	"item_axe_lv_2"
@@ -66,10 +75,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
 		"AbilityTextureName"      "item_quelling_blade"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -87,6 +95,11 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "300"
 			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "15"
+			}
 		}
 	}
 	"item_axe_lv_3"
@@ -97,10 +110,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
 		"AbilityTextureName"      "item_quelling_blade"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -118,9 +130,14 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "400"
 			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "20"
+			}
 		}
 	}
-	"item_axe_lv_4"
+	"item_axe_max"
 	{
 		"ID"              "6094"
 		"BaseClass"           	  "item_lua"
@@ -128,10 +145,9 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
 		"AbilityTextureName"      "item_quelling_blade"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"

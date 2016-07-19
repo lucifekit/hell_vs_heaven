@@ -47,8 +47,8 @@ function modifier_mango:OnCreated(kv)
     local caster = self:GetCaster()
     
     local time_between_tick = 0.5
-    local hp_per_tick = caster:GetLevel()+SETTING_REGEN
-    local mp_per_tick = caster:GetLevel()+SETTING_REGEN
+    local hp_per_tick = SETTING_REGEN
+    local mp_per_tick = SETTING_REGEN/2
     if(caster.hpregen_multi)then
       time_between_tick = time_between_tick/(1+caster.hpregen_multi)
       hp_per_tick = hp_per_tick*(1+caster.hpregen_multi)
@@ -76,8 +76,8 @@ function modifier_mango:OnRefresh(kv)
     local caster = self:GetCaster()
     self.target = caster
     local time_between_tick = 0.5
-    local hp_per_tick = caster:GetLevel()+SETTING_REGEN
-    local mp_per_tick = caster:GetLevel()+SETTING_REGEN
+    local hp_per_tick = SETTING_REGEN
+    local mp_per_tick = SETTING_REGEN/2
     if(caster.hpregen_multi)then
       time_between_tick = time_between_tick/(1+caster.hpregen_multi)
       hp_per_tick = hp_per_tick*(1+caster.hpregen_multi)

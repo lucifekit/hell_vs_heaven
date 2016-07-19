@@ -143,6 +143,8 @@ function GameBegun()
   --kemPrint("GameBegun"..DAMAGE_TYPE_MAGICAL)
   --kemPrint("GameBegun"..DAMAGE_TYPE_PURE)
   --kemPrint("GameBegun"..DAMAGE_TYPE_ALL)
+  GameRules:SendCustomMessage("<font color='#ff2222'>Tips:</font> Buy a mango for regen in early game.", 0, 0)
+  GameRules:SendCustomMessage("<font color='#ff2222'>Tips:</font> Destroy tower at neutral camp to level up faster.", 1, 0)
   Battle_Step_0_Wait()
   
   for _,maps_1_point in ipairs(Entities:FindAllByName("maps_1")) do

@@ -86,48 +86,54 @@ function Battle_Step_1_Prepare()
     end
   end
   if(team_1_count>0 and team_2_count>0)then
-    local teleport_center = Entities:FindAllByName("battle_prepare")[1]:GetAbsOrigin()
-    for i = 0 , 9 do
-      if(HERO_OF_PLAYER[i])then
-        local tempHero = HERO_OF_PLAYER[i]
-        tempHero:AddNewModifier(nil,nil,"modifier_prepare",{duration=75})
-        tempHero:SetOrigin(teleport_center)
-        FindClearSpaceForUnit(tempHero,teleport_center,true)
-      end
-      
-      
-    end
-    kemPrint("Battle 99")
-    CurrentQuest = SpawnEntityFromTableSynchronous( "quest", { name = "PrepareBattle", title = "#prepare_battle" } )
-    CurrentQuest.EndTime = 60
-    local subQuest = SpawnEntityFromTableSynchronous( "subquest_base", { 
-             show_progress_bar = true, 
-             progress_bar_hue_shift = -29 
-           } )
-           
-    CurrentQuest:AddSubquest( subQuest )
-    -- text on the quest timer at start
-    CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, 60 )
-    CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, 60 )
-    
-    -- value on the bar
-    subQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, 60 )
-    subQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, 60 )
-    Timers:CreateTimer(1, function()
-        CurrentQuest.EndTime = CurrentQuest.EndTime - 1
-        CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, CurrentQuest.EndTime )
-        subQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, CurrentQuest.EndTime )
-    
-        -- Finish the quest when the time is up  
-        if CurrentQuest.EndTime == 0 then 
-            EmitGlobalSound("Tutorial.Quest.complete_01") -- Part of game_sounds_music_tutorial
-            CurrentQuest:CompleteQuest()
-            Battle_Step_2_Battle()
-            return
-        else
-            return 1 -- Call again every second
+    local teleport_entities = Entities:FindAllByName("battle_prepare")
+    if(#teleport_entities>0)then
+        local teleport_center = teleport_entities[1]:GetAbsOrigin()
+        for i = 0 , 9 do
+          if(HERO_OF_PLAYER[i])then
+            local tempHero = HERO_OF_PLAYER[i]
+            tempHero:RemoveModifierByName("modifier_khinhcong_jumping_lua")
+            tempHero:AddNewModifier(tempHero,nil,"modifier_prepare",{duration=75})
+            tempHero:SetOrigin(teleport_center)
+            FindClearSpaceForUnit(tempHero,teleport_center,true)
+          end
+        
         end
-    end)
+        kemPrint("Battle 99")
+        CurrentQuest = SpawnEntityFromTableSynchronous( "quest", { name = "PrepareBattle", title = "#prepare_battle" } )
+        CurrentQuest.EndTime = 60
+        local subQuest = SpawnEntityFromTableSynchronous( "subquest_base", { 
+                 show_progress_bar = true, 
+                 progress_bar_hue_shift = -29 
+               } )
+               
+        CurrentQuest:AddSubquest( subQuest )
+        -- text on the quest timer at start
+        CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, 60 )
+        CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, 60 )
+        
+        -- value on the bar
+        subQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, 60 )
+        subQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, 60 )
+        Timers:CreateTimer(1, function()
+            CurrentQuest.EndTime = CurrentQuest.EndTime - 1
+            CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, CurrentQuest.EndTime )
+            subQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, CurrentQuest.EndTime )
+        
+            -- Finish the quest when the time is up  
+            if CurrentQuest.EndTime == 0 then 
+                EmitGlobalSound("Tutorial.Quest.complete_01") -- Part of game_sounds_music_tutorial
+                CurrentQuest:CompleteQuest()
+                Battle_Step_2_Battle()
+                return
+            else
+                return 1 -- Call again every second
+            end
+        end)
+    else
+        kemPrint("Cannot find battle prepare entities")
+    end
+    
   else
     GameRules:SendCustomMessage("Not enough players, battle cancel", 0, 0)
     GameRules:SendCustomMessage("Not enough players, battle cancel", 1, 0)

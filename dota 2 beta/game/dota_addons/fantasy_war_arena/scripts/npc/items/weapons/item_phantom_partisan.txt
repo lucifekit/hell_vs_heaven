@@ -1,13 +1,15 @@
-//============PHANTOM PARTISAN===============
-	"item_phantom_partisan"
+//============METAL LANCE===============
+	"item_metal_lance"
 	{
 		"ID"              "6040"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_javelin"
-		"ItemCost"            "5000"
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_dragon_lance"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -28,27 +30,31 @@
 			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"physic_amplify"  "75"
+				"physical_amplify"  "75"
 			}
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "650"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "15"
+			}
 		}
 	}
-	"item_phantom_partisan_lv_1"
+	"item_metal_lance_lv_1"
 	{
 		"ID"              "6041"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_javelin"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_dragon_lance"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -69,27 +75,31 @@
 			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"physic_amplify"  "88"
+				"physical_amplify"  "88"
 			}
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "830"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "20"
+			}
 		}
 	}
-	"item_phantom_partisan_lv_2"
+	"item_metal_lance_lv_2"
 	{
 		"ID"              "6042"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_javelin"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_dragon_lance"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -110,27 +120,31 @@
 			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"physic_amplify"  "101"
+				"physical_amplify"  "101"
 			}
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "1010"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "25"
+			}
 		}
 	}
-	"item_phantom_partisan_lv_3"
+	"item_metal_lance_lv_3"
 	{
 		"ID"              "6043"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_javelin"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_dragon_lance"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -151,27 +165,31 @@
 			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"physic_amplify"  "114"
+				"physical_amplify"  "114"
 			}
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "1190"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "30"
+			}
 		}
 	}
-	"item_phantom_partisan_lv_4"
+	"item_metal_lance_lv_4"
 	{
 		"ID"              "6044"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_javelin"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_dragon_lance"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -192,27 +210,31 @@
 			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"physic_amplify"  "127"
+				"physical_amplify"  "127"
 			}
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "1370"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "35"
+			}
 		}
 	}
-	"item_phantom_partisan_lv_5"
+	"item_metal_lance_lv_5"
 	{
 		"ID"              "6045"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_javelin"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_dragon_lance"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -233,27 +255,31 @@
 			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"physic_amplify"  "140"
+				"physical_amplify"  "140"
 			}
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "1550"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "40"
+			}
 		}
 	}
-	"item_phantom_partisan_lv_6"
+	"item_metal_lance_lv_6"
 	{
 		"ID"              "6046"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_javelin"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_dragon_lance"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -274,27 +300,31 @@
 			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"physic_amplify"  "153"
+				"physical_amplify"  "153"
 			}
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "1730"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "45"
+			}
 		}
 	}
-	"item_phantom_partisan_lv_7"
+	"item_metal_lance_lv_7"
 	{
 		"ID"              "6047"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_javelin"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_dragon_lance"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -315,27 +345,31 @@
 			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"physic_amplify"  "166"
+				"physical_amplify"  "166"
 			}
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "1910"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "50"
+			}
 		}
 	}
-	"item_phantom_partisan_lv_8"
+	"item_metal_lance_max"
 	{
 		"ID"              "6048"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_javelin"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemQuality"				"rare"
+		"AbilityTextureName"      "item_dragon_lance"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -356,12 +390,24 @@
 			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"physic_amplify"  "179"
+				"physical_amplify"  "179"
 			}
 			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "2090"
 			}
+		}
+	}
+	"item_recipe_metal_lance"
+	{
+		"ID"              "6049"
+		"BaseClass"           "item_datadriven"
+		"ItemRecipe"          "1"
+		"ItemCost"            "0"
+		"ItemResult"          "item_metal_lance"
+		"ItemRequirements"
+		{
+			"01"  "item_health_orb_max;item_axe_max;item_strength_belt_max;"
 		}
 	}

@@ -5,9 +5,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_monkey_king_bar"
-		"ItemCost"            "5000"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -15,26 +17,30 @@
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
-			
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"atk_speed"  "15"
 			}
-			"03"
+			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "375"
 			}
-			"04"
+			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"physic_amplify"  "75"
 			}
-			"05"
+			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "650"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "15"
 			}
 		}
 	}
@@ -44,12 +50,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_monkey_king_bar"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -57,26 +62,30 @@
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
-			
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"atk_speed"  "16.5"
 			}
-			"03"
+			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "405"
 			}
-			"04"
+			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"physic_amplify"  "88"
 			}
-			"05"
+			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "830"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "20"
 			}
 		}
 	}
@@ -86,12 +95,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_monkey_king_bar"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -99,26 +107,30 @@
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
-			
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"atk_speed"  "18"
 			}
-			"03"
+			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "435"
 			}
-			"04"
+			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"physic_amplify"  "101"
 			}
-			"05"
+			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "1010"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "25"
 			}
 		}
 	}
@@ -128,12 +140,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_monkey_king_bar"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -141,26 +152,30 @@
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
-			
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"atk_speed"  "19.5"
 			}
-			"03"
+			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "465"
 			}
-			"04"
+			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"physic_amplify"  "114"
 			}
-			"05"
+			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "1190"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "30"
 			}
 		}
 	}
@@ -170,12 +185,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_monkey_king_bar"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -183,26 +197,30 @@
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
-			
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"atk_speed"  "21"
 			}
-			"03"
+			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "495"
 			}
-			"04"
+			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"physic_amplify"  "127"
 			}
-			"05"
+			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "1370"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "35"
 			}
 		}
 	}
@@ -212,12 +230,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_monkey_king_bar"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -225,25 +242,30 @@
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"atk_speed"  "22.5"
 			}
-			"03"
+			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "525"
 			}
-			"04"
+			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"physic_amplify"  "140"
 			}
-			"05"
+			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "1550"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "40"
 			}
 		}
 	}
@@ -253,12 +275,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_monkey_king_bar"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -266,26 +287,30 @@
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
-			
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"atk_speed"  "24"
 			}
-			"03"
+			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "555"
 			}
-			"04"
+			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"physic_amplify"  "153"
 			}
-			"05"
+			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "1730"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "45"
 			}
 		}
 	}
@@ -295,12 +320,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_monkey_king_bar"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -308,41 +332,44 @@
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
-			
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"atk_speed"  "25.5"
 			}
-			"03"
+			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "585"
 			}
-			"04"
+			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"physic_amplify"  "166"
 			}
-			"05"
+			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "1910"
 			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "50"
+			}
 		}
 	}
-	"item_wukong_bar_lv_8"
+	"item_wukong_bar_max"
 	{
 		"ID"              "6028"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_monkey_king_bar"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -350,26 +377,37 @@
 		"ItemDisplayCharges" "0"
 		"AbilitySpecial"
 		{
-			
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"atk_speed"  "27"
 			}
-			"03"
+			"02"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"accuracy_point"  "615"
 			}
-			"04"
+			"03"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"physic_amplify"  "179"
 			}
-			"05"
+			"04"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"weapon_physical_damage"  "2090"
 			}
+		}
+	}
+	"item_recipe_wukong_bar"
+	{
+		"ID"              "6029"
+		"BaseClass"           "item_datadriven"
+		"ItemRecipe"          "1"
+		"ItemCost"            "0"
+		"ItemResult"          "item_wukong_bar"
+		"ItemRequirements"
+		{
+			"01"  "item_speed_band_max;item_axe_max;item_strength_belt_max;"
 		}
 	}

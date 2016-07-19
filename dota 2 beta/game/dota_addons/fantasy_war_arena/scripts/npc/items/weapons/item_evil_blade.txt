@@ -5,9 +5,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_demon_edge"
-		"ItemCost"            "5000"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -15,11 +17,15 @@
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
-			
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"hp"  "80"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "110"
 			}
 			"03"
 			{
@@ -34,7 +40,7 @@
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"weapon_poison_damage"  "110"
+				"exp"  "15"
 			}
 		}
 	}
@@ -44,12 +50,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_demon_edge"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -57,10 +62,15 @@
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"hp"  "105"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "135"
 			}
 			"03"
 			{
@@ -75,7 +85,7 @@
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"weapon_poison_damage"  "135"
+				"exp"  "20"
 			}
 		}
 	}
@@ -85,12 +95,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_demon_edge"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -98,10 +107,15 @@
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"hp"  "130"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "160"
 			}
 			"03"
 			{
@@ -116,7 +130,7 @@
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"weapon_poison_damage"  "160"
+				"exp"  "25"
 			}
 		}
 	}
@@ -126,12 +140,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_demon_edge"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -139,10 +152,15 @@
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"hp"  "155"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "185"
 			}
 			"03"
 			{
@@ -157,7 +175,7 @@
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"weapon_poison_damage"  "185"
+				"exp"  "30"
 			}
 		}
 	}
@@ -167,12 +185,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_demon_edge"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -180,11 +197,15 @@
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
-			
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"hp"  "180"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "210"
 			}
 			"03"
 			{
@@ -199,7 +220,7 @@
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"weapon_poison_damage"  "210"
+				"exp"  "35"
 			}
 		}
 	}
@@ -209,12 +230,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_demon_edge"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -222,11 +242,15 @@
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
-			
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"hp"  "205"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "235"
 			}
 			"03"
 			{
@@ -241,7 +265,7 @@
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"weapon_poison_damage"  "235"
+				"exp"  "40"
 			}
 		}
 	}
@@ -251,12 +275,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_demon_edge"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -264,11 +287,15 @@
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
-			
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"hp"  "230"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "260"
 			}
 			"03"
 			{
@@ -283,7 +310,7 @@
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"weapon_poison_damage"  "260"
+				"exp"  "45"
 			}
 		}
 	}
@@ -293,12 +320,11 @@
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_demon_edge"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -306,11 +332,15 @@
 		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
-			
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"hp"  "255"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "285"
 			}
 			"03"
 			{
@@ -325,22 +355,21 @@
 			"05"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"weapon_poison_damage"  "285"
+				"exp"  "50"
 			}
 		}
 	}
-	"item_evil_blade_lv_8"
+	"item_evil_blade_max"
 	{
 		"ID"              "6038"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
+		"ItemQuality"				"rare"
 		"AbilityTextureName"      "item_demon_edge"
-		"ItemCost" "0"
-		"SideShop"			"1"
-		"SecretShop"			"1"  
-		"HomeShop"			"0"    
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -348,11 +377,15 @@
 		"ItemDisplayCharges" "0"
 		"AbilitySpecial"
 		{
-			
-			"02"
+			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"hp"  "280"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "310"
 			}
 			"03"
 			{
@@ -364,10 +397,17 @@
 				"var_type"  "FIELD_INTEGER"
 				"physic_amplify"  "179"
 			}
-			"05"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"weapon_poison_damage"  "310"
-			}
+		}
+	}
+	"item_recipe_evil_blade"
+	{
+		"ID"              "6039"
+		"BaseClass"           "item_datadriven"
+		"ItemRecipe"          "1"
+		"ItemCost"            "0"
+		"ItemResult"          "item_evil_blade"
+		"ItemRequirements"
+		{
+			"01"  "item_ring_max;item_glove_max;item_poison_orb_max;"
 		}
 	}
