@@ -343,6 +343,13 @@ function CreateDataForPlayer(playerID)
   hero.element = heroData["element"] or ELEMENT_NONE
 
   --kemPrint("Element "..hero.element)
+  local abilityCount  = hero:GetAbilityCount()
+  for i=0,abilityCount-1 do
+    local tempAbi = hero:GetAbilityByIndex(i)
+    if(tempAbi)then
+      print("Skill slot "..i.." : "..tempAbi:GetAbilityName())
+    end
+  end
   if(heroData["effect_1"]) then
     --kemPrint("adding "..heroData["effect_1"])
 

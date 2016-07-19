@@ -1,0 +1,77 @@
+//============STRENGTH BELT===============
+	"item_strength_belt"
+	{
+		"ID"              "6430"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_belt_of_strength"
+		"ItemCost" "500"  
+		"HomeShop"			"0"    
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "stat"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_physical_damage"  "200"
+			}
+		}
+	}
+	"item_strength_belt_lv_1"
+	{
+		"ID"              "6431"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_belt_of_strength"
+		"ItemCost" "0"
+		"SideShop"			"1"
+		"SecretShop"			"1"  
+		"HomeShop"			"0"    
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "stat"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_physical_damage"  "300"
+			}
+		}
+	}
+	"item_strength_belt_lv_2"
+	{
+		"ID"              "6432"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_belt_of_strength"
+		"ItemCost" "0"
+		"SideShop"			"1"
+		"SecretShop"			"1"  
+		"HomeShop"			"0"    
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "stat"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_physical_damage"  "400"
+			}
+		}
+	}

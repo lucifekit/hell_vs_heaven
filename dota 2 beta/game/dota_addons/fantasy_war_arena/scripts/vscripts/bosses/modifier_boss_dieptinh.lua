@@ -18,7 +18,7 @@ function modifier_boss_dieptinh:DeclareFunctions()
 end
 
 function modifier_boss_dieptinh:GetModifierPreAttack_BonusDamage()
-  return -1000
+  return -10000
 end
 
 SETTING_BUFF_EFFECT = "modifier_boss_dieptinh_speed"
@@ -551,7 +551,7 @@ function modifier_boss_dieptinh:OnCreated(kv)
   for i = 0,12 do
     local tempAbility = self:GetParent():GetAbilityByIndex(i)
     if(tempAbility)then
-      kemPrint("Ability : "..tempAbility:GetAbilityName())
+      --kemPrint("Ability : "..tempAbility:GetAbilityName())
       tempAbility:SetLevel(1)
     end
   end
@@ -560,5 +560,8 @@ function modifier_boss_dieptinh:OnCreated(kv)
 end
 
 function modifier_boss_dieptinh:OnRefresh(kv)
-  kemPrint("BOSS DIEP TINH ONUPGRADED")
+  if(IsServer())then
+    kemPrint("BOSS DIEP TINH ONUPGRADED")
+  end
+  
 end

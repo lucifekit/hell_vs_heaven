@@ -1,0 +1,10 @@
+"npc_dota_hero_doanchi"
+  {
+    "AbilityLayout"     "6"
+    "override_hero"     "npc_dota_hero_invoker"
+    "Ability1"  "skill_test"
+    "Ability13"  ""
+    "Ability14"  ""
+    "Ability15"  ""
+    "Ability16"  ""
+  }

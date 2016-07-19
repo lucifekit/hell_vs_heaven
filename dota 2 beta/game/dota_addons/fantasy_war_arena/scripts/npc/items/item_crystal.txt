@@ -1,0 +1,18 @@
+"item_crystal"
+  {
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"7000" 
+	"Model"							"models/props_gameplay/rune_doubledamage01.vmdl"
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"item_crystal"
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"5000"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"crystal"
+	"SideShop"						"1"
+	"SecretShop"						"1"
+  }
+  

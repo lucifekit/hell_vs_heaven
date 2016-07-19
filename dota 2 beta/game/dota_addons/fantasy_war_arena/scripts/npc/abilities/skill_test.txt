@@ -1,0 +1,11 @@
+"skill_test"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"  "45989"   
+    "BaseClass"             "ability_datadriven"
+    "RequiredLevel"          "1"
+    "MaxLevel"          "1"
+    "AbilityTextureName"      "rubick_telekinesis"
+    
+  }

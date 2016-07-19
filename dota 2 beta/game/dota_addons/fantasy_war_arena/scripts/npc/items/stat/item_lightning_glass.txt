@@ -1,0 +1,77 @@
+//============LIGHTNING GLASS===============
+	"item_lightning_resist"
+	{
+		"ID"              "6500"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_lightning_resist"
+		"ItemCost" "500"  
+		"HomeShop"			"0"    
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "stat"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_lightning"  "100"
+			}
+		}
+	}
+	"item_lightning_resist_lv_1"
+	{
+		"ID"              "6501"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_lightning_resist"
+		"ItemCost" "0"
+		"SideShop"			"1"
+		"SecretShop"			"1"  
+		"HomeShop"			"0"    
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "stat"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_lightning"  "125"
+			}
+		}
+	}
+	"item_lightning_resist_lv_2"
+	{
+		"ID"              "6502"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_lightning_resist"
+		"ItemCost" "0"
+		"SideShop"			"1"
+		"SecretShop"			"1"  
+		"HomeShop"			"0"    
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "stat"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_lightning"  "150"
+			}
+		}
+	}

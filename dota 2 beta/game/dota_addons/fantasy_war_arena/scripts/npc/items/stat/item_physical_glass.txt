@@ -1,0 +1,77 @@
+//============PHYSICAL GLASS===============
+	"item_physical_resist"
+	{
+		"ID"              "6460"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_physical_resist"
+		"ItemCost" "500"  
+		"HomeShop"			"0"    
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "stat"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_physical"  "100"
+			}
+		}
+	}
+	"item_physical_resist_lv_1"
+	{
+		"ID"              "6461"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_physical_resist"
+		"ItemCost" "0"
+		"SideShop"			"1"
+		"SecretShop"			"1"  
+		"HomeShop"			"0"    
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "stat"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_physical"  "125"
+			}
+		}
+	}
+	"item_physical_resist_lv_2"
+	{
+		"ID"              "6462"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_physical_resist"
+		"ItemCost" "0"
+		"SideShop"			"1"
+		"SecretShop"			"1"  
+		"HomeShop"			"0"    
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "stat"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_physical"  "150"
+			}
+		}
+	}

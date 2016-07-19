@@ -5,7 +5,23 @@
     flow-children:  right;
     
 }
+#StatPanel{	
+	width:500px;
 
+    margin-left:950px;
+	flow-children:down;
+	height:fit-children;
+	background-color: gradient( linear, 0% 0%, 0% 5%, from( #232326 ), to( #111111 ) );
+
+	background-image: url("s2r://panorama/images/textures/miniprofile_rock_psd.vtex");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+
+    opacity: 0.6;
+    transition-property: opacity;
+    transition-duration: 0.24s;
+
+}
 .hidden{
 	visibility: collapse;
 }
@@ -76,23 +92,7 @@
 
 
 
-#StatPanel{	
-	width:500px;
 
-    margin-left:1000px;
-	flow-children:down;
-	height:fit-children;
-	background-color: gradient( linear, 0% 0%, 0% 5%, from( #232326 ), to( #111111 ) );
-
-	background-image: url("s2r://panorama/images/textures/miniprofile_rock_psd.vtex");
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-
-    opacity: 0.6;
-    transition-property: opacity;
-    transition-duration: 0.24s;
-
-}
 #StatPanel:hover{
 	opacity: 0.95;
 }

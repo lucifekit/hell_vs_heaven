@@ -1,0 +1,77 @@
+//============FLAME GLASS===============
+	"item_fire_resist"
+	{
+		"ID"              "6480"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_fire_resist"
+		"ItemCost" "500"  
+		"HomeShop"			"0"    
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "stat"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_fire"  "100"
+			}
+		}
+	}
+	"item_fire_resist_lv_1"
+	{
+		"ID"              "6481"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_fire_resist"
+		"ItemCost" "0"
+		"SideShop"			"1"
+		"SecretShop"			"1"  
+		"HomeShop"			"0"    
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "stat"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_fire"  "125"
+			}
+		}
+	}
+	"item_fire_resist_lv_2"
+	{
+		"ID"              "6482"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_fire_resist"
+		"ItemCost" "0"
+		"SideShop"			"1"
+		"SecretShop"			"1"  
+		"HomeShop"			"0"    
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "stat"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"resist_fire"  "150"
+			}
+		}
+	}

@@ -14,9 +14,9 @@
 #TitlePanel
 {
   horizontal-align: left;
-  vertical-align: bottom;
-  margin-bottom: 150px;
-  margin-left: 100px;
+  vertical-align: top;
+  margin-top: 60px;
+  margin-left: 50px;
   flow-children: right;
   /*border: 1px solid #f00;*/
 }

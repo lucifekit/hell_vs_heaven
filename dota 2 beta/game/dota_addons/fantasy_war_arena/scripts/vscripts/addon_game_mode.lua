@@ -63,6 +63,7 @@ end
 
 -- Create the game mode when we activate
 function Activate()
+  GameRules.DropTable = LoadKeyValues("scripts/kv/loots.kv")
   GameRules.GameMode = GameMode()
   GameRules.GameMode:InitGameMode()
   

@@ -107,7 +107,7 @@ function modifier_hp_big:OnRefresh(kv)
   end
 end
 function modifier_hp_big:OnDestroy(kv)
-  kemPrint("destroyed hp")
+  --kemPrint("destroyed hp")
 
   self:StartIntervalThink(-1)
 end

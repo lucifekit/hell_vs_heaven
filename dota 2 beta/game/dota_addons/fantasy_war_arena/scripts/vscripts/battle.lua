@@ -137,7 +137,7 @@ end
 
 function Battle_Step_0_Wait()
   Battle_Time = false
-  kemPrint("Battle 140")
+  --kemPrint("Battle 140")
   CurrentQuest = SpawnEntityFromTableSynchronous( "quest", { name = "WaitBattle", title = "#battle_in" } )
     CurrentQuest.EndTime = 300
     local subQuest = SpawnEntityFromTableSynchronous( "subquest_base", { 

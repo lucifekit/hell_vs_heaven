@@ -162,7 +162,7 @@ function GameMode:OnItemPickedUp(keys)
   local itemEntity = EntIndexToHScript(keys.ItemEntityIndex)
   local player = PlayerResource:GetPlayer(keys.PlayerID)
   local itemname = keys.itemname
- 
+  print("pick item "..itemname)
   Timers:CreateTimer(0.5,function()
 
     kemPrint("Items picked up")

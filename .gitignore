@@ -80,12 +80,4 @@ steam_appid.txt
 #  DOTA 2 Addons Path
 #############
 !dota\ 2\ beta/.gitignore
-dota\ 2\ beta/game/*
-!dota\ 2\ beta/game/dota_addons/
-dota\ 2\ beta/game/dota_addons/*
-!dota\ 2\ beta/game/dota_addons/fantasy_war_arena/
-
-dota\ 2\ beta/content/*
-!dota\ 2\ beta/content/dota_addons/
-dota\ 2\ beta/content/dota_addons/*
-!dota\ 2\ beta/content/dota_addons/fantasy_war_arena/
+!dota\ 2\ beta/

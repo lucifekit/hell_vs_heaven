@@ -60,7 +60,7 @@ function modifier_kemtele:OnCreated(kv)
 end
 function modifier_kemtele:OnDestroy()
 
-  kemPrint("Ondestroy")
+  --kemPrint("Ondestroy")
   if(IsServer())then
     if self.interupted then
       kemPrint("Interupted")

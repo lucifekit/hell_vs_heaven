@@ -62,14 +62,20 @@ end
 --end
 
 function modifier_thuongthien_thienvuongchieny:OnCreated( kv )
-
-  kemPrint("create thien vuong chien y")
+  if(IsServer())then
+    kemPrint("create thien vuong chien y")
+  end
+  
 end
 
 function modifier_thuongthien_thienvuongchieny:OnRefresh( kv )
-  kemPrint("refresh thien vuong chien y")
+  if(IsServer())then
+    kemPrint("refresh thien vuong chien y")
+  end
 end
 
 function modifier_thuongthien_thienvuongchieny:OnDestroy( kv )
-  kemPrint("destroy thien vuong chien y")
+  if(IsServer())then
+    kemPrint("destroy thien vuong chien y")
+  end
 end

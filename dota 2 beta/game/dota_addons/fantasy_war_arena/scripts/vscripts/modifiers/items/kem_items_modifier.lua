@@ -108,11 +108,21 @@ function kem_items_modifier:OnDeath( params )
   end
   
 end
+LinkLuaModifier("modifier_two_weapon","modifiers/modifier_two_weapon", LUA_MODIFIER_MOTION_NONE )
+
 function kem_items_modifier:OnCreated( params ) 
     local item = self:GetAbility()
     local hero = self:GetParent()
     if IsServer() then --this should be only run on server.
-        
+        local carryWeapon = false
+        for _,modifiers in ipairs(hero:FindAllModifiers()) do
+          if(modifiers.item_type)then
+            if(modifiers.item_type=="weapon")then
+              carryWeapon = true
+            end
+          end 
+        end
+    
         local itemname=item:GetAbilityName()
         local kv = LoadKeyValues("scripts/kv/items.kv")
         local itemData = kv[itemname]
@@ -132,8 +142,10 @@ function kem_items_modifier:OnCreated( params )
         self.item_max_level = self:GetNumber("max_level")
         self.exp = self:GetNumber("exp")
         self.upgrade = self:GetString("upgrade")
-        
-        
+        self.item_type = self:GetString("type")
+        if(self.item_type=="weapon" and carryWeapon)then
+          hero:AddNewModifier(hero,nil,"modifier_two_weapon",{})
+        end
         
         
         
@@ -187,7 +199,20 @@ end
 
 function kem_items_modifier:OnDestroy() --When ever the unit takes damage this is called
     if IsServer() then --this should be only run on server.
-        
+        print("Droping item,removing modifier")
+        local hero = self:GetParent()
+        local iNumbWeapons = 0
+        for _,modifiers in ipairs(hero:FindAllModifiers()) do
+          if(modifiers.item_type)then
+            if(modifiers.item_type=="weapon")then
+              iNumbWeapons = iNumbWeapons+1
+            end
+          end 
+        end
+        --print("Number of weapon "..carryWeaponNumb)
+        if(iNumbWeapons<2)then
+          hero:RemoveModifierByName("modifier_two_weapon")
+        end
         local hero = self:GetParent()
         if(self.data==nil)then
 
