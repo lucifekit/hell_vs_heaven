@@ -2,13 +2,11 @@ skill_daocon_hoiphongphatlieu = class({})
 --------------------------------------------------------------------------------
 require('heroes_abilities/daocon/daocon')
 function skill_daocon_hoiphongphatlieu:GetManacost()
-   return 25
+   return 300
 end
 
 function skill_daocon_hoiphongphatlieu:GetCooldown()
-   local atk_perseconds = self:GetCaster():GetAttacksPerSecond()
-   local cd = 1 / atk_perseconds
-   return cd
+   return 30
 end
 
 function skill_daocon_hoiphongphatlieu:OnAbilityPhaseStart()

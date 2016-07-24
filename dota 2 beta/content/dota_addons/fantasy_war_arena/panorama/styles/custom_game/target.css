@@ -31,7 +31,10 @@
 	color:#ffff80;
 	width:100%;
 }
-#TargetHeroImage{
+#TargetHeroImage,#TargetImage{
 	width:100px;
 	height:64px;
+}
+.hidden{
+	visibility: collapse;
 }

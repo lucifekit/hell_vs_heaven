@@ -8,7 +8,6 @@ BAREBONES_DEBUG_SPEW = false
 
 SETTING_FX_POISON = "particles/msg_fx/msg_crit.vpcf"
 SETTING_FX_DAMAGE = "particles/msg_fx/msg_damage.vpcf"
-
 _G.NEUTRALS_TEAM = 4
 
 if GameMode == nil then

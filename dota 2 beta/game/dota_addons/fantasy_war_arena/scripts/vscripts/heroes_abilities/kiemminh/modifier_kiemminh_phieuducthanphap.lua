@@ -17,14 +17,15 @@ function modifier_kiemminh_phieuducthanphap:DeclareFunctions()
 end
 function modifier_kiemminh_phieuducthanphap:GetModifierMoveSpeedBonus_Constant( params)
   --PrintTable(params)
-  return self.move_speed
+  return self.speed
 end
 
 --------------------------------------------------------------------------------
 
 function modifier_kiemminh_phieuducthanphap:OnCreated( kv )
 
-    self.move_speed = math.ceil(20+self:GetAbility():GetLevel()*6)
+    local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
+  self.speed = (10+self:GetAbility():GetLevel()*3)*settings.speed_base
 
   
   
@@ -33,7 +34,8 @@ end
 --------------------------------------------------------------------------------
 function modifier_kiemminh_phieuducthanphap:OnRefresh( kv )
  
-    self.move_speed = math.ceil(20+self:GetAbility():GetLevel()*6)
+    local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
+  self.speed = (10+self:GetAbility():GetLevel()*3)*settings.speed_base
 
   
 end

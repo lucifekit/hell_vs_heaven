@@ -408,6 +408,6 @@
 		"ItemResult"          "item_evil_blade"
 		"ItemRequirements"
 		{
-			"01"  "item_ring_max;item_glove_max;item_poison_orb_max;"
+			"01"  "item_ring_max;item_glove_max;item_poison_orb_max;item_health_orb_max;"
 		}
 	}

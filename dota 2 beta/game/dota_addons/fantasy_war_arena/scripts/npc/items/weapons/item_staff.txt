@@ -1,73 +1,7 @@
 //============STAFF===============
-	"item_staff"
-	{
-		"ID"              "6080"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_quarterstaff"
-		"ItemCost"            "0"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "weapon"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"atk_speed"  "10"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"weapon_element_damage"  "100"
-			}
-			"03"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "5"
-			}
-		}
-	}
-	"item_staff_lv_1"
-	{
-		"ID"              "6081"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_quarterstaff"
-		"ItemCost"            "0"
-		"HomeShop"            "0"
-		"SecretShop"            "1"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "weapon"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"atk_speed"  "12"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"weapon_element_damage"  "200"
-			}
-			"03"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "10"
-			}
-		}
-	}
-	"item_staff_lv_2"
+	
+	
+	"item_staff_max"
 	{
 		"ID"              "6082"
 		"BaseClass"           	  "item_lua"
@@ -75,9 +9,8 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
 		"AbilityTextureName"      "item_quarterstaff"
-		"ItemCost"            "0"
+		"ItemCost"            "1000"
 		"HomeShop"            "0"
-		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -102,68 +35,4 @@
 			}
 		}
 	}
-	"item_staff_lv_3"
-	{
-		"ID"              "6083"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_quarterstaff"
-		"ItemCost"            "0"
-		"HomeShop"            "0"
-		"SecretShop"            "1"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "weapon"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"atk_speed"  "16"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"weapon_element_damage"  "400"
-			}
-			"03"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "20"
-			}
-		}
-	}
-	"item_staff_max"
-	{
-		"ID"              "6084"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_quarterstaff"
-		"ItemCost"            "0"
-		"HomeShop"            "0"
-		"SecretShop"            "1"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "weapon"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "0"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"atk_speed"  "18"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"weapon_element_damage"  "500"
-			}
-		}
-	}
+	

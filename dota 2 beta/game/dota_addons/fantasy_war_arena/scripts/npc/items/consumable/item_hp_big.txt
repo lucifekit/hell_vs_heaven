@@ -139,3 +139,88 @@
 	}
 	
 }
+"item_exp"
+{
+	"BaseClass"						"item_datadriven"
+	"ID"							"5009" 
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"Model"							"models/heroes/leshrac/mesh/smoke.vmdl"
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"item_tome_of_knowledge"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"              "0"
+	"AbilityCooldown"				"0"
+	"AbilityManaCost"				"0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1000"
+	"ItemShopTags"					"consumable"
+	"ItemQuality"					"consumable"
+	"ItemAliases"					"exp"
+	"ItemStackable"					"50"
+	"ItemPermanent"					"0"
+	"ItemInitialCharges"			"1"
+	
+	
+	
+	"OnSpellStart"
+	{		
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/items/regen.lua"
+			"Function"				"Exp"
+		}	
+		"FireSound"
+		{
+			"EffectName"			"DOTA_Item.HealingSalve.Activate"
+		}
+		"SpendCharge"
+		{}
+	}
+}
+
+"item_exp_10"
+{
+	"BaseClass"						"item_datadriven"
+	"ID"							"5010" 
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"Model"							"models/heroes/leshrac/mesh/smoke.vmdl"
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"item_exp_10"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"              "0"
+	"AbilityCooldown"				"0"
+	"AbilityManaCost"				"0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"8000"
+	"ItemShopTags"					"consumable"
+	"ItemQuality"					"consumable"
+	"ItemAliases"					"exp"
+	"ItemStackable"					"50"
+	"ItemPermanent"					"0"
+	"ItemInitialCharges"			"1"
+	
+	
+	
+	"OnSpellStart"
+	{		
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/items/regen.lua"
+			"Function"				"Exp10"
+		}	
+		"FireSound"
+		{
+			"EffectName"			"DOTA_Item.HealingSalve.Activate"
+		}
+		"SpendCharge"
+		{}
+	}
+}

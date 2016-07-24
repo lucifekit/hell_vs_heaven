@@ -1,83 +1,6 @@
 //============STEEL ARMOR===============
-	"item_armor"
-	{
-		"ID"              "6120"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_chainmail"
-		"ItemCost"            "0"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "armors"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"resist"  "50"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"hp"  "100"
-			}
-			"03"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"mp"  "100"
-			}
-			"04"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "5"
-			}
-		}
-	}
-	"item_armor_lv_1"
-	{
-		"ID"              "6121"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_chainmail"
-		"ItemCost"            "0"
-		"HomeShop"            "0"
-		"SecretShop"            "1"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "armors"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"resist"  "80"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"hp"  "200"
-			}
-			"03"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"mp"  "150"
-			}
-			"04"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "10"
-			}
-		}
-	}
-	"item_armor_lv_2"
+	
+	"item_armor_max"
 	{
 		"ID"              "6122"
 		"BaseClass"           	  "item_lua"
@@ -85,9 +8,8 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
 		"AbilityTextureName"      "item_chainmail"
-		"ItemCost"            "0"
+		"ItemCost"            "1000"
 		"HomeShop"            "0"
-		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -117,78 +39,4 @@
 			}
 		}
 	}
-	"item_armor_lv_3"
-	{
-		"ID"              "6123"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_chainmail"
-		"ItemCost"            "0"
-		"HomeShop"            "0"
-		"SecretShop"            "1"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "armors"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"resist"  "140"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"hp"  "400"
-			}
-			"03"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"mp"  "250"
-			}
-			"04"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "20"
-			}
-		}
-	}
-	"item_armor_max"
-	{
-		"ID"              "6124"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_chainmail"
-		"ItemCost"            "0"
-		"HomeShop"            "0"
-		"SecretShop"            "1"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "armors"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "0"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"resist"  "170"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"hp"  "500"
-			}
-			"03"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"mp"  "300"
-			}
-		}
-	}
+	

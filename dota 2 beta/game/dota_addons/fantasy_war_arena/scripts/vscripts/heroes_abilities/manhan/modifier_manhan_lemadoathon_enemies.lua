@@ -26,7 +26,7 @@ function modifier_manhan_lemadoathon_enemies:OnCreated( kv )
   local skill_level = self:GetAbility():GetLevel()
   -- SOUL STEALER
   local physical_simplify = 0.5+0.15*skill_level
-  local movement_speed_reduce = 20+8*skill_level
+  local movement_speed_reduce = (10+4*skill_level)*2.5
   local cooldown = 5
   self.physical_simplify = physical_simplify
   self.speed = movement_speed_reduce
@@ -43,7 +43,7 @@ end
 function modifier_manhan_lemadoathon_enemies:OnRefresh( kv )
   if(IsServer())then
       local skill_level = self:GetAbility():GetLevel()
-      local movement_speed_reduce = 20+8*skill_level
+      local movement_speed_reduce = (10+4*skill_level)*2.5
       self.speed = movement_speed_reduce
   end
 end

@@ -29,13 +29,24 @@ function Precache( context )
   PrecacheResource("particle", "particles/units/heroes/hero_windrunner/windrunner_windrun.vpcf",context)
   PrecacheResource("soundfile","soundevents/game_sounds_heroes/game_sounds_tiny.vsndevts",context)
   PrecacheResource("soundfile","soundevents/game_sounds_heroes/game_sounds_kunkka.vsndevts",context)
-
+  --item
+  PrecacheResource("particle","particles/units/heroes/hero_warlock/warlock_shadow_word_buff.vpcf",context)
+  PrecacheResource("particle","particles/invulernable.vpcf",context)
+  --diep tinh
   PrecacheResource("soundfile","soundevents/game_sounds_heroes/game_sounds_lich.vsndevts",context)
   PrecacheResource("soundfile","soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts",context)
   PrecacheResource("soundfile","soundevents/voscripts/game_sounds_vo_crystalmaiden.vsndevts",context)
-  PrecacheResource("particle","particles/units/heroes/hero_warlock/warlock_shadow_word_buff.vpcf",context)
-  PrecacheResource("particle","particles/invulernable.vpcf",context)
-
+  
+  --heaven boss
+  PrecacheResource("soundfile","soundevents/game_sounds_heroes/game_sounds_templar_assassin.vsndevts",context)
+  PrecacheResource("soundfile","soundevents/voscripts/game_sounds_vo_skywrath_mage.vsndevts",context)
+  PrecacheResource("soundfile","soundevents/game_sounds_heroes/game_sounds_lich.vsndevts",context)
+  
+  --hell boss
+  PrecacheResource("particle","particles/units/heroes/hero_lina/lina_spell_light_strike_array.vpcf",context)
+  PrecacheResource("soundfile","soundevents/game_sounds_heroes/game_sounds_lina.vsndevts",context)
+  PrecacheResource("particle","particles/units/heroes/hero_sandking/sandking_caustic_finale_explode.vpcf",context)
+  
   -- Particles can be precached individually or by folder
   -- It it likely that precaching a single particle system will precache all of its children, but this may not be guaranteed
   --PrecacheResource("particle", "particles/econ/generic/generic_aoe_explosion_sphere_1/generic_aoe_explosion_sphere_1.vpcf", context)
@@ -64,6 +75,8 @@ end
 -- Create the game mode when we activate
 function Activate()
   GameRules.DropTable = LoadKeyValues("scripts/kv/loots.kv")
+  
+  
   GameRules.GameMode = GameMode()
   GameRules.GameMode:InitGameMode()
   

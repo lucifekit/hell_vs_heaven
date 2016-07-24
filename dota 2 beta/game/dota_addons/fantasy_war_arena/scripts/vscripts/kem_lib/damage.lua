@@ -137,6 +137,9 @@ end
 function DamageHandler:NoDamage()
   return {min_physic=0,min_element=0,max_physic=0,max_element=0}
 end
+function DamageHandler:InitDamage(mip,map,mie,mae)
+  return {min_physic=mip,min_element=mie,max_physic=map,max_element=mae}
+end
 function DamageHandler:ApplyDamage(whoDealDamage,byWhichAbility,whoTakeDamage,ADDamage,critInfo,damage_element,custom)
 
     if(ADDamage.min_physic==0 and ADDamage.min_element==0) then
@@ -306,7 +309,9 @@ function DamageHandler:ApplyDamage(whoDealDamage,byWhichAbility,whoTakeDamage,AD
 
 end
 
-
+function DamageHandler:InitCrit(chance,damage)
+  return {chance=chance,damage=damage}
+end
 
 function DamageHandler:GetCritInfo(caster)
   local chance = 0

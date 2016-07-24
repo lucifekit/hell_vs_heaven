@@ -11,18 +11,29 @@ end
 function kemPrint(msg)
 
   if(IsInToolsMode())then
-    print(GameRules:GetGameTime().." : "..msg)
+    if(IsServer())then
+      print(GameRules:GetGameTime().." : "..msg)
+    end
   end
   
 end
-function FxPoint(effect,point,time)
+function FxPointControl(effect,point,time,control)
   local hit_effect = ParticleManager:CreateParticle(effect, PATTACH_WORLDORIGIN, nil)
   ParticleManager:SetParticleControl( hit_effect, 0, point)     
+  if(control)then
+    for i,v in ipairs(control) do
+      ParticleManager:SetParticleControl( hit_effect, i,v)
+    end
+    
+  end
   --ParticleManager:SetParticleControl( hit_effect, 3, unit:GetAbsOrigin()+Vector(0,0,50))
   Timers:CreateTimer(time,function() 
       ParticleManager:DestroyParticle(hit_effect,true)
   end)
 
+end
+function FxPoint(effect,point,time)
+  FxPointControl(effect,point,time,nil)
 end
 function CreateEffectOnUnit(effect,unit,time)
   local hit_effect = ParticleManager:CreateParticle(effect, PATTACH_ABSORIGIN_FOLLOW, unit)

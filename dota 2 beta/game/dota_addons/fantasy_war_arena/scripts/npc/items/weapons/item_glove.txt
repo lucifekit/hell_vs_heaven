@@ -1,73 +1,6 @@
 //============GLOVE OF POISON===============
-	"item_glove"
-	{
-		"ID"              "6100"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_gloves"
-		"ItemCost"            "0"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "weapon"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"atk_speed"  "10"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"weapon_poison_damage"  "30"
-			}
-			"03"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "5"
-			}
-		}
-	}
-	"item_glove_lv_1"
-	{
-		"ID"              "6101"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_gloves"
-		"ItemCost"            "0"
-		"HomeShop"            "0"
-		"SecretShop"            "1"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "weapon"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"atk_speed"  "12"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"weapon_poison_damage"  "40"
-			}
-			"03"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "10"
-			}
-		}
-	}
-	"item_glove_lv_2"
+	
+	"item_glove_max"
 	{
 		"ID"              "6102"
 		"BaseClass"           	  "item_lua"
@@ -75,9 +8,8 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
 		"AbilityTextureName"      "item_gloves"
-		"ItemCost"            "0"
+		"ItemCost"            "1000"
 		"HomeShop"            "0"
-		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "weapon"
@@ -95,75 +27,6 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "50"
 			}
-			"03"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "15"
-			}
 		}
 	}
-	"item_glove_lv_3"
-	{
-		"ID"              "6103"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_gloves"
-		"ItemCost"            "0"
-		"HomeShop"            "0"
-		"SecretShop"            "1"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "weapon"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"atk_speed"  "16"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"weapon_poison_damage"  "60"
-			}
-			"03"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "20"
-			}
-		}
-	}
-	"item_glove_max"
-	{
-		"ID"              "6104"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_gloves"
-		"ItemCost"            "0"
-		"HomeShop"            "0"
-		"SecretShop"            "1"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "weapon"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "0"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"atk_speed"  "18"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"weapon_poison_damage"  "70"
-			}
-		}
-	}
+	

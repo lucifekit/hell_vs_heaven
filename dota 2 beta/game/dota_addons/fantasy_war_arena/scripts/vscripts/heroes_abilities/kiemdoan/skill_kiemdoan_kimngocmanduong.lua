@@ -17,7 +17,9 @@ function skill_kiemdoan_kimngocmanduong:GetCooldown()
   local atk_perseconds = self:GetCaster():GetAttacksPerSecond()
   return 1/atk_perseconds
 end
-
+function skill_kiemdoan_kimngocmanduong:GetManaCost()
+  return self:GetLevel()*10
+end
 function skill_kiemdoan_kimngocmanduong:OnAbilityPhaseStart()
   --self:GetCaster():StartGesture( ACT_DOTA_ATTACK)
   local atk_perseconds = self:GetCaster():GetAttacksPerSecond()

@@ -13,6 +13,7 @@
   <Panel hittest="false" class="KemUITarget" >
   		<Panel id="TargetContainer">
 			   <DOTAHeroImage id="TargetHeroImage"/>
+         <Image id="TargetImage" src="file://{images}/custom_game/units/dieptinh.png" class="hidden"/>
          <Panel id="TargetInfo">
             <Label id="TargetName" text=""/>
             <Label id="TargetHP" text=""/>

@@ -71,8 +71,8 @@ SETTING_MISSILE_PUSHBACK = 500
 SETTING_MISSILE_FLY_SPEED = 900
 SETTING_MISSILE_MAX_DISTANCE = 1200
 SETTING_MISSILE_MAX_TARGET = 4
-SETTING_MISSILE_DAMAGE_MIN = 2600--2687
-SETTING_MISSILE_DAMAGE_MAX = 3100--3165
+SETTING_MISSILE_DAMAGE_MIN = 3600--2687
+SETTING_MISSILE_DAMAGE_MAX = 5100--3165
 
 SETTING_TORRENT_BUBBLE_EFFECT = "particles/econ/items/kunkka/divine_anchor/hero_kunkka_dafx_skills/kunkka_spell_torrent_bubbles_fxset.vpcf"
 SETTING_TORRENT_EFFECT = "particles/econ/items/kunkka/kunkka_torrent_base/kunkka_spell_torrent_splash_econ.vpcf"
@@ -318,7 +318,7 @@ function modifier_boss_dieptinh:AngryLowChance(target)
         caster:EmitSound(SETTING_TORRENT_SOUND)
       end)
       for i = 1,number_of_torrents do
-        local tempPoint = caster_point+800*RotateVector2D(angleBetweenCasterAndTarget,math.rad(i*360/number_of_torrents))
+        local tempPoint = caster_point+700*RotateVector2D(angleBetweenCasterAndTarget,math.rad(i*360/number_of_torrents))
         local pfx = ParticleManager:CreateParticle(SETTING_TORRENT_BUBBLE_EFFECT,PATTACH_WORLDORIGIN,caster)
           
         ParticleManager:SetParticleControl( pfx, 0, tempPoint+Vector(0,0,30)  ) 
@@ -438,8 +438,8 @@ function modifier_boss_dieptinh:Ulti_1(caster,target)
       skill_physical_damage_percent = 0,
       skill_tree_amplify_damage = 0,-- can edit
       skill_basic_damage_percent = 1,
-      element_damage_min = 600,
-      element_damage_max = 800
+      element_damage_min = 1600,
+      element_damage_max = 2800
       }
     local damageGroupData = {
       whoDealDamage = caster,
@@ -472,8 +472,8 @@ function modifier_boss_dieptinh:Ulti_2(caster,target)
         skill_physical_damage_percent = 0,
         skill_tree_amplify_damage = 0,-- can edit
         skill_basic_damage_percent = 1,
-        element_damage_min = 750,
-        element_damage_max = 1250
+        element_damage_min = 1750,
+        element_damage_max = 2250
         }
       local damageGroupData = {
         whoDealDamage = caster,
@@ -542,19 +542,21 @@ end
 -- END ULTI
 function modifier_boss_dieptinh:OnCreated(kv)
   --kemPrint("BOSS DIEP TINH ONCREATED")
-     
-  GameRules:SendCustomMessage("<font color='#0099ff'>Mystery voice:</font> I dont know what is love ...", 0, 0)
-  GameRules:SendCustomMessage("<font color='#0099ff'>Mystery voice:</font> Until now, i killed 329 people, maybe you will become the 330th one...", 1, 0)
-  self:GetParent().SayHi = false
-  self:GetParent().Angry = false
-  self:GetParent().SayGetOut = false
-  for i = 0,12 do
-    local tempAbility = self:GetParent():GetAbilityByIndex(i)
-    if(tempAbility)then
-      --kemPrint("Ability : "..tempAbility:GetAbilityName())
-      tempAbility:SetLevel(1)
+  if(IsServer())then
+    GameRules:SendCustomMessage("<font color='#0099ff'>Mystery voice:</font> I dont know what is love ...", 0, 0)
+    GameRules:SendCustomMessage("<font color='#0099ff'>Mystery voice:</font> Until now, i killed 329 people, maybe you will become the 330th one...", 1, 0)
+    self:GetParent().SayHi = false
+    self:GetParent().Angry = false
+    self:GetParent().SayGetOut = false
+    for i = 0,12 do
+      local tempAbility = self:GetParent():GetAbilityByIndex(i)
+      if(tempAbility)then
+        --kemPrint("Ability : "..tempAbility:GetAbilityName())
+        tempAbility:SetLevel(1)
+      end
     end
   end
+  
 
   
 end

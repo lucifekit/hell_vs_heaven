@@ -12,6 +12,9 @@ function skill_kiemdoan_soanh:OnAbilityPhaseStart()
   self:GetCaster():StartGestureWithPlaybackRate( ACT_DOTA_ATTACK,atk_perseconds)
   return true
 end
+function skill_kiemdoan_soanh:GetManaCost()
+  return 300
+end
 function skill_kiemdoan_soanh:OnUpgrade()
 
   local caster = self:GetCaster()

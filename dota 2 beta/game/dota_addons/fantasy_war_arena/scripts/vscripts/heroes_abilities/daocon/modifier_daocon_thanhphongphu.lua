@@ -18,7 +18,8 @@ return funcs
 end
 function modifier_daocon_thanhphongphu:GetModifierMoveSpeedBonus_Constant( params)
   --PrintTable(params)
-  return self.speed
+  --print(self.speed)
+    return self.speed
 end
 
 --function modifier_daocon_thanhphongphu:GetModifierAttackSpeedBonus_Constant( params)
@@ -34,14 +35,11 @@ end
 --end
 
 function modifier_daocon_thanhphongphu:OnCreated( kv )
- 
- 
-  self.speed = 20+self:GetAbility():GetLevel()*6
- if(IsServer())then
- end
- 
+  local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
+  self.speed = (10+self:GetAbility():GetLevel()*3)*settings.speed_base
 end
 
 function modifier_daocon_thanhphongphu:OnRefresh( kv )
- self.speed = 20+self:GetAbility():GetLevel()*6
+  local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
+  self.speed = (10+self:GetAbility():GetLevel()*3)*settings.speed_base
 end

@@ -40,9 +40,10 @@ local buff_duration = math.floor(4.74+0.526*skill_level)
 local max_target = math.floor(1+0.2*skill_level)
 
 local enemies = FindUnitsInRadius(caster:GetTeam(), cast_point, nil, SETTING_DEBUFF_RADIUS, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, 0, false )
+caster:EmitSound(SETTING_SOUND)
 if #enemies > 0 then
   --EmitSoundOn(SETTING_SOUND,caster)
-  caster:EmitSound(SETTING_SOUND)
+  
   for _,enemy in pairs(enemies) do
       if(max_target>0)then
         max_target= max_target-1

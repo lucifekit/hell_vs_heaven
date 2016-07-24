@@ -70,6 +70,34 @@ function kem_items_modifier:GetString(params)
   end
   return self.data[params]==nil and "" or self.data[params]
 end
+function kem_items_modifier:GainExp(exp)
+  --kemPrint("+"..params.unit:GetLevel().." exp")
+  local item = self:GetAbility()
+  if(item:IsItem())then
+
+      if(self.item_level<self.item_max_level)then
+        if(item.kill_count==nil)then
+          item.kill_count = 0
+        end
+        item.kill_count = item.kill_count+exp
+        item:SetCurrentCharges(item.kill_count)
+        if(item.kill_count>=self.exp)then
+          --kemPrint("Enough exp to upgrade item")
+          if(self.upgrade~=nil)then
+            --kemPrint("Upgrade item to "..self.upgrade)
+      
+            local caster = self:GetParent()
+            caster:RemoveItem(item)
+            caster:AddItemByName(self.upgrade)
+            --local newItem = CreateItem(self.upgrade, caster,caster)
+          end
+        end
+      end
+      
+  end
+  
+  
+end
 function kem_items_modifier:OnDeath( params ) 
   --PrintTable(params)
   local killer = params.attacker
@@ -80,25 +108,9 @@ function kem_items_modifier:OnDeath( params )
     if(item:IsItem())then
 
       if(self.item_level<self.item_max_level)then
-        if(item.kill_count==nil)then
-          item.kill_count = 0
-        end
-
-        --kemPrint("+"..params.unit:GetLevel().." exp")
-        item.kill_count = item.kill_count+params.unit:GetLevel()
-        item:SetCurrentCharges(item.kill_count)
-        if(item.kill_count>=self.exp)then
-          --kemPrint("Enough exp to upgrade item")
-          if(self.upgrade~=nil)then
-            --kemPrint("Upgrade item to "..self.upgrade)
-
-            local caster = self:GetParent()
-            caster:RemoveItem(item)
-            caster:AddItemByName(self.upgrade)
-            --local newItem = CreateItem(self.upgrade, caster,caster)
-          end
-        end
-
+        
+        self:GainExp(params.unit:GetLevel())
+        
       end
       
       
@@ -170,6 +182,7 @@ function kem_items_modifier:OnCreated( params )
         hero.critical_chance = hero.critical_chance + self:GetNumber("critical_chance")
         hero.hp_drain = hero.hp_drain + self:GetNumber("hp_drain")/100
         hero.mp_drain = hero.mp_drain + self:GetNumber("mp_drain")/100
+        hero.damage_to_mp = hero.damage_to_mp + self:GetNumber("damage_to_mp")/100
 
     
     end

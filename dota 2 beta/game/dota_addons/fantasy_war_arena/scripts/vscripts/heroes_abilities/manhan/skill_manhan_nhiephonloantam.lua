@@ -13,6 +13,9 @@ function skill_manhan_nhiephonloantam:OnAbilityPhaseStart()
   self:GetCaster():StartGesture( ACT_DOTA_ATTACK)
   return true
 end
+function skill_manhan_nhiephonloantam:GetManaCost()
+  return self:GetLevel()*50
+end
 function skill_manhan_nhiephonloantam:GetCooldown()
   if(IsInToolsMode())then
     return 1

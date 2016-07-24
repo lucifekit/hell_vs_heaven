@@ -1,33 +1,6 @@
 //============POISON ORB===============
-	"item_poison_orb"
-	{
-		"ID"              "6420"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_orb_of_venom"
-		"ItemCost"            "0"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "stat"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"weapon_poison_damage"  "35"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "10"
-			}
-		}
-	}
-	"item_poison_orb_lv_1"
+	
+	"item_poison_orb_max"
 	{
 		"ID"              "6421"
 		"BaseClass"           	  "item_lua"
@@ -35,9 +8,8 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
 		"AbilityTextureName"      "item_orb_of_venom"
-		"ItemCost"            "0"
+		"ItemCost"            "500"
 		"HomeShop"            "0"
-		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "stat"
@@ -50,35 +22,6 @@
 				"var_type"  "FIELD_INTEGER"
 				"weapon_poison_damage"  "50"
 			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "15"
-			}
 		}
 	}
-	"item_poison_orb_max"
-	{
-		"ID"              "6422"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_orb_of_venom"
-		"ItemCost"            "0"
-		"HomeShop"            "0"
-		"SecretShop"            "1"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "stat"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "0"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"weapon_poison_damage"  "65"
-			}
-		}
-	}
+	

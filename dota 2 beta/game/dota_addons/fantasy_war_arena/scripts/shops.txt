@@ -7,40 +7,53 @@
     "item"    "item_hp_big"
     "item"    "item_hp_ultra"
     "item"    "item_mango"
+	"item"    "item_exp"
+	"item"    "item_exp_10"
+	"item"    "item_ward_observer"
   }
 
   "attributes"
   {
-	"item"	"item_speed_band"
-	"item"  "item_element_drop"
-	"item"  "item_strength_belt"
-	"item"  "item_poison_orb"
-	"item"  "item_health_orb"
-	"item"  "item_mana_orb"
-	"item"  "item_physical_bottle"
-	"item"  "item_poison_bottle"
-	"item"  "item_fire_bottle"
-	"item"  "item_ice_bottle"
-	"item"  "item_lightning_bottle"
+	
+	"item"  "item_health_orb_max"
+	"item"  "item_mana_orb_max"
+	
+	"item"	  "item_armor_max"
+    "item"	  "item_boot_max"
+    "item"	  "item_hood_max"
+    "item"	  "item_ring_max"
+	
+	"item"  "item_physical_bottle_max"
+	"item"  "item_poison_bottle_max"
+	"item"  "item_fire_bottle_max"
+	"item"  "item_ice_bottle_max"
+	"item"  "item_lightning_bottle_max"
   }
 
   "weapons_armor"
   {
-    "item"    "item_staff"
-    "item"    "item_axe"
-    "item"    "item_glove"
-    "item"	  "item_armor"
-    "item"	  "item_boot"
-    "item"	  "item_hood"
-    "item"	  "item_ring"
+    "item"    "item_staff_max"
+    "item"    "item_axe_max"
+    "item"    "item_glove_max"
+    
+     "item"	  "item_physical_amplify"
+    "item"	  "item_magical_amplify"
+    "item"	"item_speed_band_max"//atk speed
+	"item"  "item_element_drop_max"//magic damage
+	"item"  "item_strength_belt_max"//physic damage
+	"item"  "item_poison_orb_max"//poison damage
+    
+  
   }
 
       
   "misc"
   {
-    "item"    "item_ward_observer"
+    
     "item"    "item_flying_nimbus_inactive"
     "item"	  "item_skywing_inactive"
+    
+   
   } 
   
   // Level 1 - Green Recipes
@@ -56,15 +69,15 @@
   {
 
     //"item"    "item_ring_of_basilius"  
-
+	"item"    "item_swift_knife"
+	"item"	  "item_venom_blade"
+	"item"    "item_evil_blade"
   }
         
   "magics"      
   {
-
-    //"item"    "item_force_staff"
-
-    
+    "item"	  "item_flame_sword"
+    "item"	  "item_mana_blade"
   }
     
   // Level 3 - Purple Recipes 
@@ -79,15 +92,9 @@
       
   "weapons"
   {
-
     "item"    "item_lightning_hammer"
-    "item"    "item_swift_knife"
     "item"    "item_wukong_bar"
-    "item"    "item_evil_blade"
     "item"	  "item_metal_lance"
-    "item"	  "item_flame_sword"
-    "item"	  "item_venom_blade"
-    "item"	  "item_mana_blade"
   }
     
   // Level 4 - Orange / Orb / Artifacts       

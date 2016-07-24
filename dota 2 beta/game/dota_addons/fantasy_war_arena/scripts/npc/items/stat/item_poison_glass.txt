@@ -1,13 +1,15 @@
 //============POISON BOTTLE===============
-	"item_poison_bottle"
+	
+	"item_poison_bottle_max"
 	{
-		"ID"              "6470"
+		"ID"              "6471"
 		"BaseClass"           	  "item_lua"
 		"ScriptFile"                    "items/items.lua"
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
 		"AbilityTextureName"      "item_poison_bottle"
-		"ItemCost"            "0"
+		"ItemCost"            "500"
+		"HomeShop"            "0"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "stat"
@@ -20,65 +22,6 @@
 				"var_type"  "FIELD_INTEGER"
 				"resist_poison"  "100"
 			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "10"
-			}
 		}
 	}
-	"item_poison_bottle_lv_1"
-	{
-		"ID"              "6471"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_poison_bottle"
-		"ItemCost"            "0"
-		"HomeShop"            "0"
-		"SecretShop"            "1"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "stat"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"resist_poison"  "125"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "15"
-			}
-		}
-	}
-	"item_poison_bottle_max"
-	{
-		"ID"              "6472"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_poison_bottle"
-		"ItemCost"            "0"
-		"HomeShop"            "0"
-		"SecretShop"            "1"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "stat"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "0"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"resist_poison"  "150"
-			}
-		}
-	}
+	

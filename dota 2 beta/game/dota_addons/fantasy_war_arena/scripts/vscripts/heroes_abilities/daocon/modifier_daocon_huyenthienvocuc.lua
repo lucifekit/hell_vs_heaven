@@ -15,16 +15,32 @@ return funcs
 end
 
 function modifier_daocon_huyenthienvocuc:OnTakeDamage( params)
+  --print("on take damage ")
   if(IsServer())then
-  if(self:GetParent()==params.unit)then
-    local damage_taken = params.damage
-    local damage_negate_max = math.ceil(self:GetParent():GetMaxHealth() * self.damage_negate_max)
-    local heal = math.ceil(damage_taken * self.damage_negate)
-    if(damage_negate_max<heal)then
-      heal = damage_negate_max
+    if(self:GetParent()==params.unit)then
+      local damage_taken = params.damage
+      if(damage_taken>0)then
+        --PrintTable(params)
+        local damage_negate_max = math.ceil(self:GetParent():GetMaxHealth() * self.damage_negate_max)
+        local heal = math.ceil(damage_taken * self.damage_negate)
+        if(damage_negate_max<heal)then
+          heal = damage_negate_max
+        end
+        local current_health = self:GetParent():GetHealth()
+        if(current_health>0)then
+          self:GetParent():SetHealth(self:GetParent():GetHealth()+heal)
+        end
+        --print("heal "..heal.." hp from "..damage_taken.." when got "..current_health)
+        
+        --(3974)-1233=2741
+        --2741+159=2900
+        --(x)-1480=(0-)
+        --0+159
+        --vd co 3000 hp, an 1 hit 3000 mau', con 0 mau'
+        --regen 159--> con 159 mau--> song
+        
+      end
     end
-    self:GetParent():SetHealth(self:GetParent():GetHealth()+heal)
-  end
   end
   
   --return 50--reduce 50%

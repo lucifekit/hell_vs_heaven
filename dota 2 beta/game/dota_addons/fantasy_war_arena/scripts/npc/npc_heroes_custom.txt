@@ -38,7 +38,7 @@
 	    "BountyGoldMin"     "0"
 	    "BountyGoldMax"     "0"
 	    "MovementCapabilities"     "DOTA_UNIT_CAP_MOVE_GROUND"
-	    "MovementSpeed"     "240"
+	    "MovementSpeed"     "300"
 	    "MovementTurnRate"     "1.0"
 	    "StatusHealth"     "100"
 	    "StatusHealthRegen"     "0.0"
@@ -106,7 +106,7 @@
 	    //"RingRadius"        "70"
 	
 	    "MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
-	    "MovementSpeed"       "240"                 // Speed.
+	    "MovementSpeed"       "300"                 // Speed.
 	    "MovementTurnRate"      "1.0"                 // Turning rate.
 	
 	    "StatusHealth"        "100"                 // Base health.
@@ -164,7 +164,7 @@
 	    //"RingRadius"        "70"
 	
 	    "MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
-	    "MovementSpeed"       "240"                 // Speed.
+	    "MovementSpeed"       "300"                 // Speed.
 	    "MovementTurnRate"      "1.0"                 // Turning rate.
 	
 	    "StatusHealth"        "100"                 // Base health.
@@ -223,7 +223,7 @@
 	    //"RingRadius"        "70"
 	
 	    "MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
-	    "MovementSpeed"       "240"                 // Speed.
+	    "MovementSpeed"       "300"                 // Speed.
 	    "MovementTurnRate"      "1.0"                 // Turning rate.
 	
 	    "StatusHealth"        "100"                 // Base health.
@@ -272,7 +272,7 @@
 	    "BountyGoldMin"     "0"
 	    "BountyGoldMax"     "0"
 	    "MovementCapabilities"     "DOTA_UNIT_CAP_MOVE_GROUND"
-	    "MovementSpeed"     "240"
+	    "MovementSpeed"     "300"
 	    "MovementTurnRate"     "1.0"
 	    "StatusHealth"     "100"
 	    "StatusHealthRegen"     "0.0"

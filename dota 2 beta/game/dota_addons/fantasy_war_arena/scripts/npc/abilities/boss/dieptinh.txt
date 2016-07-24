@@ -1,15 +1,3 @@
-"dieptinh"
-{
-
-   "ID"  "90010"
-   "BaseClass"             "ability_lua"
-   "RequiredLevel"          "1"
-   "MaxLevel"        "1"
-   "LevelsBetweenUpgrades"  "1"
-   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-   "ScriptFile"          "bosses/dieptinh"
-   
-}
 "boss_dieptinh_get_out"
 {
    "ID"  "90011"

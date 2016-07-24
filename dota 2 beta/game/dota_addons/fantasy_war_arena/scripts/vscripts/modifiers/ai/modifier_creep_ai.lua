@@ -14,7 +14,8 @@ function modifier_creep_ai:IsPurgeException()
 end
 function modifier_creep_ai:Back(reason)
       if(string.len(reason)>0)then
-
+        --print(self.unit:GetUnitName())
+        
       end
   
       local newOrder = {
@@ -86,15 +87,19 @@ end
   
 end
 function modifier_creep_ai:OnCreated( kv )
-
-  self.target = nil
-  self.unit = self:GetParent()
-  self.spawn_position = self.unit:GetOrigin()
-  self.name = self.unit:GetUnitName().."-"..self.unit:entindex()
-  self:StartIntervalThink(2)
+  if(IsServer())then
+    self.target = nil
+    self.unit = self:GetParent()
+    self.spawn_position = self.unit:GetOrigin()
+    self.name = self.unit:GetUnitName().."-"..self.unit:entindex()
+    self:StartIntervalThink(2)
+  end
+  
 end
 
 --------------------------------------------------------------------------------
 function modifier_creep_ai:OnRefresh( kv )
-  self.target = nil
+  if(IsServer())then
+    self.target = nil
+  end
 end

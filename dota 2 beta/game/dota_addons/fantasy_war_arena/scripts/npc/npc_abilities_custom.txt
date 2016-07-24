@@ -389,18 +389,6 @@
 	   		}
 	   	}
 	}
-	"dieptinh"
-	{
-	
-	   "ID"  "90010"
-	   "BaseClass"             "ability_lua"
-	   "RequiredLevel"          "1"
-	   "MaxLevel"        "1"
-	   "LevelsBetweenUpgrades"  "1"
-	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	   "ScriptFile"          "bosses/dieptinh"
-	   
-	}
 	"boss_dieptinh_get_out"
 	{
 	   "ID"  "90011"
@@ -440,6 +428,62 @@
 	"boss_dieptinh_nova"
 	{
 	   "ID"  "90015"
+	   "BaseClass"             "ability_datadriven"
+	   "RequiredLevel"          "1"
+	   "MaxLevel"        "1"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	
+	"boss_heaven_68"
+	{
+	   "ID"  "90012"
+	   "BaseClass"             "ability_datadriven"
+	   "RequiredLevel"          "1"
+	   "MaxLevel"        "1"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	
+	"boss_heaven_9"
+	{
+	   "ID"  "96013"
+	   "BaseClass"             "ability_datadriven"
+	   "RequiredLevel"          "1"
+	   "MaxLevel"        "1"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	
+	
+	"boss_heaven_10"
+	{
+	   "ID"  "96014"
+	   "BaseClass"             "ability_datadriven"
+	   "RequiredLevel"          "1"
+	   "MaxLevel"        "1"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	
+	"boss_hell_68"
+	{
+	   "ID"  "97012"
+	   "BaseClass"             "ability_datadriven"
+	   "RequiredLevel"          "1"
+	   "MaxLevel"        "1"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	
+	"boss_hell_9"
+	{
+	   "ID"  "97013"
+	   "BaseClass"             "ability_datadriven"
+	   "RequiredLevel"          "1"
+	   "MaxLevel"        "1"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	
+	
+	"boss_hell_10"
+	{
+	   "ID"  "97014"
 	   "BaseClass"             "ability_datadriven"
 	   "RequiredLevel"          "1"
 	   "MaxLevel"        "1"
@@ -849,7 +893,7 @@
 	   "AbilityTextureName"      "brewmaster_storm_dispel_magic"
 	   "ScriptFile"          "heroes_abilities/daocon/skill_daocon_thanhphongphu"
 	   "HotKeyOverride"    ""
-	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
 	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	   "AbilityUnitTargetFlags"    ""
@@ -932,6 +976,21 @@
 	   "precache"
 	   {
 	   }
+	   // ENERGY FOCUS
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp_percent"  "20 40 60 80 100"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"invisibility_detect_time"  "5"
+			}
+		}
+	   
 	}
 	"skill_daocon_vonhanvonga"
 	{
@@ -1796,7 +1855,7 @@
 	    // General
 	    //-------------------------------------------------------------------------------------------------------------
 	    "ID"  "14304"   
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET |DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 	    "FightRecapLevel"       "1"
 	    "BaseClass"             "ability_lua"
 	    "RequiredLevel"          "8"
@@ -1868,7 +1927,7 @@
 	
 	    "precache"
 	    {
-	         
+	         "particle" "particles/units/heroes/hero_silencer/silencer_curse_cast.vpcf"
 	    }
 	    // DISPEL
 		"AbilitySpecial"

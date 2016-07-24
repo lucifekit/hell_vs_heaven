@@ -1,4 +1,7 @@
 CurrentQuest = nil
+SETTING_BATTLE_WAIT_TIME = 600
+SETTING_BATTLE_PREPARE_TIME = 60
+SETTING_BATTLE_TIME = 150
 LinkLuaModifier("modifier_prepare","modifiers/modifier_prepare",LUA_MODIFIER_MOTION_NONE)
 function Battle_End()
   for i = 0 , 9 do
@@ -39,7 +42,7 @@ function Battle_Step_2_Battle()
     end
     kemPrint("Battle 40")
     CurrentQuest = SpawnEntityFromTableSynchronous( "quest", { name = "Battle", title = "#battle_time" } )
-    CurrentQuest.EndTime = 120
+    CurrentQuest.EndTime = SETTING_BATTLE_TIME
     local subQuest = SpawnEntityFromTableSynchronous( "subquest_base", { 
              show_progress_bar = true, 
              progress_bar_hue_shift = -119 
@@ -47,12 +50,12 @@ function Battle_Step_2_Battle()
            
     CurrentQuest:AddSubquest( subQuest )
     -- text on the quest timer at start
-    CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, 120 )
-    CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, 120 )
+    CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, SETTING_BATTLE_TIME )
+    CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, SETTING_BATTLE_TIME )
     
     -- value on the bar
-    subQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, 120 )
-    subQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, 120 )
+    subQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, SETTING_BATTLE_TIME )
+    subQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, SETTING_BATTLE_TIME )
     Timers:CreateTimer(1, function()
         CurrentQuest.EndTime = CurrentQuest.EndTime - 1
         CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, CurrentQuest.EndTime )
@@ -101,20 +104,20 @@ function Battle_Step_1_Prepare()
         end
         kemPrint("Battle 99")
         CurrentQuest = SpawnEntityFromTableSynchronous( "quest", { name = "PrepareBattle", title = "#prepare_battle" } )
-        CurrentQuest.EndTime = 60
+        CurrentQuest.EndTime = SETTING_BATTLE_PREPARE_TIME
         local subQuest = SpawnEntityFromTableSynchronous( "subquest_base", { 
                  show_progress_bar = true, 
-                 progress_bar_hue_shift = -29 
+                 progress_bar_hue_shift = -30 
                } )
                
         CurrentQuest:AddSubquest( subQuest )
         -- text on the quest timer at start
-        CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, 60 )
-        CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, 60 )
+        CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, SETTING_BATTLE_PREPARE_TIME )
+        CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, SETTING_BATTLE_PREPARE_TIME )
         
         -- value on the bar
-        subQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, 60 )
-        subQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, 60 )
+        subQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, SETTING_BATTLE_PREPARE_TIME )
+        subQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, SETTING_BATTLE_PREPARE_TIME )
         Timers:CreateTimer(1, function()
             CurrentQuest.EndTime = CurrentQuest.EndTime - 1
             CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, CurrentQuest.EndTime )
@@ -145,7 +148,7 @@ function Battle_Step_0_Wait()
   Battle_Time = false
   --kemPrint("Battle 140")
   CurrentQuest = SpawnEntityFromTableSynchronous( "quest", { name = "WaitBattle", title = "#battle_in" } )
-    CurrentQuest.EndTime = 300
+    CurrentQuest.EndTime = SETTING_BATTLE_WAIT_TIME
     local subQuest = SpawnEntityFromTableSynchronous( "subquest_base", { 
              show_progress_bar = true, 
              progress_bar_hue_shift = -119 
@@ -153,12 +156,12 @@ function Battle_Step_0_Wait()
            
     CurrentQuest:AddSubquest( subQuest )
     -- text on the quest timer at start
-  CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, 300 )
-  CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, 300 )
+  CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, SETTING_BATTLE_WAIT_TIME )
+  CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, SETTING_BATTLE_WAIT_TIME )
   
   -- value on the bar
-  subQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, 300 )
-  subQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, 300 )
+  subQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, SETTING_BATTLE_WAIT_TIME )
+  subQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, SETTING_BATTLE_WAIT_TIME )
   Timers:CreateTimer(1, function()
       CurrentQuest.EndTime = CurrentQuest.EndTime - 1
       CurrentQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, CurrentQuest.EndTime )

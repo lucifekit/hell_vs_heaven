@@ -9,6 +9,9 @@ end
 function modifier_hp_small:GetEffectName()
   return "particles/items_fx/healing_flask.vpcf"
 end
+function modifier_hp_small:GetAttributes()
+    return MODIFIER_ATTRIBUTE_MULTIPLE --we want item's passive abilities to be hidden most of the times
+end
 function modifier_hp_small:GetEffectAttachType()
   return "follow_origin"
 end

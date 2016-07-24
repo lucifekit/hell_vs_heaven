@@ -1,0 +1,24 @@
+//============PHYSICAL AMPLIFY===============
+	"item_physical_amplify"
+	{
+		"ID"              "6510"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"common"
+		"AbilityTextureName"      "item_ogre_axe"
+		"ItemCost"            "200"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physic_amplify"  "50"
+			}
+		}
+	}

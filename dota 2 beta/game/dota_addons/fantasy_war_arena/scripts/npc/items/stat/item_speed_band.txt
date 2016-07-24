@@ -1,33 +1,6 @@
 //============SPEED BAND===============
-	"item_speed_band"
-	{
-		"ID"              "6400"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_boots_of_elves"
-		"ItemCost"            "0"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "stat"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"attack_speed"  "15"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "10"
-			}
-		}
-	}
-	"item_speed_band_lv_1"
+	
+	"item_speed_band_max"
 	{
 		"ID"              "6401"
 		"BaseClass"           	  "item_lua"
@@ -35,9 +8,8 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
 		"AbilityTextureName"      "item_boots_of_elves"
-		"ItemCost"            "0"
+		"ItemCost"            "500"
 		"HomeShop"            "0"
-		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "stat"
@@ -48,37 +20,8 @@
 			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"attack_speed"  "20"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "15"
+				"atk_speed"  "10"
 			}
 		}
 	}
-	"item_speed_band_max"
-	{
-		"ID"              "6402"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_boots_of_elves"
-		"ItemCost"            "0"
-		"HomeShop"            "0"
-		"SecretShop"            "1"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "stat"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "0"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"attack_speed"  "25"
-			}
-		}
-	}
+	

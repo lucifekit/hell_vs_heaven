@@ -408,6 +408,6 @@
 		"ItemResult"          "item_venom_blade"
 		"ItemRequirements"
 		{
-			"01"  "item_speed_band_max;item_glove_max;item_poison_orb_max;"
+			"01"  "item_speed_band_max;item_glove_max;item_poison_orb_max;item_magical_amplify;"
 		}
 	}

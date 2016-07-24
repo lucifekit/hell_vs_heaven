@@ -507,4 +507,10 @@ if item_lightning_bottle_max == nil then item_lightning_bottle_max = class({}) e
 function item_lightning_bottle_max:GetIntrinsicModifierName() return "kem_items_modifier" end
 
 
+-- PHYSICAL AMPLIFY
+if item_physical_amplify == nil then item_physical_amplify = class({}) end
+function item_physical_amplify:GetIntrinsicModifierName() return "kem_items_modifier" end
+-- MAGICAL AMPLIFY
+if item_magical_amplify == nil then item_magical_amplify = class({}) end
+function item_magical_amplify:GetIntrinsicModifierName() return "kem_items_modifier" end
 

@@ -1,0 +1,28 @@
+
+"boss_heaven_68"
+{
+   "ID"  "90012"
+   "BaseClass"             "ability_datadriven"
+   "RequiredLevel"          "1"
+   "MaxLevel"        "1"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+
+"boss_heaven_9"
+{
+   "ID"  "96013"
+   "BaseClass"             "ability_datadriven"
+   "RequiredLevel"          "1"
+   "MaxLevel"        "1"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+
+
+"boss_heaven_10"
+{
+   "ID"  "96014"
+   "BaseClass"             "ability_datadriven"
+   "RequiredLevel"          "1"
+   "MaxLevel"        "1"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}

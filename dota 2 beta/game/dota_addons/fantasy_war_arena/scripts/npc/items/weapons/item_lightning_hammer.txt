@@ -408,6 +408,6 @@
 		"ItemResult"          "item_lightning_hammer"
 		"ItemRequirements"
 		{
-			"01"  "item_speed_band_max;item_staff_max;item_element_drop_max;"
+			"01"  "item_speed_band_max;item_staff_max;item_element_drop_max;item_physical_amplify;"
 		}
 	}

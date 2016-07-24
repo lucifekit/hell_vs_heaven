@@ -8,6 +8,9 @@ SETTING_MP_REGEN = 500
 function modifier_hp_big:RemoveOnDeath()
   return true
 end
+function modifier_hp_big:GetAttributes()
+    return MODIFIER_ATTRIBUTE_MULTIPLE --we want item's passive abilities to be hidden most of the times
+end
 function modifier_hp_big:GetEffectName()
   return "particles/items_fx/healing_flask.vpcf"
 end
@@ -15,9 +18,7 @@ function modifier_hp_big:GetEffectAttachType()
   return "follow_origin"
 end
 function modifier_hp_big:GetTexture()
-
   return "item_greater_salve"
-
 end
 
 function modifier_hp_big:IsPassive()

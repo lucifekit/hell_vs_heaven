@@ -29,7 +29,7 @@ function UpdatePlayerData(playerID)
     hero.as = math.ceil(hero:GetAttackSpeed()*100-100)
     
     hero:AddNewModifier(hero,nil,"modifier_game_speed",{})
-    
+    print("Calculate stat bonus "..hero.as)
     hero:CalculateStatBonus()
     local ready = HERO_READY[playerID]
     if ready then
@@ -96,8 +96,8 @@ function UpgradeSkill(playerID)
     
     hero.reduce_poison_time = 0.0--giam thoi gian trung doc
     
-    hero.extra_hp_percentage = 0.0
-    hero.extra_mp_percentage = 0.0
+--    hero.extra_hp_percentage = 0.0
+--    hero.extra_mp_percentage = 0.0
     
     hero.hpregen_multi = 0.0
     hero.mpregen_multi = 0.0
@@ -158,12 +158,12 @@ function UpgradeSkill(playerID)
           --hp
           
 
-          if(tempAbility.GetExtraHpPercentage) then
-            hero.extra_hp_percentage = hero.extra_hp_percentage+tempAbility:GetExtraHpPercentage()
-          end
-          if(tempAbility.GetExtraMpPercentage) then
-            hero.extra_mp_percentage = hero.extra_mp_percentage+tempAbility:GetExtraMpPercentage()
-          end
+--          if(tempAbility.GetExtraHpPercentage) then
+--            hero.extra_hp_percentage = hero.extra_hp_percentage+tempAbility:GetExtraHpPercentage()
+--          end
+--          if(tempAbility.GetExtraMpPercentage) then
+--            hero.extra_mp_percentage = hero.extra_mp_percentage+tempAbility:GetExtraMpPercentage()
+--          end
           --hpmp speed
           if(tempAbility.GetHpRegenPercentage)then
           hero.hpregen_multi = hero.hpregen_multi+tempAbility:GetHpRegenPercentage()
@@ -347,7 +347,7 @@ function CreateDataForPlayer(playerID)
   for i=0,abilityCount-1 do
     local tempAbi = hero:GetAbilityByIndex(i)
     if(tempAbi)then
-      print("Skill slot "..i.." : "..tempAbi:GetAbilityName())
+      kemPrint("Skill slot "..i.." : "..tempAbi:GetAbilityName())
     end
   end
   if(heroData["effect_1"]) then
@@ -479,12 +479,12 @@ function CreateDataForPlayer(playerID)
   hero.return_magical_damage  = 0
   
   hero.return_damage_resist  = 0
+  hero.damage_to_mp = 0.0
+  --hero.damage_block  = 0
+  --hero.damage_block_max  = 0
   
-  hero.damage_block  = 0
-  hero.damage_block_max  = 0
-  
-  hero.extra_hp_percentage = 0.0
-  hero.extra_mp_percentage = 0.0
+--  hero.extra_hp_percentage = 0.0
+--  hero.extra_mp_percentage = 0.0
   
   --DEFENSE
   hero.resist_metal = 0

@@ -45,8 +45,9 @@ function modifier_daocon_nhatkhitamthanh_allies:OnRefresh( kv )
 end
 
 function modifier_daocon_nhatkhitamthanh_allies:OnDestroy( kv )
-  kemPrint("destroy nhat khi tam thanh allies")
+ 
   if(IsServer())then
+    kemPrint("destroy nhat khi tam thanh allies")
     local par = self:GetParent()
     local skill_level = self:GetAbility():GetLevel()
     local skill_level = self:GetAbility():GetLevel()

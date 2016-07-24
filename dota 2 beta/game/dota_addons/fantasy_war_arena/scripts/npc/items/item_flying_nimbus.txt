@@ -92,7 +92,7 @@
 		"02"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"bonus_movement_speed"		"150"
+			"bonus_movement_speed"		"200"
 		}
 	}
 	"OnSpellStart"
@@ -333,7 +333,7 @@
 		"02"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"bonus_movement_speed"		"200"
+			"bonus_movement_speed"		"250"
 		}
 	}
 	"OnSpellStart"

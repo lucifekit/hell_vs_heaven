@@ -27,9 +27,10 @@ end
 
 function modifier_daocon_vonhanvonga_allies:OnCreated( kv )
 
-  kemPrint("create vonhanvonga allies")
+ 
 
   if(IsServer())then
+    kemPrint("create vonhanvonga allies")
     local caster = self:GetCaster()
     local par = self:GetParent()
     --self.ability_level = 
@@ -49,9 +50,10 @@ function modifier_daocon_vonhanvonga_allies:OnRefresh( kv )
 end
 
 function modifier_daocon_vonhanvonga_allies:OnDestroy( kv )
-  kemPrint("destroy vonhan vo nga allies")
-
+  
   if(IsServer())then
+  kemPrint("destroy vonhan vo nga allies")
+  
     local par = self:GetParent()
     local skill_level = self:GetAbility():GetLevel()
     

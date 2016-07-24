@@ -151,6 +151,10 @@ function BeginAttackState( nMouseButton, abilityIndex, targetEntityIndex )
 					if(!Entities.IsAlive(localHero)){
 						return;
 					}
+					if(!Entities.IsEntityInRange(localHero,order.TargetIndex,1500)){
+						return;
+					}
+					//$.Msg(Entities.NotOnMinimapForEnemies(order.TargetIndex));
 					//$.Msg(Entities.CanAcceptTargetToAttack(localHero,order.TargetIndex));
 				}
 				//$.Msg(abilityIndex);
@@ -303,20 +307,49 @@ function UpdateTarget(targetIndex){
 
 	$('#TargetContainer').SetHasClass("HaveTarget",true);
 	var className = Entities.GetClassname(targetIndex);
-	var unitName = Entities.GetUnitName(targetIndex)
-	unitName = unitName.replace("npc","").replace(/_/g," ").trim();
-	unitName = unitName.substr(0,1).toUpperCase()+unitName.substr(1);
+	var unitName = Entities.GetUnitName(targetIndex);
+	//$.Msg(unitName);
+	var unitNameFixed = unitName.replace("npc","").replace(/_/g," ").trim();
+	//$.Msg(1,unitNameFixed);
+	unitNameFixed = unitNameFixed.substr(0,1).toUpperCase()+unitNameFixed.substr(1);
+	//$.Msg(2,unitNameFixed);
+	$('#TargetImage').SetHasClass("hidden",true);
+	$('#TargetHeroImage').SetHasClass("hidden",false);
 	if(className=='npc_dota_creep'){
-		$('#TargetName').text = unitName;
+		$('#TargetName').text = unitNameFixed;
 		$('#TargetHP').text = "HP : "+Entities.GetHealth(targetIndex)+"/"+Entities.GetMaxHealth(targetIndex);
 		$('#TargetDamage').text = "ATK : "+Entities.GetDamageMin(targetIndex)+"-"+Entities.GetDamageMax(targetIndex);
+		//$('#TargetHeroImage').heroname = className;
+		setCustomTargetImage("creep");
 	}else{
-		$('#TargetName').text = $.Localize('#'+className);//+" - "+targetIndex;
+		//$.Msg(unitName,"-",$.Localize(unitName),"-",$.Localize('#'+unitName),$.Localize("#npc_dota_hero_nevermore"),$.Localize("npc_dota_hero_nevermore"),$.Localize("game_info_tip01"),$.Localize("#game_info_tip01"));
+		$('#TargetName').text = $.Localize(''+unitName)+" - "+targetIndex;
 		$('#TargetHP').text = "HP : "+Entities.GetHealthPercent(targetIndex)+"%";
 		$('#TargetDamage').text = "ATK : "+Entities.GetDamageMin(targetIndex)+"-"+Entities.GetDamageMax(targetIndex);
-
 		$('#TargetHeroImage').heroname = className;
+		//$.Msg(unitNameFixed);
+		if(unitNameFixed=="Boss dieptinh"){
+			setCustomTargetImage("dieptinh");
+			
+		}
+		if(unitNameFixed=="Boss hell"){
+			$('#TargetHeroImage').heroname = "npc_dota_hero_night_stalker";
+		}
+		if(unitNameFixed=="Boss heaven"){
+			$('#TargetHeroImage').heroname = "npc_dota_hero_skywrath_mage";
+		}
 	}
+}
+function setCustomTargetImage(path){
+	//$.Msg("Set custom image = "+path);
+	var imagePath = "file://{images}/custom_game/units/"+path+".png";
+	//imagePath = "file://{images}/custom_game/units/"+path+"_png.vtex";
+	$.Msg(imagePath);
+		$('#TargetImage').SetImage(imagePath);
+		//$('#TargetImage').src = imagePath;
+		//$.Msg($('#TargetImage').src,$('#TargetImage').GetAttributeString("src",""));
+		$('#TargetImage').SetHasClass("hidden",false);
+		$('#TargetHeroImage').SetHasClass("hidden",true);
 }
 // Handle Left Button events
 function OnLeftButtonPressed()

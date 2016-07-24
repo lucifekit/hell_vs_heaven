@@ -15,7 +15,9 @@ SETTING_HLPH_MODIFIER = "modifier_manhan_hoalienphanhoa"
 function skill_manhan_hoalienphanhoa:GetCooldown(  )
   return 70-8*self:GetLevel()
 end
-
+function skill_manhan_hoalienphanhoa:GetManaCost()
+  return self:GetLevel()*20
+end
 function skill_manhan_hoalienphanhoa:OnAbilityPhaseStart()
   self:GetCaster():StartGesture( ACT_DOTA_RAZE_2)
   return true

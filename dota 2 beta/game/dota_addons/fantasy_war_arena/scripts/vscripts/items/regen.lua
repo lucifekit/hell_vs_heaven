@@ -37,7 +37,33 @@ function Mango(event)
   target:AddNewModifier(target,nil,"modifier_mango",{duration=1800})
   
 end
+function Exp(event)
+   local target = event.caster
+   if(IsServer())then
+      
+            
+      local modifiers = target:FindAllModifiers()
+      print("Count : "..#modifiers)
+      for _,modi in ipairs(modifiers) do
+        if(modi:GetName()=="kem_items_modifier")then
+          modi:GainExp(1)
+        end
+      end
+   end
+end
 
+function Exp10(event)
+   local target = event.caster
+   if(IsServer())then
+      local modifiers = target:FindAllModifiers()
+      print("Count : "..#modifiers)
+      for _,modi in ipairs(modifiers) do
+        if(modi:GetName()=="kem_items_modifier")then
+          modi:GainExp(10)
+        end
+      end
+   end
+end
 function TestSpeed(event)
   
   local target = event.caster

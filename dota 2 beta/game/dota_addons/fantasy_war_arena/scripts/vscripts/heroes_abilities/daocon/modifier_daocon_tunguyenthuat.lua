@@ -2,7 +2,12 @@ modifier_daocon_tunguyenthuat = class({})
 function modifier_daocon_tunguyenthuat:IsHidden()
    return false
 end
-
+function modifier_daocon_tunguyenthuat:GetStatusEffectName()
+   return "particles/status_fx/status_effect_gods_strength.vpcf"
+end
+function modifier_daocon_tunguyenthuat:HeroEffectPriority()
+   return 10
+end
 function modifier_daocon_tunguyenthuat:RemoveOnDeath()
    return true
 end

@@ -26,10 +26,10 @@ function modifier_manhan_thucphocchu_active:GetModifierMoveSpeedBonus_Constant( 
 end
 
 function modifier_manhan_thucphocchu_active:OnCreated( kv )  
-  self.move_speed = 20+self:GetAbility():GetLevel()*8
+  self.move_speed = (10+self:GetAbility():GetLevel()*4)*2.5
 end
 
 --------------------------------------------------------------------------------
 function modifier_manhan_thucphocchu_active:OnRefresh( kv )
-  self.move_speed = 20+self:GetAbility():GetLevel()*8
+  self.move_speed = (10+self:GetAbility():GetLevel()*4)*2.5
 end

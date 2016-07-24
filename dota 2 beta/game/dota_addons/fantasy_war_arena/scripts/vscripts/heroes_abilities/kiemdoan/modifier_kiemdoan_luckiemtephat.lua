@@ -3,7 +3,7 @@ modifier_kiemdoan_luckiemtephat = class({})
 SETTING_LKTP_EFFECT = "particles/units/heroes/hero_morphling/morphling_waveform.vpcf"
 --SETTING_SKILL_MODIFIER = "modifier_paralized"
 SETTING_HEALTH_PROC = 25
-SETTING_COOLDOWN = 1
+SETTING_COOLDOWN = 30
 --SETTING_BUFF_MODIFIER  = "modifier_manhan_thucphocchu_active"
 --LinkLuaModifier(SETTING_SKILL_MODIFIER,"modifiers/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
 --LinkLuaModifier(SETTING_BUFF_MODIFIER,"heroes_abilities/kiemdoan/"..SETTING_BUFF_MODIFIER, LUA_MODIFIER_MOTION_NONE )

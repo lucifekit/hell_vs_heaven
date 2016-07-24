@@ -5,7 +5,7 @@
     "BaseClass"         "npc_dota_creature"  // Class of entity of link to.
     "Model"           "models/heroes/crystal_maiden/crystal_maiden_arcana.vmdl"  // Model.
     //"Model" "models/heroes/crystal_maiden/crystal_maiden.vmdl"
-    "ModelScale"	"1.5"
+    "ModelScale"	"1.2"
     "HealthBarOffset"           "400"
     "SoundSet"          "Creep_Good_Range"          // Name of sound set.
     "Level"           "50"
@@ -15,8 +15,8 @@
     "AttackDamageMax"     "9999"     // Damage range max.
     "AttackRate"        "2"     // Speed of attack.
     "BountyXP"          "2000"     // Experience earn.
-    "BountyGoldMin"       "1000"     // Gold earned min.
-    "BountyGoldMax"       "1500"     // Gold earned max.
+    "BountyGoldMin"       "5000"     // Gold earned min.
+    "BountyGoldMax"       "7500"     // Gold earned max.
     "MovementSpeed"       "170" 
     "Ability1"	"boss"
     "Ability2"	"boss_dieptinh_get_out"

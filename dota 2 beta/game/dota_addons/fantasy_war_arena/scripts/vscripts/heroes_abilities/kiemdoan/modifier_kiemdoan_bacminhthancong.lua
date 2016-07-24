@@ -21,16 +21,17 @@ function modifier_kiemdoan_bacminhthancong:DeclareFunctions()
 end
 function modifier_kiemdoan_bacminhthancong:OnTakeDamage( params)
   if(IsServer())then
-  if(self:GetParent()==params.unit)then
-    local damage_taken = params.damage
-    local damage_negate_max = math.ceil(self:GetParent():GetMaxHealth() * self.damage_negate_max)
-    local heal = math.ceil(damage_taken * self.damage_negate)
-    if(damage_negate_max<heal)then
-      heal = damage_negate_max
+    if(self:GetParent()==params.unit)then
+      local damage_taken = params.damage
+      local damage_negate_max = math.ceil(self:GetParent():GetMaxHealth() * self.damage_negate_max)
+      local heal = math.ceil(damage_taken * self.damage_negate)
+      if(damage_negate_max<heal)then
+        heal = damage_negate_max
+      end
+      if(self:GetParent():GetHealth()>0)then
+        self:GetParent():SetHealth(self:GetParent():GetHealth()+heal)
+      end    
     end
-    
-    self:GetParent():SetHealth(self:GetParent():GetHealth()+heal)
-  end
   end
   
   --return 50--reduce 50%

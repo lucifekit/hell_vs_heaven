@@ -3,7 +3,7 @@
     // General
     //-------------------------------------------------------------------------------------------------------------
     "ID"  "14304"   
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET |DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
     "FightRecapLevel"       "1"
     "BaseClass"             "ability_lua"
     "RequiredLevel"          "8"

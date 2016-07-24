@@ -1,83 +1,6 @@
 //============BOOT===============
-	"item_boot"
-	{
-		"ID"              "6110"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_boots"
-		"ItemCost"            "0"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "armors"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"move_speed"  "30"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"hp"  "50"
-			}
-			"03"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"mp"  "50"
-			}
-			"04"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "5"
-			}
-		}
-	}
-	"item_boot_lv_1"
-	{
-		"ID"              "6111"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_boots"
-		"ItemCost"            "0"
-		"HomeShop"            "0"
-		"SecretShop"            "1"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "armors"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"move_speed"  "35"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"hp"  "125"
-			}
-			"03"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"mp"  "90"
-			}
-			"04"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "10"
-			}
-		}
-	}
-	"item_boot_lv_2"
+	
+	"item_boot_max"
 	{
 		"ID"              "6112"
 		"BaseClass"           	  "item_lua"
@@ -85,9 +8,8 @@
 		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemQuality"				"common"
 		"AbilityTextureName"      "item_boots"
-		"ItemCost"            "0"
+		"ItemCost"            "750"
 		"HomeShop"            "0"
-		"SecretShop"            "1"
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
@@ -98,7 +20,7 @@
 			"01"
 			{
 				"var_type"  "FIELD_INTEGER"
-				"move_speed"  "40"
+				"move_speed"  "60"
 			}
 			"02"
 			{
@@ -117,78 +39,4 @@
 			}
 		}
 	}
-	"item_boot_lv_3"
-	{
-		"ID"              "6113"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_boots"
-		"ItemCost"            "0"
-		"HomeShop"            "0"
-		"SecretShop"            "1"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "armors"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"move_speed"  "45"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"hp"  "275"
-			}
-			"03"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"mp"  "170"
-			}
-			"04"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "20"
-			}
-		}
-	}
-	"item_boot_max"
-	{
-		"ID"              "6114"
-		"BaseClass"           	  "item_lua"
-		"ScriptFile"                    "items/items.lua"
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemQuality"				"common"
-		"AbilityTextureName"      "item_boots"
-		"ItemCost"            "0"
-		"HomeShop"            "0"
-		"SecretShop"            "1"
-		"ItemShareability"        "ITEM_NOT_SHAREABLE"
-		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemShopTags"        "armors"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "0"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"move_speed"  "50"
-			}
-			"02"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"hp"  "350"
-			}
-			"03"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"mp"  "210"
-			}
-		}
-	}
+	

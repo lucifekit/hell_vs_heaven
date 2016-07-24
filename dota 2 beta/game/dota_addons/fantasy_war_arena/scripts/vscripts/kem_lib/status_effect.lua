@@ -50,10 +50,11 @@ function StatusEffectHandler:ApplyEffect(caster,unit,effect,chance,time)
     chance = chance-chance*(unitLevel/100)
   end
   if(unit:HasModifier(MODIFIER_BOSS))then
-	if(effect==EFFECT_MAIM or effect==EFFECT_KNOCKBACK or effect==EFFECT_IMMOBILE or effect==EFFECT_PARALIZED or effect==EFFECT_STUN)then
-		time = 0.03
-	end
-    
+  	if(effect==EFFECT_MAIM or effect==EFFECT_KNOCKBACK or effect==EFFECT_IMMOBILE or effect==EFFECT_PARALIZED or effect==EFFECT_STUN)then
+  		time = 0.03
+  	else
+  	  time = time*0.1
+  	end
   end
   
   
@@ -288,6 +289,9 @@ function StatusEffectHandler:KnockBack(caster,start_point,unit,chance,knockback_
   end
   if(unit.effect_knockback_resist_percent)then
         resist_chance = resist_chance+ unit.effect_knockback_resist_percent
+  end
+  if(unit:HasModifier(MODIFIER_BOSS))then
+    chance = 0
   end
 --  if(math.abs(knockback_angle.x)>1)then
 --    --kemPrint("normalized angle")

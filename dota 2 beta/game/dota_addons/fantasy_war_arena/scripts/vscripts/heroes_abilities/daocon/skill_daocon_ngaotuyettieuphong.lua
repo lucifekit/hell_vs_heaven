@@ -9,7 +9,7 @@ SETTING_NTTP_SOUND_DURATION = 1
 require('heroes_abilities/daocon/daocon')
 --------------------------------------------------------------------------------
 function skill_daocon_ngaotuyettieuphong:GetManaCost()
-   return 25
+   return 50+5*self:GetLevel()
 end
 
 function skill_daocon_ngaotuyettieuphong:GetCooldown()

@@ -95,7 +95,7 @@ function modifier_mango:OnRefresh(kv)
   end
 end
 function modifier_mango:OnDestroy(kv)
-  kemPrint("destroyed hp")
+  --kemPrint("destroyed hp")
 
   self:StartIntervalThink(-1)
 end

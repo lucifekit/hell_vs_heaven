@@ -1,0 +1,48 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 4
+	m_BoundingBoxMin = [ -512.0, -512.0, -32.0 ]
+	m_BoundingBoxMax = [ 512.0, 512.0, 32.0 ]
+	m_flConstantRadius = 1024.0
+	m_ConstantColor = [ 69, 180, 18, 255 ]
+	m_bShouldSort = false
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/edited_particle/kiem_minh/thauthienhoannhat_sphere.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_death_prophet/death_prophet_silence_refract.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_death_prophet/death_prophet_silence_flash.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_death_prophet/death_prophet_silence_glow.vpcf"
+			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_death_prophet/death_prophet_silence_glow_2.vpcf"
+			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/edited_particle/kiem_minh/thauthienhoannhat_glow_3.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_death_prophet/death_prophet_silence_glow_4.vpcf"
+			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_death_prophet/death_prophet_silence_glow_5.vpcf"
+			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_death_prophet/death_prophet_silence_twinkles.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_death_prophet/death_prophet_silence_cast.vpcf"
+		},
+	]
+}

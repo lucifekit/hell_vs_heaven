@@ -24,8 +24,9 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_kiemdoan_thiennambophap:OnCreated( kv )
-
-    self.speed = 20+self:GetAbility():GetLevel()*6
+  local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
+  self.speed = (10+self:GetAbility():GetLevel()*3)*settings.speed_base
+  
 
   
 end
@@ -33,7 +34,8 @@ end
 --------------------------------------------------------------------------------
 function modifier_kiemdoan_thiennambophap:OnRefresh( kv )
 
-    self.speed = 20+self:GetAbility():GetLevel()*6
+   local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
+   self.speed = (10+self:GetAbility():GetLevel()*3)*settings.speed_base
 
   
 end

@@ -5,6 +5,7 @@ SETTING_BUFF_MODIFIER  = "modifier_manhan_thucphocchu_active"
 LinkLuaModifier(SETTING_SKILL_MODIFIER,"modifiers/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier(SETTING_BUFF_MODIFIER,"heroes_abilities/manhan/"..SETTING_BUFF_MODIFIER, LUA_MODIFIER_MOTION_NONE )
 SETTING_EFFECT = "particles/units/heroes/hero_nevermore/nevermore_requiemofsouls.vpcf"
+SETTING_COOLDOWN=30
 function modifier_manhan_thucphocchu:IsHidden()
   return true
 end
@@ -24,7 +25,7 @@ function modifier_manhan_thucphocchu:GetModifierMoveSpeedBonus_Constant( params)
   --PrintTable(params)
   return self.move_speed
 end
-SETTING_COOLDOWN=30
+
 function modifier_manhan_thucphocchu:OnTakeDamage(params)
   if(IsServer())then
     if(params.unit==self:GetParent())then
@@ -64,22 +65,24 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_manhan_thucphocchu:OnCreated( kv )
-  if(IsServer())then
-    self.move_speed = 20+self:GetAbility():GetLevel()*8
-    self.paralyze_chance = 3+self:GetAbility():GetLevel()
-    self.paralyze_duration = 2+0.2*self:GetAbility():GetLevel()
-    self.speed_duration = 5+2*self:GetAbility():GetLevel()
-  end
+  local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
+  self.speed = (10+self:GetAbility():GetLevel()*4)*settings.speed_base
+  self.paralyze_chance = 3+self:GetAbility():GetLevel()
+  self.paralyze_duration = 2+0.2*self:GetAbility():GetLevel()
+  self.speed_duration = 5+2*self:GetAbility():GetLevel()
+  
   
 
 end
 
 --------------------------------------------------------------------------------
 function modifier_manhan_thucphocchu:OnRefresh( kv )
-  if(IsServer())then
-  self.move_speed = 20+self:GetAbility():GetLevel()*8
+  local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
+  self.move_speed = (10+self:GetAbility():GetLevel()*4)*settings.speed_base
+
+  
   self.paralyze_chance = 3+self:GetAbility():GetLevel()
   self.paralyze_duration = 2+0.2*self:GetAbility():GetLevel()
   self.speed_duration = 5+2*self:GetAbility():GetLevel()
-  end
+
 end
