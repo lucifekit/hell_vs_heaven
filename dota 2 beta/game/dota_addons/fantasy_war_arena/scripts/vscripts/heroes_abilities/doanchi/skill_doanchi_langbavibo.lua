@@ -1,4 +1,5 @@
 skill_doanchi_langbavibo = class({})
+require('kem_lib/kem')
 SETTING_SKILL_MODIFIER = "modifier_doanchi_langbavibo"
 
 LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/doanchi/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )

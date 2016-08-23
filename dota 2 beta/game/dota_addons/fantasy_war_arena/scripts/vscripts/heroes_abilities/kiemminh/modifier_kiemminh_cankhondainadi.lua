@@ -1,4 +1,5 @@
 modifier_kiemminh_cankhondainadi = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 function modifier_kiemminh_cankhondainadi:GetEffectAttachType()
   return PATTACH_OVERHEAD_FOLLOW

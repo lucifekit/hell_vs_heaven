@@ -32,6 +32,15 @@ function RegisterHero( event )
 	//$.Msg("JS : Registered Hero "+event.msg);
 
 }
+function Resist(value){
+	if(value<1280){
+		return value.toString()+" ~ "+Math.floor(value*100/1536).toString()+"%";	
+	}
+	return value.toString()+" ~ "+Math.floor(value*100/(value+256)).toString()+"%";
+}
+function Crit(value){
+	return value.toString()+" ~ "+Math.floor(value*100/1000).toString()+"%";	
+}
 function UpdateStat(data)
 {
 	//$.Msg(data);
@@ -78,11 +87,11 @@ function UpdateStat(data)
 	var ms = Entities.GetBaseMoveSpeed(heroIdx);
 	$('#StatMS').text = Math.ceil(Entities.GetMoveSpeedModifier(heroIdx, ms));
 
-	$('#StatResistMetal').text = hero.resist_metal;
-	$('#StatResistWood').text = hero.resist_wood;
-	$('#StatResistFire').text = hero.resist_fire;
-	$('#StatResistWater').text = hero.resist_water;
-	$('#StatResistEarth').text = hero.resist_earth;
+	$('#StatResistMetal').text = Resist(hero.resist_metal);
+	$('#StatResistWood').text = Resist(hero.resist_wood);
+	$('#StatResistFire').text = Resist(hero.resist_fire);
+	$('#StatResistWater').text = Resist(hero.resist_water);
+	$('#StatResistEarth').text = Resist(hero.resist_earth);
 
 	$('#StatMaim').text = hero.effect_maim_add_percent+" / " +hero.effect_maim_add_time+ " | " +hero.effect_maim_resist_percent  +" / "+hero.effect_maim_reduce_time;
 	$('#StatWeak').text = hero.effect_weak_add_percent+" / " +hero.effect_weak_add_time+ " | " +hero.effect_weak_resist_percent  +" / "+hero.effect_weak_reduce_time;
@@ -98,9 +107,10 @@ function UpdateStat(data)
 
 	$('#StatBasicDamage').text = Math.ceil(hero.basic_damage_percent*100)+"%";
 	$('#StatPhysicalAmplify').text = Math.ceil(hero.physic_amplify*100)+"%";
+	$('#StatMagicalAmplify').text = Math.ceil(hero.element_amplify*100)+"%";
 
 
-	$('#StatCriticalChance').text = hero.critical_chance;
+	$('#StatCriticalChance').text = Crit(hero.critical_chance);
 	$('#StatCriticalDamage').text = Math.ceil(hero.critical_damage*100)/100;
 	$('#StatEvade').text = Math.ceil(hero.evade_point);
 	$('#StatAccuracy').text = Math.ceil(hero.accuracy_point*hero.accuracy_chance);

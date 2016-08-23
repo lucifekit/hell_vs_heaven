@@ -1,4 +1,5 @@
 modifier_kiemminh_thanhhoalenhphap = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 
 function modifier_kiemminh_thanhhoalenhphap:IsHidden()

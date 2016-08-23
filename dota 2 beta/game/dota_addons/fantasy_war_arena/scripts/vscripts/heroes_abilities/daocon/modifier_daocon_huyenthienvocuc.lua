@@ -1,4 +1,5 @@
 modifier_daocon_huyenthienvocuc = class({})
+require('kem_lib/kem')
 function modifier_daocon_huyenthienvocuc:IsHidden()
    return true
 end
@@ -55,16 +56,26 @@ end
 --end
 
 function modifier_daocon_huyenthienvocuc:OnCreated( kv )
-if(IsServer())then
-local skill_level=self:GetAbility():GetLevel()
-local damage_negate = 0.4
-local damage_negate_max = 0.015+0.005*skill_level
-local reflect_damage_resist = 0.1+0.07*skill_level
-self.damage_negate=0.4
-self.damage_negate_max=damage_negate_max
-end
+  if(IsServer())then
+    local p = self:GetParent()
+    local skill_level=self:GetAbility():GetLevel()+GetSkillLevel(p)
+    local damage_negate = 0.4
+    local damage_negate_max = 0.015+0.005*skill_level
+    local reflect_damage_resist = 0.1+0.07*skill_level
+    self.damage_negate=0.4
+    self.damage_negate_max=damage_negate_max
+  end
 
 end
 
 function modifier_daocon_huyenthienvocuc:OnRefresh( kv )
+  if(IsServer())then
+    local p = self:GetParent()
+    local skill_level=self:GetAbility():GetLevel()+GetSkillLevel(p)
+    local damage_negate = 0.4
+    local damage_negate_max = 0.015+0.005*skill_level
+    local reflect_damage_resist = 0.1+0.07*skill_level
+    self.damage_negate=0.4
+    self.damage_negate_max=damage_negate_max
+  end
 end

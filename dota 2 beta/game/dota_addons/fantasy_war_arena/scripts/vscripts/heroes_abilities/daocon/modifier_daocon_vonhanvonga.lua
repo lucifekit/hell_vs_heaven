@@ -1,4 +1,5 @@
 modifier_daocon_vonhanvonga = class({})
+require('kem_lib/kem')
 function modifier_daocon_vonhanvonga:IsHidden()
    return false
 end

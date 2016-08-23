@@ -1,4 +1,5 @@
 skill_kiemdoan_soanh = class({})
+require('kem_lib/kem')
 require('heroes_abilities/kiemdoan/kiemdoan')
 SETTING_BUFF_MODIFIER = "modifier_kiemdoan_soanh"
 SETTING_FIND_RADIUS = 300
@@ -26,9 +27,15 @@ function skill_kiemdoan_soanh:OnSpellStart()
 
   local caster = self:GetCaster()  
   local target_point = self:GetCursorPosition()
-  local skill_level = self:GetLevel()
+  local skill_level = self:GetLevel() + GetSkillLevel(caster)
   local phongvan_level = caster:GetAbilityByIndex(0):GetLevel()
+  if(phongvan_level>0)then
+    phongvan_level=phongvan_level+GetSkillLevel(caster)
+  end
   local lucmach_level = caster:GetAbilityByIndex(3):GetLevel()
+  if(lucmach_level>0)then
+    lucmach_level=lucmach_level+GetSkillLevel(caster)
+  end
   phongvan_level = math.min(10+skill_level*2,phongvan_level)
   lucmach_level = math.min(10+skill_level*2,lucmach_level)
   local enemies = FindUnitsInRadius(caster:GetTeam(), target_point, nil, SETTING_FIND_RADIUS, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, 0, false )

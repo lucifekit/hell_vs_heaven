@@ -1,4 +1,5 @@
 skill_daocon_thanhphongphu = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 SETTING_SKILL_MODIFIER = "modifier_daocon_thanhphongphu"
 SETTING_RADIUS = 200
@@ -12,7 +13,9 @@ function skill_daocon_thanhphongphu:GetCooldown()
    return 15
 end
 function skill_daocon_thanhphongphu:GetSlowResistTime()
-   return 10+12.5*self:GetLevel()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return 10+skill_level*2.5
 end
 function skill_daocon_thanhphongphu:OnAbilityPhaseStart()
    local atk_perseconds = self:GetCaster():GetAttacksPerSecond()
@@ -22,17 +25,12 @@ end
 
 function skill_daocon_thanhphongphu:OnSpellStart()
    local caster = self:GetCaster()
-   local skill_level = self:GetLevel()
+   local skill_level = self:GetLevel() + GetSkillLevel(caster)
    local caster_position = caster:GetAbsOrigin()
    local hTarget = self:GetCursorTarget()
    local cast_point = self:GetCursorPosition()
    local target_point = self:GetCursorPosition()
-
+  caster:EmitSound("DOTA_Item.Mjollnir.Activate")
   caster:AddNewModifier( self:GetCaster(), self,SETTING_SKILL_MODIFIER, { duration = SETTING_DURATION } )
-  local enemies = FindUnitsInRadius(caster:GetTeam(), cast_point, nil, SETTING_RADIUS, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, 0, false )
-  if #enemies > 0 then
-    for _,enemy in pairs(enemies) do
-      enemy:AddNewModifier( self:GetCaster(), self,SETTING_SKILL_MODIFIER, { duration = SETTING_DURATION } )
-    end
-  end
+  BuffAllies(caster,self,SETTING_SKILL_MODIFIER,SETTING_DURATION,target_point,SETTING_RADIUS)
 end

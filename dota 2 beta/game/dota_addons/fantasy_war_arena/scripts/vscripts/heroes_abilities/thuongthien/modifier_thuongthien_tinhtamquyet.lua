@@ -1,4 +1,5 @@
 modifier_thuongthien_tinhtamquyet = class({})
+require('kem_lib/kem')
 function modifier_thuongthien_tinhtamquyet:IsHidden()
    return false
 end
@@ -28,11 +29,14 @@ end
 
 function modifier_thuongthien_tinhtamquyet:OnCreated( kv )
 --10-80
-
-  self.extra_hp_percentage = 0.05+self:GetAbility():GetLevel()*0.075
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.extra_hp_percentage = 0.05+skill_level*0.075
 
 end
 
 function modifier_thuongthien_tinhtamquyet:OnRefresh( kv )
-  self.extra_hp_percentage = 0.05+self:GetAbility():GetLevel()*0.075
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.extra_hp_percentage = 0.05+skill_level*0.075
 end

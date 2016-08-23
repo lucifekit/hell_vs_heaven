@@ -1,4 +1,5 @@
 skill_daocon_ngaotuyettieuphong = class({})
+require('kem_lib/kem')
 SETTING_NTTP_EFFECT = "particles/edited_particle/dao_con/ngaotuyettieuphong.vpcf"
 SETTING_NTTP_FLY_TIME = 0.8
 SETTING_NTTP_FLY_SPEED = 800
@@ -9,7 +10,9 @@ SETTING_NTTP_SOUND_DURATION = 1
 require('heroes_abilities/daocon/daocon')
 --------------------------------------------------------------------------------
 function skill_daocon_ngaotuyettieuphong:GetManaCost()
-   return 50+5*self:GetLevel()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+   return 50+skill_level*5
 end
 
 function skill_daocon_ngaotuyettieuphong:GetCooldown()
@@ -26,7 +29,7 @@ end
 
 function skill_daocon_ngaotuyettieuphong:OnSpellStart()
    local caster = self:GetCaster()
-   local skill_level = self:GetLevel()
+   local skill_level = self:GetLevel() + GetSkillLevel(caster)
    local caster_position = caster:GetAbsOrigin()
    local hTarget = self:GetCursorTarget()
    local cast_point = self:GetCursorPosition()
@@ -71,7 +74,7 @@ local max_target = 2
     --33%,371-453,23%
    local damageData = {
         caster = caster,
-        main_attribute_value = caster:GetAgility(),
+        main_physic = caster:GetAgility(),
         skill_physical_damage_percent = physical_damage_amplify,
         skill_tree_amplify_damage = 0,-- can edit
         skill_basic_damage_percent = basic_damage,
@@ -82,7 +85,7 @@ local max_target = 2
    local damageInfo = DamageHandler:GetDamage(damageData)
    local damageData2 = {
         caster = caster,
-        main_attribute_value = caster:GetAgility(),
+        main_physic = caster:GetAgility(),
         skill_physical_damage_percent = lightning_physical_damage_amplify,
         skill_tree_amplify_damage = 0,-- can edit
         skill_basic_damage_percent = lightning_basic_damage,
@@ -141,6 +144,7 @@ local max_target = 2
               local HPPL_Ability = proj.Source:FindAbilityByName("skill_daocon_hoiphongphatlieu")
               local HPPL_Level = HPPL_Ability:GetLevel()
               if(HPPL_Level>0)then
+                HPPL_Level = HPPL_Level+GetSkillLevel(proj.Source)
                 local HPPL_Chance = 5+HPPL_Level
                 if(math.random(0,100)<HPPL_Chance)then
                   CastHoiPhongPhatLieu(proj.Source,unit:GetOrigin())

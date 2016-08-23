@@ -1,4 +1,5 @@
 modifier_daocon_cuongphongsaudien = class({})
+require('kem_lib/kem')
 function modifier_daocon_cuongphongsaudien:IsHidden()
    return true
 end

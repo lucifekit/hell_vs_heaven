@@ -7,7 +7,7 @@
     "FightRecapLevel"       "1"
     "RequiredLevel"          "30"
     "BaseClass"             "ability_lua"
-    "AbilityTextureName"      "jakiro_liquid_fire"
+    "AbilityTextureName"      "manhan_hoalienphanhoa"
     "ScriptFile"          "heroes_abilities/manhan/skill_manhan_hoalienphanhoa"
     "MaxLevel"                      "5"
     "CastFilterRejectCaster" "1"

@@ -1,4 +1,5 @@
 modifier_thuongthien_kinhloiphathien = class({})
+require('kem_lib/kem')
 
 SETTING_HEALTH_PROC=25
 
@@ -46,12 +47,16 @@ end
 function modifier_thuongthien_kinhloiphathien:OnCreated( kv )
   
   -- DANGER ZONE
-self.invulnerable_duration = 0.83+0.334*self:GetAbility():GetLevel()
-self.buff_duration = 15
+  local p=self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
+  self.invulnerable_duration = 0.83+0.334*skill_level
+  self.buff_duration = 15
   
 end
 
 function modifier_thuongthien_kinhloiphathien:OnRefresh( kv )
-self.invulnerable_duration = 0.83+0.334*self:GetAbility():GetLevel()
-self.buff_duration = 15
+  local p=self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
+  self.invulnerable_duration = 0.83+0.334*skill_level
+  self.buff_duration = 15
 end

@@ -7,7 +7,7 @@
     "FightRecapLevel"       "1"
     "RequiredLevel"          "35"
     "BaseClass"             "ability_lua"
-    "AbilityTextureName"      "warlock_fatal_bonds"
+    "AbilityTextureName"      "manhan_nhiephonloantam"
     "ScriptFile"          "heroes_abilities/manhan/skill_manhan_nhiephonloantam"
     "MaxLevel"                      "10"
     "CastFilterRejectCaster" "1"

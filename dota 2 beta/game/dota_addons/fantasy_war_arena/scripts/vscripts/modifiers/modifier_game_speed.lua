@@ -56,8 +56,9 @@ end
 --  return 0
 --end
 function modifier_game_speed:OnCreated(kv)
-  self.resist_physical = 0
+  
   if(IsServer())then
+    self.resist_physical = 0
     local hero = self:GetParent()
     if(hero.resist_metal)then
       self.resist_physical = hero.resist_metal*100/(hero.resist_metal+1024)
@@ -68,15 +69,18 @@ function modifier_game_speed:OnCreated(kv)
 
 end
 function modifier_game_speed:OnRefresh(kv)
-  self.resist_physical = 0
-  if(IsServer())then
-    local hero = self:GetParent()
-    if(hero.resist_metal)then
-      self.resist_physical = hero.resist_metal*100/(hero.resist_metal+1024)
-
-      --kemPrint("Server Resist metal : "..hero.resist_metal.." ==> Block "..self.resist_physical.."% ")
+  if(self)then
+    if(IsServer())then
+      self.resist_physical = 0  
+      local hero = self:GetParent()
+      if(hero.resist_metal)then
+        self.resist_physical = hero.resist_metal*100/(hero.resist_metal+1024)
+  
+        --kemPrint("Server Resist metal : "..hero.resist_metal.." ==> Block "..self.resist_physical.."% ")
+      end
     end
   end
+  
   --kemPrint("Refresh game mechanic modifier")
 
 end

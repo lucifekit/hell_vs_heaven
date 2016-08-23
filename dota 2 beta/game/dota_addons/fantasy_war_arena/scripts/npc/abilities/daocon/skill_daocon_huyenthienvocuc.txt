@@ -5,7 +5,7 @@
    "RequiredLevel"          "7"
    "MaxLevel"				 "5"
    "LevelsBetweenUpgrades"  "1"
-   "AbilityTextureName"      "faceless_void_time_lock"
+   "AbilityTextureName"      "skill_daocon_huyenthienvocuc"
    "ScriptFile"          "heroes_abilities/daocon/skill_daocon_huyenthienvocuc"
    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
    "precache"

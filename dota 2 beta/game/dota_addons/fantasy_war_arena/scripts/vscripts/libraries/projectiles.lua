@@ -193,6 +193,7 @@ function Projectiles:CreateProjectile(projectile)
   projectile.id = ParticleManager:CreateParticle(projectile.EffectName, PATTACH_CUSTOMORIGIN, nil)
   ParticleManager:SetParticleAlwaysSimulate(projectile.id)
   for k,v in pairs(projectile.ControlPoints) do
+    --kemPrint("196 SetParticleControl "..k)
     ParticleManager:SetParticleControl(projectile.id, k, v)
   end
   for k,v in pairs(projectile.ControlPointForwards) do
@@ -208,10 +209,12 @@ function Projectiles:CreateProjectile(projectile)
     local origin = v.origin or projectile.vSpawnOrigin
     ParticleManager:SetParticleControlEnt(projectile.id, k, unit, pattach, attachPoint, origin, true)
   end
-
+  --kemPrint("212 SetParticleControl "..projectile.iPositionCP.." at spawnOrigin")
+  --print(projectile.vSpawnOrigin)
   ParticleManager:SetParticleControl(projectile.id, projectile.iPositionCP, projectile.vSpawnOrigin)
   if projectile.ControlPointForwards[1] == nil and projectile.ControlPointOrientations[1] == nil then
-    ParticleManager:SetParticleControlForward(projectile.id, projectile.iPositionCP, projectile.vel:Normalized())
+    --kemPrint("215 SetParticleControlForward "..projectile.iPositionCP.." at vel normalized")
+    --ParticleManager:SetParticleControlForward(projectile.id, projectile.iPositionCP, projectile.vel:Normalized())
   end
   --ParticleManager:SetParticleControlEnt(projectile.id, projectile.iPositionCP, projectile.Source, PATTACH_CUSTOMORIGIN, nil, projectile.vSpawnOrigin, true)
   --ParticleManager:SetParticleControlForward(projectile.id, projectile.iPositionCP, projectile.Source:GetForwardVector())
@@ -233,6 +236,8 @@ function Projectiles:CreateProjectile(projectile)
       ParticleManager:SetParticleControl(projectile.id, projectile.iVelocityCP, ((-2 * projectile.vel:Dot(normal) * normal) + projectile.vel) * 30)
     end]]
   else
+    --kemPrint("238 SetParticleControl "..projectile.iVelocityCP.." at vel")
+    --print(projectile.vel * 30)
     ParticleManager:SetParticleControl(projectile.id, projectile.iVelocityCP, projectile.vel * 30)
   end
 
@@ -254,6 +259,7 @@ function Projectiles:CreateProjectile(projectile)
     return projectile.vel * 30
   end
   function projectile:SetVelocity(newVel, newPos)
+    
     if projectile.changes > 0 then
       projectile.changes = projectile.changes - 1
       projectile.vel = newVel / 30
@@ -291,6 +297,7 @@ function Projectiles:CreateProjectile(projectile)
     end
   end
   function projectile:Destroy()
+    --kemPrint("destroying")
     ParticleManager:DestroyParticle(projectile.id, projectile.bDestroyImmediate)
     Projectiles:RemoveTimer(projectile.ProjectileTimerName)
   end
@@ -310,6 +317,7 @@ function Projectiles:CreateProjectile(projectile)
 
       -- checks
       if curTime > projectile.spawnTime + projectile.fExpireTime or projectile.distanceTraveled > projectile.fDistance then
+        --kemPrint("320 Destroy particle "..projectile.distanceTraveled..">"..projectile.fDistance)
         ParticleManager:DestroyParticle(projectile.id, projectile.bDestroyImmediate)
         if projectile.OnFinish then
           local status, out = pcall(projectile.OnFinish, projectile, pos)
@@ -412,6 +420,7 @@ function Projectiles:CreateProjectile(projectile)
                 end
 
                 if projectile.UnitBehavior == PROJECTILES_DESTROY then
+                  print("423 destroy behavior unit")
                   ParticleManager:DestroyParticle(projectile.id, projectile.bDestroyImmediate)
                   if projectile.OnFinish then
                     local status, out = pcall(projectile.OnFinish, projectile, subpos)
@@ -462,6 +471,7 @@ function Projectiles:CreateProjectile(projectile)
                 end
 
                 if projectile.TreeBehavior == PROJECTILES_DESTROY then
+                  print("423 destroy behavior tree")
                   ParticleManager:DestroyParticle(projectile.id, projectile.bDestroyImmediate)
                   if projectile.OnFinish then
                     local status, out = pcall(projectile.OnFinish, projectile, subpos)
@@ -488,6 +498,7 @@ function Projectiles:CreateProjectile(projectile)
             end
 
             if projectile.WallBehavior == PROJECTILES_DESTROY then
+              print("423 destroy behavior wall")
               ParticleManager:DestroyParticle(projectile.id, projectile.bDestroyImmediate)
               if projectile.OnFinish then
                 local status, out = pcall(projectile.OnFinish, projectile, subpos)
@@ -512,6 +523,7 @@ function Projectiles:CreateProjectile(projectile)
         if projectile.GroundBehavior ~= PROJECTILES_NOTHING and groundConnect then
             --print('groundConnect')
             if projectile.GroundBehavior == PROJECTILES_DESTROY then
+              print("423 destroy behavior ground")
               ParticleManager:DestroyParticle(projectile.id, projectile.bDestroyImmediate)
               local status, action = pcall(projectile.OnGroundHit, projectile, ground)
               if not status then
@@ -560,6 +572,7 @@ function Projectiles:CreateProjectile(projectile)
         subpos = pos + vel * (div * index)
 
         if projectile.distanceTraveled + (subpos-pos):Length() > projectile.fDistance then
+          --print("575 destroy distance travel")
           ParticleManager:DestroyParticle(projectile.id, projectile.bDestroyImmediate)
           if projectile.OnFinish then
             local status, out = pcall(projectile.OnFinish, projectile, subpos)

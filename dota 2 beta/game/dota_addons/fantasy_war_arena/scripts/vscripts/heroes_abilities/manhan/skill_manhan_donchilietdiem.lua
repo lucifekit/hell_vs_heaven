@@ -1,4 +1,5 @@
 skill_manhan_donchilietdiem = class({})
+require('kem_lib/kem')
 SETTING_DCLD_NUMBER_OF_FIRES = 1
 SETTING_DCLD_DURATION_OF_FIRES = 2
 SETTING_DCLD_SKILL_CODE = "skill_manhan_donchilietdiem"
@@ -11,12 +12,17 @@ SETTING_DCLD_EFFECT = "particles/edited_particle/ma_nhan/donchilietdiem.vpcf"
 SETTING_EFFECT_2 = "particles/units/heroes/hero_nevermore/nevermore_requiemofsouls_line.vpcf"
 function skill_manhan_donchilietdiem:GetCooldown()
   --if mttc then return 0.5
+  if(HasBook(self:GetCaster()))then
+    return 0.5
+  end
   return 2
 end
 
 function skill_manhan_donchilietdiem:GetManaCost()
   --if mttc then return 2
-  return 5*self:GetLevel()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*5
 end
 
 function skill_manhan_donchilietdiem:OnAbilityPhaseStart()
@@ -28,7 +34,7 @@ end
 function skill_manhan_donchilietdiem:OnSpellStart()
 
   local caster = self:GetCaster()
-  local skill_level = self:GetLevel()
+  local skill_level = self:GetLevel() + GetSkillLevel(caster)
   local caster_position = caster:GetAbsOrigin()
   local target_point = self:GetCursorPosition()
 	--self:PayManaCost()
@@ -54,7 +60,7 @@ local max_target = math.floor(2+0.2*skill_level)
       
       local damageData = {
         caster = caster,
-        main_attribute_value = caster:GetIntellect(),
+        main_magic = caster:GetIntellect(),
         skill_physical_damage_percent = 0,
         skill_tree_amplify_damage = 0,-- can edit
         skill_basic_damage_percent = basic_damage,

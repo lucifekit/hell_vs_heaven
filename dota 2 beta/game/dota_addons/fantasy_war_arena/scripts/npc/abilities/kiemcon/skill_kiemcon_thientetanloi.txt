@@ -1,0 +1,58 @@
+"skill_kiemcon_thientetanloi"
+{
+   "ID"  "15155"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "9"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "disruptor_thunder_strike"
+   "ScriptFile"          "heroes_abilities/kiemcon/skill_kiemcon_thientetanloi"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "700"
+   "precache"
+   {
+   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_leshrac.vsndevts"
+   }
+   // LIGHTNING RAIN
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "45"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "675 746 817 888 959 1030 1101 1172 1243 1314"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "1000 1075 1150 1225 1300 1375 1450 1525 1600 1675"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_stun"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"stun_time"  "1"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "3"
+		}
+	}
+
+   
+}

@@ -3,7 +3,7 @@ modifier_hp_small = class({})
 
 SETTING_HP_REGEN = 250
 SETTING_MP_REGEN = 250
-function modifier_hp_big:RemoveOnDeath()
+function modifier_hp_small:RemoveOnDeath()
   return true
 end
 function modifier_hp_small:GetEffectName()
@@ -104,7 +104,7 @@ function modifier_hp_small:OnRefresh(kv)
     kemPrint("refreshed hp"..time_between_tick.." - "..hp_per_tick)
   end
 end
-function modifier_hp_big:OnDestroy(kv)
+function modifier_hp_small:OnDestroy(kv)
   --kemPrint("destroyed hp")
   self:StartIntervalThink(-1)
 end

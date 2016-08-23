@@ -13,14 +13,14 @@ function skill_manhan_thucphocchu_onUpgrade(event)
 
 end
 
-SETTING_MDTT_EFFECT = "particles/units/heroes/hero_nevermore/nevermore_requiemofsouls.vpcf"
+--SETTING_MDTT_EFFECT = "particles/units/heroes/hero_nevermore/nevermore_requiemofsouls.vpcf"
 SETTING_MDTT_EFFECT_2 = "particles/units/heroes/hero_nevermore/nevermore_requiemofsouls_line.vpcf"
 function CastMDTT(caster,ability)
 
   local caster_point = caster:GetOrigin()
   local caster_angle = caster:GetForwardVector()
   local caster_forward_point = caster_point +150*caster_angle
-  local skill_level = ability:GetLevel()
+  local skill_level = ability:GetLevel()+GetSkillLevel(caster)
   -- SOUL REVENGE
 local basic_damage = 0.05+0.01*skill_level
 local element_damage_min = 100+7*skill_level
@@ -45,7 +45,7 @@ local life_steal = 0.01+0.01*skill_level
     
       local damageData = {
         caster = caster,
-        main_attribute_value = caster:GetIntellect(),
+        main_magic = caster:GetIntellect(),
         skill_physical_damage_percent = 0,
         skill_tree_amplify_damage = 0,-- can edit
         skill_basic_damage_percent = basic_damage,

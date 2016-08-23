@@ -12,7 +12,7 @@
     
     "CastFilterRejectCaster" "1"
     "HotKeyOverride"    "" 
-    "AbilityTextureName"      "warlock_rain_of_chaos"
+    "AbilityTextureName"      "manhan_kimthienthoatxac"
     "ScriptFile"          "heroes_abilities/manhan/skill_manhan_kimthienthoatxac"
     // EVASION
 	"AbilitySpecial"

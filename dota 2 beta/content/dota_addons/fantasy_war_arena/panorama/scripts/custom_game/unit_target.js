@@ -332,6 +332,10 @@ function UpdateTarget(targetIndex){
 			setCustomTargetImage("dieptinh");
 			
 		}
+		if(unitNameFixed=="Boss hokhon"){
+			setCustomTargetImage("hokhon");
+			
+		}
 		if(unitNameFixed=="Boss hell"){
 			$('#TargetHeroImage').heroname = "npc_dota_hero_night_stalker";
 		}
@@ -344,7 +348,7 @@ function setCustomTargetImage(path){
 	//$.Msg("Set custom image = "+path);
 	var imagePath = "file://{images}/custom_game/units/"+path+".png";
 	//imagePath = "file://{images}/custom_game/units/"+path+"_png.vtex";
-	$.Msg(imagePath);
+	//$.Msg(imagePath);
 		$('#TargetImage').SetImage(imagePath);
 		//$('#TargetImage').src = imagePath;
 		//$.Msg($('#TargetImage').src,$('#TargetImage').GetAttributeString("src",""));

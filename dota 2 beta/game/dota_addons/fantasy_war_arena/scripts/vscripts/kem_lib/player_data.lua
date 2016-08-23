@@ -2,6 +2,7 @@
 -- manages player data
 LinkLuaModifier("modifier_khinhcong_lua", "modifiers/modifier_khinhcong_lua", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_game_speed", "modifiers/modifier_game_speed", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_skill_level", "modifiers/modifier_skill_level", LUA_MODIFIER_MOTION_NONE)
 STAT_SM = 0
 STAT_TP = 1
 STAT_SK = 2
@@ -13,8 +14,10 @@ if not PlayerData then
   PlayerData = {}
 end
 function UpdatePlayerDataForHero(hero)
-
-  kemPrint("Update player data for hero "..hero:GetUnitName())
+  if(IsServer())then
+    kemPrint("Update player data for hero "..hero:GetUnitName())
+  end
+  
 
   UpdatePlayerData(hero:GetPlayerID())
 end
@@ -26,11 +29,15 @@ function UpdatePlayerData(playerID)
     hero.stat_sm  = hero:GetAgility()
     hero.stat_sk  = hero:GetStrength()
     hero.stat_nc  = hero:GetIntellect()
-    hero.as = math.ceil(hero:GetAttackSpeed()*100-100)
+ 
     
-    hero:AddNewModifier(hero,nil,"modifier_game_speed",{})
-    print("Calculate stat bonus "..hero.as)
+    --hero:AddNewModifier(hero,nil,"modifier_game_speed",{})
+   
+    --print("Calculate stat bonus "..hero.as)
+    
+       
     hero:CalculateStatBonus()
+    hero.as = math.ceil(hero:GetAttackSpeed()*100-100)
     local ready = HERO_READY[playerID]
     if ready then
 
@@ -67,7 +74,7 @@ function UpgradeSkillForHero(hero)
 end
 function UpgradeSkill(playerID)
 
-  kemPrint("call upgrade skill" ..playerID)
+  kemPrint("call upgrade skill for player " ..playerID)
   local hero = HERO_OF_PLAYER[playerID]
   
   if hero then
@@ -91,8 +98,9 @@ function UpgradeSkill(playerID)
     
     hero.accuracy_chance = 1
     hero.bypass_evade  = 0 --bo qua ne tranh
-    
+    --print("Upgrade skill set chance = 0 "..hero:GetUnitName())
     hero.critical_chance  = 0.0
+    hero.critical_damage=1.8
     
     hero.reduce_poison_time = 0.0--giam thoi gian trung doc
     
@@ -144,6 +152,9 @@ function UpgradeSkill(playerID)
           end
           if(tempAbility.GetCriticalChance)then
             hero.critical_chance = hero.critical_chance+tempAbility:GetCriticalChance()
+          end
+          if(tempAbility.GetCriticalDamage)then
+            hero.critical_damage = hero.critical_damage+tempAbility:GetCriticalDamage()
           end
           if(tempAbility.GetByPassEvade)then
              hero.bypass_evade = hero.bypass_evade +tempAbility:GetByPassEvade()
@@ -298,7 +309,10 @@ function UpgradeSkill(playerID)
             hero.effect_knockback_resist_percent = hero.effect_knockback_resist_percent +tempAbility:GetKnockbackResistChance()
         end
         
-
+        --SPECIAL BUFF
+        if(tempAbility.UpdateSkill)then
+          tempAbility:UpdateSkill()
+        end
   
         
       end
@@ -325,14 +339,17 @@ function CreateDataForPlayer(playerID)
     end
     if hero.inited then return end
 
-
- 
+  --Timers:CreateTimer(1,function()
+    --hero:StartGesture(ACT_DOTA_CAST_ABILITY_2)  
+    --return 1
+  --end)
+  
   hero.inited = true
   hero.idx = hero:GetEntityIndex()
   hero.hero_level = hero:GetLevel()
   hero:SetIdleAcquire( false ) 
-
-  kemPrint("Save spawn point "..hero:GetUnitName())
+  hero.skill_level = 0
+  --kemPrint("Save spawn point "..hero:GetUnitName())
   hero.spawn_point = hero:GetOrigin()
 
   
@@ -341,7 +358,7 @@ function CreateDataForPlayer(playerID)
   local heroData = hero_elements[hero_name]
   --PrintTable(heroData)
   hero.element = heroData["element"] or ELEMENT_NONE
-
+  hero.class   = heroData["class"] or ""
   --kemPrint("Element "..hero.element)
   local abilityCount  = hero:GetAbilityCount()
   for i=0,abilityCount-1 do
@@ -371,17 +388,20 @@ function CreateDataForPlayer(playerID)
      hero.is_physical = false
      hero.is_magical = true
   end
-  local khinhcong_ability = hero:AddAbility("skill_khinhcong")
-  hero:UpgradeAbility(khinhcong_ability)
-  if  khinhcong_ability then
-    local kc_time = 10
-    if(IsInToolsMode())then
-      kc_time = 10
+  if(heroData["horse_disable_ability"]==1)then
+    local khinhcong_ability = hero:AddAbility("skill_khinhcong")
+    hero:UpgradeAbility(khinhcong_ability)
+    if  khinhcong_ability then
+      local kc_time = 10
+      if(IsInToolsMode())then
+        kc_time = 10
+      end
+      hero:AddNewModifier(hero,khinhcong_ability , "modifier_khinhcong_lua",{max_count = 10,start_count = 10,replenish_time = kc_time})
     end
-    hero:AddNewModifier(hero,khinhcong_ability , "modifier_khinhcong_lua",{max_count = 10,start_count = 10,replenish_time = kc_time})
   end
+  
   hero:AddNewModifier(hero,nil,"modifier_game_speed",{})
-    
+  hero:AddNewModifier(hero,nil , "modifier_skill_level",{})
   
   hero.stat_tp = 50
 
@@ -457,8 +477,10 @@ function CreateDataForPlayer(playerID)
   hero.basic_damage_percent  = 0.0 -- phat huy luc tan cong co ban
   
   --chance
+  --print("Init set chance = 0 "..hero:GetUnitName())
   hero.critical_chance  = 0     --diem chi mang
-  hero.critical_damage  = 1.8   --sat thuogn chi mang
+  hero.critical_damage  = 1.8   --sat thuong chi mang gay ra
+  hero.critical_damage_resist = 0 --sat thuong chi mang nhan vao
   hero.reduce_poison_time  = 0.0  --giam thoi gian trung doc
   
   hero.evade_point  = hero.stat_tp*4
@@ -526,7 +548,16 @@ function CreateDataForPlayer(playerID)
     if hero.player_name  == "" then -- This normally happens in dev tools
         hero.player_name  = 'Developer'
     end
-    
+  hero.canDive = function()
+    if(hero:HasModifier("modifier_prepare"))then
+      return false
+    end
+    if hero:IsStunned() or hero:IsHexed() or hero:IsFrozen() or hero:IsNightmared() or hero:IsOutOfGame() then
+    -- Interrupt the ability
+      return false
+    end
+    return true
+  end
   hero.skillCooldown = function()
 
     --PrintTable(self)

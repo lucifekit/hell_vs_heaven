@@ -1,4 +1,5 @@
 skill_kiemminh_vanvatcauphan = class({})
+require('kem_lib/kem')
 
 --------------------------------------------------------------------------------
 SETTING_EFFECT = "particles/units/heroes/hero_venomancer/venomancer_venomous_gale.vpcf"
@@ -21,13 +22,15 @@ function skill_kiemminh_vanvatcauphan:GetCooldown()
      local atk_perseconds = self:GetCaster():GetAttacksPerSecond()
      return 1/atk_perseconds
   end
-  if(self:GetCaster():GetLevel()>=25)then
+  if(HasBook(self:GetCaster()))then
     return 1
   end
   return 2.5
 end
 function skill_kiemminh_vanvatcauphan:GetManaCost()
-  return self:GetLevel()*10
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*10
 end
 function skill_kiemminh_vanvatcauphan:OnAbilityPhaseStart()
 	self:GetCaster():StartGesture( ACT_DOTA_CAST_ABILITY_2)
@@ -35,7 +38,7 @@ function skill_kiemminh_vanvatcauphan:OnAbilityPhaseStart()
 end
 function skill_kiemminh_vanvatcauphan:OnSpellStart()
   local caster = self:GetCaster()
-  local skill_level = self:GetLevel()
+  local skill_level = self:GetLevel() + GetSkillLevel(caster)
   local caster_position = caster:GetAbsOrigin()
 	local hTarget = self:GetCursorTarget()
 	local target_point = self:GetCursorPosition()
@@ -58,7 +61,7 @@ local explode_max_target = 2
 	--self:PayManaCost()
 	local damageData = {
         caster = caster,
-        main_attribute_value = caster:GetIntellect(),
+        main_magic = caster:GetIntellect(),
         skill_physical_damage_percent = 0,
         skill_tree_amplify_damage = 0,-- can edit
 
@@ -80,6 +83,7 @@ local explode_max_target = 2
        duration = SETTING_POISON_TIME,
        custom = ""
    }
+   local critInfo = DamageHandler:GetCritInfo(caster)
    local damageAreaData = {
         whoDealDamage = caster,
         byWhichAbility = self,
@@ -87,7 +91,7 @@ local explode_max_target = 2
         radius = SETTING_RADIUS,
         damage = DamageHandler:GetDamage(damageData),        
         damage_element = ELEMENT_WOOD,
-
+        crit = critInfo,
         maxTarget=max_target,
         custom = {
           action="status_effect",
@@ -123,7 +127,7 @@ local explode_max_target = 2
    
    local damageData2 = {
         caster = caster,
-        main_attribute_value = caster:GetIntellect(),
+        main_magic = caster:GetIntellect(),
         skill_physical_damage_percent = 0,
         skill_tree_amplify_damage = 0,-- can edit
 

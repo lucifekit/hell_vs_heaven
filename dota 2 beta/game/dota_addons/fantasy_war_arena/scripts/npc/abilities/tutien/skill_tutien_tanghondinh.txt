@@ -1,0 +1,29 @@
+"skill_tutien_tanghondinh"
+{
+   "ID"  "12112"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "60"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "skill_tutien_tanghondinh"
+   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_tanghondinh"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // MOON BLESS
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"critical_chance"  "180 210 240 270 300"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"duration"  "15"
+		}
+	}
+   
+}

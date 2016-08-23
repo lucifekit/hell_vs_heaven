@@ -1,4 +1,5 @@
 modifier_thuongthien_kinhloiphathien_critical = class({})
+require('kem_lib/kem')
 function modifier_thuongthien_kinhloiphathien_critical:IsHidden()
    return false
 end

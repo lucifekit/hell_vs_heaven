@@ -1,4 +1,5 @@
 skill_thuongthien_hoanhhanhvoky = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 SETTING_SKILL_MODIFIER = "modifier_thuongthien_hoanhhanhvoky"
 LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/thuongthien/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
@@ -18,7 +19,7 @@ end
 
 function skill_thuongthien_hoanhhanhvoky:OnSpellStart()
    local caster = self:GetCaster()
-   local skill_level = self:GetLevel()
+   local skill_level = self:GetLevel() + GetSkillLevel(caster)
    local caster_position = caster:GetAbsOrigin()
    local hTarget = self:GetCursorTarget()   
    local cast_point = self:GetCursorPosition()

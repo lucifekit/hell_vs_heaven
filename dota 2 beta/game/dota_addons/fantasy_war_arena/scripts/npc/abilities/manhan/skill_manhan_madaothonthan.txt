@@ -12,7 +12,7 @@
     
     "CastFilterRejectCaster" "1"
     "HotKeyOverride"    "F" 
-    "AbilityTextureName"      "nevermore_requiem"
+    "AbilityTextureName"      "manhan_madaothonthan"
     "ScriptFile"          "heroes_abilities/manhan/skill_manhan_madaothonthan"
 	// SOUL REVENGE
 	"AbilitySpecial"

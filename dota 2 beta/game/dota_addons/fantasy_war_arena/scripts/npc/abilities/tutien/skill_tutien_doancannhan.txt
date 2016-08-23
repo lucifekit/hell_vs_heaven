@@ -1,0 +1,54 @@
+"skill_tutien_doancannhan"
+{
+   "ID"  "12106"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "30"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "skill_tutien_doancannhan"
+   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_doancannhan"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "1000"
+   "precache"
+   {
+   }
+   // MOON CURSE
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"immobile_chance"  "32 39 46 53 60"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"immobile_time"  "3"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"critical_immobile_chance"  "57 64 71 78 85"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"critical_immobile_time"  "3"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"critical_immobile_cooldown"  "20"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"critical_max_target"  "2"
+		}
+	}
+   
+}

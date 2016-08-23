@@ -1,4 +1,5 @@
 modifier_daocon_tunguyenthuat = class({})
+require('kem_lib/kem')
 function modifier_daocon_tunguyenthuat:IsHidden()
    return false
 end
@@ -32,9 +33,13 @@ end
 --end
 
 function modifier_daocon_tunguyenthuat:OnCreated( kv )
-  self.hp_percent = self:GetAbility():GetLevel()*0.2
+  local p = self:GetParent()
+  local skill_level=self:GetAbility():GetLevel()+GetSkillLevel(p)
+  self.hp_percent = skill_level*0.2
 end
 
 function modifier_daocon_tunguyenthuat:OnRefresh( kv )
-  self.hp_percent = self:GetAbility():GetLevel()*0.2
+  local p = self:GetParent()
+  local skill_level=self:GetAbility():GetLevel()+GetSkillLevel(p)
+  self.hp_percent = skill_level*0.2
 end

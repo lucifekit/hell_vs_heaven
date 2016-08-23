@@ -1,14 +1,17 @@
 skill_daocon_huyenthienvocuc = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 SETTING_SKILL_MODIFIER = "modifier_daocon_huyenthienvocuc"
 LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/daocon/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
 function skill_daocon_huyenthienvocuc:GetReturnResist()
-  return 10+7*self:GetLevel()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return 10+skill_level*7
 end
 function skill_daocon_huyenthienvocuc:OnUpgrade()
   local caster = self:GetCaster()
   caster:AddNewModifier(caster, self, SETTING_SKILL_MODIFIER, {})
-  caster: CalculateStatBonus()
+  caster:CalculateStatBonus()
   UpgradeSkill(caster:GetPlayerID())
   -- TEMPEST AURA
 --local damage_negate = 0.4

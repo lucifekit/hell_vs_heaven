@@ -1,4 +1,5 @@
 skill_kiemminh_phieuducthanphap = class({})
+require('kem_lib/kem')
 SETTING_SKILL_MODIFIER = "modifier_kiemminh_phieuducthanphap"
 
 LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/kiemminh/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
@@ -7,7 +8,9 @@ LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/kiemminh/"..SETTING_SKI
 
 
 function skill_kiemminh_phieuducthanphap:GetStunResistTime()
-  return math.ceil(self:GetLevel()*13.5)
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return math.ceil(skill_level*13.5)
 end
 
 function skill_kiemminh_phieuducthanphap:OnUpgrade()

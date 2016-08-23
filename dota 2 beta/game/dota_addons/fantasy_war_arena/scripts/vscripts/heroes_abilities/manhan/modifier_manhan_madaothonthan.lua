@@ -1,4 +1,5 @@
 modifier_manhan_madaothonthan = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 require('heroes_abilities/manhan/manhan')
 
@@ -24,10 +25,12 @@ function modifier_manhan_madaothonthan:OnCreated( kv )
 
   --kemPrint("Created ma dao thon than"..self:GetParent():GetUnitName())
   if(IsServer())then
-    self.move_speed = 20+self:GetAbility():GetLevel()*8
-    self.paralyze_chance = 3+self:GetAbility():GetLevel()
-    self.paralyze_duration = 2+0.2*self:GetAbility():GetLevel()
-    self.speed_duration = 5+2*self:GetAbility():GetLevel()
+    local p = self:GetParent()
+    local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+    self.move_speed = 20+skill_level*8
+    self.paralyze_chance = 3+skill_level
+    self.paralyze_duration = 2+0.2*skill_level
+    self.speed_duration = 5+2*skill_level
     self:StartIntervalThink( 5 )
   end
   
@@ -37,10 +40,12 @@ end
 
 --------------------------------------------------------------------------------
 function modifier_manhan_madaothonthan:OnRefresh( kv )
-  self.move_speed = 20+self:GetAbility():GetLevel()*8
-  self.paralyze_chance = 3+self:GetAbility():GetLevel()
-  self.paralyze_duration = 2+0.2*self:GetAbility():GetLevel()
-  self.speed_duration = 5+2*self:GetAbility():GetLevel()
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.move_speed = 20+skill_level*8
+  self.paralyze_chance = 3+skill_level
+  self.paralyze_duration = 2+0.2*skill_level
+  self.speed_duration = 5+2*skill_level
 
   --kemPrint("Refreshed thucphocchu")
 end

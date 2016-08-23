@@ -1,11 +1,14 @@
 skill_daocon_hophongphap = class({})
+require('kem_lib/kem')
 SETTING_HPP_EFFECT = "particles/edited_particle/dao_con/hophongphap_2.vpcf"
 SETTING_HPP_FLY_TIME = 0.8
 SETTING_HPP_FLY_SPEED = 800
 SETTING_HPP_HIT_EFFECT = "particles/units/heroes/hero_visage/visage_base_attack_hit.vpcf"
 --------------------------------------------------------------------------------
 function skill_daocon_hophongphap:GetManaCost()
-   return 2*self:GetLevel()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+   return skill_level*2
 end
 
 function skill_daocon_hophongphap:GetCooldown()
@@ -22,7 +25,7 @@ end
 
 function skill_daocon_hophongphap:OnSpellStart()
    local caster = self:GetCaster()
-   local skill_level = self:GetLevel()
+   local skill_level = self:GetLevel() + GetSkillLevel(caster)
    local caster_position = caster:GetAbsOrigin()
    local hTarget = self:GetCursorTarget()
    local cast_point = self:GetCursorPosition()
@@ -42,7 +45,7 @@ local max_target = 3
    
    local damageData = {
         caster = caster,
-        main_attribute_value = caster:GetAgility(),
+        main_physic = caster:GetAgility(),
         skill_physical_damage_percent = physical_damage_amplify,
         skill_tree_amplify_damage = 0,-- can edit
         skill_basic_damage_percent = basic_damage,

@@ -1,4 +1,5 @@
 modifier_thuongthien_kinhloiphathien_invulnerable = class({})
+require('kem_lib/kem')
 function modifier_thuongthien_kinhloiphathien_invulnerable:IsHidden()
    return false
 end

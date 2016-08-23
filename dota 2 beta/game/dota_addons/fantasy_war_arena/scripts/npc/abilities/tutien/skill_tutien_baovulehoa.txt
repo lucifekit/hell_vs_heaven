@@ -1,0 +1,67 @@
+"skill_tutien_baovulehoa"
+{
+   "ID"  "12109"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "45"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "skill_tutien_baovulehoa"
+   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_baovulehoa"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "700"
+   "precache"
+   {
+   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts"
+   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_shredder.vsndevts"
+   }
+   // VOLLEY GLAIVE
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "29 31 32 34 35 37 38 40 41 43"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"poison_damage"  "191 202 213 224 235 246 257 268 279 290"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_maim"  "21 22 23 24 25 26 27 28 29 30"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time"  "1"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_weak"  "12 14 16 18 20 22 24 26 28 30"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"weak_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "5"
+		}
+		"08"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"volley_poison"  "217 229 241 253 265 277 289 301 313 325"
+		}
+	}
+   
+}

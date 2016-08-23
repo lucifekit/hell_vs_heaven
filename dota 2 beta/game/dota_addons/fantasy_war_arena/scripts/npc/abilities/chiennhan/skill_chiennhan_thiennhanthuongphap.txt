@@ -1,0 +1,39 @@
+"skill_chiennhan_thiennhanthuongphap"
+{
+   "ID"  "13252"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "6"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "chiennhan_thiennhanthuongphap"
+   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_thiennhanthuongphap"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // BASIC TALENT
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"attack_speed"  "15 20 25 30 35"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"accuracy_chance"  "70 90 110 130 150"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_amplify"  "30 55 80 105 130"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"critical_chance"  "34 38 42 46 50"
+		}
+	}
+   
+}

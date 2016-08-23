@@ -1,4 +1,5 @@
 modifier_kiemminh_lyhoadaiphap = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 
 function modifier_kiemminh_lyhoadaiphap:IsHidden()
@@ -23,12 +24,15 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_kiemminh_lyhoadaiphap:OnCreated( kv )
- 
-  self.atk_speed = math.ceil(10+self:GetAbility():GetLevel()*1.6)
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.atk_speed = math.ceil(10+skill_level*1.6)
   
 end
 
 --------------------------------------------------------------------------------
 function modifier_kiemminh_lyhoadaiphap:OnRefresh( kv )
-  self.atk_speed = math.ceil(10+self:GetAbility():GetLevel()*1.6)
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.atk_speed = math.ceil(10+skill_level*1.6)
 end

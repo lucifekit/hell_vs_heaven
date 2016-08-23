@@ -212,7 +212,6 @@ function modifier_boss_dieptinh:CastKnockbackMissile(target,number_of_missile)
   local distanceBetwwenCasterAndTarget = (target_point-caster_point):Length2D()
   local damageData = {
         caster = caster,
-        main_attribute_value = 0,
         skill_physical_damage_percent = 0,
         skill_tree_amplify_damage = 0,-- can edit
         skill_basic_damage_percent = 1,
@@ -329,7 +328,6 @@ function modifier_boss_dieptinh:AngryLowChance(target)
            ParticleManager:SetParticleControl( pfx2, 0, tempPoint+Vector(0,0,30)  ) 
            local damageData = {
                   caster = caster,
-                  main_attribute_value = 0,
                   skill_physical_damage_percent = 0,
                   skill_tree_amplify_damage = 0,-- can edit
                   skill_basic_damage_percent = 1,
@@ -391,7 +389,6 @@ function modifier_boss_dieptinh:AngryHighChance(target)
         if #enemies > 0 then
           local damageData = {
                 caster = caster,
-                main_attribute_value = 0,
                 skill_physical_damage_percent = 0,
                 skill_tree_amplify_damage = 0,-- can edit
                 skill_basic_damage_percent = 1,
@@ -434,7 +431,7 @@ function modifier_boss_dieptinh:Ulti_1(caster,target)
   end)
   local damageData = {
       caster = caster,
-      main_attribute_value = 0,
+      
       skill_physical_damage_percent = 0,
       skill_tree_amplify_damage = 0,-- can edit
       skill_basic_damage_percent = 1,
@@ -468,7 +465,7 @@ function modifier_boss_dieptinh:Ulti_2(caster,target)
     CreateEffectOnUnit(SETTING_FROZEN_EFFECT,target,4)
     local damageData = {
         caster = caster,
-        main_attribute_value = 0,
+        
         skill_physical_damage_percent = 0,
         skill_tree_amplify_damage = 0,-- can edit
         skill_basic_damage_percent = 1,
@@ -506,7 +503,7 @@ function modifier_boss_dieptinh:Ulti_3(caster,target)
       FxPoint(SETTING_ACID_EFFECT,temp_point,1)
       local damageData = {
           caster = caster,
-          main_attribute_value = 0,
+          
           skill_physical_damage_percent = 0,
           skill_tree_amplify_damage = 0,-- can edit
           skill_basic_damage_percent = 1,

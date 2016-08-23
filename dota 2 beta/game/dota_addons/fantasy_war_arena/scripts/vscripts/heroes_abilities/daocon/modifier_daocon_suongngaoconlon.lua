@@ -1,4 +1,5 @@
 modifier_daocon_suongngaoconlon = class({})
+require('kem_lib/kem')
 function modifier_daocon_suongngaoconlon:IsHidden()
    return true
 end

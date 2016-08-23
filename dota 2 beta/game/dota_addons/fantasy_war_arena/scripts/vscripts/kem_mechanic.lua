@@ -33,7 +33,8 @@ LinkLuaModifier("modifier_prepare","modifiers/modifier_prepare", LUA_MODIFIER_MO
 
 require('battle')
 function CreateBoss(where,team)
-  local unit_name= "dieptinh"
+  local unit_name_array = {"dieptinh","hokhon"}
+  local unit_name = unit_name_array[math.random(1,#unit_name_array)]
   --kemPrint("Create bosssssssssssssssssss")
   if(team==DOTA_TEAM_GOODGUYS)then
     unit_name="heaven"
@@ -42,7 +43,7 @@ function CreateBoss(where,team)
     unit_name="hell"
   end
   LinkLuaModifier("modifier_boss_"..unit_name,"bosses/modifier_boss_"..unit_name, LUA_MODIFIER_MOTION_NONE )
-  kemPrint("Link complete "..unit_name)
+  --kemPrint("Link complete "..unit_name)
   local boss = CreateUnitByName("npc_boss_"..unit_name, where, true, nil, nil,team)
   if(boss)then
     kemPrint("boss : "..boss:GetUnitName())
@@ -301,7 +302,11 @@ function HandleHeroCreated(hero)
   local cs = PlayerResource:GetConnectionState(ownerID)
   if(cs==1)then
     --neu la bot
-    hero:ModifyStrength(1000)
+    hero:ModifyStrength(5000)
+    hero.stat_tp = 2000
+    hero.accuracy_point = 8000
+    
+    hero.inited = true
 
     while(hero:GetLevel()<88)do
                   hero:HeroLevelUp(false)
@@ -310,6 +315,8 @@ function HandleHeroCreated(hero)
     for i = 1,12 do
       hero:GetAbilityByIndex(i):SetLevel(5)
     end
+    print("Set critical chance = 500")
+    hero.critical_chance = 500
   end
   
   --for i=0,10 do
@@ -673,7 +680,61 @@ function KemChat(keys,playerID)
                 end
              end
            end
-           if(command=="-enterdebug")then
+           if(command=="-1")then
+            if(IsInToolsMode())then
+              if(hero)then
+                local bosses = Entities:FindAllByName("npc_dota_creature")
+                if(#bosses>0)then
+                  for _,enemy in ipairs(bosses) do
+                    if(string.sub(enemy:GetUnitName(),0,8)=="npc_boss")then
+                      local damageTable = {
+                        attacker = enemy,
+                        ability = nil,
+                        damage_type = DAMAGE_TYPE_PURE,
+                        victim = hero,
+                        damage = 200}
+                      local h1 = hero:GetHealth()
+                      ApplyDamage(damageTable)
+                      local h2 = hero:GetHealth()
+                      print("Take "..(h1-h2).." damage")
+                    end
+                    
+                  end
+                end
+                
+              end
+            end
+           end
+           if(command=="-kb")then
+            if(IsInToolsMode())then
+              if(hero)then
+                --StatusEffectHandler:KnockBack(nil,Vector(0,0,0),hero,9999,5,500)
+                local bosses = Entities:FindAllByName("npc_dota_creature")
+                if(#bosses>0)then
+                  for _,enemy in ipairs(bosses) do
+                    if(string.sub(enemy:GetUnitName(),0,8)=="npc_boss")then
+                      local knockbackModifierTable =
+                        {
+                          should_stun = 0,
+                          knockback_duration = 5,
+                          duration = 5,
+                          knockback_distance = 500,
+                          knockback_height = 0,
+                          center_x = 0,
+                          center_y = 0,
+                          center_z = 0
+                        }
+         
+                      hero:AddNewModifier( enemy, nil, EFFECT_KNOCKBACK, knockbackModifierTable )
+                    end
+                    
+                  end
+                end
+                 
+              end
+            end
+           end
+           if(command=="-enterdebug" or command=="-ed")then
               kemPrint("command enter debug")
              if(IsInToolsMode())then
                 kemPrint("ENTER DEBUG")
@@ -697,7 +758,7 @@ function KemChat(keys,playerID)
 
                 if(#bosses>0)then
                   for _,enemy in ipairs(bosses) do
-                    if(enemy:GetUnitName()=="npc_boss_dieptinh")then
+                    if(string.sub(enemy:GetUnitName(),0,8)=="npc_boss")then
                       hero:SetAbsOrigin(enemy:GetOrigin())
                       FindClearSpaceForUnit(hero, hero:GetOrigin(),true)  
                     end
@@ -781,17 +842,21 @@ function KemChat(keys,playerID)
                     if(level>0 and level<=99)then
                       if(hero)then
                         while(hero:GetLevel()<level)do
-                          hero:HeroLevelUp(false)
+                          hero:AddExperience(500,0,false,false)
                         end
 
                         hero:SetGold(99999,false)
                         for i = 0,11 do
                           local tempAbility =hero:GetAbilityByIndex(i) 
-                          tempAbility:SetLevel(hero:GetAbilityByIndex(i):GetMaxLevel())
+                          if(tempAbility)then
+                            tempAbility:SetLevel(hero:GetAbilityByIndex(i):GetMaxLevel())
+                          end
+                          
                         end
                         --hero:AddNewModifier(hero,nil,"modifier_prepare",{duration=5})
                         kemPrint("up auto "..playerID)
                         GameMode:UpStatAuto({playerID=playerID})
+                        UpdatePlayerData(playerID)
                       else
                         kemPrint("NO hero")
 
@@ -799,7 +864,32 @@ function KemChat(keys,playerID)
                     end
           end
         end
-        
+        if(command=="-lv")then
+           if(IsInToolsMode())then
+                    local level = tonumber(s)
+                    if(level>99)then
+                      level =  99
+                    end
+
+                    if(level>0 and level<=99)then
+                      if(hero)then
+                        while(hero:GetLevel()<level)do
+                          hero:AddExperience(500,0,false,false)
+                        end
+
+                        hero:SetGold(99999,false)
+                      
+                        --hero:AddNewModifier(hero,nil,"modifier_prepare",{duration=5})
+                        kemPrint("up auto "..playerID)
+                        GameMode:UpStatAuto({playerID=playerID})
+             
+                      else
+                        kemPrint("NO hero")
+
+                      end
+                    end
+          end
+        end
         if(command=="-health")then
            if(IsInToolsMode())then
                   local level = tonumber(s)

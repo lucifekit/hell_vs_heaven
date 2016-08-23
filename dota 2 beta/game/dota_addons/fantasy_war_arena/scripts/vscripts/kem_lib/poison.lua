@@ -27,14 +27,14 @@ function PoisonHandler:ApplyPoison(caster,target,ability,period,duration,damage,
             victim = target
           }
           local tempDamage = damage
-          if(caster.skill_poison_damage>0)then
+          if(caster.skill_poison_damage)then
             tempDamage = tempDamage+caster.skill_poison_damage
           end
-          if(caster.weapon_poison_damage>0)then
+          if(caster.weapon_poison_damage)then
             tempDamage = tempDamage+caster.weapon_poison_damage
           end
 
-          if(caster.skill_amplify>0)then
+          if(caster.skill_amplify)then
             tempDamage = tempDamage+tempDamage*caster.skill_amplify 
           end
 
@@ -43,7 +43,18 @@ function PoisonHandler:ApplyPoison(caster,target,ability,period,duration,damage,
           if(target:IsHero())then
             damageTable.damage = damageTable.damage*0.2
           end
-
+          --check resist
+          local resist_value = 0
+          if(target.resist_wood)then
+              resist_value=target.resist_wood
+          end
+          local element_def = 0
+          if(resist_value<1280)then
+              element_def = resist_value/1536
+          else
+              element_def = resist_value/(resist_value+256)
+          end
+          damageTable.damage = damageTable.damage*(1-element_def)
           --kemPrint("Poison target has  "..target:GetHealth().." hp, dealing "..tempDamage.."/"..damageTable.damage.." damage")
           ApplyDamage(damageTable)
           --show damage system

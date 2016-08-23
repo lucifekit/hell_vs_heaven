@@ -1,4 +1,5 @@
 modifier_manhan_thucphocchu_active = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 SETTING_EFFECT = "particles/units/heroes/hero_nevermore/nevermore_requiemofsouls.vpcf"
 --SETTING_EFFECT_2 = "particles/units/heroes/hero_nevermore/nevermore_requiemofsouls_line.vpcf"
@@ -26,10 +27,14 @@ function modifier_manhan_thucphocchu_active:GetModifierMoveSpeedBonus_Constant( 
 end
 
 function modifier_manhan_thucphocchu_active:OnCreated( kv )  
-  self.move_speed = (10+self:GetAbility():GetLevel()*4)*2.5
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.move_speed = (10+skill_level*4)*2.5
 end
 
 --------------------------------------------------------------------------------
 function modifier_manhan_thucphocchu_active:OnRefresh( kv )
-  self.move_speed = (10+self:GetAbility():GetLevel()*4)*2.5
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.move_speed = (10+skill_level*4)*2.5
 end

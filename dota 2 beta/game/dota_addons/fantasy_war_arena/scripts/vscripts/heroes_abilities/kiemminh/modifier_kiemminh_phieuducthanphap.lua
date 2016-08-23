@@ -1,4 +1,5 @@
 modifier_kiemminh_phieuducthanphap = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 
 function modifier_kiemminh_phieuducthanphap:IsHidden()
@@ -25,7 +26,9 @@ end
 function modifier_kiemminh_phieuducthanphap:OnCreated( kv )
 
     local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
-  self.speed = (10+self:GetAbility():GetLevel()*3)*settings.speed_base
+    local p = self:GetParent()
+    local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.speed = (10+skill_level*3)*settings.speed_base
 
   
   
@@ -35,7 +38,9 @@ end
 function modifier_kiemminh_phieuducthanphap:OnRefresh( kv )
  
     local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
-  self.speed = (10+self:GetAbility():GetLevel()*3)*settings.speed_base
+    local p = self:GetParent()
+    local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.speed = (10+skill_level*3)*settings.speed_base
 
   
 end

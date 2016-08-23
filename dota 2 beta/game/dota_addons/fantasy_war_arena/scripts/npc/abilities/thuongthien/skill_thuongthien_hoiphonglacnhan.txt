@@ -7,7 +7,7 @@
    "LevelsBetweenUpgrades"  "1"
    "FightRecapLevel"       "1"
    "CastFilterRejectCaster" "1"
-   "AbilityTextureName"      "queenofpain_shadow_strike"
+   "AbilityTextureName"      "phantom_lancer_spirit_lance"
    "ScriptFile"          "heroes_abilities/thuongthien/skill_thuongthien_hoiphonglacnhan"
    "HotKeyOverride"    "Q"
    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_AUTOCAST"

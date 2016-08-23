@@ -1,4 +1,5 @@
 modifier_thuongthien_truytinhtrucnguyet = class({})
+require('kem_lib/kem')
 function modifier_thuongthien_truytinhtrucnguyet:IsHidden()
    return true
 end

@@ -1,5 +1,6 @@
 skill_khinhcong = class({})
---require('kem')
+require('kem_lib/kem')
+
 
 require('kem_lib/player_data')
 
@@ -29,40 +30,18 @@ function skill_khinhcong:OnSpellStart()
 	--DebugPrintTable(event)
   local caster   = self:GetCaster()
   local owner = caster:GetOwner()
-  --owner.jump_time = owner.jump_time+1
-
-  --kemPrint("So lan jump : "..owner.jump_time)
   
   local playerID = caster:GetPlayerID()
   
-
+  --Neu dang jump thi quit
   if caster:HasModifier( SETTING_MODIFIER_KHINHCONG_JUMPING ) then
-    --kemPrint("quit")
-
-    --Say(nil, "Dang Nhay Ma", false)
-    --local message = "Jumping"
-    --UTIL_MessageText(caster:GetPlayerID()+1,message, 255, 25, 25, 255)
-    
-    return nil
+     return nil
   end
-  --pl_data["jump_time"] = pl_data["jump_time"]+1
-  --UTIL_MessageText(playerID+1,"Jump time : "..pl_data['jump_time'], 255, 25, 25, 255)
- 
-  
-
   local casterOrigin  = caster:GetAbsOrigin()
-  --local casterAngles  = caster:GetAngles()
-
-
   local startTime = GameRules:GetGameTime()
-
-  --kemPrint("Init target point " ..event.target_points)
-  local point = self:GetCursorPosition()
   local target_point = self:GetCursorPosition()
   local caster_position =  caster:GetAbsOrigin()
-  --kemPrint("Init target point "..point..event.target_points[1])
-
-  --local angle_from_caster_to_target = math.atan2(vTargetPosition.y-caster_position.y, vTargetPosition.x-caster_position.x ) +math.rad(90)
+  
   local canMove = true
   if(target_point.z-caster_position.z>200)then
         --cao qua
@@ -84,10 +63,10 @@ function skill_khinhcong:OnSpellStart()
         modifier:IncrementStackCount()
         return
   end
-  local angle_from_caster_to_target = math.atan2(point.y-casterOrigin.y, point.x-casterOrigin.x ) 
+  local angle_from_caster_to_target = math.atan2(target_point.y-casterOrigin.y, target_point.x-casterOrigin.x ) 
 
-  local point_difference_normalized = (point - casterOrigin)
-  local distance = math.min(SETTING_JUMP_MAX_LENGTH+math.max(500,(caster.jump_time*10)),(point - casterOrigin):Length2D())
+  local point_difference_normalized = (target_point - casterOrigin)
+  local distance = math.min(SETTING_JUMP_MAX_LENGTH+math.max(500,(caster.jump_time*10)),(target_point - casterOrigin):Length2D())
   
   if distance<SETTING_JUMP_DISTANCE_MIN then
     

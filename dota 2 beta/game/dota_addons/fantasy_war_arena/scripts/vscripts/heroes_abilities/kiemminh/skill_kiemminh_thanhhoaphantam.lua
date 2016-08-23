@@ -1,4 +1,5 @@
 skill_kiemminh_thanhhoaphantam = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 SETTING_POISON_TICK = 4
 SETTING_POISON_TIME_BETWEEN_TICK = 0.5
@@ -9,7 +10,7 @@ function skill_kiemminh_thanhhoaphantam:GetCooldown()
      local atk_perseconds = self:GetCaster():GetAttacksPerSecond()
      return 1/atk_perseconds
   end
-  if(self:GetCaster():GetLevel()>=25)then
+  if(HasBook(self:GetCaster()))then
     return 0.5
   end
   return 2
@@ -20,12 +21,13 @@ function skill_kiemminh_thanhhoaphantam:OnAbilityPhaseStart()
 	return true
 end
 function skill_kiemminh_thanhhoaphantam:GetManaCost()
-
-  return self:GetLevel()*2
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*2
 end
 function skill_kiemminh_thanhhoaphantam:OnSpellStart()
   local caster = self:GetCaster()
-  local skill_level = self:GetLevel()
+  local skill_level = self:GetLevel() + GetSkillLevel(caster)
   local caster_position = caster:GetAbsOrigin()
 	local hTarget = self:GetCursorTarget()
 	local cast_point = self:GetCursorPosition()
@@ -61,7 +63,7 @@ local max_target = math.floor(2+0.2*skill_level)
 	
 	local damageData = {
         caster = caster,
-        main_attribute_value = caster:GetIntellect(),
+        main_magic = caster:GetIntellect(),
         skill_physical_damage_percent = 0,
         skill_tree_amplify_damage = 0,-- can edit
 
@@ -70,12 +72,13 @@ local max_target = math.floor(2+0.2*skill_level)
         element_damage_min = 0,
         element_damage_max = 0
   }
+  local critInfo = DamageHandler:GetCritInfo(caster)
   local damageAreaData = {
         whoDealDamage = caster,
         byWhichAbility = self,
         where = cast_point,
         radius = 200,
-
+        crit = critInfo,
         maxTarget = max_target,
         damage = DamageHandler:GetDamage(damageData),        
         damage_element = ELEMENT_WOOD,

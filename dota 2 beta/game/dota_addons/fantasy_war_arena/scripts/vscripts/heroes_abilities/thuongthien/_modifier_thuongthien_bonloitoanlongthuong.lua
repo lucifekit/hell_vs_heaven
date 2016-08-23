@@ -1,4 +1,5 @@
 modifier_thuongthien_bonloitoanlongthuong = class({})
+require('kem_lib/kem')
 function modifier_thuongthien_bonloitoanlongthuong:IsHidden()
    return true
 end

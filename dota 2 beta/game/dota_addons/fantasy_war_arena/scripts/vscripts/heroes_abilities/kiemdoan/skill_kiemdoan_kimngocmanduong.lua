@@ -1,4 +1,5 @@
 skill_kiemdoan_kimngocmanduong = class({})
+require('kem_lib/kem')
 
 --SETTING_KNMD_EFFECT = "particles/units/heroes/hero_tinker/tinker_laser.vpcf"
 --SETTING_KNMD_EFFECT = "models/heroes/bristleback/bristleback_offhand_weapon.vmdl"
@@ -18,7 +19,9 @@ function skill_kiemdoan_kimngocmanduong:GetCooldown()
   return 1/atk_perseconds
 end
 function skill_kiemdoan_kimngocmanduong:GetManaCost()
-  return self:GetLevel()*10
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*10
 end
 function skill_kiemdoan_kimngocmanduong:OnAbilityPhaseStart()
   --self:GetCaster():StartGesture( ACT_DOTA_ATTACK)
@@ -30,7 +33,7 @@ function skill_kiemdoan_kimngocmanduong:OnSpellStart()
   local caster = self:GetCaster()
   local caster_point = caster:GetAbsOrigin()
   local target_point = self:GetCursorPosition()
-  local skill_level = self:GetLevel()
+  local skill_level = self:GetLevel() + GetSkillLevel(caster)
   caster:EmitSound("Hero_Kunkka.Tidebringer.Attack")
   local angleBetweenCasterAndTarget = (target_point - caster_point):Normalized()--goc
   local tempPoint = RotatePosition(caster_point,QAngle(0,90,0),target_point)
@@ -47,7 +50,7 @@ local max_target = 5
   
    local damageData = {
         caster = caster,
-        main_attribute_value = caster:GetIntellect(),
+        main_magic = caster:GetIntellect(),
         skill_physical_damage_percent = 0,
         skill_tree_amplify_damage = 0,-- can edit
         skill_basic_damage_percent = basic_damage,

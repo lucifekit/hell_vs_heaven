@@ -1,11 +1,16 @@
 skill_kiemminh_hoanghoangocphan = class({})
+require('kem_lib/kem')
 
 function skill_kiemminh_hoanghoangocphan:GetBasicDamage()
-  return 0.02*self:GetLevel()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*0.02
 end
 
 function skill_kiemminh_hoanghoangocphan:GetSkillAmplify()
-  return 0.02*self:GetLevel()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*0.02
 end
 
 
@@ -14,5 +19,4 @@ end
 function skill_kiemminh_hoanghoangocphan:OnUpgrade()
    local caster = self:GetCaster()
    UpgradeSkill(caster:GetPlayerID())
-
 end

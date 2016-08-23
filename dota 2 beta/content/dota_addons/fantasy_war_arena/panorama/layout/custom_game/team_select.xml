@@ -3,6 +3,7 @@
 		<include src="file://{resources}/styles/dotastyles.css" />
 		<include src="file://{resources}/styles/play.css" />
 		<include src="file://{resources}/styles/custom_game/team_select.css" />
+		<include src="file://{resources}/styles/custom_game/team_select_2.css" />
 	</styles>
 	<scripts>
 		<include src="file://{resources}/scripts/custom_game/team_select.js" />

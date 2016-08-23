@@ -5,7 +5,7 @@
    "RequiredLevel"          "40"
    "MaxLevel"				 "10"
    "LevelsBetweenUpgrades"  "1"
-   "AbilityTextureName"      "ancient_apparition_ice_blast"
+   "AbilityTextureName"      "skill_daocon_thienthanhdiatroc"
    "ScriptFile"          "heroes_abilities/daocon/skill_daocon_thienthanhdiatroc"
    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
    "precache"

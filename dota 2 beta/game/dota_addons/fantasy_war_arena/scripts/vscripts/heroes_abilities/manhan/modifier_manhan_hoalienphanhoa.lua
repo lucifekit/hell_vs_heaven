@@ -1,4 +1,5 @@
 modifier_manhan_hoalienphanhoa = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 
 function modifier_manhan_hoalienphanhoa:IsPurgable()

@@ -28,7 +28,7 @@
         <Label class="ability_level_overlay_text" id="ability_level_overlay_text5"></Label>
       </Panel>
       <Panel hittest="false" class="individual_ability_level_overlay" id="ability_level_overlay6">
-        <Label class="ability_level_overlay_text" id="ability_level_overlay_text6" text="Jump"></Label>
+        <Label class="ability_level_overlay_text" id="ability_level_overlay_text6" text=""></Label>
       </Panel>
   	</Panel>
   </Panel>

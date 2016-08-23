@@ -1,4 +1,5 @@
 modifier_manhan_thiennhandaophap = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 
 function modifier_manhan_thiennhandaophap:IsHidden()
@@ -23,12 +24,15 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_manhan_thiennhandaophap:OnCreated( kv )
- 
-  self.atk_speed = 5+math.floor(self:GetAbility():GetLevel()*2)
+  local p=self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
+  self.atk_speed = 5+skill_level*2
   
 end
 
 --------------------------------------------------------------------------------
 function modifier_manhan_thiennhandaophap:OnRefresh( kv )
-  self.atk_speed = 5+math.floor(self:GetAbility():GetLevel()*2)
+  local p=self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
+  self.atk_speed = 5+skill_level*2
 end

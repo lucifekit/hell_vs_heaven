@@ -1,4 +1,5 @@
 modifier_doanchi_langbavibo = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 
 function modifier_doanchi_langbavibo:IsPurgable()

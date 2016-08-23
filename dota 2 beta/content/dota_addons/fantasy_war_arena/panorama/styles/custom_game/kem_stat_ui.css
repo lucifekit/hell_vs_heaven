@@ -6,9 +6,9 @@
     
 }
 #StatPanel{	
-	width:500px;
+	width:550px;
 
-    margin-left:950px;
+    margin-left:0px;
 	flow-children:down;
 	height:fit-children;
 	background-color: gradient( linear, 0% 0%, 0% 5%, from( #232326 ), to( #111111 ) );

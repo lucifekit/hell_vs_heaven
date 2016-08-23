@@ -1,4 +1,5 @@
 dummy_visibility = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 
 function dummy_visibility:IsHidden()

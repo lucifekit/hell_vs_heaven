@@ -5,7 +5,7 @@
    "RequiredLevel"          "8"
    "MaxLevel"				 "10"
    "LevelsBetweenUpgrades"  "1"
-   "AbilityTextureName"      "naga_siren_song_of_the_siren_cancel"
+   "AbilityTextureName"      "skill_thuongthien_tinhtamquyet"
    "ScriptFile"          "heroes_abilities/thuongthien/skill_thuongthien_tinhtamquyet"
    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
    "precache"

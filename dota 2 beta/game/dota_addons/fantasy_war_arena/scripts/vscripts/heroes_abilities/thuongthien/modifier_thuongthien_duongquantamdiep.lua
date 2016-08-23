@@ -1,4 +1,5 @@
 modifier_thuongthien_duongquantamdiep = class({})
+require('kem_lib/kem')
 function modifier_thuongthien_duongquantamdiep:IsHidden()
    return true
 end

@@ -189,6 +189,7 @@ function modifier_boss_hell:Cast80(target)
         byWhichAbility = self,
         radius = 200,
         damage =damageInfo,
+        crit = critInfo,
         damage_element = ELEMENT_FIRE,
         custom = {
           action="status_effect",
@@ -240,6 +241,7 @@ function modifier_boss_hell:Cast90(target)
         byWhichAbility = self,
         radius = 100,
         damage =damageInfo,
+        crit = critInfo,
         damage_element = ELEMENT_FIRE,
         custom = {
           action="status_effect",

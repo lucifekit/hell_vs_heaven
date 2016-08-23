@@ -1,4 +1,5 @@
 skill_manhan_madaothonthan = class({})
+require('kem_lib/kem')
 require('heroes_abilities/manhan/manhan')
 SETTING_SKILL_MODIFIER = "modifier_manhan_madaothonthan"
 

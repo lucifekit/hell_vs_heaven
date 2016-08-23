@@ -296,6 +296,7 @@ function modifier_boss_heaven:Cast90(target)
         radius = 100,
         damage =damageInfo,
         damage_element = ELEMENT_FIRE,
+        crit = critInfo,
         custom = {
           action="status_effect",
           effect_type=EFFECT_BURN,

@@ -52,6 +52,7 @@
     
     "item"    "item_flying_nimbus_inactive"
     "item"	  "item_skywing_inactive"
+    "item"	  "item_book"
     
    
   } 

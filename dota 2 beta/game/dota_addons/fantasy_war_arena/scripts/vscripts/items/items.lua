@@ -514,3 +514,6 @@ function item_physical_amplify:GetIntrinsicModifierName() return "kem_items_modi
 if item_magical_amplify == nil then item_magical_amplify = class({}) end
 function item_magical_amplify:GetIntrinsicModifierName() return "kem_items_modifier" end
 
+-- SECRET BOOK
+if item_book == nil then item_book = class({}) end
+function item_book:GetIntrinsicModifierName() return "kem_items_modifier" end

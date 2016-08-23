@@ -1,0 +1,35 @@
+"skill_chiennhan_vanlongtamhien"
+{
+   "ID"  "13262"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "60"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "abaddon_death_coil"
+   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_vanlongtamhien"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // DEATH MASTERY
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"stack_dragoff_to_hell"  "1 1 1 1 2"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"stack_hell_soul"  "1 1 1 1 2"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"stack_hell_dash"  "1 1 1 1 2"
+		}
+	}
+   
+}

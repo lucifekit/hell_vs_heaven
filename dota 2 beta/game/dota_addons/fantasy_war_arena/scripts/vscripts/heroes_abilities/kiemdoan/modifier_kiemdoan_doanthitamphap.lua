@@ -1,4 +1,5 @@
 modifier_kiemdoan_doanthitamphap = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 
 function modifier_kiemdoan_doanthitamphap:IsHidden()
@@ -28,12 +29,16 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_kiemdoan_doanthitamphap:OnCreated( kv )
-   self.atk_speed = math.ceil(3+math.floor(self:GetAbility():GetLevel()*2.5))
+  local p=self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
+  self.atk_speed = 3+math.floor(skill_level*2.5)
   
   
 end
 
 --------------------------------------------------------------------------------
 function modifier_kiemdoan_doanthitamphap:OnRefresh( kv )
-  self.atk_speed = math.ceil(3+math.floor(self:GetAbility():GetLevel()*2.5))
+  local p=self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
+  self.atk_speed = 3+math.floor(skill_level*2.5)
 end

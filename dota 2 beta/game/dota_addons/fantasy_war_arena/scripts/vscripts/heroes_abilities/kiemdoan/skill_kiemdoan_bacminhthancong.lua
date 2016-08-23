@@ -1,4 +1,5 @@
 skill_kiemdoan_bacminhthancong = class({})
+require('kem_lib/kem')
 
 SETTING_SKILL_MODIFIER = "modifier_kiemdoan_bacminhthancong"
 
@@ -6,15 +7,21 @@ LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/kiemdoan/"..SETTING_SKI
 
 
 function skill_kiemdoan_bacminhthancong:GetParalizeResistChance()
-  return self:GetLevel()*200
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*200
 end
 
 function skill_kiemdoan_bacminhthancong:GetFearResistChance()
-  return self:GetLevel()*200
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*200
 end
 
 function skill_kiemdoan_bacminhthancong:GetKnockbackResistChance()
-  return self:GetLevel()*200
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*200
 end
 
 

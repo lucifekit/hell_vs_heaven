@@ -1,0 +1,75 @@
+"skill_chiennhan_liethoatinhthien"
+{
+   "ID"  "13255"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "9"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "abaddon_frostmourne"
+   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_liethoatinhthien"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "200"
+   "precache"
+   {
+   }
+   // LEECH
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "79 83 87 91 95 99 103 107 111 115"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"drain"  "1.4 1.8 2.2 2.6 3.0 3.4 3.8 4.2 4.6 5.0"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_damage_amplify"  "54 58 62 66 70 74 78 82 86 90"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "641.11 663.32 685.53 707.74 729.95 752.16 774.37 796.58 818.79 841"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "783.578 810.736 837.894 865.052 892.21 919.368 946.526 973.684 1000.842 1028"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_maim"  "18.5 22.0 25.5 29.0 32.5 36.0 39.5 43.0 46.5 50.0"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time"  "1"
+		}
+		"08"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_burn"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+		}
+		"09"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"burn_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+		}
+		"10"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "3 3 3 3 4 4 4 4 4 5"
+		}
+	}
+   
+}

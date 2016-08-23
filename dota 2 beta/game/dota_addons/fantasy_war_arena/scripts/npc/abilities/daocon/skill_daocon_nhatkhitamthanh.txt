@@ -5,7 +5,7 @@
    "RequiredLevel"          "35"
    "MaxLevel"				 "10"
    "LevelsBetweenUpgrades"  "1"
-   "AbilityTextureName"      "sven_warcry"
+   "AbilityTextureName"      "skill_daocon_nhatkhitamthanh"
    "ScriptFile"          "heroes_abilities/daocon/skill_daocon_nhatkhitamthanh"
    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
    "precache"

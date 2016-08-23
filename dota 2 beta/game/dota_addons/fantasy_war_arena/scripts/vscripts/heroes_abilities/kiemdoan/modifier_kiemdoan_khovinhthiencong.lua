@@ -1,4 +1,5 @@
 modifier_kiemdoan_khovinhthiencong = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 SETTING_HEALTH_PROC = 25
 SETTING_COOLDOWN = 30
@@ -37,12 +38,15 @@ function modifier_kiemdoan_khovinhthiencong:OnTakeDamage(params)
    end
 end
 function modifier_kiemdoan_khovinhthiencong:OnCreated( kv )
- 
-  self.atk_speed = math.ceil(10+math.floor(self:GetAbility():GetLevel()*2))
+  local p=self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
+  self.atk_speed = 10+skill_level*2
   
 end
 
 --------------------------------------------------------------------------------
 function modifier_kiemdoan_khovinhthiencong:OnRefresh( kv )
-  self.atk_speed = math.ceil(10+math.floor(self:GetAbility():GetLevel()*2))
+  local p=self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
+  self.atk_speed = 10+skill_level*2
 end

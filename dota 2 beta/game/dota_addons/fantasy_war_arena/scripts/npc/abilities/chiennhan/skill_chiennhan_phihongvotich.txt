@@ -1,0 +1,66 @@
+"skill_chiennhan_phihongvotich"
+{
+   "ID"  "13261"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "55"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "chiennhan_phihongvotich"
+   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_phihongvotich"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "1200"
+   "precache"
+   {
+   }
+   // ONE MAN ONE HORSE
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "205 220 235 250 265"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_damage_amplify"  "281 303 325 347 369"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "1496 1632 1768 1904 2040"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "2244 2448 2652 2856 3060"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_maim"  "38 41 44 47 50"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time"  "1"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_burn"  "28 31 34 37 40"
+		}
+		"08"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"burn_time"  "2.2 2.4 2.6 2.8 3.0"
+		}
+	}
+
+   
+}

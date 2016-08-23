@@ -1,4 +1,5 @@
 modifier_daocon_hoiphongphatlieu = class({})
+require('kem_lib/kem')
 function modifier_daocon_hoiphongphatlieu:IsHidden()
    return true
 end

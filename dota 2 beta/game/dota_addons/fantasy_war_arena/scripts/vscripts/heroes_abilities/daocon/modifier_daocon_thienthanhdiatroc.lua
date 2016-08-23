@@ -1,4 +1,5 @@
 modifier_daocon_thienthanhdiatroc = class({})
+require('kem_lib/kem')
 function modifier_daocon_thienthanhdiatroc:IsHidden()
    return true
 end
@@ -27,12 +28,14 @@ end
 --end
 
 function modifier_daocon_thienthanhdiatroc:OnCreated( kv )
-  
-    self.atk_speed = 6+self:GetAbility():GetLevel()*2
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.atk_speed = 6+skill_level*2
   
 end
 
 function modifier_daocon_thienthanhdiatroc:OnRefresh( kv )
-    
-    self.atk_speed = 6+self:GetAbility():GetLevel()*2
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)    
+  self.atk_speed = 6+skill_level*2
 end

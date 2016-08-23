@@ -1,4 +1,5 @@
 skill_kiemdoan_thiennambophap = class({})
+require('kem_lib/kem')
 SETTING_SKILL_MODIFIER = "modifier_kiemdoan_thiennambophap"
 
 LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/kiemdoan/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
@@ -8,7 +9,9 @@ function skill_kiemdoan_thiennambophap:OnAbilityPhaseStart()
 end
 
 function skill_kiemdoan_thiennambophap:GetBurnResistTime()
-  return 17*self:GetLevel()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return 17*skill_level
 end
 
 

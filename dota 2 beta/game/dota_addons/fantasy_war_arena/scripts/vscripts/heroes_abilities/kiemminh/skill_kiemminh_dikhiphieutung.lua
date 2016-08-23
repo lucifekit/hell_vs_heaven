@@ -1,7 +1,10 @@
 skill_kiemminh_dikhiphieutung = class({})
+require('kem_lib/kem')
 
 function skill_kiemminh_dikhiphieutung:GetElementEvade()
-  return self:GetLevel()*5 --250
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*5 --250
 end
 
 function skill_kiemminh_dikhiphieutung:OnUpgrade()

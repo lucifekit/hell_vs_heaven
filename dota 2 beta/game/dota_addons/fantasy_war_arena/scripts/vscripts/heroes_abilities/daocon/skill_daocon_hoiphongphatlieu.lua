@@ -1,4 +1,5 @@
 skill_daocon_hoiphongphatlieu = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 require('heroes_abilities/daocon/daocon')
 function skill_daocon_hoiphongphatlieu:GetManacost()

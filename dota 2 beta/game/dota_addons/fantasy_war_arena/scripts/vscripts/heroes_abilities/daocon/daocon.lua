@@ -14,7 +14,8 @@ function CastHoiPhongPhatLieu(caster,target_point)
   if(skill_level==0)then
     return
   end
-
+    
+  skill_level = skill_level+GetSkillLevel(caster)
 --CreateDummyUnit to cast sound
     local hlph_dummy_unit = CreateUnitByName("npc_dummy_unit", target_point, false, nil, nil, caster:GetTeam())
     hlph_dummy_unit:FindAbilityByName("dummy_unit"):SetLevel(1)
@@ -51,7 +52,7 @@ local physical_amplify = 0.2
     local last_time=0
      local damageData = {
         caster = caster,
-        main_attribute_value = caster:GetAgility(),
+        main_physic = caster:GetAgility(),
         skill_physical_damage_percent = physical_amplify,
         skill_tree_amplify_damage = 0,-- can edit
         skill_basic_damage_percent = basic_damage,

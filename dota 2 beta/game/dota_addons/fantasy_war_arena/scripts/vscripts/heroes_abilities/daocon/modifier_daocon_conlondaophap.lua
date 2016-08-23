@@ -1,4 +1,5 @@
 modifier_daocon_conlondaophap = class({})
+require('kem_lib/kem')
 function modifier_daocon_conlondaophap:IsHidden()
    return true
 end
@@ -27,12 +28,14 @@ end
 --end
 
 function modifier_daocon_conlondaophap:OnCreated( kv )
-  
-    self.atk_speed = 5+self:GetAbility():GetLevel()*2
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
+  self.atk_speed = 5+skill_level*2
   
 end
 
 function modifier_daocon_conlondaophap:OnRefresh( kv )
-    
-    self.atk_speed = 5+self:GetAbility():GetLevel()*2
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)    
+  self.atk_speed = 5+skill_level*2
 end

@@ -1,4 +1,5 @@
 modifier_manhan_xikhongmadiem = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 
 function modifier_manhan_xikhongmadiem:IsHidden()
@@ -23,12 +24,15 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_manhan_xikhongmadiem:OnCreated( kv )
- 
-  self.atk_speed = math.ceil(11+self:GetAbility():GetLevel()*1.5)
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.atk_speed = math.ceil(11+skill_level*1.5)
   
 end
 
 --------------------------------------------------------------------------------
 function modifier_manhan_xikhongmadiem:OnRefresh( kv )
-  self.atk_speed = math.ceil(11+self:GetAbility():GetLevel()*1.5)
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.atk_speed = math.ceil(11+skill_level*1.5)
 end

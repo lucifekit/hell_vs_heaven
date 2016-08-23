@@ -1,4 +1,5 @@
 skill_kiemdoan_kinhthiennhatkiem= class({})
+require('kem_lib/kem')
 
 SETTING_KTNK_EFFECT = "particles/edited_particle/kiem_doan/skill_kiemdoan_ktnk_sword.vpcf"
 --SETTING_KTNK_EFFECT = "particles/units/heroes/hero_venomancer/venomancer_venomous_gale.vpcf"
@@ -7,9 +8,9 @@ SETTING_KTNK_FLY_TIME = 1
 SETTING_KTNK_FLY_SPEED = 1000
 SETTING_KTNK_DURATION= 8
 function skill_kiemdoan_kinhthiennhatkiem:GetCooldown()
-  --self:GetCaster():StartGesture( ACT_DOTA_ATTACK)
-  return 1
-  --return 45-self:GetLevel()*3
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return 45-skill_level*3
 end
 
 function skill_kiemdoan_kinhthiennhatkiem:OnAbilityPhaseStart()
@@ -22,7 +23,7 @@ end
 
 function skill_kiemdoan_kinhthiennhatkiem:OnSpellStart()
   local caster = self:GetCaster()
-  local skill_level = self:GetLevel()
+  local skill_level = self:GetLevel() + GetSkillLevel(caster)
   local target_point = self:GetCursorPosition()
   local caster_point = caster:GetAbsOrigin()
   local angleBetweenCasterAndTarget = (target_point - caster_point):Normalized()

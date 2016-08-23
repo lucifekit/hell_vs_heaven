@@ -1,4 +1,5 @@
 skill_thuongthien_doanhonthich = class({})
+require('kem_lib/kem')
 --range 550
 --cooldown 3
 --20 mân - 50
@@ -15,15 +16,17 @@ SETTING_AOE = 150
 --SETTING_SKILL_MODIFIER = "modifier_thuongthien_doanhonthich"
 --LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/thuongthien/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
 function skill_thuongthien_doanhonthich:GetManaCost()
-   return 10+10*self:GetLevel()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+   return 10+skill_level*10
 end
 
 function skill_thuongthien_doanhonthich:GetCooldown()
    return 3
 end
 function skill_thuongthien_doanhonthich:GetRange()
-  local heroLevel = self:GetCaster():GetLevel()
-  if(heroLevel>25)then
+  
+  if(HasBook(self:GetCaster()))then
     return SETTING_MOVE_RANGE_WITH_BOOK
   end
   return SETTING_MOVE_RANGE
@@ -36,7 +39,7 @@ end
 
 function skill_thuongthien_doanhonthich:OnSpellStart()
    local caster = self:GetCaster()
-   local skill_level = self:GetLevel()
+   local skill_level = self:GetLevel() + GetSkillLevel(caster)
    local caster_position = caster:GetAbsOrigin()
    local hTarget = self:GetCursorTarget()   
    local cast_point = self:GetCursorPosition()
@@ -72,7 +75,15 @@ local immobile_time = 2
 
 --   end
    Timers:CreateTimer(SETTING_TICK,function()
-    if(tick>0)then
+    local canMove=true
+    if(tick==0)then
+      canMove = false      
+    end
+    if not caster:canDive()then
+      canMove = false
+    end
+    
+    if(canMove)then
         --move
         --local gh = GetGroundHeight(caster:GetOrigin(),caster)
 

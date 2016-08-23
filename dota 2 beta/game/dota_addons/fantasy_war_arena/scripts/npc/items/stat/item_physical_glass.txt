@@ -14,7 +14,6 @@
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "stat"
 		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
 			"01"

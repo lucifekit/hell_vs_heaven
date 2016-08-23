@@ -1,4 +1,5 @@
 modifier_thuongthien_thienvuongchieny_allies = class({})
+require('kem_lib/kem')
 function modifier_thuongthien_thienvuongchieny_allies:IsHidden()
    return false
 end
@@ -32,13 +33,16 @@ function modifier_thuongthien_thienvuongchieny_allies:OnCreated( kv )
     local par = self:GetParent()
     --self.ability_level = 
 
-    local skill_level = self:GetAbility():GetLevel()
+    local p = self:GetParent()
+		local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
     local allies_physical_amplify = 0.1+0.05*skill_level    
     local allies_critical_chance = 10+2*skill_level
     local allies_maim_chance = 10+3.5*skill_level
-    par.physic_amplify = par.physic_amplify+ allies_physical_amplify--vat cong them vao
-    par.critical_chance = par.critical_chance+ allies_critical_chance--vat cong them vao
-    par.effect_maim_add_percent = par.effect_maim_add_percent+ allies_maim_chance--vat cong them vao
+    if(par.inited)then
+      par.physic_amplify = par.physic_amplify+ allies_physical_amplify--vat cong them vao
+      par.critical_chance = par.critical_chance+ allies_critical_chance--vat cong them vao
+      par.effect_maim_add_percent = par.effect_maim_add_percent+ allies_maim_chance--vat cong them vao
+    end
   end
   
 end
@@ -53,12 +57,16 @@ function modifier_thuongthien_thienvuongchieny_allies:OnDestroy( kv )
 
   if(IsServer())then
     local par = self:GetParent()
-    local skill_level = self:GetAbility():GetLevel()
+    local p = self:GetParent()
+		local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
     local allies_physical_amplify = 0.1+0.05*skill_level    
     local allies_critical_chance = 10+2*skill_level
     local allies_maim_chance = 10+3.5*skill_level
-    par.physic_amplify = par.physic_amplify- allies_physical_amplify--vat cong them vao
-    par.critical_chance = par.critical_chance- allies_critical_chance--vat cong them vao
-    par.effect_maim_add_percent = par.effect_maim_add_percent- allies_maim_chance--vat cong them vao
+    if(par.inited)then
+      par.physic_amplify = par.physic_amplify- allies_physical_amplify--vat cong them vao
+      par.critical_chance = par.critical_chance- allies_critical_chance--vat cong them vao
+      par.effect_maim_add_percent = par.effect_maim_add_percent- allies_maim_chance--vat cong them vao
+    end
+    
   end
 end

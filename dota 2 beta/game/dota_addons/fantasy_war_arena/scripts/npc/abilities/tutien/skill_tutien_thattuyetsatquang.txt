@@ -1,0 +1,45 @@
+"skill_tutien_thattuyetsatquang"
+{
+   "ID"  "12111"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "55"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "skill_tutien_thattuyetsatquang"
+   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_thattuyetsatquang"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_obsidian_destroyer.vsndevts"
+   }
+   // MOON FALL
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"critical_chance"  "75 100 125 150 175"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"attack_speed"  "12 14 16 18 20"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_chance_increase"  "28 46 64 82 100"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"duration"  "6 7 8 9 10"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"cooldown"  "30"
+		}
+	}
+   
+}

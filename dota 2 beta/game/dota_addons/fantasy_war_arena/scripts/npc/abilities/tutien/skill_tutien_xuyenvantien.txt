@@ -1,0 +1,65 @@
+"skill_tutien_xuyenvantien"
+{
+   "ID"  "12113"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "99"
+   "MaxLevel"				 "1"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "skill_tutien_xuyenvantien"
+   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_xuyenvantien"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "900"
+   "precache"
+   {
+   }
+   // SWIFT GLAIVE
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "100"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_damage_amplify"  "7 11 15 19 23 27 31 35 39 43"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"poison_damage"  "59 73 87 101 115 129 143 157 171 185"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_maim"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time"  "1"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_weak"  "18.5 22.0 25.5 29.0 32.5 36.0 39.5 43.0 46.5 50.0"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"weak_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+		}
+		"08"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "3"
+		}
+	}
+   
+}

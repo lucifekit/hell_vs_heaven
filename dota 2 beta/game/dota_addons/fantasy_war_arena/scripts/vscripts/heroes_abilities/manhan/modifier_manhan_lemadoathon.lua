@@ -1,4 +1,5 @@
 modifier_manhan_lemadoathon = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 --function modifier_manhan_lemadoathon:GetEffectAttachType()
 --  return PATTACH_OVERHEAD_FOLLOW
@@ -64,7 +65,8 @@ end
 
 function modifier_manhan_lemadoathon:OnCreated( kv )
  if(IsServer())then
-  local skill_level = self:GetAbility():GetLevel()
+  local p = self:GetParent()
+		local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
   -- SOUL STEALER
 --  local physical_simplify = 0.5+0.15*skill_level
 --  local movement_speed_reduce = 20+8*skill_level
@@ -78,7 +80,8 @@ end
 --------------------------------------------------------------------------------
 function modifier_manhan_lemadoathon:OnRefresh( kv )
 if(IsServer())then
-  local skill_level = self:GetAbility():GetLevel()
+  local p = self:GetParent()
+		local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
   -- SOUL STEALER
 --  local physical_simplify = 0.5+0.15*skill_level
 --  local movement_speed_reduce = 20+8*skill_level

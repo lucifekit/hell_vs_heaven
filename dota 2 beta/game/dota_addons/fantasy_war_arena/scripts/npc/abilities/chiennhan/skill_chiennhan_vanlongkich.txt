@@ -1,0 +1,75 @@
+"skill_chiennhan_vanlongkich"
+{
+   "ID"  "13259"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "45"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "chiennhan_vanlongkich"
+   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_vanlongkich"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "200"
+   "precache"
+   {
+   }
+   // VAMPIRE SLASH
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"drain"  "1 2 3 4 5 6 7 8 9 10"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "79 83 87 91 95 99 103 107 111 115"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_damage_amplify"  "106 112 118 124 130 136 142 148 154 160"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "648 686 724 762 800 838 876 914 952 990"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "793 839 885 932 978 1024 1071 1117 1163 1210"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_maim"  "18.5 22.0 25.5 29.0 32.5 36.0 39.5 43.0 46.5 50.0"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time"  "1"
+		}
+		"08"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_burn"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+		}
+		"09"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"burn_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+		}
+		"10"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "3 3 3 3 4 4 4 4 4 5"
+		}
+	}
+   
+}

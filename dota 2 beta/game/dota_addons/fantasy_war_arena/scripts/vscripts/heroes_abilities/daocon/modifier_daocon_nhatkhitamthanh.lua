@@ -1,4 +1,5 @@
 modifier_daocon_nhatkhitamthanh = class({})
+require('kem_lib/kem')
 function modifier_daocon_nhatkhitamthanh:IsHidden()
    return false
 end

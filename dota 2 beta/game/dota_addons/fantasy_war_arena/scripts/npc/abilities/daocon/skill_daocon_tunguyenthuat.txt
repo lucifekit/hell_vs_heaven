@@ -5,7 +5,7 @@
    "RequiredLevel"          "30"
    "MaxLevel"				 "5"
    "LevelsBetweenUpgrades"  "1"
-   "AbilityTextureName"      "keeper_of_the_light_illuminate"
+   "AbilityTextureName"      "skill_daocon_tunguyenthuat"
    "ScriptFile"          "heroes_abilities/daocon/skill_daocon_tunguyenthuat"
    "HotKeyOverride"    ""
    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"

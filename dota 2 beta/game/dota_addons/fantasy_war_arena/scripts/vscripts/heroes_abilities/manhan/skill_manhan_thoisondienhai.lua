@@ -1,4 +1,5 @@
 skill_manhan_thoisondienhai = class({})
+require('kem_lib/kem')
 
 SETTING_TSDH_NUMBER_OF_FIRES = 1
 SETTING_TSDH_DURATION_OF_FIRES = 5
@@ -30,7 +31,7 @@ function skill_manhan_thoisondienhai:OnSpellStart()
 	self.radius = self:GetSpecialValueFor( "radius" )
 	self.vision_range = self:GetSpecialValueFor( "vision_range" )
 	local caster = self:GetCaster()
-	local skill_level = self:GetLevel()
+	local skill_level = self:GetLevel() + GetSkillLevel(caster)
 
 	kemPrint("Skill level : "..skill_level)
 	local caster_position = caster:GetAbsOrigin()
@@ -81,7 +82,7 @@ local number_of_fire = 1+1*skill_level
 		
 		kemPrint("Number of fire "..numberOfFire.." x "..distance_to_left.."x"..tempLeftX.."y"..tempLeftY.." right "..distance_to_right.."x"..tempRightX.."y"..tempRightY)
 
-		local casted_sound = false
+		SoundPoint("Hero_Huskar.Burning_Spear",target_point,5,caster:GetTeam())
 		
 		--CREATE FIRE DUMMY 
 		for i = 1,numberOfFire do
@@ -92,32 +93,10 @@ local number_of_fire = 1+1*skill_level
 
 			local tempPoint = target_point + Vector(tempX, tempY, 0 )
 
-			--CreateDummyUnit to sound
-			
-			if casted_sound ==false then
-  			local tsdh_dummy_unit = CreateUnitByName("npc_dummy_unit", tempPoint, false, nil, nil, caster:GetTeam())
-        tsdh_dummy_unit:FindAbilityByName("dummy_unit"):SetLevel(1)
---        local tsdh_unit_ability = tsdh_dummy_unit:FindAbilityByName(SETTING_TSDH_SKILLCODE)
---        if tsdh_unit_ability ~= nil then
---          tsdh_unit_ability:SetLevel(1)
---        --chaos_meteor_unit_ability:ApplyDataDrivenModifier(chaos_meteor_dummy_unit, chaos_meteor_dummy_unit, "modifier_invoker_chaos_meteor_datadriven_unit_ability", {duration = -1})
---        end
-			  tsdh_dummy_unit:EmitSound("Hero_Huskar.Burning_Spear")
-			  casted_sound=true
-			  Timers:CreateTimer({
-          endTime = 5,
-          callback = function()
-          tsdh_dummy_unit:RemoveSelf()
-        end
-        })
-			end
-			
-			
-      
       --DAMAGE
       local damageData = {
         caster = caster,
-        main_attribute_value = caster:GetIntellect(),
+        main_magic = caster:GetIntellect(),
         skill_physical_damage_percent = 0,
         skill_tree_amplify_damage = 0,-- can edit
         skill_basic_damage_percent = basic_damage,

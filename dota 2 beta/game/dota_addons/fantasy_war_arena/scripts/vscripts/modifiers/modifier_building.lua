@@ -16,12 +16,15 @@ end
 function modifier_building:DeclareFunctions()
   local funcs = {
     MODIFIER_PROPERTY_DISABLE_TURNING,
-    MODIFIER_PROPERTY_IGNORE_CAST_ANGLE
+    MODIFIER_PROPERTY_IGNORE_CAST_ANGLE,
+    MODIFIER_PROPERTY_EXTRA_HEALTH_PERCENTAGE
   }
  
   return funcs
 end
-
+function modifier_building:GetModifierExtraHealthPercentage()
+  return 1+math.floor(GameRules:GetGameTime()/300) 
+end
 function modifier_building:GetModifierDisableTurning()
   return 1 
 end

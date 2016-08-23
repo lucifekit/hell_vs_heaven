@@ -10,7 +10,7 @@
     "MaxLevel"				 "5"
     "LevelsBetweenUpgrades"  "1"
     "HotKeyOverride"    "" 
-    "AbilityTextureName"      "batrider_flamebreak"
+    "AbilityTextureName"      "manhan_thucphocchu"
     "ScriptFile"          "heroes_abilities/manhan/skill_manhan_thucphocchu"
     // FLAME BLOOD
 	"AbilitySpecial"

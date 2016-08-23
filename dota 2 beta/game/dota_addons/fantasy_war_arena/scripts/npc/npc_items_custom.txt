@@ -209,13 +209,9 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"0"
-				"OverrideAnimation"	"ACT_DOTA_DISABLED"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_health"
-	
-					"MODIFIER_PROPERTY_VISUAL_Z_DELTA"				"200"
-	
 					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
 				}
 				"OnCreated"
@@ -450,30 +446,26 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"0"
-				"OverrideAnimation"	"ACT_DOTA_DISABLED"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_health"
 					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
-	
-					"MODIFIER_PROPERTY_VISUAL_Z_DELTA"				"200"
-	
 				}
 				"OnCreated"
 	            {
 	                
-	                //"AttachEffect"
-	                //{
-	                //    "Target"			"CASTER"
-	                //    "EffectName"		"particles/edited_particle/flying_nimbus.vpcf"
-	                //    "EffectAttachType"	"follow_origin"
-	                //}
+	                "AttachEffect"
+	                {
+	                    "Target"			"CASTER"
+	                    "EffectName"		"particles/edited_particle/skywing.vpcf"
+	                    "EffectAttachType"	"follow_origin"
+	                }
 	            }
 			}
 		}
 		"precache"
 	    {
-	      "particle"              "particles/edited_particle/flying_nimbus.vpcf"      
+	      "particle"              "particles/edited_particle/skywing.vpcf"      
 	    }
 	  }
 	  
@@ -728,7 +720,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "50"
+					"exp"  "10"
 				}
 			}
 		}
@@ -783,7 +775,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "60"
+					"exp"  "15"
 				}
 			}
 		}
@@ -838,7 +830,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "70"
+					"exp"  "20"
 				}
 			}
 		}
@@ -893,7 +885,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "80"
+					"exp"  "25"
 				}
 			}
 		}
@@ -948,7 +940,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "90"
+					"exp"  "30"
 				}
 			}
 		}
@@ -1003,7 +995,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "100"
+					"exp"  "35"
 				}
 			}
 		}
@@ -1058,7 +1050,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "110"
+					"exp"  "40"
 				}
 			}
 		}
@@ -1113,7 +1105,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "120"
+					"exp"  "45"
 				}
 			}
 		}
@@ -1231,7 +1223,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "50"
+					"exp"  "10"
 				}
 			}
 		}
@@ -1286,7 +1278,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "60"
+					"exp"  "15"
 				}
 			}
 		}
@@ -1341,7 +1333,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "70"
+					"exp"  "20"
 				}
 			}
 		}
@@ -1396,7 +1388,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "80"
+					"exp"  "25"
 				}
 			}
 		}
@@ -1451,7 +1443,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "90"
+					"exp"  "30"
 				}
 			}
 		}
@@ -1506,7 +1498,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "100"
+					"exp"  "35"
 				}
 			}
 		}
@@ -1561,7 +1553,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "110"
+					"exp"  "40"
 				}
 			}
 		}
@@ -1616,7 +1608,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "120"
+					"exp"  "45"
 				}
 			}
 		}
@@ -1781,7 +1773,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "50"
+					"exp"  "10"
 				}
 			}
 		}
@@ -1836,7 +1828,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "60"
+					"exp"  "15"
 				}
 			}
 		}
@@ -1891,7 +1883,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "70"
+					"exp"  "20"
 				}
 			}
 		}
@@ -1946,7 +1938,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "80"
+					"exp"  "25"
 				}
 			}
 		}
@@ -2001,7 +1993,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "90"
+					"exp"  "30"
 				}
 			}
 		}
@@ -2056,7 +2048,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "100"
+					"exp"  "35"
 				}
 			}
 		}
@@ -2111,7 +2103,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "110"
+					"exp"  "40"
 				}
 			}
 		}
@@ -2166,7 +2158,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "120"
+					"exp"  "45"
 				}
 			}
 		}
@@ -2269,7 +2261,7 @@
 				"04"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "50"
+					"exp"  "10"
 				}
 			}
 		}
@@ -2309,7 +2301,7 @@
 				"04"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "60"
+					"exp"  "25"
 				}
 			}
 		}
@@ -2349,7 +2341,7 @@
 				"04"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "70"
+					"exp"  "40"
 				}
 			}
 		}
@@ -2389,7 +2381,7 @@
 				"04"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "80"
+					"exp"  "55"
 				}
 			}
 		}
@@ -2429,7 +2421,7 @@
 				"04"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "90"
+					"exp"  "70"
 				}
 			}
 		}
@@ -2469,7 +2461,7 @@
 				"04"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "100"
+					"exp"  "85"
 				}
 			}
 		}
@@ -2509,7 +2501,7 @@
 				"04"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "110"
+					"exp"  "100"
 				}
 			}
 		}
@@ -2549,7 +2541,7 @@
 				"04"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "120"
+					"exp"  "115"
 				}
 			}
 		}
@@ -3162,7 +3154,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "50"
+					"exp"  "10"
 				}
 			}
 		}
@@ -3217,7 +3209,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "60"
+					"exp"  "15"
 				}
 			}
 		}
@@ -3272,7 +3264,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "70"
+					"exp"  "20"
 				}
 			}
 		}
@@ -3327,7 +3319,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "80"
+					"exp"  "25"
 				}
 			}
 		}
@@ -3382,7 +3374,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "90"
+					"exp"  "30"
 				}
 			}
 		}
@@ -3437,7 +3429,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "100"
+					"exp"  "35"
 				}
 			}
 		}
@@ -3492,7 +3484,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "110"
+					"exp"  "40"
 				}
 			}
 		}
@@ -3547,7 +3539,7 @@
 				"07"
 				{
 					"var_type"  "FIELD_INTEGER"
-					"exp"  "120"
+					"exp"  "45"
 				}
 			}
 		}
@@ -4297,6 +4289,40 @@
 			{}
 		}
 	}
+	//============SECRET BOOK===============
+		"item_book"
+		{
+			"ID"              "6600"
+			"BaseClass"           	  "item_lua"
+			"ScriptFile"                    "items/items.lua"
+			"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"ItemQuality"				"epic"
+			"AbilityTextureName"      "item_book"
+			"ItemCost"            "10000"
+			"ItemShareability"        "ITEM_NOT_SHAREABLE"
+			"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+			"ItemShopTags"        "stat"
+			"ItemInitialCharges" "0"
+			"ItemDisplayCharges" "0"
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"  "FIELD_INTEGER"
+					"skill_level"  "1"
+				}
+				"02"
+				{
+					"var_type"  "FIELD_INTEGER"
+					"hp"  "1000"
+				}
+				"03"
+				{
+					"var_type"  "FIELD_INTEGER"
+					"mp"  "500"
+				}
+			}
+		}
 	//============ELEMENT DROP===============
 		
 		"item_element_drop_max"
@@ -4312,8 +4338,6 @@
 			"ItemShareability"        "ITEM_NOT_SHAREABLE"
 			"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 			"ItemShopTags"        "stat"
-			"ItemInitialCharges" "0"
-			"ItemDisplayCharges" "1"
 			"AbilitySpecial"
 			{
 				"01"
@@ -4339,8 +4363,6 @@
 			"ItemShareability"        "ITEM_NOT_SHAREABLE"
 			"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 			"ItemShopTags"        "stat"
-			"ItemInitialCharges" "0"
-			"ItemDisplayCharges" "1"
 			"AbilitySpecial"
 			{
 				"01"
@@ -4366,8 +4388,6 @@
 			"ItemShareability"        "ITEM_NOT_SHAREABLE"
 			"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 			"ItemShopTags"        "stat"
-			"ItemInitialCharges" "0"
-			"ItemDisplayCharges" "1"
 			"AbilitySpecial"
 			{
 				"01"
@@ -4394,7 +4414,6 @@
 			"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 			"ItemShopTags"        "stat"
 			"ItemInitialCharges" "0"
-			"ItemDisplayCharges" "1"
 			"AbilitySpecial"
 			{
 				"01"
@@ -4420,8 +4439,6 @@
 			"ItemShareability"        "ITEM_NOT_SHAREABLE"
 			"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 			"ItemShopTags"        "stat"
-			"ItemInitialCharges" "0"
-			"ItemDisplayCharges" "1"
 			"AbilitySpecial"
 			{
 				"01"
@@ -4448,7 +4465,6 @@
 			"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 			"ItemShopTags"        "stat"
 			"ItemInitialCharges" "0"
-			"ItemDisplayCharges" "1"
 			"AbilitySpecial"
 			{
 				"01"
@@ -4474,8 +4490,6 @@
 			"ItemShareability"        "ITEM_NOT_SHAREABLE"
 			"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 			"ItemShopTags"        "stat"
-			"ItemInitialCharges" "0"
-			"ItemDisplayCharges" "1"
 			"AbilitySpecial"
 			{
 				"01"
@@ -4501,8 +4515,6 @@
 			"ItemShareability"        "ITEM_NOT_SHAREABLE"
 			"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 			"ItemShopTags"        "stat"
-			"ItemInitialCharges" "0"
-			"ItemDisplayCharges" "1"
 			"AbilitySpecial"
 			{
 				"01"
@@ -4528,8 +4540,6 @@
 			"ItemShareability"        "ITEM_NOT_SHAREABLE"
 			"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 			"ItemShopTags"        "stat"
-			"ItemInitialCharges" "0"
-			"ItemDisplayCharges" "1"
 			"AbilitySpecial"
 			{
 				"01"
@@ -4555,8 +4565,6 @@
 			"ItemShareability"        "ITEM_NOT_SHAREABLE"
 			"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 			"ItemShopTags"        "stat"
-			"ItemInitialCharges" "0"
-			"ItemDisplayCharges" "1"
 			"AbilitySpecial"
 			{
 				"01"
@@ -4582,8 +4590,6 @@
 			"ItemShareability"        "ITEM_NOT_SHAREABLE"
 			"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 			"ItemShopTags"        "stat"
-			"ItemInitialCharges" "0"
-			"ItemDisplayCharges" "1"
 			"AbilitySpecial"
 			{
 				"01"

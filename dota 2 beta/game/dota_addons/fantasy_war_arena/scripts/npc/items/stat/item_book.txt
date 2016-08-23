@@ -1,0 +1,34 @@
+//============SECRET BOOK===============
+	"item_book"
+	{
+		"ID"              "6600"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"epic"
+		"AbilityTextureName"      "item_book"
+		"ItemCost"            "10000"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "stat"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"skill_level"  "1"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "1000"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"mp"  "500"
+			}
+		}
+	}

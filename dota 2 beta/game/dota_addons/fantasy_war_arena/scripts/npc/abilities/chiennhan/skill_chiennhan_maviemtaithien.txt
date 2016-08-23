@@ -1,0 +1,34 @@
+"skill_chiennhan_maviemtaithien"
+{
+   "ID"  "13260"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "50"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "chiennhan_maviemtaithien"
+   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_maviemtaithien"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // MASTER TALENT
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "2 4 6 8 10"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"burn_time_increase"  "16 32 48 64 80"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time_reduce"  "24 48 72 96 120"
+		}
+	}
+   
+}

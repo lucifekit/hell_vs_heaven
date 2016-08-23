@@ -1,4 +1,5 @@
 skill_manhan_thienngoailuutinh = class({})
+require('kem_lib/kem')
 
 SkillCode = "skill_manhan_thienngoailuutinh"
 SETTING_TNLT_EFFECT = "particles/units/heroes/hero_nevermore/nevermore_base_attack.vpcf"
@@ -13,8 +14,9 @@ function skill_manhan_thienngoailuutinh:GetCooldown()
   return 1/atk_perseconds
 end
 function skill_manhan_thienngoailuutinh:GetManaCost()
-  --if mttc then return 2
-  return 20*self:GetLevel()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*20
 end
 
 function skill_manhan_thienngoailuutinh:OnAbilityPhaseStart()
@@ -28,7 +30,7 @@ function skill_manhan_thienngoailuutinh:OnSpellStart()
 	local caster = self:GetCaster()
 	local caster_point = caster:GetAbsOrigin()
 	local target_point = self:GetCursorPosition()
-	local skill_level = self:GetLevel()
+	local skill_level = self:GetLevel() + GetSkillLevel(caster)
 	local caster_point_temp = Vector(caster_point.x, caster_point.y, 0)
 	local target_point_temp = Vector(target_point.x, target_point.y, 0)
 	
@@ -69,13 +71,14 @@ local max_target = 7
 		  --DAMAGE TANG 1
       local damage1Data = {
         caster = caster,
-        main_attribute_value = caster:GetIntellect(),
+        main_magic = caster:GetIntellect(),
         skill_physical_damage_percent = 0,
         skill_tree_amplify_damage = 0,-- can edit
         skill_basic_damage_percent = basic_damage,
         element_damage_min = element_damage_min,
         element_damage_max = element_damage_max
         }
+      local critInfo = DamageHandler:GetCritInfo(caster)
       local damageAreaData = {
         whoDealDamage = caster,
         byWhichAbility = self,
@@ -83,6 +86,7 @@ local max_target = 7
         radius = 200,
         damage = DamageHandler:GetDamage(damage1Data),
         damage_element = ELEMENT_FIRE,
+        crit = critInfo,
         custom = {
           action="status_effect",
           effect_type=EFFECT_BURN,
@@ -125,7 +129,7 @@ local max_target = 7
       --DAMAGE TANG 2
       local damageData = {
         caster = caster,
-        main_attribute_value = caster:GetIntellect(),
+        main_magic = caster:GetIntellect(),
         skill_physical_damage_percent = 0,
         skill_tree_amplify_damage = 0,-- can edit
         skill_basic_damage_percent = ground_basic_damage,

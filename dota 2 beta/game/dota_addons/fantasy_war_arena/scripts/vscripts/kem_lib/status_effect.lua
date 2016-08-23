@@ -21,6 +21,7 @@ if not StatusEffectHandler then
   StatusEffectHandler = class({})
 end
 MODIFIER_THUONGTHIEN_HOANHHANHVOKY = "modifier_thuongthien_hoanhhanhvoky"
+MODIFIER_CHIENNHAN_PHIHONGVOTICH = "modifier_chiennhan_phihongvotich"
 MODIFIER_BOSS = "modifier_boss"
 
 SETTING_EFFECT_BASE = 256
@@ -282,6 +283,7 @@ end
 
 
 function StatusEffectHandler:KnockBack(caster,start_point,unit,chance,knockback_duration,knockback_distance)
+  
   local resist_chance = 0
   --kemPrint("call knockback ")
   if(start_point==nil)then
@@ -291,6 +293,9 @@ function StatusEffectHandler:KnockBack(caster,start_point,unit,chance,knockback_
         resist_chance = resist_chance+ unit.effect_knockback_resist_percent
   end
   if(unit:HasModifier(MODIFIER_BOSS))then
+    chance = 0
+  end
+  if(unit:HasModifier(MODIFIER_CHIENNHAN_PHIHONGVOTICH))then
     chance = 0
   end
 --  if(math.abs(knockback_angle.x)>1)then
@@ -313,6 +318,7 @@ function StatusEffectHandler:KnockBack(caster,start_point,unit,chance,knockback_
           center_z = start_point.z
         }
         --kemPrint("add modifier knockback "..knockback_duration.."s distance = "..knockback_distance)
+    
     unit:AddNewModifier( caster, nil, EFFECT_KNOCKBACK, knockbackModifierTable )
 
 

@@ -1,0 +1,44 @@
+"skill_kiemcon_nguynguyconlon"
+{
+   "ID"  "15162"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "60"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "zuus_static_field"
+   "ScriptFile"          "heroes_abilities/kiemcon/skill_kiemcon_nguynguyconlon"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // LIGHTNING MASTERY
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"cooldown_reduce"  "0.2 0.4 0.6 0.8 1.0"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"stack_duration"  "3"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_stack"  "3 4 5 6 7"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"critical_per_stack"  "12 24 36 48 60"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"damage_reduce_per_stack"  "1 2 3 4 5"
+		}
+	}
+
+}

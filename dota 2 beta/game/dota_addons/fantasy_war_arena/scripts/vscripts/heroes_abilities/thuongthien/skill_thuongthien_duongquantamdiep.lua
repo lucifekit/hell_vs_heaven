@@ -1,4 +1,5 @@
 skill_thuongthien_duongquantamdiep = class({})
+require('kem_lib/kem')
 SETTING_SKILL_MODIFIER="modifier_thuongthien_duongquantamdiep"
 LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/thuongthien/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
 SETTING_DEBUFF_RADIUS = 120
@@ -9,7 +10,9 @@ function skill_thuongthien_duongquantamdiep:GetManaCost()
    if(self:GetCaster():HasModifier(SETTING_SKILL_MODIFIER)) then
     return 0
    end
-   return 5*self:GetLevel()
+   local caster = self:GetCaster()
+   local skill_level = self:GetLevel()+GetSkillLevel(caster)
+   return skill_level*5
 end
 
 function skill_thuongthien_duongquantamdiep:GetCooldown()
@@ -37,7 +40,7 @@ end
 
 function skill_thuongthien_duongquantamdiep:OnSpellStart()
    local caster = self:GetCaster()
-   local skill_level = self:GetLevel()
+   local skill_level = self:GetLevel() + GetSkillLevel(caster)
    local caster_position = caster:GetAbsOrigin()
    local hTarget = self:GetCursorTarget()   
    local cast_point = self:GetCursorPosition()
@@ -68,7 +71,7 @@ local max_target = 4
   
   local damageData = {
         caster = caster,
-        main_attribute_value = caster:GetAgility(),
+        main_physic = caster:GetAgility(),
         skill_physical_damage_percent = physical_damage_amplify,
         skill_tree_amplify_damage = 0,-- can edit
         skill_basic_damage_percent = basic_damage,
@@ -78,15 +81,25 @@ local max_target = 4
   local effectChance = chance_to_maim*100
   local damage = DamageHandler:GetDamage(damageData)
   local critInfo = DamageHandler:GetCritInfo(caster)
-  local maxTarget = max_target
-  local enemies = FindUnitsInRadius(caster:GetTeam(), cast_point, nil, SETTING_DEBUFF_RADIUS, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, FIND_CLOSEST, false )
-  for _,enemy in ipairs(enemies) do
-    if(maxTarget>0)then
-      maxTarget = maxTarget-1
-      DamageHandler:ApplyDamage(caster,self,enemy,damage,critInfo,ELEMENT_METAL,{})
-      StatusEffectHandler:ApplyEffect(caster,enemy,EFFECT_MAIM,effectChance,maim_time)
-    end      
-  end
+  local damageAreaData = {
+      whoDealDamage = caster,
+      byWhichAbility = self,
+      where = target_point,
+      radius = SETTING_DEBUFF_RADIUS,
+      damage = damage,        
+      crit = critInfo,
+      damage_element = ELEMENT_METAL,
+      maxTarget=max_target,
+      custom = {
+        action="status_effect",
+        effect_type=EFFECT_MAIM,
+        effect_chance=chance_to_maim*100,
+        effect_time=maim_time
+      }
+
+    }
+    DamageHandler:DamageArea(damageAreaData)  
+ 
  
   
   local atk_perseconds = self:GetCaster():GetAttacksPerSecond()

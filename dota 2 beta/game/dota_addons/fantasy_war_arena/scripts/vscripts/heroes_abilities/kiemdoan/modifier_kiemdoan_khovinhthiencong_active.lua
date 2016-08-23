@@ -1,4 +1,5 @@
 modifier_kiemdoan_khovinhthiencong_active = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 
 function modifier_kiemdoan_khovinhthiencong_active:IsHidden()
@@ -28,11 +29,13 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_kiemdoan_khovinhthiencong_active:OnCreated( kv )
-  self.atk_speed =math.floor(self:GetAbility():GetLevel()*2)
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.atk_speed =math.floor(skill_level*2)
   self.regen_speed=0
   if(IsServer())then
     
-    self.regen_speed = 10+self:GetAbility():GetLevel()*2
+    self.regen_speed = 10+skill_level*2
     self.hp_regen = self:GetParent():GetMaxHealth()*self.regen_speed/100
     if(self.hp_regen>1000)then
       self.regen_speed = math.floor(100000/self:GetParent():GetMaxHealth())
@@ -44,8 +47,10 @@ end
 
 --------------------------------------------------------------------------------
 function modifier_kiemdoan_khovinhthiencong_active:OnRefresh( kv )
-  self.atk_speed = math.floor(self:GetAbility():GetLevel()*2)
-  self.regen_speed = 10+self:GetAbility():GetLevel()*2
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.atk_speed = math.floor(skill_level*2)
+  self.regen_speed = 10+skill_level*2
 end
 
 function modifier_kiemdoan_khovinhthiencong_active:OnDestroy()

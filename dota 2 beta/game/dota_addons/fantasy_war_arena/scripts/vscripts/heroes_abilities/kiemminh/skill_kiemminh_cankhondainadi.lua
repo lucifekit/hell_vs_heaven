@@ -1,4 +1,5 @@
 skill_kiemminh_cankhondainadi = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 
 SETTING_SKILL_MODIFIER = "modifier_kiemminh_cankhondainadi"
@@ -6,17 +7,23 @@ SETTING_DEBUFF_RADIUS = 480
 LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/kiemminh/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
 SETTING_EFFECT = "particles/edited_particle/kiem_minh/thauthienhoannhat.vpcf"
 function skill_kiemminh_cankhondainadi:GetCooldown()
-  if(self:GetCaster():HasModifier("modifier_kiemminh_thanhhoalenhphap")) then
+  
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  if(caster:HasModifier("modifier_kiemminh_thanhhoalenhphap")) then
      local atk_perseconds = self:GetCaster():GetAttacksPerSecond()
      return 1/atk_perseconds
   end
-  if(self:GetCaster():GetLevel()>=25)then
-    return 105-6*self:GetLevel()
+  if(HasBook(caster))then
+    
+    return 105-skill_level*6
   end
-  return 120-6*self:GetLevel()
+  return 120-skill_level*6
 end
 function skill_kiemminh_cankhondainadi:GetManaCost()
-  return 200+60*self:GetLevel()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return 200+skill_level*60
 end
 function skill_kiemminh_cankhondainadi:OnAbilityPhaseStart()
 	self:GetCaster():StartGesture( ACT_DOTA_ATTACK)
@@ -24,7 +31,7 @@ function skill_kiemminh_cankhondainadi:OnAbilityPhaseStart()
 end
 function skill_kiemminh_cankhondainadi:OnSpellStart()
   local caster = self:GetCaster()
-  local skill_level = self:GetLevel()
+  local skill_level = self:GetLevel() + GetSkillLevel(caster)
   local caster_position = caster:GetAbsOrigin()
 	local hTarget = self:GetCursorTarget()
 	local cast_point = self:GetCursorPosition()

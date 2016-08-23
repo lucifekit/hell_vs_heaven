@@ -1,0 +1,35 @@
+"skill_tutien_meanhtung"
+{
+   "ID"  "12103"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "7"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "skill_tutien_meanhtung"
+   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_meanhtung"
+   "HotKeyOverride"    "W"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.05"
+   "AbilityCastRange"        "2000"
+   "precache"
+   {
+   }
+   // BLINK
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"blink_range"  "700 800 900 1000 1100"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"blink_range_with_book"  "750 900 1050 1200 1350"
+		}
+	}
+   
+}

@@ -1,8 +1,10 @@
 skill_kiemminh_thanhhoalieunguyen = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
-SETTING_THLN_EFFECT = "particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf"
+--SETTING_THLN_EFFECT = "particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf"
+SETTING_THLN_EFFECT = "particles/edited_particle/kiem_minh/thln_mirana.vpcf"
 --SETTING_THLN_EXPLODE_EFFECT = "particles/edited_particle/kiem_minh/thanhhoalieunguyen_explode.vpcf"
-SETTING_THLN_EXPLODE_EFFECT = "particles/edited_particle/kiem_minh/thanhhoalieunguyen_explode.vpcf"
+--SETTING_THLN_EXPLODE_EFFECT = "particles/edited_particle/kiem_minh/thanhhoalieunguyen_explode.vpcf"
 SETTING_THLN_EFFECT_HEIGHT = 800
 SETTING_THLN_EFFECT_FALLING_TIME = 0.8
 SETTING_THLN_X_DISTANCE = 140
@@ -16,7 +18,9 @@ function skill_kiemminh_thanhhoalieunguyen:GetCooldown()
   return 3.5
 end
 function skill_kiemminh_thanhhoalieunguyen:GetManaCost()
-  return 150+self:GetLevel()*15
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return 150+skill_level*15
 end
 function skill_kiemminh_thanhhoalieunguyen:OnAbilityPhaseStart()
 	self:GetCaster():StartGesture( ACT_DOTA_CAST_ABILITY_4)
@@ -24,7 +28,7 @@ function skill_kiemminh_thanhhoalieunguyen:OnAbilityPhaseStart()
 end
 function skill_kiemminh_thanhhoalieunguyen:OnSpellStart()
   local caster = self:GetCaster()
-  local skill_level = self:GetLevel()
+  local skill_level = self:GetLevel() + GetSkillLevel(caster)
   local caster_position = caster:GetAbsOrigin()
 	local hTarget = self:GetCursorTarget()
 	local target_point = self:GetCursorPosition()
@@ -57,7 +61,7 @@ local radius = 50+5*skill_level
 
   local damageData = {
         caster = caster,
-        main_attribute_value = caster:GetIntellect(),
+        main_magic = caster:GetIntellect(),
         skill_physical_damage_percent = 0,
         skill_tree_amplify_damage = 0,-- can edit
 
@@ -66,11 +70,12 @@ local radius = 50+5*skill_level
         element_damage_min = 0,
         element_damage_max = 0
   }
+  local critInfo = DamageHandler:GetCritInfo(caster)
   local damageAreaData = {
         whoDealDamage = caster,
         byWhichAbility = self,
         where = target_point,
-
+        crit = critInfo,
         radius = radius,
         damage = DamageHandler:GetDamage(damageData),        
         damage_element = ELEMENT_WOOD,
@@ -85,7 +90,7 @@ local radius = 50+5*skill_level
   local hhnp = caster:FindAbilityByName("skill_kiemminh_hoanghoangocphan")
   local hhnp_level = hhnp:GetLevel()
   if(hhnp_level>0) then
-       
+       hhnp_level=hhnp_level+GetSkillLevel(caster)       
 
        poison_data.radius = poison_data.radius +20*hhnp_level
        damageAreaData.radius = damageAreaData.radius+20*hhnp_level
@@ -93,16 +98,17 @@ local radius = 50+5*skill_level
 	for i=0,8 do 
 	  
 	  local cast_where = target_point+Vector(x[i+1]*SETTING_THLN_X_DISTANCE,y[i+1]*SETTING_THLN_Y_DISTANCE,0)
-	  local thln_missile = ParticleManager:CreateParticle(SETTING_THLN_EFFECT, PATTACH_ABSORIGIN, caster)
-    ParticleManager:SetParticleControl( thln_missile, 0, cast_where +Vector(0,0,SETTING_THLN_EFFECT_HEIGHT))
-    ParticleManager:SetParticleControl( thln_missile,1, cast_where+Vector(0,0,50))
-    ParticleManager:SetParticleControl( thln_missile, 2, Vector(SETTING_THLN_EFFECT_HEIGHT/SETTING_THLN_EFFECT_FALLING_TIME,0,0) )
+	  FxPoint(SETTING_THLN_EFFECT,cast_where,1)
+--	  local thln_missile = ParticleManager:CreateParticle(SETTING_THLN_EFFECT, PATTACH_ABSORIGIN, caster)
+--    ParticleManager:SetParticleControl( thln_missile, 0, cast_where +Vector(0,0,SETTING_THLN_EFFECT_HEIGHT))
+--    ParticleManager:SetParticleControl( thln_missile,1, cast_where+Vector(0,0,50))
+--    ParticleManager:SetParticleControl( thln_missile, 2, Vector(SETTING_THLN_EFFECT_HEIGHT/SETTING_THLN_EFFECT_FALLING_TIME,0,0) )
     Timers:CreateTimer(SETTING_THLN_EFFECT_FALLING_TIME,function() 
-      ParticleManager:DestroyParticle(thln_missile,true)
-      local thln_explode_missile = ParticleManager:CreateParticle(SETTING_THLN_EXPLODE_EFFECT, PATTACH_ABSORIGIN, caster)
-      ParticleManager:SetParticleControl( thln_explode_missile, 0, cast_where+Vector(0,0,20) )
-      ParticleManager:SetParticleControl( thln_explode_missile, 1, Vector(1,1,1) )
-      ParticleManager:SetParticleControl( thln_explode_missile, 2, Vector(0,0,0) )
+      --ParticleManager:DestroyParticle(thln_missile,true)
+--      local thln_explode_missile = ParticleManager:CreateParticle(SETTING_THLN_EXPLODE_EFFECT, PATTACH_ABSORIGIN, caster)
+--      ParticleManager:SetParticleControl( thln_explode_missile, 0, cast_where+Vector(0,0,20) )
+--      ParticleManager:SetParticleControl( thln_explode_missile, 1, Vector(1,1,1) )
+--      ParticleManager:SetParticleControl( thln_explode_missile, 2, Vector(0,0,0) )
       --ParticleManager:DestroyParticle(thln_explode_missile,false)
       poison_data.where = cast_where
       PoisonHandler:PoisonArea(poison_data) 

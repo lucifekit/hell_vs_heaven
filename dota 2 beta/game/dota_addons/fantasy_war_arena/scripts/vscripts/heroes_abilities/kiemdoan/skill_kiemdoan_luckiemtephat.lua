@@ -1,4 +1,5 @@
 skill_kiemdoan_luckiemtephat = class({})
+require('kem_lib/kem')
 
 
 SETTING_SKILL_MODIFIER = "modifier_kiemdoan_luckiemtephat"

@@ -48,6 +48,7 @@
 .ability_container{
 	width:50%;
 	height:100%;
+	overflow:squish scroll;
 	/*background-color:red;*/
 	
 }

@@ -1,15 +1,20 @@
 skill_manhan_xikhongmadiem = class({})
+require('kem_lib/kem')
 SETTING_SKILL_MODIFIER = "modifier_manhan_xikhongmadiem"
 
 LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/manhan/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
 
 
 function skill_manhan_xikhongmadiem:GetBurnInflictChance()
-  return 30+self:GetLevel()*12
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return 30+skill_level*12
 end
 
 function skill_manhan_xikhongmadiem:GetMaimResistChance()
-  return 30+self:GetLevel()*12
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return 30+skill_level*12
 end
 
 function skill_manhan_xikhongmadiem:OnUpgrade()

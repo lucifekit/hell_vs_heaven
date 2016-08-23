@@ -1,4 +1,5 @@
 skill_manhan_lemadoathon = class({})
+require('kem_lib/kem')
 SETTING_DEBUFF_RADIUS = 120
 SETTING_DEBUFF_DURATION = 120
 SETTING_SKILL_MODIFIER = "modifier_manhan_lemadoathon"

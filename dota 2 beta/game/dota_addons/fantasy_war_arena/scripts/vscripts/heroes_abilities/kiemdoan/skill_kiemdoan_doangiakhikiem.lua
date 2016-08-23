@@ -1,15 +1,22 @@
 skill_kiemdoan_doangiakhikiem = class({})
+require('kem_lib/kem')
 
 function skill_kiemdoan_doangiakhikiem:GetBasicDamage()
-  return 0.02*self:GetLevel()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*0.02
 end
 
 function skill_kiemdoan_doangiakhikiem:GetSlowInflictTime()
-  return self:GetLevel()*16
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*16
 end
 
 function skill_kiemdoan_doangiakhikiem:GetBurnResistTime()
-  return self:GetLevel()*24
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*24
 end
 
 

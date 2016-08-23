@@ -1,15 +1,22 @@
 skill_manhan_madiemthatsat = class({})
+require('kem_lib/kem')
 
 function skill_manhan_madiemthatsat:GetBasicDamage()
-  return 0.02*self:GetLevel()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*0.02
 end
 
 function skill_manhan_madiemthatsat:GetBurnInflictTime()
-  return self:GetLevel()*16
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*16
 end
 
 function skill_manhan_madiemthatsat:GetMaimResistTime()
-  return self:GetLevel()*24
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*24
 end
 
 

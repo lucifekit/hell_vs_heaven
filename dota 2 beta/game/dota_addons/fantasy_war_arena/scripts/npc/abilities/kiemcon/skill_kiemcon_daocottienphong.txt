@@ -1,0 +1,47 @@
+"skill_kiemcon_daocottienphong"
+{
+   "ID"  "15157"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "35"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "kiemcon_daocottienphong"
+   "ScriptFile"          "heroes_abilities/kiemcon/skill_kiemcon_daocottienphong"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "700"
+   "precache"
+   {
+   	"soundfile" "soundevents/game_sounds_items.vsndevts"
+   }
+   // LIGHTNING BODY
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"lightning_resist"  "44 78 112 146 180 214 248 282 316 350"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_resist"  "244 478 712 946 1180 1414 1648 1882 2116 2350"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"fire_resist"  "44 78 112 146 180 214 248 282 316 350"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"water_resist"  "44 78 112 146 180 214 248 282 316 350"
+		}
+	}
+
+
+}

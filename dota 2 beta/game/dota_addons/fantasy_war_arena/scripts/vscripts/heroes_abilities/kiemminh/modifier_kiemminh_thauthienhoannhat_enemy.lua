@@ -1,4 +1,5 @@
 modifier_kiemminh_thauthienhoannhat_enemy = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 function modifier_kiemminh_thauthienhoannhat_enemy:GetEffectAttachType()
   return PATTACH_OVERHEAD_FOLLOW
@@ -21,7 +22,8 @@ function modifier_kiemminh_thauthienhoannhat_enemy:OnCreated( kv )
  
  if(IsServer())then
     self:StartIntervalThink(0.5)
-    local skill_level = self:GetAbility():GetLevel()
+    local p = self:GetParent()
+		local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
     local mp_regen = 100+50*skill_level
     local hp_regen = 100+50*skill_level
     self.mp_regen = mp_regen
@@ -35,7 +37,8 @@ end
 --------------------------------------------------------------------------------
 function modifier_kiemminh_thauthienhoannhat_enemy:OnRefresh( kv )
   if(IsServer())then
-    local skill_level = self:GetAbility():GetLevel()
+    local p = self:GetParent()
+		local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
     local mp_regen = 100+50*skill_level
     local hp_regen = 100+50*skill_level
     self.mp_regen = mp_regen

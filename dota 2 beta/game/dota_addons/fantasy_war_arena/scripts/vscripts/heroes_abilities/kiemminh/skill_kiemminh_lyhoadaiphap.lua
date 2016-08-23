@@ -1,15 +1,20 @@
 skill_kiemminh_lyhoadaiphap = class({})
+require('kem_lib/kem')
 SETTING_SKILL_MODIFIER = "modifier_kiemminh_lyhoadaiphap"
 
 LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/kiemminh/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
 
 
 function skill_kiemminh_lyhoadaiphap:GetWeakInflictChance()
-  return 20+self:GetLevel()*8
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return 20+skill_level*8
 end
 
 function skill_kiemminh_lyhoadaiphap:GetStunResistChance()
-  return 30+self:GetLevel()*12
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return 30+skill_level*12
 end
 
 function skill_kiemminh_lyhoadaiphap:OnUpgrade()

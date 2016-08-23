@@ -26,7 +26,7 @@
     "AttributeBaseIntelligence"     "50"
     "AttributeIntelligenceGain"     "0"
     "AttributeBaseAgility"     "50"
-    "AttributeAgilityGain"     "5"
+    "AttributeAgilityGain"     "1"
     "AttackRate"     "1.0"
     "AttackAnimationPoint"     "0.75"
     "AttackRange"     "700"

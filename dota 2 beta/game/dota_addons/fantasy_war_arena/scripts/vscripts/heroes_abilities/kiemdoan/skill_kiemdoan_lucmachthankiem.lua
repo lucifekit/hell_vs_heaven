@@ -1,4 +1,5 @@
 skill_kiemdoan_lucmachthankiem = class({})
+require('kem_lib/kem')
 
 require('heroes_abilities/kiemdoan/kiemdoan')
 
@@ -8,7 +9,9 @@ function skill_kiemdoan_lucmachthankiem:GetCooldown()
   return 1/atk_perseconds
 end
 function skill_kiemdoan_lucmachthankiem:GetManaCost()
-  return 100+self:GetLevel()*10
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return 100+skill_level*10
 end
 function skill_kiemdoan_lucmachthankiem:OnAbilityPhaseStart()
   --self:GetCaster():StartGesture( ACT_DOTA_ATTACK)
@@ -21,7 +24,7 @@ function skill_kiemdoan_lucmachthankiem:OnSpellStart()
 
 
   local caster = self:GetCaster()
-  local skill_level = self:GetLevel()
+  local skill_level = self:GetLevel() + GetSkillLevel(caster)
   local target_point = self:GetCursorPosition()
   local target = self:GetCursorTarget()
   if(target)then

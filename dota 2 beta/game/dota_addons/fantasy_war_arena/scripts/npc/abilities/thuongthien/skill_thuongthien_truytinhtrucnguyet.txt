@@ -5,7 +5,7 @@
    "RequiredLevel"          "45"
    "MaxLevel"				 "10"
    "LevelsBetweenUpgrades"  "1"
-   "AbilityTextureName"      "phantom_lancer_spirit_lance"
+   "AbilityTextureName"      "skill_thuongthien_truytinhtrucnguyet"
    "ScriptFile"          "heroes_abilities/thuongthien/skill_thuongthien_truytinhtrucnguyet"
    "HotKeyOverride"    "D"
    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"

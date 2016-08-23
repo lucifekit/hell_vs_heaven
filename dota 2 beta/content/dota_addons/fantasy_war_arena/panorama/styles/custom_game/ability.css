@@ -57,6 +57,9 @@
 }
 .max_level #AbilityImage{
 	border:2px solid gold;
+	saturation: 1;
+	
+	wash-color: #cccccc;
 }
 #passive_ability_list .max_level #AbilityButtonContainer #AbilityImage{
 	border:2px solid gold;

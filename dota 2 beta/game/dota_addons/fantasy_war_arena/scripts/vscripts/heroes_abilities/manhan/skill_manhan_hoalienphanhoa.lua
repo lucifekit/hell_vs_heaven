@@ -1,4 +1,5 @@
 skill_manhan_hoalienphanhoa = class({})
+require('kem_lib/kem')
 LinkLuaModifier("modifier_manhan_hoalienphanhoa","heroes_abilities/manhan/modifier_manhan_hoalienphanhoa", LUA_MODIFIER_MOTION_NONE )
 SETTING_HLPH_EFFECT = "particles/edited_particle/ma_nhan/hoalienphanhoa.vpcf"
 SETTING_HLPH_START_EFFECT = "particles/edited_particle/ma_nhan/fx_hoalienphanhoa_start.vpcf"
@@ -12,11 +13,15 @@ SETTING_HLPH_MODIFIER = "modifier_manhan_hoalienphanhoa"
 --------------------------------------------------------------------------------
 --
 --
-function skill_manhan_hoalienphanhoa:GetCooldown(  )
-  return 70-8*self:GetLevel()
+function skill_manhan_hoalienphanhoa:GetCooldown()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return 70-skill_level*8
 end
 function skill_manhan_hoalienphanhoa:GetManaCost()
-  return self:GetLevel()*20
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*20
 end
 function skill_manhan_hoalienphanhoa:OnAbilityPhaseStart()
   self:GetCaster():StartGesture( ACT_DOTA_RAZE_2)
@@ -32,7 +37,7 @@ local caster = self:GetCaster()
 --SetAnimation('raze3') --[[Returns:void
 --Pass ''string'' for the animation to play on this model
 --]]
-local skill_level = self:GetLevel()
+local skill_level = self:GetLevel() + GetSkillLevel(caster)
 -- FLAME VORTEX
 local pull_duration = 6
 local pull_chance = 0.3+0.1*skill_level

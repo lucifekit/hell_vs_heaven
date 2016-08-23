@@ -5,7 +5,7 @@
    "RequiredLevel"          "50"
    "MaxLevel"				 "5"
    "LevelsBetweenUpgrades"  "1"
-   "AbilityTextureName"      "wisp_spirits"
+   "AbilityTextureName"      "skill_daocon_suongngaoconlon"
    "ScriptFile"          "heroes_abilities/daocon/skill_daocon_suongngaoconlon"
    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
    "precache"

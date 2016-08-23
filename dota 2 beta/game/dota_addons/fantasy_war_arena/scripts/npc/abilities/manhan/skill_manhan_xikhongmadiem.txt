@@ -12,7 +12,7 @@
     
     "CastFilterRejectCaster" "1"
     "HotKeyOverride"    "" 
-    "AbilityTextureName"      "warlock_golem_flaming_fists"
+    "AbilityTextureName"      "manhan_xikhongmadiem"
     "ScriptFile"          "heroes_abilities/manhan/skill_manhan_xikhongmadiem"
 // EXPERT TALENT
 	"AbilitySpecial"

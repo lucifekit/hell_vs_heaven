@@ -1,0 +1,41 @@
+"skill_kiemcon_tuytienthaccot"
+{
+   "ID"  "15156"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "30"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "razor_eye_of_the_storm"
+   "ScriptFile"          "heroes_abilities/kiemcon/skill_kiemcon_tuytienthaccot"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "1000"
+   "precache"
+   {
+   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_disruptor.vsndevts"
+   }
+   // LIGHTINING STRIKE
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"stun_chance"  "40 45 50 55 60"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"stun_time"  "1.2 1.4 1.6 1.8 2.0"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "3 3 4 4 5"
+		}
+	}
+   
+}

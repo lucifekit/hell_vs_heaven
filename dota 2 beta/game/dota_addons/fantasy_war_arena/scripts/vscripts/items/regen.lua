@@ -59,7 +59,12 @@ function Exp10(event)
       print("Count : "..#modifiers)
       for _,modi in ipairs(modifiers) do
         if(modi:GetName()=="kem_items_modifier")then
-          modi:GainExp(10)
+          if(IsInToolsMode())then
+            modi:GainExp(100)
+            else
+            modi:GainExp(10)
+          end
+          
         end
       end
    end

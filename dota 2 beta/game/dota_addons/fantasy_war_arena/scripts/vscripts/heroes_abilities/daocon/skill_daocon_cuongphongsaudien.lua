@@ -1,11 +1,14 @@
 skill_daocon_cuongphongsaudien = class({})
+require('kem_lib/kem')
 SETTING_CPSD_EFFECT = "particles/edited_particle/dao_con/cuongphongsaudien.vpcf"
 SETTING_CPSD_FLY_TIME = 1.2
 SETTING_CPSD_FLY_SPEED = 800
 SETTING_CPSD_HIT_EFFECT = "particles/units/heroes/hero_visage/visage_base_attack_hit.vpcf"
 --------------------------------------------------------------------------------
 function skill_daocon_cuongphongsaudien:GetManaCost()
-   return 5*self:GetLevel()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*5
 end
 
 function skill_daocon_cuongphongsaudien:GetCooldown()
@@ -22,7 +25,7 @@ end
 
 function skill_daocon_cuongphongsaudien:OnSpellStart()
    local caster = self:GetCaster()
-   local skill_level = self:GetLevel()
+   local skill_level = self:GetLevel() + GetSkillLevel(caster)
    local caster_position = caster:GetAbsOrigin()
    local hTarget = self:GetCursorTarget()
    local cast_point = self:GetCursorPosition()
@@ -41,7 +44,7 @@ local stun_time = 1
    
    local damageData = {
         caster = caster,
-        main_attribute_value = caster:GetAgility(),
+        main_physic = caster:GetAgility(),
         skill_physical_damage_percent = physical_damage_amplify,
         skill_tree_amplify_damage = 0,-- can edit
         skill_basic_damage_percent = basic_damage,

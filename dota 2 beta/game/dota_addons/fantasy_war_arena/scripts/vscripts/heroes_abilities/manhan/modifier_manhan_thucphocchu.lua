@@ -1,4 +1,5 @@
 modifier_manhan_thucphocchu = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 SETTING_SKILL_MODIFIER = "modifier_paralized"
 SETTING_BUFF_MODIFIER  = "modifier_manhan_thucphocchu_active"
@@ -66,10 +67,12 @@ end
 
 function modifier_manhan_thucphocchu:OnCreated( kv )
   local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
-  self.speed = (10+self:GetAbility():GetLevel()*4)*settings.speed_base
-  self.paralyze_chance = 3+self:GetAbility():GetLevel()
-  self.paralyze_duration = 2+0.2*self:GetAbility():GetLevel()
-  self.speed_duration = 5+2*self:GetAbility():GetLevel()
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.speed = (10+skill_level*4)*settings.speed_base
+  self.paralyze_chance = 3+skill_level
+  self.paralyze_duration = 2+0.2*skill_level
+  self.speed_duration = 5+2*skill_level
   
   
 
@@ -78,11 +81,13 @@ end
 --------------------------------------------------------------------------------
 function modifier_manhan_thucphocchu:OnRefresh( kv )
   local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
-  self.move_speed = (10+self:GetAbility():GetLevel()*4)*settings.speed_base
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.move_speed = (10+skill_level*4)*settings.speed_base
 
   
-  self.paralyze_chance = 3+self:GetAbility():GetLevel()
-  self.paralyze_duration = 2+0.2*self:GetAbility():GetLevel()
-  self.speed_duration = 5+2*self:GetAbility():GetLevel()
+  self.paralyze_chance = 3+skill_level
+  self.paralyze_duration = 2+0.2*skill_level
+  self.speed_duration = 5+2*skill_level
 
 end

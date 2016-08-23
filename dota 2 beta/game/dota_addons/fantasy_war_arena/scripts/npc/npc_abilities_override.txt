@@ -4,7 +4,19 @@
 {
   "Version"   "1"
   
-  
+  "ogre_magi_multicast"
+  {
+  	"MaxLevel" "6"
+  	"AbilitySpecial"
+	{
+		
+		"05"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"fireblast_cooldown"	"2 4 6 8 9 10"
+		}
+	}
+  }
   // -----------------------------------------------------------
   // - UNCOMMENT ANY ITEM YOU DON'T WANT TO APPEAR IN THE SHOP -
   // -----------------------------------------------------------

@@ -189,13 +189,9 @@
 		{
 			"Passive"			"1"
 			"IsHidden"			"0"
-			"OverrideAnimation"	"ACT_DOTA_DISABLED"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_health"
-
-				"MODIFIER_PROPERTY_VISUAL_Z_DELTA"				"200"
-
 				"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
 			}
 			"OnCreated"
@@ -430,30 +426,26 @@
 		{
 			"Passive"			"1"
 			"IsHidden"			"0"
-			"OverrideAnimation"	"ACT_DOTA_DISABLED"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_health"
 				"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
-
-				"MODIFIER_PROPERTY_VISUAL_Z_DELTA"				"200"
-
 			}
 			"OnCreated"
             {
                 
-                //"AttachEffect"
-                //{
-                //    "Target"			"CASTER"
-                //    "EffectName"		"particles/edited_particle/flying_nimbus.vpcf"
-                //    "EffectAttachType"	"follow_origin"
-                //}
+                "AttachEffect"
+                {
+                    "Target"			"CASTER"
+                    "EffectName"		"particles/edited_particle/skywing.vpcf"
+                    "EffectAttachType"	"follow_origin"
+                }
             }
 		}
 	}
 	"precache"
     {
-      "particle"              "particles/edited_particle/flying_nimbus.vpcf"      
+      "particle"              "particles/edited_particle/skywing.vpcf"      
     }
   }
   

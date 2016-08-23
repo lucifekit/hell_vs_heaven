@@ -99,27 +99,27 @@
           
           <Panel id="StatBasicDefense">
             <Panel id="KemUI_Stat_ResistMetal" class="kem_ui_stat">
-              <Label text="PTVL : " class="kem_ui_stat_label fc" />
+              <Label text="Physical Resist : " class="kem_ui_stat_label fc" />
               <Label id="StatResistMetal" text="0" class="kem_ui_stat_label" />
             </Panel>
 
             <Panel id="KemUI_Stat_ResistWood" class="kem_ui_stat">
-              <Label text="Poison resist : " class="kem_ui_stat_label fc" />
+              <Label text="Poison Resist : " class="kem_ui_stat_label fc" />
               <Label id="StatResistWood" text="0" class="kem_ui_stat_label" />
             </Panel>
 
             <Panel  id="KemUI_Stat_ResistFire" class="kem_ui_stat">
-              <Label text="Flame resist : " class="kem_ui_stat_label fc" />
+              <Label text="Fire Resist : " class="kem_ui_stat_label fc" />
               <Label id="StatResistFire" text="0" class="kem_ui_stat_label" />
             </Panel>
 
             <Panel id="KemUI_Stat_ResistWater" class="kem_ui_stat">
-              <Label text="Ice resist : " class="kem_ui_stat_label fc" />
+              <Label text="Ice Resist : " class="kem_ui_stat_label fc" />
               <Label id="StatResistWater" text="0" class="kem_ui_stat_label"  />
             </Panel>
 
             <Panel id="KemUI_Stat_ResistEarth" class="kem_ui_stat">
-              <Label text="Lightning resist : " class="kem_ui_stat_label fc" />
+              <Label text="Lightning Resist : " class="kem_ui_stat_label fc" />
               <Label id="StatResistEarth" text="0" class="kem_ui_stat_label"  />
             </Panel>
           </Panel><!--end basicstat-->
@@ -164,6 +164,10 @@
                       <Label text="Critical damage : " class="kem_ui_stat_label fc" />
                       <Label id="StatCriticalDamage" text="N/A" class="kem_ui_stat_label" />
                     </Panel>
+                    <Panel  id="KemUI_Stat_BasicDamage" class="kem_ui_stat">
+                        <Label text="Basic damage : " class="kem_ui_stat_label fc" />
+                        <Label id="StatBasicDamage" text="N/A" class="kem_ui_stat_label" />
+                    </Panel>
               </Panel>
               <Panel id="StatAdvanceStatRight" class="kem_ui_stat StatRowHalf">
                   <Panel  id="KemUI_Stat_ElementDamage" class="kem_ui_stat">
@@ -186,9 +190,9 @@
                   <Label text="Physical amplify : " class="kem_ui_stat_label fc" />
                   <Label id="StatPhysicalAmplify" text="N/A" class="kem_ui_stat_label" />
                 </Panel>
-                <Panel  id="KemUI_Stat_BasicDamage" class="kem_ui_stat">
-                  <Label text="Basic damage : " class="kem_ui_stat_label fc" />
-                  <Label id="StatBasicDamage" text="N/A" class="kem_ui_stat_label" />
+                <Panel  id="KemUI_Stat_MagicalAmplify" class="kem_ui_stat">
+                  <Label text="Magical amplify : " class="kem_ui_stat_label fc" />
+                  <Label id="StatMagicalAmplify" text="N/A" class="kem_ui_stat_label" />
                 </Panel>
               </Panel>
             </Panel>

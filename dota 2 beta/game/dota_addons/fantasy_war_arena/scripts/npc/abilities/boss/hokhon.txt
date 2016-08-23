@@ -1,0 +1,48 @@
+"boss_hokhon_rains"
+{
+   "ID"  "90021"
+   "BaseClass"             "ability_datadriven"
+   "RequiredLevel"          "1"
+   "MaxLevel"        "1"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+"boss_hokhon_breathe"
+{
+   "ID"  "90022"
+   "BaseClass"             "ability_datadriven"
+   "RequiredLevel"          "1"
+   "MaxLevel"        "1"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+   "precache"
+   {
+   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
+   }
+}
+
+"boss_hokhon_summon"
+{
+   "ID"  "90023"
+   "BaseClass"             "ability_datadriven"
+   "RequiredLevel"          "1"
+   "MaxLevel"        "1"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+
+
+"boss_hokhon_flame_ring"
+{
+   "ID"  "90024"
+   "BaseClass"             "ability_datadriven"
+   "RequiredLevel"          "1"
+   "MaxLevel"        "1"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+
+"boss_hokhon_x_ring"
+{
+   "ID"  "90025"
+   "BaseClass"             "ability_datadriven"
+   "RequiredLevel"          "1"
+   "MaxLevel"        "1"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}

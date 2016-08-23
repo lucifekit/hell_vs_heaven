@@ -1,4 +1,5 @@
 modifier_kiemdoan_bacminhthancong = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 
 function modifier_kiemdoan_bacminhthancong:IsPurgable()
@@ -41,8 +42,9 @@ end
 
 function modifier_kiemdoan_bacminhthancong:OnCreated( kv )
    if(IsServer())then
-  --self.damage_reduce = 30+self:GetAbility():GetLevel()*30
-  local skill_level=self:GetAbility():GetLevel()
+  --self.damage_reduce = 30+skill_level*30
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
   self.damage_negate = 0.3
   self.damage_negate_max = 0.005+0.005*skill_level
 --local reflect_damage_resist = 0.1+0.07*skill_level
@@ -52,6 +54,9 @@ end
 --------------------------------------------------------------------------------
 function modifier_kiemdoan_bacminhthancong:OnRefresh( kv )
   if(IsServer())then
-  self.damage_reduce = 30+self:GetAbility():GetLevel()*30
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.damage_negate = 0.3
+  self.damage_negate_max = 0.005+0.005*skill_level
   end
 end

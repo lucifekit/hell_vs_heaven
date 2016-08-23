@@ -489,6 +489,623 @@
 	   "MaxLevel"        "1"
 	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	}
+	"boss_hokhon_rains"
+	{
+	   "ID"  "90021"
+	   "BaseClass"             "ability_datadriven"
+	   "RequiredLevel"          "1"
+	   "MaxLevel"        "1"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"boss_hokhon_breathe"
+	{
+	   "ID"  "90022"
+	   "BaseClass"             "ability_datadriven"
+	   "RequiredLevel"          "1"
+	   "MaxLevel"        "1"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	   "precache"
+	   {
+	   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
+	   }
+	}
+	
+	"boss_hokhon_summon"
+	{
+	   "ID"  "90023"
+	   "BaseClass"             "ability_datadriven"
+	   "RequiredLevel"          "1"
+	   "MaxLevel"        "1"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	
+	
+	"boss_hokhon_flame_ring"
+	{
+	   "ID"  "90024"
+	   "BaseClass"             "ability_datadriven"
+	   "RequiredLevel"          "1"
+	   "MaxLevel"        "1"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	
+	"boss_hokhon_x_ring"
+	{
+	   "ID"  "90025"
+	   "BaseClass"             "ability_datadriven"
+	   "RequiredLevel"          "1"
+	   "MaxLevel"        "1"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"skill_chiennhan_bitothanhphong"
+	{
+	   "ID"  "13256"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "30"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "chiennhan_bitothanhphong"
+	   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_bitothanhphong"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "700"
+	   "precache"
+	   {
+	   }
+	   // HELL WIND
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_chance_reduce"  "34 63 92 121 150"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"evade"  "61 83 105 127 150"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_time_increase"  "27 51 76 100 125"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"duration"  "180"
+			}
+		}
+	   
+	}
+	"skill_chiennhan_huyenanhtruyhonthuong"
+	{
+	   "ID"  "13253"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "7"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "chiennhan_huyenanhtruyhonthuong"
+	   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_huyenanhtruyhonthuong"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "1200"
+	   "precache"
+	   {
+	   }
+	   // DRAGGED OFF TO HELL
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"pull_chance"  "40 55 70 85 100"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"speed_reduce"  "10 15 20 25 30"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"speed_reduce_time"  "2.0 2.5 3.0 3.5 4.0"
+			}
+		}
+	   
+	}
+	"skill_chiennhan_liethoatinhthien"
+	{
+	   "ID"  "13255"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "9"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "abaddon_frostmourne"
+	   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_liethoatinhthien"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "200"
+	   "precache"
+	   {
+	   }
+	   // LEECH
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "79 83 87 91 95 99 103 107 111 115"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"drain"  "1.4 1.8 2.2 2.6 3.0 3.4 3.8 4.2 4.6 5.0"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_damage_amplify"  "54 58 62 66 70 74 78 82 86 90"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_min"  "641.11 663.32 685.53 707.74 729.95 752.16 774.37 796.58 818.79 841"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_max"  "783.578 810.736 837.894 865.052 892.21 919.368 946.526 973.684 1000.842 1028"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_maim"  "18.5 22.0 25.5 29.0 32.5 36.0 39.5 43.0 46.5 50.0"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_time"  "1"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_burn"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+			}
+			"09"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"burn_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+			}
+			"10"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_target"  "3 3 3 3 4 4 4 4 4 5"
+			}
+		}
+	   
+	}
+	"skill_chiennhan_maamphephach"
+	{
+	   "ID"  "13257"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "35"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "abaddon_borrowed_time"
+	   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_maamphephach"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "700"
+	   "precache"
+	   {
+	   }
+	  // DEATH CALL
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"fear_chance"  "44 48 52 56 60 64 68 72 76 80"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"fear_time"  "3.3 3.6 3.9 4.2 4.5 4.8 5.1 5.4 5.7 6.0"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"burn_chance"  "30 35 40 45 50 55 60 65 70 75"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"burn_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_target"  "3 3 3 4 4 4 5 5 5 6"
+			}
+		}
+	
+	   
+	}
+	"skill_chiennhan_maviemtaithien"
+	{
+	   "ID"  "13260"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "50"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "chiennhan_maviemtaithien"
+	   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_maviemtaithien"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // MASTER TALENT
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "2 4 6 8 10"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"burn_time_increase"  "16 32 48 64 80"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_time_reduce"  "24 48 72 96 120"
+			}
+		}
+	   
+	}
+	"skill_chiennhan_phihongvotich"
+	{
+	   "ID"  "13261"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "55"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "chiennhan_phihongvotich"
+	   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_phihongvotich"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "1200"
+	   "precache"
+	   {
+	   }
+	   // ONE MAN ONE HORSE
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "205 220 235 250 265"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_damage_amplify"  "281 303 325 347 369"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_min"  "1496 1632 1768 1904 2040"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_max"  "2244 2448 2652 2856 3060"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"chance_to_maim"  "38 41 44 47 50"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_time"  "1"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"chance_to_burn"  "28 31 34 37 40"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"burn_time"  "2.2 2.4 2.6 2.8 3.0"
+			}
+		}
+	
+	   
+	}
+	"skill_chiennhan_tanduongnhuhuyet"
+	{
+	   "ID"  "13251"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "1"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "chiennhan_tanduongnhuhuyet"
+	   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_tanduongnhuhuyet"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "200"
+	   "precache"
+	   {
+	   }
+	   // FROST SLASH
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "100"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_damage_amplify"  "39 43 47 51 55 59 63 67 71 75"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_min"  "104 157 210 263 316 369 422 475 528 581"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_max"  "134 199 264 329 394 459 524 589 654 719"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_maim"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_time"  "1"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_burn"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"burn_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+			}
+			"09"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_target"  "5"
+			}
+		}
+	   
+	}
+	"skill_chiennhan_thienmagiaithe"
+	{
+	   "ID"  "13258"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "40"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "abaddon_aphotic_shield"
+	   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_thienmagiaithe"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // EXPERT TALENT
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"attack_speed"  "11 13 14 16 18 19 21 22 24 26"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_chance_increase"  "19 28 37 46 55 64 73 82 91 100"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_chance_resist"  "24 38 52 66 80 94 108 122 136 150"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stun_chance_resist"  "24 38 52 66 80 94 108 122 136 150"
+			}
+		}
+	   
+	}
+	"skill_chiennhan_thiennhanthuongphap"
+	{
+	   "ID"  "13252"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "6"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "chiennhan_thiennhanthuongphap"
+	   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_thiennhanthuongphap"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // BASIC TALENT
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"attack_speed"  "15 20 25 30 35"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_chance"  "70 90 110 130 150"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_amplify"  "30 55 80 105 130"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "34 38 42 46 50"
+			}
+		}
+	   
+	}
+	"skill_chiennhan_vanlongkich"
+	{
+	   "ID"  "13259"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "45"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "chiennhan_vanlongkich"
+	   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_vanlongkich"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "200"
+	   "precache"
+	   {
+	   }
+	   // VAMPIRE SLASH
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"drain"  "1 2 3 4 5 6 7 8 9 10"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "79 83 87 91 95 99 103 107 111 115"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_damage_amplify"  "106 112 118 124 130 136 142 148 154 160"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_min"  "648 686 724 762 800 838 876 914 952 990"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_max"  "793 839 885 932 978 1024 1071 1117 1163 1210"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_maim"  "18.5 22.0 25.5 29.0 32.5 36.0 39.5 43.0 46.5 50.0"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_time"  "1"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_burn"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+			}
+			"09"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"burn_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+			}
+			"10"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_target"  "3 3 3 3 4 4 4 4 4 5"
+			}
+		}
+	   
+	}
+	"skill_chiennhan_vanlongtamhien"
+	{
+	   "ID"  "13262"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "60"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "abaddon_death_coil"
+	   "ScriptFile"          "heroes_abilities/chiennhan/skill_chiennhan_vanlongtamhien"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // DEATH MASTERY
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stack_dragoff_to_hell"  "1 1 1 1 2"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stack_hell_soul"  "1 1 1 1 2"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stack_hell_dash"  "1 1 1 1 2"
+			}
+		}
+	   
+	}
 	"skill_daocon_conlondaophap"
 	{
 	   "ID"  "15102"
@@ -712,7 +1329,7 @@
 	   "RequiredLevel"          "7"
 	   "MaxLevel"				 "5"
 	   "LevelsBetweenUpgrades"  "1"
-	   "AbilityTextureName"      "faceless_void_time_lock"
+	   "AbilityTextureName"      "skill_daocon_huyenthienvocuc"
 	   "ScriptFile"          "heroes_abilities/daocon/skill_daocon_huyenthienvocuc"
 	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 	   "precache"
@@ -822,7 +1439,7 @@
 	   "RequiredLevel"          "35"
 	   "MaxLevel"				 "10"
 	   "LevelsBetweenUpgrades"  "1"
-	   "AbilityTextureName"      "sven_warcry"
+	   "AbilityTextureName"      "skill_daocon_nhatkhitamthanh"
 	   "ScriptFile"          "heroes_abilities/daocon/skill_daocon_nhatkhitamthanh"
 	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 	   "precache"
@@ -856,7 +1473,7 @@
 	   "RequiredLevel"          "50"
 	   "MaxLevel"				 "5"
 	   "LevelsBetweenUpgrades"  "1"
-	   "AbilityTextureName"      "wisp_spirits"
+	   "AbilityTextureName"      "skill_daocon_suongngaoconlon"
 	   "ScriptFile"          "heroes_abilities/daocon/skill_daocon_suongngaoconlon"
 	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 	   "precache"
@@ -930,7 +1547,7 @@
 	   "RequiredLevel"          "40"
 	   "MaxLevel"				 "10"
 	   "LevelsBetweenUpgrades"  "1"
-	   "AbilityTextureName"      "ancient_apparition_ice_blast"
+	   "AbilityTextureName"      "skill_daocon_thienthanhdiatroc"
 	   "ScriptFile"          "heroes_abilities/daocon/skill_daocon_thienthanhdiatroc"
 	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 	   "precache"
@@ -964,7 +1581,7 @@
 	   "RequiredLevel"          "30"
 	   "MaxLevel"				 "5"
 	   "LevelsBetweenUpgrades"  "1"
-	   "AbilityTextureName"      "keeper_of_the_light_illuminate"
+	   "AbilityTextureName"      "skill_daocon_tunguyenthuat"
 	   "ScriptFile"          "heroes_abilities/daocon/skill_daocon_tunguyenthuat"
 	   "HotKeyOverride"    ""
 	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -1067,6 +1684,452 @@
 	            "particle" 						"particles/edited_particle/kiem_doan/skill_kiemdoan_phongvanbienhuyen.vpcf"
 	        }
 	  }
+	"skill_kiemcon_conlonkiemphap"
+	{
+	   "ID"  "15152"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "6"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "zuus_lightning_bolt"
+	   "ScriptFile"          "heroes_abilities/kiemcon/skill_kiemcon_conlonkiemphap"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // BASIC TALENT
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"attack_speed"  "7 9 11 13 15"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage"  "70 140 210 280 350"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "34 38 42 46 50"
+			}
+		}
+	   
+	}
+	"skill_kiemcon_cuongloichandia"
+	{
+	   "ID"  "15151"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "1"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "kiemcon_cuongloichandia"
+	   "ScriptFile"          "heroes_abilities/kiemcon/skill_kiemcon_cuongloichandia"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "700"
+	   "precache"
+	   {
+	   }
+	   // LIGHTNING BEAM
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "100"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_min"  "84 124 164 204 244 284 324 364 404 444"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_max"  "120 168 216 264 312 360 408 456 504 552"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"chance_to_stun"  "17 19 21 23 25 27 29 31 33 35"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stun_time"  "1"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_target"  "5"
+			}
+		}
+	
+	   
+	}
+	"skill_kiemcon_daocottienphong"
+	{
+	   "ID"  "15157"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "35"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "kiemcon_daocottienphong"
+	   "ScriptFile"          "heroes_abilities/kiemcon/skill_kiemcon_daocottienphong"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "700"
+	   "precache"
+	   {
+	   	"soundfile" "soundevents/game_sounds_items.vsndevts"
+	   }
+	   // LIGHTNING BODY
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"lightning_resist"  "44 78 112 146 180 214 248 282 316 350"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_resist"  "244 478 712 946 1180 1414 1648 1882 2116 2350"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"fire_resist"  "44 78 112 146 180 214 248 282 316 350"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"water_resist"  "44 78 112 146 180 214 248 282 316 350"
+			}
+		}
+	
+	
+	}
+	"skill_kiemcon_honnguyencankhon"
+	{
+	   "ID"  "15160"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "50"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "kiemcon_honnguyencankhon"
+	   "ScriptFile"          "heroes_abilities/kiemcon/skill_kiemcon_honnguyencankhon"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // MASTER TALENT
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stun_time_increase"  "16 32 48 64 80"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"slow_time_reduce"  "24 48 72 96 120"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "2 4 6 8 10"
+			}
+		}
+	   
+	}
+	"skill_kiemcon_loidinhquyet"
+	{
+	   "ID"  "15161"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "55"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "razor_plasma_field"
+	   "ScriptFile"          "heroes_abilities/kiemcon/skill_kiemcon_loidinhquyet"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // LIGHTNING AURA
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"lightning_rain_basic_damage"  "12 14 16 18 20"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"regen_speed"  "7 9 11 13 15"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_damage_receive"  "15 20 25 30 35"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stun_time_increase"  "80 100 120 140 160"
+			}
+		}
+	   
+	}
+	"skill_kiemcon_loidongcuuthien"
+	{
+	   "ID"  "15159"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "45"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "zuus_arc_lightning"
+	   "ScriptFile"          "heroes_abilities/kiemcon/skill_kiemcon_loidongcuuthien"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "700"
+	   "precache"
+	   {
+	   }
+	   // LIGHTNING NINE
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"basic_damage"  "125.5 133.0 140.5 148.0 155.5 163.0 170.5 178.0 185.5 193.0"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_min"  "1459 1544 1629 1714 1799 1884 1969 2054 2139 2224"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_max"  "1784 1888 1992 2096 2200 2304 2408 2512 2616 2720"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_stun"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stun_time"  "2"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_target"  "5 5 6 6 6 7 7 8 8 9"
+			}
+		}
+	
+	
+	
+	   
+	}
+	"skill_kiemcon_nguloichinhphap"
+	{
+	   "ID"  "15158"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "40"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "zuus_thundergods_wrath"
+	   "ScriptFile"          "heroes_abilities/kiemcon/skill_kiemcon_nguloichinhphap"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // EXPERT TALENT
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"attack_speed"  "11 13 14 16 18 19 21 22 24 26"
+			}
+	
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stun_chance_increase"  "19 28 37 46 55 64 73 82 91 100"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"slow_chance_reduce"  "24 38 52 66 80 94 108 122 136 150"
+			}
+		}
+	   
+	}
+	"skill_kiemcon_nguynguyconlon"
+	{
+	   "ID"  "15162"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "60"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "zuus_static_field"
+	   "ScriptFile"          "heroes_abilities/kiemcon/skill_kiemcon_nguynguyconlon"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // LIGHTNING MASTERY
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"cooldown_reduce"  "0.2 0.4 0.6 0.8 1.0"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stack_duration"  "3"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_stack"  "3 4 5 6 7"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_per_stack"  "12 24 36 48 60"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"damage_reduce_per_stack"  "1 2 3 4 5"
+			}
+		}
+	
+	}
+	"skill_kiemcon_thientetanloi"
+	{
+	   "ID"  "15155"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "9"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "disruptor_thunder_strike"
+	   "ScriptFile"          "heroes_abilities/kiemcon/skill_kiemcon_thientetanloi"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "700"
+	   "precache"
+	   {
+	   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+	   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_leshrac.vsndevts"
+	   }
+	   // LIGHTNING RAIN
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "45"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_min"  "675 746 817 888 959 1030 1101 1172 1243 1314"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_max"  "1000 1075 1150 1225 1300 1375 1450 1525 1600 1675"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_stun"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stun_time"  "1"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_target"  "3"
+			}
+		}
+	
+	   
+	}
+	"skill_kiemcon_tuytienthaccot"
+	{
+	   "ID"  "15156"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "30"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "razor_eye_of_the_storm"
+	   "ScriptFile"          "heroes_abilities/kiemcon/skill_kiemcon_tuytienthaccot"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "1000"
+	   "precache"
+	   {
+	   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_disruptor.vsndevts"
+	   }
+	   // LIGHTINING STRIKE
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stun_chance"  "40 45 50 55 60"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"stun_time"  "1.2 1.4 1.6 1.8 2.0"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_target"  "3 3 4 4 5"
+			}
+		}
+	   
+	}
 	"effect_kunkka"
 	{
 		// General
@@ -2666,7 +3729,7 @@
 	    "FightRecapLevel"       "1"
 	    "RequiredLevel"          "30"
 	    "BaseClass"             "ability_lua"
-	    "AbilityTextureName"      "jakiro_liquid_fire"
+	    "AbilityTextureName"      "manhan_hoalienphanhoa"
 	    "ScriptFile"          "heroes_abilities/manhan/skill_manhan_hoalienphanhoa"
 	    "MaxLevel"                      "5"
 	    "CastFilterRejectCaster" "1"
@@ -2736,7 +3799,7 @@
 	    
 	    "CastFilterRejectCaster" "1"
 	    "HotKeyOverride"    "" 
-	    "AbilityTextureName"      "warlock_rain_of_chaos"
+	    "AbilityTextureName"      "manhan_kimthienthoatxac"
 	    "ScriptFile"          "heroes_abilities/manhan/skill_manhan_kimthienthoatxac"
 	    // EVASION
 		"AbilitySpecial"
@@ -2812,7 +3875,7 @@
 	    
 	    "CastFilterRejectCaster" "1"
 	    "HotKeyOverride"    "F" 
-	    "AbilityTextureName"      "nevermore_requiem"
+	    "AbilityTextureName"      "manhan_madaothonthan"
 	    "ScriptFile"          "heroes_abilities/manhan/skill_manhan_madaothonthan"
 		// SOUL REVENGE
 		"AbilitySpecial"
@@ -2854,7 +3917,7 @@
 	    
 	    "CastFilterRejectCaster" "1"
 	    "HotKeyOverride"    "" 
-	    "AbilityTextureName"      "doom_bringer_lvl_death"
+	    "AbilityTextureName"      "nevermore_necromastery"
 	    "ScriptFile"          "heroes_abilities/manhan/skill_manhan_madiemthatsat"
 	    // MASTER TALENT
 		"AbilitySpecial"
@@ -2886,7 +3949,7 @@
 	    "FightRecapLevel"       "1"
 	    "RequiredLevel"          "35"
 	    "BaseClass"             "ability_lua"
-	    "AbilityTextureName"      "warlock_fatal_bonds"
+	    "AbilityTextureName"      "manhan_nhiephonloantam"
 	    "ScriptFile"          "heroes_abilities/manhan/skill_manhan_nhiephonloantam"
 	    "MaxLevel"                      "10"
 	    "CastFilterRejectCaster" "1"
@@ -3155,7 +4218,7 @@
 	    "MaxLevel"				 "5"
 	    "LevelsBetweenUpgrades"  "1"
 	    "HotKeyOverride"    "" 
-	    "AbilityTextureName"      "batrider_flamebreak"
+	    "AbilityTextureName"      "manhan_thucphocchu"
 	    "ScriptFile"          "heroes_abilities/manhan/skill_manhan_thucphocchu"
 	    // FLAME BLOOD
 		"AbilitySpecial"
@@ -3217,7 +4280,7 @@
 	    
 	    "CastFilterRejectCaster" "1"
 	    "HotKeyOverride"    "" 
-	    "AbilityTextureName"      "warlock_golem_flaming_fists"
+	    "AbilityTextureName"      "manhan_xikhongmadiem"
 	    "ScriptFile"          "heroes_abilities/manhan/skill_manhan_xikhongmadiem"
 	// EXPERT TALENT
 		"AbilitySpecial"
@@ -3362,7 +4425,7 @@
 	   "RequiredLevel"          "9"
 	   "MaxLevel"				 "10"
 	   "LevelsBetweenUpgrades"  "1"
-	   "AbilityTextureName"      "ursa_fury_swipes"
+	   "AbilityTextureName"      "skill_thuongthien_duongquantamdiep"
 	   "ScriptFile"          "heroes_abilities/thuongthien/skill_thuongthien_duongquantamdiep"
 	   "HotKeyOverride"    "E"
 	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
@@ -3454,7 +4517,7 @@
 	   "LevelsBetweenUpgrades"  "1"
 	   "FightRecapLevel"       "1"
 	   "CastFilterRejectCaster" "1"
-	   "AbilityTextureName"      "queenofpain_shadow_strike"
+	   "AbilityTextureName"      "phantom_lancer_spirit_lance"
 	   "ScriptFile"          "heroes_abilities/thuongthien/skill_thuongthien_hoiphonglacnhan"
 	   "HotKeyOverride"    "Q"
 	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
@@ -3628,7 +4691,7 @@
 	   "RequiredLevel"          "35"
 	   "MaxLevel"				 "10"
 	   "LevelsBetweenUpgrades"  "1"
-	   "AbilityTextureName"      "nevermore_shadowraze1"
+	   "AbilityTextureName"      "skill_thuongthien_thienvuongchieny"
 	   "ScriptFile"          "heroes_abilities/thuongthien/skill_thuongthien_thienvuongchieny"
 	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 	   "precache"
@@ -3711,7 +4774,7 @@
 	   "RequiredLevel"          "8"
 	   "MaxLevel"				 "10"
 	   "LevelsBetweenUpgrades"  "1"
-	   "AbilityTextureName"      "naga_siren_song_of_the_siren_cancel"
+	   "AbilityTextureName"      "skill_thuongthien_tinhtamquyet"
 	   "ScriptFile"          "heroes_abilities/thuongthien/skill_thuongthien_tinhtamquyet"
 	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 	   "precache"
@@ -3740,7 +4803,7 @@
 	   "RequiredLevel"          "45"
 	   "MaxLevel"				 "10"
 	   "LevelsBetweenUpgrades"  "1"
-	   "AbilityTextureName"      "phantom_lancer_spirit_lance"
+	   "AbilityTextureName"      "skill_thuongthien_truytinhtrucnguyet"
 	   "ScriptFile"          "heroes_abilities/thuongthien/skill_thuongthien_truytinhtrucnguyet"
 	   "HotKeyOverride"    "D"
 	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
@@ -3787,6 +4850,611 @@
 				"maim_time"  "1"
 			}
 			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_target"  "3"
+			}
+		}
+	   
+	}
+	"skill_tutien_baovulehoa"
+	{
+	   "ID"  "12109"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "45"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "skill_tutien_baovulehoa"
+	   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_baovulehoa"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "700"
+	   "precache"
+	   {
+	   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts"
+	   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_shredder.vsndevts"
+	   }
+	   // VOLLEY GLAIVE
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "29 31 32 34 35 37 38 40 41 43"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"poison_damage"  "191 202 213 224 235 246 257 268 279 290"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"chance_to_maim"  "21 22 23 24 25 26 27 28 29 30"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_time"  "1"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"chance_to_weak"  "12 14 16 18 20 22 24 26 28 30"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"weak_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_target"  "5"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"volley_poison"  "217 229 241 253 265 277 289 301 313 325"
+			}
+		}
+	   
+	}
+	"skill_tutien_doancannhan"
+	{
+	   "ID"  "12106"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "30"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "skill_tutien_doancannhan"
+	   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_doancannhan"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "1000"
+	   "precache"
+	   {
+	   }
+	   // MOON CURSE
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"immobile_chance"  "32 39 46 53 60"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"immobile_time"  "3"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_immobile_chance"  "57 64 71 78 85"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_immobile_time"  "3"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_immobile_cooldown"  "20"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_max_target"  "2"
+			}
+		}
+	   
+	}
+	"skill_tutien_duongmontutien"
+	{
+	   "ID"  "12102"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "6"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "luna_lucent_beam"
+	   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_duongmontutien"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // BASIC TALENT
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_chance"  "45 65 85 105 125"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"attack_speed"  "7 9 11 13 15"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_amplify"  "20 40 60 80 100"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "34 38 42 46 50"
+			}
+		}
+	   
+	}
+	"skill_tutien_meanhtung"
+	{
+	   "ID"  "12103"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "7"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "skill_tutien_meanhtung"
+	   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_meanhtung"
+	   "HotKeyOverride"    "W"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.05"
+	   "AbilityCastRange"        "2000"
+	   "precache"
+	   {
+	   }
+	   // BLINK
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"blink_range"  "700 800 900 1000 1100"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"blink_range_with_book"  "750 900 1050 1200 1350"
+			}
+		}
+	   
+	}
+	"skill_tutien_ngudocthuat"
+	{
+	   "ID"  "12107"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "35"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "skill_tutien_ngudocthuat"
+	   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_ngudocthuat"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // MASTER POISON
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"poison_damage"  "20 40 60 80 100 120 140 160 180 200"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "34 38 42 46 50 54 58 62 66 70"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stun_time_reduce"  "45 55 65 75 85 95 105 115 125 135"
+			}
+		}
+	   
+	}
+	"skill_tutien_tamma"
+	{
+	   "ID"  "12108"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "40"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "luna_lunar_blessing"
+	   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_tamma"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // EXPERT TALENT
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"attack_speed"  "11 13 14 16 18 19 21 22 24 26"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weak_chance_increase"  "19 28 37 46 55 64 73 82 91 100"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stun_chance_resist"  "24 38 52 66 80 94 108 122 136 150"
+			}
+		}
+	   
+	}
+	"skill_tutien_tamnhan"
+	{
+	   "ID"  "12110"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "50"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "luna_eclipse"
+	   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_tamnhan"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // MASTER TALENT
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "2 4 6 8 10"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weak_time_increase"  "16 32 48 64 80"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stun_time_reduce"  "24 48 72 96 120"
+			}
+		}
+	   
+	}
+	"skill_tutien_tanghondinh"
+	{
+	   "ID"  "12112"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "60"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "skill_tutien_tanghondinh"
+	   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_tanghondinh"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // MOON BLESS
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "180 210 240 270 300"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"duration"  "15"
+			}
+		}
+	   
+	}
+	"skill_tutien_thattuyetsatquang"
+	{
+	   "ID"  "12111"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "55"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "skill_tutien_thattuyetsatquang"
+	   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_thattuyetsatquang"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_obsidian_destroyer.vsndevts"
+	   }
+	   // MOON FALL
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "75 100 125 150 175"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"attack_speed"  "12 14 16 18 20"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_chance_increase"  "28 46 64 82 100"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"duration"  "6 7 8 9 10"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"cooldown"  "30"
+			}
+		}
+	   
+	}
+	"skill_tutien_thienladiavong"
+	{
+	   "ID"  "12105"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "9"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "skill_tutien_thienladiavong"
+	   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_thienladiavong"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "700"
+	   "precache"
+	   {
+	   }
+	   // HOMING MISSILE
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "65"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_damage_amplify"  "53 59 65 71 77 83 89 95 101 107"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"poison_damage"  "228 246 264 282 300 318 336 354 372 390"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_maim"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_time"  "1"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_weak"  "18.5 22.0 25.5 29.0 32.5 36.0 39.5 43.0 46.5 50.0"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"weak_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_target"  "3"
+			}
+		}
+	   
+	}
+	"skill_tutien_toidocthuat"
+	{
+	   "ID"  "12104"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "8"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "skill_tutien_toidocthuat"
+	   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_toidocthuat"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // ENVENOM
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_amplify"  "27 34 41 48 55 62 69 76 83 90"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"poison"  "21 27 33 39 45 51 57 63 69 75"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_damage"  "35 45 55 65 75 85 95 105 115 125"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"allies_critical_damage"  "20 30 40 50 60 70 80 90 100 110"
+			}
+		}
+	   
+	}
+	"skill_tutien_truytamtien"
+	{
+	   "ID"  "12101"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "1"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "luna_moon_glaive"
+	   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_truytamtien"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "700"
+	   "precache"
+	   {
+	   }
+	   // SWIFT GLAIVE
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "100"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_damage_amplify"  "7 11 15 19 23 27 31 35 39 43"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"poison_damage"  "59 73 87 101 115 129 143 157 171 185"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_maim"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_time"  "1"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_weak"  "18.5 22.0 25.5 29.0 32.5 36.0 39.5 43.0 46.5 50.0"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"weak_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_target"  "3"
+			}
+		}
+	   
+	}
+	"skill_tutien_xuyenvantien"
+	{
+	   "ID"  "12113"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "99"
+	   "MaxLevel"				 "1"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "skill_tutien_xuyenvantien"
+	   "ScriptFile"          "heroes_abilities/tutien/skill_tutien_xuyenvantien"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "900"
+	   "precache"
+	   {
+	   }
+	   // SWIFT GLAIVE
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "100"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_damage_amplify"  "7 11 15 19 23 27 31 35 39 43"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"poison_damage"  "59 73 87 101 115 129 143 157 171 185"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_maim"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_time"  "1"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_weak"  "18.5 22.0 25.5 29.0 32.5 36.0 39.5 43.0 46.5 50.0"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"weak_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+			}
+			"08"
 			{
 				"var_type"  "FIELD_INTEGER"
 				"max_target"  "3"

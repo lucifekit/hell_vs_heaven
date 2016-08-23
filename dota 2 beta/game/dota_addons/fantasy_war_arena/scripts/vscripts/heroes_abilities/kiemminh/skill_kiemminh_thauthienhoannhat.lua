@@ -1,4 +1,5 @@
 skill_kiemminh_thauthienhoannhat = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 
 SETTING_DEBUFF_RADIUS = 300
@@ -13,11 +14,12 @@ function skill_kiemminh_thauthienhoannhat:GetCooldown()
      local atk_perseconds = self:GetCaster():GetAttacksPerSecond()
      return 1/atk_perseconds
   end
-
-  return 60-3*self:GetLevel()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return 60-skill_level*3
 end
 function skill_kiemminh_thauthienhoannhat:GetManaCost()  
-  return 25
+  return 100
 end
 function skill_kiemminh_thauthienhoannhat:OnAbilityPhaseStart()
 	self:GetCaster():StartGesture( ACT_DOTA_ATTACK)
@@ -25,7 +27,7 @@ function skill_kiemminh_thauthienhoannhat:OnAbilityPhaseStart()
 end
 function skill_kiemminh_thauthienhoannhat:OnSpellStart()
   local caster = self:GetCaster()
-  local skill_level = self:GetLevel()
+  local skill_level = self:GetLevel() + GetSkillLevel(caster)
   local caster_position = caster:GetAbsOrigin()
 	local hTarget = self:GetCursorTarget()
 	local cast_point = self:GetCursorPosition()

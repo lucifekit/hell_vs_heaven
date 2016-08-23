@@ -1,14 +1,19 @@
 skill_kiemminh_minhgiaokiemphap = class({})
+require('kem_lib/kem')
 SETTING_SKILL_MODIFIER = "modifier_kiemminh_minhgiaokiemphap"
 
 LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/kiemminh/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
 
 function skill_kiemminh_minhgiaokiemphap:GetPoisonDamage()
-  return self:GetLevel()*20
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*20
 end
 
 function skill_kiemminh_minhgiaokiemphap:GetCriticalChance()
-  return self:GetLevel()*10 --50
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*10 --50
 end
 function skill_kiemminh_minhgiaokiemphap:OnUpgrade()
    local caster = self:GetCaster()

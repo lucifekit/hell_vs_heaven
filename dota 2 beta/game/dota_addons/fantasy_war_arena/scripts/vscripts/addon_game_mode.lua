@@ -9,7 +9,7 @@ end
 --LinkLuaModifier("modifier_charges", "modifiers/modifier_charges", LUA_MODIFIER_MOTION_NONE)
 require('internal/util')
 require('gamemode')
---require('kem')
+
 --SETTING_KIEMDOAN_SWORD_EFFECT ="particles/units/heroes/hero_kunkka/kunkka_weapon_tidebringer.vpcf"
 
 
@@ -46,7 +46,9 @@ function Precache( context )
   PrecacheResource("particle","particles/units/heroes/hero_lina/lina_spell_light_strike_array.vpcf",context)
   PrecacheResource("soundfile","soundevents/game_sounds_heroes/game_sounds_lina.vsndevts",context)
   PrecacheResource("particle","particles/units/heroes/hero_sandking/sandking_caustic_finale_explode.vpcf",context)
+  --hokhon
   
+  PrecacheResource("soundfile","soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts",context)
   -- Particles can be precached individually or by folder
   -- It it likely that precaching a single particle system will precache all of its children, but this may not be guaranteed
   --PrecacheResource("particle", "particles/econ/generic/generic_aoe_explosion_sphere_1/generic_aoe_explosion_sphere_1.vpcf", context)

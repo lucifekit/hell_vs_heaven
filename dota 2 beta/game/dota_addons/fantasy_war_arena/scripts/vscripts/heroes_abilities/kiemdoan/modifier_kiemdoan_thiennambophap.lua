@@ -1,4 +1,5 @@
 modifier_kiemdoan_thiennambophap = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 
 function modifier_kiemdoan_thiennambophap:GetEffectAttachType()
@@ -25,7 +26,9 @@ end
 
 function modifier_kiemdoan_thiennambophap:OnCreated( kv )
   local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
-  self.speed = (10+self:GetAbility():GetLevel()*3)*settings.speed_base
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.speed = (10+skill_level*3)*settings.speed_base
   
 
   
@@ -35,7 +38,9 @@ end
 function modifier_kiemdoan_thiennambophap:OnRefresh( kv )
 
    local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
-   self.speed = (10+self:GetAbility():GetLevel()*3)*settings.speed_base
+   local p = self:GetParent()
+   local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+   self.speed = (10+skill_level*3)*settings.speed_base
 
   
 end

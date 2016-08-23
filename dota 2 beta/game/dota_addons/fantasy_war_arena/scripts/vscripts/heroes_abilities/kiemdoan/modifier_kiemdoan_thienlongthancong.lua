@@ -1,4 +1,5 @@
 modifier_kiemdoan_thienlongthancong = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 
 function modifier_kiemdoan_thienlongthancong:IsHidden()
@@ -23,12 +24,15 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_kiemdoan_thienlongthancong:OnCreated( kv )
- 
-  self.atk_speed = math.ceil(10+self:GetAbility():GetLevel()*1.5)
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.atk_speed = math.ceil(10+skill_level*1.5)
   
 end
 
 --------------------------------------------------------------------------------
 function modifier_kiemdoan_thienlongthancong:OnRefresh( kv )
-  self.atk_speed = math.ceil(10+self:GetAbility():GetLevel()*1.5)
+  local p = self:GetParent()
+  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+  self.atk_speed = math.ceil(10+skill_level*1.5)
 end

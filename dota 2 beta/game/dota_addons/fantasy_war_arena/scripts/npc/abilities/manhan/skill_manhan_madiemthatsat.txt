@@ -12,7 +12,7 @@
     
     "CastFilterRejectCaster" "1"
     "HotKeyOverride"    "" 
-    "AbilityTextureName"      "doom_bringer_lvl_death"
+    "AbilityTextureName"      "nevermore_necromastery"
     "ScriptFile"          "heroes_abilities/manhan/skill_manhan_madiemthatsat"
     // MASTER TALENT
 	"AbilitySpecial"

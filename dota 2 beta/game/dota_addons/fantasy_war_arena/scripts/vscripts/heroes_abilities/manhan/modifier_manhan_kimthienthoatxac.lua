@@ -1,4 +1,5 @@
 modifier_manhan_kimthienthoatxac = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 function modifier_manhan_kimthienthoatxac:GetEffectAttachType()
   return PATTACH_ABSORIGIN_FOLLOW
@@ -20,12 +21,15 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_manhan_kimthienthoatxac:OnCreated( kv )
- 
-  self.evade = self:GetAbility():GetLevel()*2
+  local p = self:GetParent()
+  local skill_level=self:GetAbility():GetLevel()+GetSkillLevel(p)
+  self.evade = skill_level*2
   
 end
 
 --------------------------------------------------------------------------------
 function modifier_manhan_kimthienthoatxac:OnRefresh( kv )
-  self.evade = self:GetAbility():GetLevel()*2
+  local p = self:GetParent()
+  local skill_level=self:GetAbility():GetLevel()+GetSkillLevel(p)
+  self.evade = skill_level*2
 end

@@ -5,7 +5,7 @@
    "RequiredLevel"          "35"
    "MaxLevel"				 "10"
    "LevelsBetweenUpgrades"  "1"
-   "AbilityTextureName"      "nevermore_shadowraze1"
+   "AbilityTextureName"      "skill_thuongthien_thienvuongchieny"
    "ScriptFile"          "heroes_abilities/thuongthien/skill_thuongthien_thienvuongchieny"
    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
    "precache"

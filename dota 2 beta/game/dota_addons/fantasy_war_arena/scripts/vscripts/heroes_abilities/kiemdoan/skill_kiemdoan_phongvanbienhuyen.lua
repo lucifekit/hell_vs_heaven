@@ -1,4 +1,5 @@
 skill_kiemdoan_phongvanbienhuyen= class({})
+require('kem_lib/kem')
 require('heroes_abilities/kiemdoan/kiemdoan')
 
 function skill_kiemdoan_phongvanbienhuyen:GetCooldown()
@@ -6,7 +7,9 @@ function skill_kiemdoan_phongvanbienhuyen:GetCooldown()
   return 1/atk_perseconds
 end
 function skill_kiemdoan_phongvanbienhuyen:GetManaCost()
-  return self:GetLevel()*5
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*5
 end
 function skill_kiemdoan_phongvanbienhuyen:OnAbilityPhaseStart()
   --self:GetCaster():StartGesture( ACT_DOTA_ATTACK)
@@ -17,7 +20,7 @@ end
 
 function skill_kiemdoan_phongvanbienhuyen:OnSpellStart()
   local caster = self:GetCaster()
-  local skill_level = self:GetLevel()
+  local skill_level = self:GetLevel() + GetSkillLevel(caster)
   local target_point = self:GetCursorPosition()
   CastPhongVanBienHuyen(caster,target_point,self,skill_level)
  end

@@ -1,4 +1,5 @@
 modifier_kiemdoan_luckiemtephat = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 SETTING_LKTP_EFFECT = "particles/units/heroes/hero_morphling/morphling_waveform.vpcf"
 --SETTING_SKILL_MODIFIER = "modifier_paralized"
@@ -39,7 +40,7 @@ if(IsServer())then
         self:GetAbility():StartCooldown(SETTING_COOLDOWN)
         local damageData = {
             caster = caster,
-            main_attribute_value = caster:GetIntellect(),
+            main_magic = caster:GetIntellect(),
             skill_physical_damage_percent = 0,
             skill_tree_amplify_damage = 0,-- can edit
             skill_basic_damage_percent = self.basic_damage,
@@ -126,10 +127,12 @@ function modifier_kiemdoan_luckiemtephat:OnCreated( kv )
 --local element_damage_min = 520+41*skill_level
 --local element_damage_max = 610+52*skill_level
   if(IsServer())then
-    self.proc_chance = 10+self:GetAbility():GetLevel()*10
-    self.damage_min = 520+self:GetAbility():GetLevel()*41
-    self.damage_max = 610+self:GetAbility():GetLevel()*52
-    self.basic_damage = 0.5+0.03*self:GetAbility():GetLevel()
+    local p = self:GetParent()
+    local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+    self.proc_chance = 10+skill_level*10
+    self.damage_min = 520+skill_level*41
+    self.damage_max = 610+skill_level*52
+    self.basic_damage = 0.5+0.03*skill_level
   end
   
 
@@ -139,9 +142,11 @@ end
 function modifier_kiemdoan_luckiemtephat:OnRefresh( kv )
   
 if(IsServer())then
-    self.proc_chance = 10+self:GetAbility():GetLevel()*10
-    self.damage_min = 520+self:GetAbility():GetLevel()*41
-    self.damage_max = 610+self:GetAbility():GetLevel()*52
-    self.basic_damage = 0.5+0.03*self:GetAbility():GetLevel()
+    local p = self:GetParent()
+    local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
+    self.proc_chance = 10+skill_level*10
+    self.damage_min = 520+skill_level*41
+    self.damage_max = 610+skill_level*52
+    self.basic_damage = 0.5+0.03*skill_level
   end
 end

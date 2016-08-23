@@ -1,4 +1,5 @@
 skill_manhan_nhiephonloantam = class({})
+require('kem_lib/kem')
 
 SETTING_SKILL_MODIFIER = "modifier_paralized"
 SETTING_DEBUFF_RADIUS = 300
@@ -14,23 +15,30 @@ function skill_manhan_nhiephonloantam:OnAbilityPhaseStart()
   return true
 end
 function skill_manhan_nhiephonloantam:GetManaCost()
-  return self:GetLevel()*50
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*50
 end
 function skill_manhan_nhiephonloantam:GetCooldown()
   if(IsInToolsMode())then
     return 1
   end
-  return 45-self:GetLevel()
+    local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return 45-skill_level
 end
 
 function skill_manhan_nhiephonloantam:OnSpellStart()
   local caster = self:GetCaster()
   local cast_point = self:GetCursorPosition()
-  local skill_level = self:GetLevel()
-  -- PARALYZED
+  local skill_level = self:GetLevel() + GetSkillLevel(caster)
+-- PARALYZED
 local paralyzed_duration = 1.5+0.15*skill_level
 local paralyzed_chance = 0.35+0.04*skill_level
 local max_target = math.floor(3+0.3*skill_level)
+
+
+
   
   --self:PayManaCost()
   local enemies = FindUnitsInRadius(caster:GetTeam(), cast_point, nil, SETTING_DEBUFF_RADIUS, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, 0, false )

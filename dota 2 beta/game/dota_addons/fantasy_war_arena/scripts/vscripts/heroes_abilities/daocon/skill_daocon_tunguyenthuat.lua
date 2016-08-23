@@ -1,4 +1,5 @@
 skill_daocon_tunguyenthuat = class({})
+require('kem_lib/kem')
 --------------------------------------------------------------------------------
 SETTING_SKILL_MODIFIER = "modifier_daocon_tunguyenthuat"
 LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/daocon/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
@@ -18,7 +19,7 @@ end
 
 function skill_daocon_tunguyenthuat:OnSpellStart()
    local caster = self:GetCaster()
-   local skill_level = self:GetLevel()
+   local skill_level = self:GetLevel() + GetSkillLevel(caster)
    local caster_position = caster:GetAbsOrigin()
    local hTarget = self:GetCursorTarget()
    local cast_point = self:GetCursorPosition()

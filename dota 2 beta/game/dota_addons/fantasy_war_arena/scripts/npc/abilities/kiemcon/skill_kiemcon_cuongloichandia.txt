@@ -1,0 +1,56 @@
+"skill_kiemcon_cuongloichandia"
+{
+   "ID"  "15151"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "1"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "kiemcon_cuongloichandia"
+   "ScriptFile"          "heroes_abilities/kiemcon/skill_kiemcon_cuongloichandia"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "700"
+   "precache"
+   {
+   }
+   // LIGHTNING BEAM
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "100"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "84 124 164 204 244 284 324 364 404 444"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "120 168 216 264 312 360 408 456 504 552"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_stun"  "17 19 21 23 25 27 29 31 33 35"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"stun_time"  "1"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "5"
+		}
+	}
+
+   
+}

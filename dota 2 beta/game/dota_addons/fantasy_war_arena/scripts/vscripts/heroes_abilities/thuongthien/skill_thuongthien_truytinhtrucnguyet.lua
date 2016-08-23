@@ -1,4 +1,5 @@
 skill_thuongthien_truytinhtrucnguyet = class({})
+require('kem_lib/kem')
 SETTING_SKILL_MODIFIER = "modifier_thuongthien_truytinhtrucnguyet"
 LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/thuongthien/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
 SETTING_DEBUFF_RADIUS = 120
@@ -8,7 +9,9 @@ SETTING_IMPACT_EFFECT = "particles/units/heroes/hero_phantom_lancer/phantomlance
 SETTING_IMPACT_EFFECT_2 = "particles/units/heroes/hero_phantom_lancer/phantom_lancer_deathflash.vpcf"
 
 function skill_thuongthien_truytinhtrucnguyet:GetManaCost()
-   return 25+2*self:GetLevel()
+   local caster = self:GetCaster()
+   local skill_level = self:GetLevel()+GetSkillLevel(caster)
+   return 25+skill_level*2
 end
 
 function skill_thuongthien_truytinhtrucnguyet:GetCooldown()
@@ -30,7 +33,7 @@ end
 
 function skill_thuongthien_truytinhtrucnguyet:OnSpellStart()
    local caster = self:GetCaster()
-   local skill_level = self:GetLevel()
+   local skill_level = self:GetLevel() + GetSkillLevel(caster)
    local caster_position = caster:GetAbsOrigin()
    local hTarget = self:GetCursorTarget()   
    local cast_point = self:GetCursorPosition()
@@ -64,7 +67,7 @@ local max_target = 3
 
   local damageData = {
         caster = caster,
-        main_attribute_value = caster:GetAgility(),
+        main_physic = caster:GetAgility(),
         skill_physical_damage_percent = physical_damage_amplify,
         skill_tree_amplify_damage = 0,-- can edit
         skill_basic_damage_percent = basic_damage,
@@ -73,6 +76,7 @@ local max_target = 3
         }
 
   local damage = DamageHandler:GetDamage(damageData)
+
   local critInfo = DamageHandler:GetCritInfo(caster)
   --sound
   caster:EmitSound("Ability.static.start")
@@ -96,17 +100,13 @@ local max_target = 3
         damage          = damage,
         crit            = critInfo,
         UnitTest = GeneralUnitTest,
-        targetAllow = max_target,
+        maxTarget = max_target,
 
         effect  = EFFECT_MAIM,
         effect_time = maim_time,
         effect_chance = chance_to_maim*100,
         OnUnitHit = function(proj,unit)
-           kemPrint("hit")
-           if(proj.targetAllow>0) then
-             proj.targetAllow = proj.targetAllow-1
-             --damage
-             --kemPrint(proj.targetAllow.." applying damage to "..unit:GetUnitName())
+           DamageHandler:MissileHandler({attacker=proj.Source,target=unit,projectile=proj,hit_function=function(proj,unit)
              DamageHandler:ApplyDamage(caster,self,unit,proj.damage,proj.crit,ELEMENT_METAL,{})
              StatusEffectHandler:ApplyEffect(caster,unit,proj.effect,proj.effect_chance,proj.effect_time)
 
@@ -120,7 +120,8 @@ local max_target = 3
               ParticleManager:DestroyParticle(pfx,true)
               ParticleManager:DestroyParticle(pfx2,true)
              end)
-           end
+           end})
+          
         end
       } )
   

@@ -5,8 +5,18 @@ function RotateVector2D(v,theta)
     return Vector(xp,yp,v.z):Normalized()
 end
 
-function distanceBetweenPoint(v1,v2)
-	return math.sqrt((v1.x-v2.x)*(v1.x-v2.x)+(v1.y-v2.y)*(v1.y-v2.y))
+function GetSkillLevel(hero)
+    
+    local ms = hero:GetModifierStackCount("modifier_skill_level",hero)
+    --print("Skill level "..ms) 
+    return ms
+    --return 0
+end
+function HasBook(hero)
+  return GetSkillLevel(hero)>0
+end
+function ReflectDamage(attacker,victim,damage)
+
 end
 function kemPrint(msg)
 
@@ -16,6 +26,27 @@ function kemPrint(msg)
     end
   end
   
+end
+function BuffAllies(caster,ability,buff,duration,center,aoe)
+  local group = FindUnitsInRadius(caster:GetTeam(), center, nil, aoe, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, 0, false )
+  if #group > 0 then
+    for _,unit in pairs(group) do
+      if(not unit==caster)then
+        unit:AddNewModifier(caster, ability,buff, { duration = duration } )
+      end
+    end
+  end
+end
+function FxPointRelease(effect,point,control)
+  local hit_effect = ParticleManager:CreateParticle(effect, PATTACH_WORLDORIGIN, nil)
+  ParticleManager:SetParticleControl( hit_effect, 0, point)     
+  if(control)then
+    for i,v in ipairs(control) do
+      ParticleManager:SetParticleControl( hit_effect, i,v)
+    end
+    
+  end
+  ParticleManager:ReleaseParticleIndex(hit_effect)
 end
 function FxPointControl(effect,point,time,control)
   local hit_effect = ParticleManager:CreateParticle(effect, PATTACH_WORLDORIGIN, nil)
@@ -30,7 +61,7 @@ function FxPointControl(effect,point,time,control)
   Timers:CreateTimer(time,function() 
       ParticleManager:DestroyParticle(hit_effect,true)
   end)
-
+  return hit_effect
 end
 function FxPoint(effect,point,time)
   FxPointControl(effect,point,time,nil)
