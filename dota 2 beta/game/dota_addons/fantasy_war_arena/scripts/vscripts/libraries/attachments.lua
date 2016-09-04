@@ -18,7 +18,7 @@ ATTACHMENTS_VERSION = "1.00"
     -Ex: ("models/heroes/antimage/antimage.vmdl" // "attach_hitloc" // "models/items/axe/weapon_heavy_cutter.vmdl")
   -Optional particles can be specified in the "Particles" block of attachmets.txt.
   -To attach a prop to a unit, use the Attachments:AttachProp(unit, attachPoint, model[, scale[, properties] ]) function
-    -Ex: Attachments:AttachProp(unit, "attach_hitloc", "models/items/axe/weapon_heavy_cutter.vmdl", 1.0)
+    -Ex:Attachments:AttachProp(unit, "attach_hitloc", "models/items/axe/weapon_heavy_cutter.vmdl", 1.0)
     -This will create the prop and retrieve the properties from the database to attach it to the provided unit
     -If you pass in an already created prop or unit as the 'model' parameter, the attachment system will scale, position, and attach that prop/unit without creating a new one
     -Scale is the prop scale to be used, and defaults to 1.0.  The scale of the prop will also be scaled based on the unit model scale.

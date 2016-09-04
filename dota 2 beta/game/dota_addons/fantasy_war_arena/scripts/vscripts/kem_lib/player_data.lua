@@ -74,7 +74,7 @@ function UpgradeSkillForHero(hero)
 end
 function UpgradeSkill(playerID)
 
-  kemPrint("call upgrade skill for player " ..playerID)
+  --kemPrint("call upgrade skill for player " ..playerID)
   local hero = HERO_OF_PLAYER[playerID]
   
   if hero then
@@ -155,6 +155,9 @@ function UpgradeSkill(playerID)
           end
           if(tempAbility.GetCriticalDamage)then
             hero.critical_damage = hero.critical_damage+tempAbility:GetCriticalDamage()
+          end
+          if(tempAbility.GetEvade)then
+            hero.evade_point = hero.evade_point+tempAbility:GetEvade()
           end
           if(tempAbility.GetByPassEvade)then
              hero.bypass_evade = hero.bypass_evade +tempAbility:GetByPassEvade()
@@ -462,7 +465,7 @@ function CreateDataForPlayer(playerID)
   hero.physic_amplify  = 1 -- vat cong ngoai them vao tinh theo %
   hero.element_amplify  = 1 -- vat cong noi vao tinh theo %
 
-  hero.skill_amplify = 0
+
 
   --caster.attribute_amplify_element
   hero.weapon_element_damage  = 0 -- ngu hanh vu khi
@@ -475,7 +478,7 @@ function CreateDataForPlayer(playerID)
   
   --hero.skill_tree_add_percent  = 0.0 -- ko can thiet?
   hero.basic_damage_percent  = 0.0 -- phat huy luc tan cong co ban
-  
+  hero.skill_amplify = 0
   --chance
   --print("Init set chance = 0 "..hero:GetUnitName())
   hero.critical_chance  = 0     --diem chi mang

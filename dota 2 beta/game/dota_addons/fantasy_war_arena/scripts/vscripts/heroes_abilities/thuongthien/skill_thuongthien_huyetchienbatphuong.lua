@@ -9,7 +9,11 @@ function skill_thuongthien_huyetchienbatphuong:GetBasicDamage()
   local skill_level = self:GetLevel()+GetSkillLevel(caster)
   return skill_level*0.02
 end
-
+function skill_thuongthien_huyetchienbatphuong:GetSkillAmplify()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*0.02
+end
 function skill_thuongthien_huyetchienbatphuong:GetMaimInflictTime()
   local caster = self:GetCaster()
   local skill_level = self:GetLevel()+GetSkillLevel(caster)

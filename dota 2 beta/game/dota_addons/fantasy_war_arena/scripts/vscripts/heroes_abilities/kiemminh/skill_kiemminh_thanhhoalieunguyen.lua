@@ -98,7 +98,7 @@ local radius = 50+5*skill_level
 	for i=0,8 do 
 	  
 	  local cast_where = target_point+Vector(x[i+1]*SETTING_THLN_X_DISTANCE,y[i+1]*SETTING_THLN_Y_DISTANCE,0)
-	  FxPoint(SETTING_THLN_EFFECT,cast_where,1)
+	  FxPoint(SETTING_THLN_EFFECT,cast_where,1.5)
 --	  local thln_missile = ParticleManager:CreateParticle(SETTING_THLN_EFFECT, PATTACH_ABSORIGIN, caster)
 --    ParticleManager:SetParticleControl( thln_missile, 0, cast_where +Vector(0,0,SETTING_THLN_EFFECT_HEIGHT))
 --    ParticleManager:SetParticleControl( thln_missile,1, cast_where+Vector(0,0,50))

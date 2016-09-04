@@ -6,7 +6,11 @@ function skill_kiemdoan_doangiakhikiem:GetBasicDamage()
   local skill_level = self:GetLevel()+GetSkillLevel(caster)
   return skill_level*0.02
 end
-
+function skill_kiemdoan_doangiakhikiem:GetSkillAmplify()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*0.02
+end
 function skill_kiemdoan_doangiakhikiem:GetSlowInflictTime()
   local caster = self:GetCaster()
   local skill_level = self:GetLevel()+GetSkillLevel(caster)

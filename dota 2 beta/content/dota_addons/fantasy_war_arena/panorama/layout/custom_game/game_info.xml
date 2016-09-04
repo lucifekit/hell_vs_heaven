@@ -11,6 +11,9 @@
 		<Label id="BriefDescription" text="#brief_description" />
 		<Label id="HowToPlayHeader" class="Header" html="true" text="#game_info_header_how_to_play" />
 		<Label id="HowToPlayDescription" text="#howtoplay_description" />
+		<Label id="StatHeader" class="Header" html="true" text="#game_info_header_stat" />
+		<Label id="StatDescription" text="#stat_description" />
+		
 		<!--
 		<Panel id="ThroneRow" class="InfoRow">
 			<Label id="ThroneText" html="true" text="#overthrow_game_info_throne" />

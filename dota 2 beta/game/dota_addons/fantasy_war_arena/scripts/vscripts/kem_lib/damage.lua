@@ -14,6 +14,7 @@ if not DamageHandler then
   DamageHandler = class({})
 end
 
+DAMAGE_DELAY = 0.03
 
 ELEMENT_NONE = 0
 ELEMENT_METAL = 1
@@ -33,16 +34,17 @@ BUFF_BITOTHANHPHONG = "modifier_chiennhan_bitothanhphong"
 SKILL_SOANH = "skill_kiemdoan_soanh"
 
 
-BUFF_TOIDOCTHUAT = ""
-
+--BUFF_TOIDOCTHUAT = ""
+BUFF_THOITHUALUCLONG = "modifier_chuongcai_thoithualuclong"
+BUFF_TUYDIEPCUONGVU = "modifier_chuongcai_tuydiepcuongvu"
 BUFF_DOANCANNHAN = "modifier_tutien_doancannhan"
 BUFF_DOANCANNHAN_COOLDOWN = "modifier_tutien_doancannhan_cooldown"
 BUFF_DOANCANNHAN_ACTIVE = "modifier_tutien_doancannhan_active"
 FX_DOANCANNHAN = "particles/econ/items/luna/luna_lucent_ti5/luna_eclipse_impact_moonfall.vpcf"
-DEBUFF_BITOTHANHPHONG = "modifier_chiennhan_bitothanhphong_target"
-LinkLuaModifier(DEBUFF_BITOTHANHPHONG,"heroes_abilities/chiennhan/"..DEBUFF_BITOTHANHPHONG, LUA_MODIFIER_MOTION_NONE )
+
 LinkLuaModifier(BUFF_DOANCANNHAN_ACTIVE,"heroes_abilities/tutien/"..BUFF_DOANCANNHAN_ACTIVE, LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier(BUFF_DOANCANNHAN_COOLDOWN,"heroes_abilities/tutien/"..BUFF_DOANCANNHAN_COOLDOWN, LUA_MODIFIER_MOTION_NONE )
+--LinkLuaModifier(BUFF_THOITHUALUCLONG,"heroes_abilities/chuongcai/"..BUFF_THOITHUALUCLONG, LUA_MODIFIER_MOTION_NONE )
 --LinkLuaModifier(BUFF_DOANCANNHAN_ACTIVE,"heroes_abilities/tutien/"..BUFF_DOANCANNHAN_ACTIVE, LUA_MODIFIER_MOTION_NONE )
 function DamageHandler:OnCrititcal(whoDealDamage,whoTakeDamage)
   if(whoTakeDamage:HasModifier(BUFF_DOANCANNHAN))then
@@ -56,32 +58,28 @@ function DamageHandler:OnCrititcal(whoDealDamage,whoTakeDamage)
      StatusEffectHandler:ApplyEffect(whoDealDamage,whoTakeDamage,EFFECT_IMMOBILE,100,3)
   end
 end
+
+
+
 function DamageHandler:OnHit(attacker,target)
   if(attacker:HasModifier(BUFF_SOANH))then
       local buff_soanh = attacker:FindModifierByName(BUFF_SOANH)
-      if(buff_soanh:GetStackCount()<15)then
-        local random_value = math.random(0,100)
-        local message = "Random value "..random_value
-        if(random_value<5)then
-          
-          buff_soanh:IncrementStackCount()
-          local skill_soanh = attacker:FindAbilityByName("skill_kiemdoan_soanh")
-          skill_soanh:EndCooldown()
-        
-          message = message.." Proc "..skill_soanh:GetAbilityName()
-         else
-          message = message.." Missed"
-        end
-
-        --kemPrint(message)
-      end
+      buff_soanh:ActiveOnHit(target)
+      
     end
   if(attacker:HasModifier(BUFF_BITOTHANHPHONG))then
       local buff_bitothanhphong = attacker:FindModifierByName(BUFF_BITOTHANHPHONG)
-      local skill_bitothanhphong = buff_bitothanhphong:GetAbility()
-      local level_bitothanhphong = skill_bitothanhphong:GetLevel()+GetSkillLevel(attacker)
-      target:AddNewModifier(attacker,skill_bitothanhphong,DEBUFF_BITOTHANHPHONG,{duration=180})
-    end  
+      buff_bitothanhphong:ActiveOnHit(target)
+      
+  end
+  if(attacker:HasModifier(BUFF_THOITHUALUCLONG))then
+    local buff = attacker:FindModifierByName(BUFF_THOITHUALUCLONG)
+    buff:ActiveOnHit(target)
+  end  
+  if(attacker:HasModifier(BUFF_TUYDIEPCUONGVU))then
+    local buff = attacker:FindModifierByName(BUFF_TUYDIEPCUONGVU)
+    buff:ActiveOnHit(target)
+  end
 end
 function DamageHandler:CalculateMiss(attacker,target)
   if (attacker.inited) then
@@ -338,7 +336,7 @@ function DamageHandler:ApplyDamage(whoDealDamage,byWhichAbility,whoTakeDamage,AD
     --kemPrint(DAMAGE_TYPE_PHYSICAL.."|"..DAMAGE_TYPE_MAGICAL.."|"..DAMAGE_TYPE_PURE.."|"..DAMAGE_TYPE_ALL.."|")
     --kemPrint("Dealing "..damage_physic.." physic damage to "..whoTakeDamage:GetUnitName().." which has "..whoTakeDamage:GetHealth().." hp")
     local current_health = whoTakeDamage:GetHealth()
-    
+    --print("apply physic damage ")
     ApplyDamage(damageTable)
     local after_health = whoTakeDamage:GetHealth()
     if(whoDealDamage.inited)then
@@ -368,6 +366,7 @@ function DamageHandler:ApplyDamage(whoDealDamage,byWhichAbility,whoTakeDamage,AD
    
     damageTable.damage = damage_magic*(1/(1+magic_amplify))
     --print("Magic damage : "..damageTable.damage.."Ori = "..damage_magic)
+    --print("apply magic damage ")
     ApplyDamage(damageTable)
     local after_health = whoTakeDamage:GetHealth()
     --if(whoTakeDamage:HasModifier("modifier_kiemcon_nguynguyconlon_stack"))then
@@ -393,21 +392,48 @@ function DamageHandler:ApplyDamage(whoDealDamage,byWhichAbility,whoTakeDamage,AD
     
     local totalDamage = damage_physic+damage_magic
     if(totalDamage>0)then
-      local numberIndex = ParticleManager:CreateParticle( SETTING_FX_DAMAGE, PATTACH_OVERHEAD_FOLLOW, whoTakeDamage )
-      ParticleManager:SetParticleControl( numberIndex, 1, Vector( 1, totalDamage, 0 ) ) -- so luong damage
-      ParticleManager:SetParticleControl( numberIndex, 2, Vector( 1, string.len( math.floor(totalDamage ) ) + 1, 0 ) ) -- do dai
-      if(isCritical)then
-        ParticleManager:SetParticleControl( numberIndex, 3, Vector( 255,50,50 ) )
-      else
-        ParticleManager:SetParticleControl( numberIndex, 3, Vector( 255,255,90 ) )
+      
+      if(not whoTakeDamage.next_damage)then
+        whoTakeDamage.next_damage = 0
       end
       
+      
+      local now = GameRules:GetGameTime()
+      local delay=0
+      if(now<whoTakeDamage.next_damage)then
+        delay=whoTakeDamage.next_damage-now
+        whoTakeDamage.next_damage = whoTakeDamage.next_damage+DAMAGE_DELAY      
+      else
+        delay = 0
+        whoTakeDamage.next_damage = now+DAMAGE_DELAY
+      end 
+      --print("create fx ")
+      local numberIndex = ParticleManager:CreateParticle( SETTING_FX_DAMAGE, PATTACH_OVERHEAD_FOLLOW, whoTakeDamage )
+      ParticleManager:SetParticleControl( numberIndex, 1, Vector( 1, totalDamage, 0 ) ) -- so luong damage
+      
+      if(isCritical)then
+        ParticleManager:SetParticleControl( numberIndex, 2, Vector( 2, string.len( math.floor(totalDamage ) ) + 1, 0 ) ) -- do dai
+        ParticleManager:SetParticleControl( numberIndex, 3, Vector( 255,50,50 ) ) --color
+      else
+        ParticleManager:SetParticleControl( numberIndex, 2, Vector( 1, string.len( math.floor(totalDamage ) ) + 1, 0 ) ) -- do dai
+        ParticleManager:SetParticleControl( numberIndex, 3, Vector( 255,255,90 ) ) --color
+      end
+      --print("checking delay fx")
+      if(delay>0)then
+        local offset = math.floor(delay*1000)
+        --print("Offset = "..offset)
+        ParticleManager:SetParticleControl( numberIndex, 4, Vector( 0,0,offset) )
+      end
+      --print("release fx")
       ParticleManager:ReleaseParticleIndex(numberIndex)
       
+      
+      
     end
+    
     --kemPrint("Total damage "..totalDamage)
        
-
+--print("deal xong")
 end
 
 function DamageHandler:InitCrit(chance,damage)
@@ -426,9 +452,9 @@ function DamageHandler:GetCritInfo(caster)
   if(caster.critical_damage)then
     damage = caster.critical_damage
   end
-  if(caster:HasModifier(BUFF_TOIDOCTHUAT))then      
-        damage = damage + 1.2
-  end
+--  if(caster:HasModifier(BUFF_TOIDOCTHUAT))then      
+--        damage = damage + 1.2
+--  end
 
   return {chance = chance,damage = damage}
 end
@@ -524,7 +550,7 @@ function DamageHandler:GetDamage(data)
   --local min_basic_physic = main_attribute_value*(skill_physical_damage_per+attribute_amplify_physic) * skill_tree_add 
   --local max_basic_physic = main_attribute_value*(skill_physical_damage_per+attribute_amplify_physic) *skill_tree_add
   
-  print(physic_amplify.."-"..element_amplify)
+  ---print(physic_amplify.."-"..element_amplify)
    
   --phat huy luc tan cong co ban
   local is_physic = data.is_physic or false
@@ -535,7 +561,7 @@ function DamageHandler:GetDamage(data)
 --    --physic_amplify = physic_amplify -- skill ngoai cong
   end
   
-  print("after : " ..physic_amplify.."-"..element_amplify)
+  --print("after : " ..physic_amplify.."-"..element_amplify)
   --
 
   local physic_min  =   (basic_damage+skill_tree_amplify_damage+skill_amplify)  * ((att_physic_value)*(physic_amplify+skill_physical_damage_per)+physical_damage)
@@ -543,16 +569,29 @@ function DamageHandler:GetDamage(data)
   
 
   
-  local add_element =   (basic_damage+skill_tree_amplify_damage+skill_amplify)  * (att_magic_value*element_amplify  +    weapon_element_damage  +  skill_element_damage  )
-  print("Physic calculate = ".."("..basic_damage.."+"..skill_tree_amplify_damage.."+"..skill_amplify..")  * (("..att_physic_value..")*("..physic_amplify.."+"..skill_physical_damage_per..")+"..physical_damage..")  = "..physic_min)
-  print("Magic calculate = ".."("..basic_damage.."+"..skill_tree_amplify_damage.."+"..skill_amplify..")  * (("..att_magic_value.."*"..element_amplify.."+"..weapon_element_damage.."+"..skill_element_damage..") = "..(element_damage_min+add_element))
+  --local add_element =   (basic_damage+skill_tree_amplify_damage+skill_amplify)  * (att_magic_value*element_amplify  +    weapon_element_damage  +  skill_element_damage  )
+  
+  
+  local add_element =   (basic_damage)  * (att_magic_value*element_amplify)--phat huy luc tan cong co ban
+  add_element = add_element + weapon_element_damage -- sat thuong tu vu khi 
+  add_element = add_element + skill_element_damage*(1+skill_amplify)--sat thuong chieu thuc noi tai
+  
+  local min_element = add_element + element_damage_min*(1+skill_amplify)
+  min_element = (1+skill_tree_amplify_damage)*min_element
+  
+  local max_element = add_element + element_damage_max*(1+skill_amplify)
+  max_element = (1+skill_tree_amplify_damage)*max_element
+  
+  --print("Physic calculate = ".."("..basic_damage.."+"..skill_tree_amplify_damage.."+"..skill_amplify..")  * (("..att_physic_value..")*("..physic_amplify.."+"..skill_physical_damage_per..")+"..physical_damage..")  = "..physic_min)
+  print("Magic calculate = ".."("..basic_damage.."*"..att_magic_value.."*"..element_amplify..")".." + weapon["..weapon_element_damage.."] "..
+  "+ skill [ (1+"..skill_amplify..")  * "..skill_element_damage..")] ====* ["..(1+skill_tree_amplify_damage).."] = "..min_element)
   
   --PrintTable(caster)
   --kemPrint("Physic : "..skill_physical_damage_per.."+"..attribute_amplify_physic.." = "..physic_min)
   --kemPrint("Min = "..min_basic.."+"..min_add.." Max = "..max_basic.."+"..max_add)
 
   return {min_physic=physic_min,max_physic=physic_max,
-          min_element = element_damage_min+add_element,max_element=element_damage_max+add_element+10}  
+          min_element = min_element,max_element=max_element}  
   
 end
 --

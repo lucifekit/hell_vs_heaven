@@ -23,12 +23,16 @@ function modifier_kiemdoan_thiennambophap:GetModifierMoveSpeedBonus_Constant( pa
 end
 
 --------------------------------------------------------------------------------
-
+function modifier_kiemdoan_thiennambophap:Apply()
+   local p = self:GetParent()
+   local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
+   if(IsServer())then
+      local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
+      self.speed = (10+skill_level*3)*settings.speed_base
+   end
+end
 function modifier_kiemdoan_thiennambophap:OnCreated( kv )
-  local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
-  local p = self:GetParent()
-  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
-  self.speed = (10+skill_level*3)*settings.speed_base
+ self:Apply()
   
 
   
@@ -36,11 +40,5 @@ end
 
 --------------------------------------------------------------------------------
 function modifier_kiemdoan_thiennambophap:OnRefresh( kv )
-
-   local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
-   local p = self:GetParent()
-   local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)  
-   self.speed = (10+skill_level*3)*settings.speed_base
-
-  
+  self:Apply()  
 end

@@ -28,22 +28,20 @@ function modifier_boss_hokhon_reflect_target:DeclareFunctions(  )
   return funcs
 end
 function modifier_boss_hokhon_reflect_target:OnTakeDamage( params )
-if(IsServer())then
-    if(self:GetParent()==params.unit)then
-      local damage_taken = params.damage
-      if(damage_taken>0)then
-        --PrintTable(params)
-        --print("Deal back damage")
-        if(params.damage_flags~=DOTA_DAMAGE_FLAG_REFLECTION)then
-          local damage = params.damage*0.2 
-          DamageHandler:ApplyDamage(self:GetParent(),nil,params.attacker,damage,
-            DamageHandler:InitCrit(0,0),ELEMENT_METAL,
-            {flag="reflect"})
+  if(IsServer())then
+      if(self:GetParent()==params.unit)then
+        local damage_taken = params.damage
+        if(damage_taken>0)then
+          --PrintTable(params)
+          --print("Deal back damage")
+          if(params.damage_flags~=DOTA_DAMAGE_FLAG_REFLECTION)then
+            ReturnDamage(params.unit,nil,params.attacker,params.damage,0.2)
+            
+          end
+          
         end
-        
       end
     end
-  end
 end
 function modifier_boss_hokhon_reflect_target:OnCreated( kv )
 

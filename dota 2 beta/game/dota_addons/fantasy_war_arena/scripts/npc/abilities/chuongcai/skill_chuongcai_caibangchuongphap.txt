@@ -1,0 +1,34 @@
+"skill_chuongcai_caibangchuongphap"
+{
+   "ID"  "13152"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "6"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "lion_finger_of_death"
+   "ScriptFile"          "heroes_abilities/chuongcai/skill_chuongcai_caibangchuongphap"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // BASIC TALENT
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"attack_speed"  "11 12 13 14 15"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage"  "75 190 305 420 535"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"critical_chance"  "34 38 42 46 50"
+		}
+	}
+   
+}

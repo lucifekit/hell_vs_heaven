@@ -97,10 +97,10 @@ local volley_poison = 205+12*skill_level
        --unit:EmitSound(SETTING_HIT_SOUND)
        DamageHandler:MissileHandler({attacker=proj.Source,target=unit,projectile=proj,hit_function=function(proj,unit)
           
-          DamageHandler: ApplyDamage(proj.Source, proj.Ability, unit, proj.damage, proj.crit, ELEMENT_WOOD, {})
+          DamageHandler:ApplyDamage(proj.Source, proj.Ability, unit, proj.damage, proj.crit, ELEMENT_WOOD, {})
           PoisonHandler:ApplyPoison(proj.Source,unit,proj.Ability,proj.period,proj.duration,proj.poison,{})
-          StatusEffectHandler: ApplyEffect(proj.Source, unit, proj.effect, proj.effect_chance, proj.effect_time)
-          StatusEffectHandler: ApplyEffect(proj.Source, unit, EFFECT_WEAK,chance_to_weak*100, weak_time)
+          StatusEffectHandler:ApplyEffect(proj.Source, unit, proj.effect, proj.effect_chance, proj.effect_time)
+          StatusEffectHandler:ApplyEffect(proj.Source, unit, EFFECT_WEAK,chance_to_weak*100, weak_time)
        end})
        end
     } )
@@ -155,10 +155,10 @@ local volley_poison = 205+12*skill_level
                     proj.hit_group[unit]=1
                     ---PrintTable(proj.hit_group)                    
                     --kemPrint("BVLH "..proj.BVLH_NUMB.." Hit "..proj.BVLH_HIT.." Count = "..#proj.hit_group)
-                    DamageHandler: ApplyDamage(proj.Source, proj.Ability, unit, proj.damage, proj.crit, ELEMENT_WOOD, {})
+                    DamageHandler:ApplyDamage(proj.Source, proj.Ability, unit, proj.damage, proj.crit, ELEMENT_WOOD, {})
                     PoisonHandler:ApplyPoison(proj.Source,unit,proj.Ability,proj.period,proj.duration,proj.poison,{})
-                    StatusEffectHandler: ApplyEffect(proj.Source, unit, proj.effect, proj.effect_chance, proj.effect_time)
-                    StatusEffectHandler: ApplyEffect(proj.Source, unit, EFFECT_WEAK,chance_to_weak*100, weak_time)
+                    StatusEffectHandler:ApplyEffect(proj.Source, unit, proj.effect, proj.effect_chance, proj.effect_time)
+                    StatusEffectHandler:ApplyEffect(proj.Source, unit, EFFECT_WEAK,chance_to_weak*100, weak_time)
                   end
                   
                end})

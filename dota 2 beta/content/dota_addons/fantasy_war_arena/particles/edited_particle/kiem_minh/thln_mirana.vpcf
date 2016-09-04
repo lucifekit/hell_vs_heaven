@@ -138,5 +138,18 @@
 		{
 			m_ChildRef = resource:"particles/edited_particle/kiem_minh/thln_starfall_f.vpcf"
 		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/heroes_underlord/abyssal_underlord_firestorm_wave_a.vpcf"
+			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/heroes_underlord/abyssal_underlord_firestorm_wave_c.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/heroes_underlord/abyssal_underlord_firestorm_wave_d.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/heroes_underlord/abyssal_underlord_firestorm_wave_e.vpcf"
+		},
 	]
 }

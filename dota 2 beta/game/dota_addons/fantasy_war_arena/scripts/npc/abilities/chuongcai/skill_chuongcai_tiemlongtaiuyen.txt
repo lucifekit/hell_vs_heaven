@@ -1,0 +1,34 @@
+"skill_chuongcai_tiemlongtaiuyen"
+{
+   "ID"  "13158"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "40"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "phoenix_fire_spirits"
+   "ScriptFile"          "heroes_abilities/chuongcai/skill_chuongcai_tiemlongtaiuyen"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // EXPERT TALENT
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"attack_speed"  "11 13 14 16 18 19 21 22 24 26"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"burn_chance_increase"  "19 28 37 46 55 64 73 82 91 100"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_chance_reduce"  "24 38 52 66 80 94 108 122 136 150"
+		}
+	}
+   
+}

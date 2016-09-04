@@ -218,6 +218,7 @@ end
 function AllPlayerLoaded()
 
   kemPrint("All played loaded")
+  SendToConsole("dota_health_per_vertical_marker 2500")
   Timers:CreateTimer(1,function()
     if(not Battle_Time)then
       for i = 0,10 do

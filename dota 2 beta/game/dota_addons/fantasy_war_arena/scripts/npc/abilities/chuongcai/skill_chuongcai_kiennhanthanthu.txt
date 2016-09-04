@@ -1,0 +1,55 @@
+"skill_chuongcai_kiennhanthanthu"
+{
+   "ID"  "13151"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "1"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "dragon_knight_breathe_fire"
+   "ScriptFile"          "heroes_abilities/chuongcai/skill_chuongcai_kiennhanthanthu"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "700"
+   "precache"
+   {
+   }
+   // DRAGON SLAVE
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "100"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "65 115 165 215 265 315 365 415 465 515"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "90 150 210 270 330 390 450 510 570 630"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_burn"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"burn_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "3 3 3 3 4 4 4 4 4 5"
+		}
+	}
+   
+}

@@ -280,7 +280,7 @@ function modifier_boss_dieptinh:CastKnockbackMissile(target,number_of_missile)
             StatusEffectHandler:ApplyEffect(proj.Source,unit,proj.effect,proj.effect_chance,proj.effect_time)
             if(distanceBetwwenCasterAndTarget<800)then
 
-              local knockback_chance = 30
+              local knockback_chance = 10
               local knockback_duration=0.5
               StatusEffectHandler:KnockBack(proj.Source,proj.Source:GetAbsOrigin(),unit,knockback_chance,knockback_duration,800-distanceBetwwenCasterAndTarget)
             end

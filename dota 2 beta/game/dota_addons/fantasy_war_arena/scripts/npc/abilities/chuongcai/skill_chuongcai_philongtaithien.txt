@@ -1,0 +1,76 @@
+"skill_chuongcai_philongtaithien"
+{
+   "ID"  "13159"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "45"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "lina_dragon_slave_alt1"
+   "ScriptFile"          "heroes_abilities/chuongcai/skill_chuongcai_philongtaithien"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "700"
+   "precache"
+   {
+   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_clinkz.vsndevts"
+   }
+   // DRAGON RISE
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"basic_damage"  "10.6 11.2 11.8 12.4 13.0 13.6 14.2 14.8 15.4 16.0"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "226 239 252 265 278 291 304 317 330 343"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "276 292 308 324 340 356 372 388 404 420"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_burn"  "6 7 8 9 10 11 12 13 14 15"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"burn_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"explode_damage_min"  "432 457 482 507 532 557 582 607 632 657"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"explode_damage_max"  "649 687 725 763 801 839 877 915 953 991"
+		}
+		"08"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"explode_basic_damage_min"  "28.6 30.2 31.8 33.4 35.0 36.6 38.2 39.8 41.4 43.0"
+		}
+		"09"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"explode_basic_damage_max"  "42.5 45.0 47.5 50.0 52.5 55.0 57.5 60.0 62.5 65.0"
+		}
+		"10"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "2 2 2 2 3 3 3 3 3 4"
+		}
+	}
+   
+}

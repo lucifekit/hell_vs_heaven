@@ -269,6 +269,7 @@ function Projectiles:CreateProjectile(projectile)
       if projectile.bRecreateOnChange then
         ParticleManager:DestroyParticle(projectile.id, projectile.bDestroyImmediate)
         projectile.id = ParticleManager:CreateParticle(projectile.EffectName, PATTACH_CUSTOMORIGIN, nil)
+        --print("new id = "..projectile.id)
         ParticleManager:SetParticleAlwaysSimulate(projectile.id)
         for k,v in pairs(projectile.ControlPoints) do
           ParticleManager:SetParticleControl(projectile.id, k, v)
@@ -297,8 +298,9 @@ function Projectiles:CreateProjectile(projectile)
     end
   end
   function projectile:Destroy()
-    --kemPrint("destroying")
+    
     ParticleManager:DestroyParticle(projectile.id, projectile.bDestroyImmediate)
+    
     Projectiles:RemoveTimer(projectile.ProjectileTimerName)
   end
 
@@ -420,7 +422,7 @@ function Projectiles:CreateProjectile(projectile)
                 end
 
                 if projectile.UnitBehavior == PROJECTILES_DESTROY then
-                  print("423 destroy behavior unit")
+                  --print("423 destroy behavior unit")
                   ParticleManager:DestroyParticle(projectile.id, projectile.bDestroyImmediate)
                   if projectile.OnFinish then
                     local status, out = pcall(projectile.OnFinish, projectile, subpos)
@@ -471,7 +473,7 @@ function Projectiles:CreateProjectile(projectile)
                 end
 
                 if projectile.TreeBehavior == PROJECTILES_DESTROY then
-                  print("423 destroy behavior tree")
+                  --print("423 destroy behavior tree")
                   ParticleManager:DestroyParticle(projectile.id, projectile.bDestroyImmediate)
                   if projectile.OnFinish then
                     local status, out = pcall(projectile.OnFinish, projectile, subpos)
@@ -498,7 +500,7 @@ function Projectiles:CreateProjectile(projectile)
             end
 
             if projectile.WallBehavior == PROJECTILES_DESTROY then
-              print("423 destroy behavior wall")
+              --print("423 destroy behavior wall")
               ParticleManager:DestroyParticle(projectile.id, projectile.bDestroyImmediate)
               if projectile.OnFinish then
                 local status, out = pcall(projectile.OnFinish, projectile, subpos)
@@ -523,7 +525,7 @@ function Projectiles:CreateProjectile(projectile)
         if projectile.GroundBehavior ~= PROJECTILES_NOTHING and groundConnect then
             --print('groundConnect')
             if projectile.GroundBehavior == PROJECTILES_DESTROY then
-              print("423 destroy behavior ground")
+              --print("423 destroy behavior ground")
               ParticleManager:DestroyParticle(projectile.id, projectile.bDestroyImmediate)
               local status, action = pcall(projectile.OnGroundHit, projectile, ground)
               if not status then

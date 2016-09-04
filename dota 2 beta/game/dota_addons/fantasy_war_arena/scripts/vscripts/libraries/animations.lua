@@ -13,11 +13,11 @@ ANIMATIONS_VERSION = "0.84"
   -EndAnimation can be called in order to cancel a running animation
   -Animations are specified by a table which has as potential parameters:
     -duration: The duration to play the animation.  The animation will be cancelled regardless of how far along it is at the end fo the duration.
-    -activity: An activity code which will be used as the base activity for the animation i.e. DOTA_ACT_RUN, DOTA_ACT_ATTACK, etc.
-    -rate: An optional (will be 1.0 if unspecified) animation rate to be used when playing this animation.
-    -translate: An optional translate activity modifier string which can be used to modify the animation sequence.
+    -activity:An activity code which will be used as the base activity for the animation i.e. DOTA_ACT_RUN, DOTA_ACT_ATTACK, etc.
+    -rate:An optional (will be 1.0 if unspecified) animation rate to be used when playing this animation.
+    -translate:An optional translate activity modifier string which can be used to modify the animation sequence.
       Example: For ACT_DOTA_RUN+haste, this should be "haste"
-    -translate2: A second optional translate activity modifier string which can be used to modify the animation sequence further.
+    -translate2:A second optional translate activity modifier string which can be used to modify the animation sequence further.
       Example: For ACT_DOTA_ATTACK+sven_warcry+sven_shield, this should be "sven_warcry" or "sven_shield" while the translate property is the other translate modifier
   -A permanent activity translate can be applied to a unit by calling AddAnimationTranslate for that unit.  This allows for a permanent "injured" or "aggressive" animation stance.
   -Permanent activity translate modifiers can be removed with RemoveAnimationTranslate.

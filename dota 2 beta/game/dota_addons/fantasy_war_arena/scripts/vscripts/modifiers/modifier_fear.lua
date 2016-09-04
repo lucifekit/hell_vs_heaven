@@ -24,7 +24,7 @@ function modifier_fear:DeclareFunctions()
  
   return funcs
 end
-function modifier_slow:GetModifierMoveSpeedBonus_Constant( params)
+function modifier_fear:GetModifierMoveSpeedBonus_Constant( params)
   --PrintTable(params)
   return -200
 end

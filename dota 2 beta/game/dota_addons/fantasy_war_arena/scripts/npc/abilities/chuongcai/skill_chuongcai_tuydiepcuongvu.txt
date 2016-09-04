@@ -1,0 +1,39 @@
+"skill_chuongcai_tuydiepcuongvu"
+{
+   "ID"  "13157"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "35"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "skill_chuongcai_tuydiepcuongvu"
+   "ScriptFile"          "heroes_abilities/chuongcai/skill_chuongcai_tuydiepcuongvu"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE|DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // DRAGON WINE
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"reduce_damage"  "1.5 3.0 4.5 6.0 7.5 9.0 10.5 12.0 13.5 15.0"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"drunk_chance"  "10"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"drunk_basic_damage_reduce"  "6 12 18 24 30 36 42 48 54 60"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"drunk_skill_damage_reduce"  "6 12 18 24 30 36 42 48 54 60"
+		}
+	}
+   
+}

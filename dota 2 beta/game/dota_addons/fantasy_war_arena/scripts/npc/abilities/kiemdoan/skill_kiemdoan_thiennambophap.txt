@@ -30,7 +30,7 @@
 		"01"
 		{
 			"var_type"  "FIELD_INTEGER"
-			"movement_speed"  "26 32 38 44 50 56 62 68 74 80"
+			"movement_speed"  "32 40 47 55 62 70 77 85 92 100"
 		}
 		"02"
 		{

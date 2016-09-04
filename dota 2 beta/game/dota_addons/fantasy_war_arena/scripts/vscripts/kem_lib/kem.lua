@@ -12,6 +12,68 @@ function GetSkillLevel(hero)
     return ms
     --return 0
 end
+function IsShortRangeAttack(attacker,target)
+  if(not attacker:IsAlive())then
+    return false
+  end
+  if(not target:IsAlive())then
+    return false
+  end
+  return (attacker:GetOrigin()-target:GetOrigin()):Length2D()<240
+end
+function ReturnDamage(target,ability,attacker,damage,return_amount)
+  print("Damage = "..damage)
+  local damage_return = damage*return_amount
+  print("Damage return = "..damage_return)
+  if(attacker.inited)then
+     damage_return=damage_return*5
+  end
+  print("After check inited, Damage return = "..damage_return)
+  if(target.inited)then
+    if(attacker.return_damage_resist)then
+      local resist = attacker.return_damage_resist*0.01
+      print("Resist = "..resist)
+      damage_return = damage_return-damage_return*resist
+    end
+  end
+  print("After check resist, Damage return = "..damage_return)
+  DamageHandler:ApplyDamage(target,ability,attacker,damage_return,
+    DamageHandler:InitCrit(0,0),ELEMENT_METAL,
+    {flag="reflect"})
+end
+function Track(proj,target,delay,speed,difDistance)
+  if target then
+    --proj.bLive = true
+    Timers:CreateTimer(delay,function() 
+      --print("19")
+      if(proj.id and Projectiles.timers[proj.ProjectileTimerName])then
+        --print("21")
+        if(target:IsAlive())then
+          --print("23 alive")
+          local targetNewPos = target:GetAbsOrigin()
+          local myNewPos = proj.pos--tempProjectile:GetOrigin()
+          local newAngle = (targetNewPos-myNewPos):Normalized()
+          local spawn_point = myNewPos-newAngle*difDistance
+          --PrintTable(tempProjectile)
+          --proj.ControlPoints[1] = targetNewPos
+          if(proj.bRecreateOnChange)then
+            --print("31 velo")
+            proj:SetVelocity(newAngle*speed,spawn_point)
+          else
+            proj:SetVelocity(newAngle*speed,myNewPos)
+            --print("reset particle control")
+            ParticleManager:SetParticleControl(proj.id, 1, targetNewPos)
+          end
+          return delay
+        else
+          proj:Destroy()
+        end
+      end    
+      
+      
+    end)
+  end
+end
 function HasBook(hero)
   return GetSkillLevel(hero)>0
 end

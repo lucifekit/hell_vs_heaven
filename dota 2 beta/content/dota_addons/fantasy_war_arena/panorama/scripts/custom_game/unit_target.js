@@ -154,6 +154,11 @@ function BeginAttackState( nMouseButton, abilityIndex, targetEntityIndex )
 					if(!Entities.IsEntityInRange(localHero,order.TargetIndex,1500)){
 						return;
 					}
+					var cMana = Entities.GetMana(localHero);
+					var aMana = Abilities.GetManaCost(order.AbilityIndex);
+					if(cMana<aMana){
+						return;
+					}
 					//$.Msg(Entities.NotOnMinimapForEnemies(order.TargetIndex));
 					//$.Msg(Entities.CanAcceptTargetToAttack(localHero,order.TargetIndex));
 				}

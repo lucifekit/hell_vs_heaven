@@ -95,15 +95,16 @@ SETTING_LMTK_EFFECT_RED = "particles/edited_particle/kiem_doan/skill_kiemdoan_lm
 SETTING_LMTK_EFFECT_YELLOW = "particles/edited_particle/kiem_doan/skill_kiemdoan_lmtk_yellow.vpcf"
 SETTING_LMTK_EFFECT_ORANGE = "particles/edited_particle/kiem_doan/skill_kiemdoan_lmtk_orange.vpcf"
 SETTING_LMTK_EFFECT_GREEN = "particles/edited_particle/kiem_doan/skill_kiemdoan_lmtk_green.vpcf"
+--SETTING_LMTK_EFFECT_GREEN = "particles/edited_particle/chien_nhan/hatht.vpcf"
 SETTING_LMTK_HIT_EFFECT = "particles/units/heroes/hero_wisp/wisp_tether_hit.vpcf"
 --SETTING_KNMD_CASTER_EFFECT = "particles/units/heroes/hero_kunkka/kunkka_weapon_tidebringer.vpcf"
 
 
-SETTING_LMTK_SWORD_FLY_SPEED =600
-SETTING_LMTK_SWORD_FLY_TIME = 1.5
+SETTING_LMTK_SWORD_FLY_SPEED =600--600
+SETTING_LMTK_SWORD_FLY_TIME = 1.5--1.5
 SETTING_LMTK_SWORD_DISTANCE_BETWEEN_SWORD = 100
 SETTING_LMTK_SWORD_PIERCE_MULTIPLER = 0.5
-SETTING_LMTK_SWORD_CHANGE_DELAY = 0.5
+
 SETTING_LMTK_SWORD_PIERCE_MULTIPLER_MAX = 3
 
 SETTING_LMTK_MAX_TARGET = 5
@@ -190,7 +191,9 @@ local stun_time = 1
       return 
     end
     local critInfo = DamageHandler:GetCritInfo(caster)
-    for i=0,5 do
+    local sw = 5
+    --sw=0--bo
+    for i=0,sw do
       
       --cai thu 1 se la 0
       --cai thu 2 se la 0.3
@@ -264,11 +267,10 @@ local stun_time = 1
               fRehitDelay     = 10, -- (optional)
               
               
-              --bRecreateOnChange = false,
+              --bRecreateOnChange = true,
               
               followTarget    = target,
               numHit          = 0,
-              changeTimes     = 5,
               maxTarget       = SETTING_LMTK_MAX_TARGET,
               damage          = damage[i+1],
               crit            = critInfo,
@@ -292,29 +294,10 @@ local stun_time = 1
             StatusEffectHandler:ApplyEffect(proj.Source,unit,proj.effect,proj.effect_chance,proj.effect_time)
           end})
         end
+        local tempProjectile = Projectiles:CreateProjectile( projectileInfo )
+        --Track(tempProjectile,target,0.25,SETTING_LMTK_SWORD_FLY_SPEED,50)
+        Track(tempProjectile,target,0.25,SETTING_LMTK_SWORD_FLY_SPEED,0)
         
-        
-        if target then
-          local tempProjectile = Projectiles:CreateProjectile( projectileInfo )
-          Timers:CreateTimer(SETTING_LMTK_SWORD_CHANGE_DELAY,function()     
-
-            local targetNewPos = target:GetAbsOrigin()
-            local myNewPos = tempProjectile.pos--tempProjectile:GetOrigin()
-            --PrintTable(tempProjectile)
-            if(tempProjectile.isDead==false)then
-              tempProjectile:SetVelocity((targetNewPos-myNewPos):Normalized()*SETTING_LMTK_SWORD_FLY_SPEED,myNewPos-angleBetweenCasterAndTarget*50)
-            end
-            
-            
-            if(tempProjectile.changes>0)then
-              if(tempProjectile.isDead==false)then
-                return SETTING_LMTK_SWORD_CHANGE_DELAY
-              end
-            end
-          end)
-        else
-          Projectiles:CreateProjectile(projectileInfo)
-        end
         
     end)
    end

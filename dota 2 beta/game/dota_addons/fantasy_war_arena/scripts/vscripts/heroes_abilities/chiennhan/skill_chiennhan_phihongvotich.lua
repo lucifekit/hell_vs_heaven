@@ -152,7 +152,7 @@ local burn_time = 2+0.2*skill_level
     if(canMove)then
         --move
         --local gh = GetGroundHeight(caster:GetOrigin(),caster)
-        kemPrint("PHVT Moving")
+        --kemPrint("PHVT Moving")
         caster:SetAbsOrigin(caster:GetAbsOrigin()+tempAngle*move_per_tick)
         tick = tick-1
         return SETTING_TICK

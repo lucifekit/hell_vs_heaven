@@ -20,9 +20,8 @@ function skill_kiemdoan_thiennambophap:OnSpellStart()
   caster:AddNewModifier(caster, self, SETTING_SKILL_MODIFIER,{duration = 120})
   caster:CalculateStatBonus()
   
-  Timers:CreateTimer(0.2,function()
     UpdatePlayerData(caster:GetPlayerID())
-  end)
+  
   
   
   

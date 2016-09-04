@@ -1,0 +1,50 @@
+"effect_chuongcai_1"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE|DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE|DOTA_ABILITY_BEHAVIOR_ITEM"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityTextureName"			"phoenix_launch_fire_spirit"
+	"AbilityType"					"DOTA_ABILITY_TYPE_HIDDEN"
+	"IsHidden"						"1"
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"0"
+
+	
+	// Data driven
+	//-------------------------------------------------------------------------------------------------------------
+	"Modifiers"
+	{
+		"precache"
+		{
+			"particle"					"particles/econ/items/lina/lina_head_headflame/lina_flame_hand_dual_headflame.vpcf"
+		}
+	
+		"modifier_chuongcai_left_hand"
+		{
+			"Passive"					"1"
+			"IsHidden"					"1"
+			"IsPurgable"				"0"
+			
+			"OnCreated"
+			{
+			
+				"AttachEffect"
+				{
+					"Target"			"CASTER"
+					"EffectName"		"particles/econ/items/lina/lina_head_headflame/lina_flame_hand_dual_headflame.vpcf"
+					"EffectAttachType"	"start_at_customorigin"
+					"ControlPointEntities"
+					{
+						"CASTER"		"attach_attack2"
+						"CASTER"		"attach_attack1"
+					}
+				}
+			}
+			
+		}
+	}
+}

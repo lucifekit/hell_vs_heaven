@@ -36,6 +36,28 @@ if IsServer() then
   
   end
   
+  function modifier_kiemdoan_soanh:ActiveOnHit(target)
+    if(self:GetStackCount()<15)then
+        local random_value = math.random(0,100)
+        local message = "Random value "..random_value
+        if(random_value<5)then
+          
+          self:IncrementStackCount()
+          local skill_soanh = self:GetParent():FindAbilityByName("skill_kiemdoan_soanh")
+          if(skill_soanh)then
+            skill_soanh:EndCooldown()
+            message = message.." Proc "..skill_soanh:GetAbilityName()
+          end
+          
+        
+          
+         else
+          message = message.." Missed"
+        end
+
+        --kemPrint(message)
+      end
+  end
   --------------------------------------------------------------------------------
   
   function modifier_kiemdoan_soanh:OnCreated( kv )

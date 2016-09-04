@@ -15,8 +15,10 @@ function modifier_boss_hokhon_casting:CheckState()
  
   return state
 end
+function modifier_boss_hokhon_casting:DeclareFunctions()
+  return {MODIFIER_PROPERTY_OVERRIDE_ANIMATION}
+end
 
-
---function modifier_boss_hokhon_casting:GetOverrideAnimation( params )
---  return ACT_DOTA_ATTACK
---end
+function modifier_boss_hokhon_casting:GetOverrideAnimation( params )
+  return ACT_DOTA_CAST_ABILITY_2
+end

@@ -171,7 +171,7 @@ function Kem_Attributes:ModifyBonuses(hero)
         hero:CalculateStatBonus()
         hero.leveled_up = false
         if(modified) then
-          kemPrint("Kem_attributed : call update player data")
+          --kemPrint("Kem_attributed : call update player data")
 
           HERO_READY[hero:GetPlayerOwnerID()] = true
           

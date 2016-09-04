@@ -9,6 +9,12 @@ function skill_daocon_suongngaoconlon:GetBasicDamage()
   return skill_level*0.02
 end
 
+function skill_daocon_suongngaoconlon:GetSkillAmplify()
+  local caster = self:GetCaster()
+  local skill_level = self:GetLevel()+GetSkillLevel(caster)
+  return skill_level*0.02
+end
+
 function skill_daocon_suongngaoconlon:GetStunInflictTime()
   local caster = self:GetCaster()
   local skill_level = self:GetLevel()+GetSkillLevel(caster)

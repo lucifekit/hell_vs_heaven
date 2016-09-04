@@ -12,9 +12,9 @@ NOTIFICATIONS_VERSION = "0.89"
   -Notifications can be sent in pieces consisting of Labels, Images, HeroImages, and AbilityImages.
   -Notifications are specified by a table which has 4 potential parameters:
     -duration: The duration to display the notification for on screen.  Ignored for a notification which "continues" a previous notification line.
-    -class: An optional (leave as nil for default) string which will be used as the class to add to the notification piece.
-    -style: An optional (leave as nil for default) table of css properties to add to this notification, such as {["font-size"]="60px", color="green"}.
-    -continue: An optional (leave as nil for false) boolean which tells the notification system to add this notification to the current notification line if 'true'.  
+    -class:An optional (leave as nil for default) string which will be used as the class to add to the notification piece.
+    -style:An optional (leave as nil for default) table of css properties to add to this notification, such as {["font-size"]="60px", color="green"}.
+    -continue:An optional (leave as nil for false) boolean which tells the notification system to add this notification to the current notification line if 'true'.  
       This lets you place multiple individual notification pieces on the same overall notification.
   -For Labels, there is one additional mandatory parameter:
     -text:  The text to display in the notification.  Can provide localization tokens ("#addonname") or non-localized text.
