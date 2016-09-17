@@ -27,14 +27,29 @@ end
 --return state
 --end
 
+function modifier_tutien_tamma:Apply()
+   local p = self:GetParent()
+   local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
+   self.atk_speed = math.floor(10+skill_level*1.6)
+end
+
+function modifier_tutien_tamma:GainBack()
+   local p = self:GetParent()
+   local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
+   if(IsServer())then
+   end
+end
+
 function modifier_tutien_tamma:OnCreated( kv )
-  local p = self:GetParent()
-  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
-  self.atk_speed = math.floor(10+skill_level*1.6)
+self:Apply()
 end
 
 function modifier_tutien_tamma:OnRefresh( kv )
-  local p = self:GetParent()
-  local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
-  self.atk_speed = math.floor(10+skill_level*1.6)
+self:GainBack()
+self:Apply()
 end
+
+function modifier_tutien_tamma:OnDestroy()
+self:GainBack()
+end
+

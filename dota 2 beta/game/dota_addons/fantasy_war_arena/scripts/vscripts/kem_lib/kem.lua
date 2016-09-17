@@ -12,6 +12,47 @@ function GetSkillLevel(hero)
     return ms
     --return 0
 end
+
+function GetTargetAndLock(abilityData)
+  local caster = abilityData:GetCaster()
+  local hTarget = abilityData:GetCursorTarget()
+  local result = hTarget
+  if(hTarget)then
+      caster.lockTarget = hTarget
+      --setLock
+      CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(caster:GetPlayerID()), "set_lock", {playerID=caster:GetPlayerID(),target_idx=result:entindex()})
+   else
+      --an nut skill vao mat dat
+      if(caster.lockTarget)then
+        if(caster.lockTarget:IsNull())then
+          caster.lockTarget=nil
+        else
+          if(caster.lockTarget:IsAlive())then
+            if(caster:CanEntityBeSeenByMyTeam(caster.lockTarget))then
+              local castRange = abilityData:GetCastRange(caster:GetOrigin(),caster)+500
+              --print("Cast range : "..castRange)            
+              if((caster.lockTarget:GetOrigin()-caster:GetOrigin()):Length2D()<=castRange)then
+                result = caster.lockTarget
+                CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(caster:GetPlayerID()), "set_lock", {playerID=caster:GetPlayerID(),target_idx=result:entindex()})
+                --setLock
+              else
+                caster.lockTarget = nil
+              end   
+            else
+              caster.lockTarget = nil 
+            end
+          else
+            --target die
+            caster.lockTarget = nil
+          end
+        end
+        
+      else
+        --ko co lock target, thi cast vao mat dat thoi
+      end
+   end
+   return result
+end
 function IsShortRangeAttack(attacker,target)
   if(not attacker:IsAlive())then
     return false
@@ -41,33 +82,39 @@ function ReturnDamage(target,ability,attacker,damage,return_amount)
     DamageHandler:InitCrit(0,0),ELEMENT_METAL,
     {flag="reflect"})
 end
-function Track(proj,target,delay,speed,difDistance)
+function Track(proj,target,tick,missile_speed,missile_back_distance)
   if target then
     --proj.bLive = true
-    Timers:CreateTimer(delay,function() 
+    proj.changes = proj.fExpireTime/tick
+    
+    Timers:CreateTimer(tick,function() 
       --print("19")
       if(proj.id and Projectiles.timers[proj.ProjectileTimerName])then
         --print("21")
-        if(target:IsAlive())then
-          --print("23 alive")
-          local targetNewPos = target:GetAbsOrigin()
-          local myNewPos = proj.pos--tempProjectile:GetOrigin()
-          local newAngle = (targetNewPos-myNewPos):Normalized()
-          local spawn_point = myNewPos-newAngle*difDistance
-          --PrintTable(tempProjectile)
-          --proj.ControlPoints[1] = targetNewPos
-          if(proj.bRecreateOnChange)then
-            --print("31 velo")
-            proj:SetVelocity(newAngle*speed,spawn_point)
+        if(target)then
+          if(target:IsAlive())then
+            --print("23 alive")
+            local targetNewPos = target:GetAbsOrigin()+Vector(0,0,50)
+            local myNewPos = proj.pos--tempProjectile:GetOrigin()
+            local newAngle = (targetNewPos-myNewPos):Normalized()
+            local spawn_point = myNewPos-newAngle*missile_back_distance
+            --PrintTable(tempProjectile)
+            --proj.ControlPoints[1] = targetNewPos
+            if(proj.bRecreateOnChange)then
+              --print("31 velo")
+              proj:SetVelocity(newAngle*missile_speed,spawn_point)
+            else
+              proj:SetVelocity(newAngle*missile_speed,myNewPos)            
+              ParticleManager:SetParticleControl(proj.id, 1, targetNewPos)
+            end
+            return tick
           else
-            proj:SetVelocity(newAngle*speed,myNewPos)
-            --print("reset particle control")
-            ParticleManager:SetParticleControl(proj.id, 1, targetNewPos)
+            proj:Destroy()
           end
-          return delay
         else
-          proj:Destroy()
+        
         end
+        
       end    
       
       
@@ -112,9 +159,11 @@ function FxPointRelease(effect,point,control)
 end
 function FxPointControl(effect,point,time,control)
   local hit_effect = ParticleManager:CreateParticle(effect, PATTACH_WORLDORIGIN, nil)
-  ParticleManager:SetParticleControl( hit_effect, 0, point)     
+  ParticleManager:SetParticleControl( hit_effect, 0, point)
+  --PrintTable(control)     
   if(control)then
-    for i,v in ipairs(control) do
+    for i,v in pairs(control) do
+      --print("Set control point "..i.." = ")
       ParticleManager:SetParticleControl( hit_effect, i,v)
     end
     

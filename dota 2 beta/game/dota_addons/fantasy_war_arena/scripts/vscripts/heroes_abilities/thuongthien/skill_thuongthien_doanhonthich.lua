@@ -5,16 +5,16 @@ require('kem_lib/kem')
 --20 mân - 50
 --27% 1s - 54
 --35% 2s bat dong-85
-SETTING_MOVE_RANGE = 550
-SETTING_MOVE_RANGE_WITH_BOOK = 700
+SETTING_MOVE_RANGE = 700
+SETTING_MOVE_RANGE_WITH_BOOK = 1050
 SETTING_MOVE_TICK = 12
 SETTING_TICK = 0.04
 SETTING_IMMOBILE_TIME =2 
 SETTING_MAIM_TIME = 1
 SETTING_AOE = 150
 --------------------------------------------------------------------------------
---SETTING_SKILL_MODIFIER = "modifier_thuongthien_doanhonthich"
---LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/thuongthien/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
+SETTING_MOVING_MODIFIER = "modifier_kem_moving"
+LinkLuaModifier(SETTING_MOVING_MODIFIER,"modifiers/"..SETTING_MOVING_MODIFIER, LUA_MODIFIER_MOTION_NONE )
 function skill_thuongthien_doanhonthich:GetManaCost()
   local caster = self:GetCaster()
   local skill_level = self:GetLevel()+GetSkillLevel(caster)
@@ -74,6 +74,8 @@ local immobile_time = 2
 --    local ib = GridNav:IsBlocked(tempPoint)
 
 --   end
+
+   caster:AddNewModifier(caster,self,SETTING_MOVING_MODIFIER,{})
    Timers:CreateTimer(SETTING_TICK,function()
     local canMove=true
     if(tick==0)then
@@ -82,7 +84,7 @@ local immobile_time = 2
     if not caster:canDive()then
       canMove = false
     end
-    
+   
     if(canMove)then
         --move
         --local gh = GetGroundHeight(caster:GetOrigin(),caster)
@@ -100,6 +102,7 @@ local immobile_time = 2
             caster:SetOrigin(Vector(co.x,co.y,gh))
         end
         FindClearSpaceForUnit(caster, co, false )
+        caster:RemoveModifierByName(SETTING_MOVING_MODIFIER)
         local enemies = FindUnitsInRadius(caster:GetTeam(), caster:GetOrigin(), nil, SETTING_AOE, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, FIND_CLOSEST, false )
         if #enemies > 0 then
 

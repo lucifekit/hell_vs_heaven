@@ -56,6 +56,7 @@
     <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/kem_abilities_ui.xml" />
     <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/unit_target.xml" />
     <CustomUIElement type="GameInfo" layoutfile="file://{resources}/layout/custom_game/game_info.xml" />
+    <!--<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/picking_panel.xml" />-->
     <!--<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/battle.xml" />-->
 
     
@@ -78,3 +79,4 @@
 
     
 </root>
+

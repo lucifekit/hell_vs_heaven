@@ -26,10 +26,9 @@ end
 function modifier_kiemdoan_thiennambophap:Apply()
    local p = self:GetParent()
    local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
-   if(IsServer())then
-      local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
-      self.speed = (10+skill_level*3)*settings.speed_base
-   end
+   
+   local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
+   self.speed = (10+skill_level*3)*settings.speed_base
 end
 function modifier_kiemdoan_thiennambophap:OnCreated( kv )
  self:Apply()

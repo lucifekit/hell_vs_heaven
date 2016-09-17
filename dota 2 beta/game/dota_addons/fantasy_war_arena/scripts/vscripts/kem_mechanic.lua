@@ -22,9 +22,12 @@ SETTING_CREEP_UPGRADE_TICK = 180
 
 SETTING_TIMER = 2
 SETTING_EXPERIENCE_PER_TICK = 500
+SETTING_NEXT_BOSS_TIME = 120
+
 Boss_Heaven_Appear = false
 Boss_Hell_Appear = false
 LinkLuaModifier("modifier_creep_ai","modifiers/ai/modifier_creep_ai", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier("modifier_creep_test","modifiers/ai/modifier_creep_test", LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier("modifier_boss_ai","modifiers/ai/modifier_boss_ai", LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier("modifier_building","modifiers/modifier_building", LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier("modifier_building_hp","modifiers/modifier_building_hp", LUA_MODIFIER_MOTION_NONE )
@@ -32,9 +35,17 @@ LinkLuaModifier("modifier_building_hp","modifiers/modifier_building_hp", LUA_MOD
 LinkLuaModifier("modifier_prepare","modifiers/modifier_prepare", LUA_MODIFIER_MOTION_NONE )
 
 require('battle')
+boss_array = {"dieptinh","hokhon"}
 function CreateBoss(where,team)
-  local unit_name_array = {"dieptinh","hokhon"}
-  local unit_name = unit_name_array[math.random(1,#unit_name_array)]
+  --local unit_name_array = {"dieptinh","hokhon"}
+  if(#boss_array==0)then
+    return
+  end
+  local boss_index = math.random(1,#boss_array)
+  local unit_name = boss_array[boss_index]
+  table.remove(boss_array,boss_index)
+  --print("NOW BOSS ARRAY ==========================")
+  --PrintTable(boss_array)
   --kemPrint("Create bosssssssssssssssssss")
   if(team==DOTA_TEAM_GOODGUYS)then
     unit_name="heaven"
@@ -314,7 +325,11 @@ function HandleHeroCreated(hero)
                 end
     
     for i = 1,12 do
-      hero:GetAbilityByIndex(i):SetLevel(5)
+      local tempAbility = hero:GetAbilityByIndex(i)
+      if(tempAbility)then
+        tempAbility:SetLevel(5)
+      end
+      
     end
     print("Set critical chance = 500")
     hero.critical_chance = 500
@@ -429,21 +444,31 @@ function initParonama()
     kemPrint("====================INITED PARONAMA =======================")
 
 end
+Heaven_Created = false
+Hell_Created = false
 function CreateHeavenBoss()
-  local tempEntitiesGroupHeaven = Entities:FindAllByName("heaven_teleport")  
-      for _,spawn_point in ipairs(tempEntitiesGroupHeaven) do
-        GameRules:SendCustomMessage("<font color='#0099ff'>SKYWRATH MAGE:</font> FOR THE HEAVEN SAKE, I COME TO DESTROY THE HELL", 0, 0)
-        --GameRules:SendCustomMessage("<font color='#0099ff'>Mystery voice:</font> Until now, i killed 329 people, maybe you will become the 330th one...", 1, 0)
-        CreateBoss(spawn_point:GetOrigin(),DOTA_TEAM_GOODGUYS)
-      end
+  if(not Heaven_Created)then
+    Heaven_Created = true
+    local tempEntitiesGroupHeaven = Entities:FindAllByName("heaven_teleport")  
+    for _,spawn_point in ipairs(tempEntitiesGroupHeaven) do
+      GameRules:SendCustomMessage("<font color='#0099ff'>SKYWRATH MAGE:</font> FOR THE HEAVEN SAKE, I COME TO DESTROY THE HELL", 0, 0)
+      --GameRules:SendCustomMessage("<font color='#0099ff'>Mystery voice:</font> Until now, i killed 329 people, maybe you will become the 330th one...", 1, 0)
+      CreateBoss(spawn_point:GetOrigin(),DOTA_TEAM_GOODGUYS)
+    end
+  end
+  
   
 end
 function CreateHellBoss()
-  local tempEntitiesGroupHell = Entities:FindAllByName("hell_teleport")  
+  if(not Hell_Created)then
+    Hell_Created = true
+    local tempEntitiesGroupHell = Entities:FindAllByName("hell_teleport")  
       for _,spawn_point in ipairs(tempEntitiesGroupHell) do
       GameRules:SendCustomMessage("<font color='#0099ff'>NIGHT STALKER:</font> TIME FOR HEAVEN FALL", 0, 0)
         CreateBoss(spawn_point:GetOrigin(),DOTA_TEAM_BADGUYS)
       end
+  end
+  
 end
 function OnDie(keys)
 
@@ -513,6 +538,16 @@ function OnDie(keys)
     if(string.sub(killedName,0,8)=="npc_boss")then
       TEAM_POINT[killerEntity:GetTeam()] =TEAM_POINT[killerEntity:GetTeam()]+5
       needUpdate = true
+      --msg
+      if(#boss_array>0)then
+        GameRules:SendCustomMessage("<font color='#ff2222'>Next boss will appear after "..SETTING_NEXT_BOSS_TIME.." seconds</font>", 0, 0)
+        Timers:CreateTimer(SETTING_NEXT_BOSS_TIME,function()
+          CreateBoss(Vector(0,-600,0),DOTA_TEAM_NEUTRALS)
+        end)
+      else
+        GameRules:SendCustomMessage("<font color='#ffff80'>All boss are eliminated</font>", 0, 0)
+      end
+      
     end
     RollDrops(killedUnit)
  
@@ -594,7 +629,7 @@ function OnSkillUsed(keys)
       if(hero.skillCooldown) then
         --hero:AddExperience(200,0,false,false)
         --hero:HeroLevelUp(true)
-        hero.skillCooldown()
+        hero:skillCooldown()
       end
       
         if(IsInToolsMode())then
@@ -667,7 +702,23 @@ function KemChat(keys,playerID)
               
             end
            end
-
+           if(command=="-creep")then
+            if(hero)then
+              local tempEntitiesGroupHeaven = Entities:FindAllByName("heaven_teleport")  
+              for _,spawn_point_entities in ipairs(tempEntitiesGroupHeaven) do
+                local spawn_point = spawn_point_entities:GetOrigin()
+                local neutralsUnitGroup = FindUnitsInRadius(NEUTRALS_TEAM,spawn_point, nil, 800, DOTA_UNIT_TARGET_TEAM_FRIENDLY,DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE,  FIND_ANY_ORDER, false)
+  
+                for i=1,5-#neutralsUnitGroup do
+                  local tempUnit = CreateUnitByName("npc_unit_level_10", Vector(math.random(spawn_point.x-400,spawn_point.x+400),math.random(spawn_point.y-400,spawn_point.y+400),0), true, nil, nil,DOTA_TEAM_NEUTRALS)
+          
+                  --kemPrint("Adding modifier for "..tempUnit:GetUnitName().."-"..tempUnit:entindex())
+                  tempUnit:AddNewModifier(nil,nil,"modifier_creep_test",nil)
+                end
+              end
+              
+            end
+           end
            if(command=="-kem")then
               
              if(IsInToolsMode())then
@@ -678,6 +729,19 @@ function KemChat(keys,playerID)
                 CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(playerID), "enter_debug_mode", {playerID=playerID})
                 for i = 1,12 do
                   hero:GetAbilityByIndex(i):SetLevel(5)
+                end
+             end
+           end
+           if(command=="-crys")then
+              
+             if(IsInToolsMode())then
+                for i = 1,10 do
+                    local item = CreateItem("item_crystal", nil, nil)
+                    item:SetPurchaseTime(0)
+                    local pos = hero:GetAbsOrigin()
+                    local drop = CreateItemOnPositionSync( pos, item )
+                    local pos_launch = pos+RandomVector(RandomFloat(150,200))
+                    item:LaunchLoot(false, 200, 0.75, pos_launch)
                 end
              end
            end
@@ -744,7 +808,7 @@ function KemChat(keys,playerID)
              end
            end
            
-           if(command=="-quitdebug")then
+           if(command=="-quitdebug" or command=="-qd")then
              if(IsInToolsMode())then
                 kemPrint("QUIT DEBUG")
                 CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(playerID), "quit_debug_mode", {playerID=playerID})
@@ -833,36 +897,45 @@ function KemChat(keys,playerID)
         --da co command     
 
         kemPrint("command "..command) 
+        if(command=="-ani")then
+          if(IsInToolsMode())then
+            if(hero)then
+              local anim = tonumber(s)
+              hero:StartGestureWithPlaybackRate(anim,1)
+            end
+          end
+        end
         if(command=="-level")then
            if(IsInToolsMode())then
-                    local level = tonumber(s)
-                    if(level>99)then
-                      level =  99
+                kemPrint("in tools mode")
+                local level = tonumber(s)
+                if(level>99)then
+                  level =  99
+                end
+
+                if(level>0 and level<=99)then
+                  if(hero)then
+                    while(hero:GetLevel()<level)do
+                      hero:AddExperience(500,0,false,false)
                     end
 
-                    if(level>0 and level<=99)then
-                      if(hero)then
-                        while(hero:GetLevel()<level)do
-                          hero:AddExperience(500,0,false,false)
-                        end
-
-                        hero:SetGold(99999,false)
-                        for i = 0,11 do
-                          local tempAbility =hero:GetAbilityByIndex(i) 
-                          if(tempAbility)then
-                            tempAbility:SetLevel(hero:GetAbilityByIndex(i):GetMaxLevel())
-                          end
-                          
-                        end
-                        --hero:AddNewModifier(hero,nil,"modifier_prepare",{duration=5})
-                        kemPrint("up auto "..playerID)
-                        GameMode:UpStatAuto({playerID=playerID})
-                        UpdatePlayerData(playerID)
-                      else
-                        kemPrint("NO hero")
-
+                    hero:SetGold(99999,false)
+                    for i = 0,11 do
+                      local tempAbility =hero:GetAbilityByIndex(i) 
+                      if(tempAbility)then
+                        tempAbility:SetLevel(hero:GetAbilityByIndex(i):GetMaxLevel())
                       end
+                      
                     end
+                    --hero:AddNewModifier(hero,nil,"modifier_prepare",{duration=5})
+                    kemPrint("up auto when type level "..playerID)
+                    GameMode:UpStatAuto({playerID=playerID})
+                    UpdatePlayerData(playerID)
+                  else
+                    kemPrint("NO hero")
+
+                  end
+                end
           end
         end
         if(command=="-lv")then
@@ -881,7 +954,7 @@ function KemChat(keys,playerID)
                         hero:SetGold(99999,false)
                       
                         --hero:AddNewModifier(hero,nil,"modifier_prepare",{duration=5})
-                        kemPrint("up auto "..playerID)
+                        kemPrint("up auto when type -lv "..playerID)
                         GameMode:UpStatAuto({playerID=playerID})
              
                       else

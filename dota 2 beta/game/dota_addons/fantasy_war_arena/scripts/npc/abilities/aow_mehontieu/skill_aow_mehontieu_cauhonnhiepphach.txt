@@ -1,0 +1,60 @@
+"skill_aow_mehontieu_cauhonnhiepphach"
+{
+   "ID"  "12405"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "9"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "skill_mehontieu_cauhonnhiepphach"
+   "ScriptFile"          "heroes_abilities/aow_mehontieu/skill_aow_mehontieu_cauhonnhiepphach"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "900"
+   "precache"
+   {
+   }
+   // STARSHATTER
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "41 42 43 44 45 46 47 48 49 50"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_damage_amplify"  "8 16 24 32 40 48 56 64 72 80"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "43 61 79 97 115 133 151 169 187 205"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "68 103 138 173 208 243 278 313 348 383"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_slow"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"slow_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "3"
+		}
+	}
+   
+}

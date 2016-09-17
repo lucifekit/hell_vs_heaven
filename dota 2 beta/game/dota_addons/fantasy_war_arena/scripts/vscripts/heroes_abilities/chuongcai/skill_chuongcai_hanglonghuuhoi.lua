@@ -94,7 +94,7 @@ local max_target = 5
          effect_time = burn_time,
          maxTarget = max_target,
          skill_11x_level = skill_11x_level,
-         iVisionTeamNumber = caster : GetTeamNumber(), 
+         iVisionTeamNumber = caster:GetTeamNumber(), 
          UnitTest = GeneralUnitTest,         
          OnUnitHit = function(proj, unit)  
        

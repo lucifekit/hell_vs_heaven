@@ -17,7 +17,8 @@ end
 function skill_chuongcai_caibangchuongphap:OnUpgrade()
   local caster = self:GetCaster()
   caster:AddNewModifier(caster, self, SETTING_SKILL_MODIFIER, {})
-  caster: CalculateStatBonus()
+  caster:CalculateStatBonus()
+  print("chuong cai upgrade skill")
   UpgradeSkill(caster:GetPlayerID())
   -- BASIC TALENT
 --local attack_speed = 10+1*skill_level

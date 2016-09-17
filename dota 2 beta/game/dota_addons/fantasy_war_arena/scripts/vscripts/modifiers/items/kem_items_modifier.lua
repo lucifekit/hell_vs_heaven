@@ -47,14 +47,14 @@ function kem_items_modifier:GetModifierConstantManaRegen()
 end
 
 
-function kem_items_modifier:GetNumber(params)
+function kem_items_modifier:GetNumber(key)
   if(IsServer())then
     if(self.data==nil)then
       return 0
     end
-    return self.data[params]==nil and 0 or self.data[params]
+    return self.data[key]==nil and 0 or self.data[key]
   else
-   local value = self:GetAbility():GetSpecialValueFor(params)
+   local value = self:GetAbility():GetSpecialValueFor(key)
     if(value>0)then
       return value
     end
@@ -64,11 +64,11 @@ function kem_items_modifier:GetNumber(params)
   
 end
 
-function kem_items_modifier:GetString(params)
+function kem_items_modifier:GetString(key)
   if(self.data==nil)then
     return ""
   end
-  return self.data[params]==nil and "" or self.data[params]
+  return self.data[key]==nil and "" or self.data[key]
 end
 function kem_items_modifier:GainExp(exp)
   --kemPrint("+"..params.unit:GetLevel().." exp")
@@ -120,49 +120,42 @@ function kem_items_modifier:OnDeath( params )
   end
   
 end
+
+
 LinkLuaModifier("modifier_two_weapon","modifiers/modifier_two_weapon", LUA_MODIFIER_MOTION_NONE )
+
+
 function kem_items_modifier:SkillChange(hero)
-  local modifiers_list = hero:FindAllModifiers()
-  local debuged = false
+  if(self.skill_level>0)then
+    print("Skill change check : Call upgrade skill for hero ( reset all stat )")
+    UpgradeSkillForHero(hero)
+  end
+  
   --chi refresh nhung cai nao ko co update
-  local skill_level_modifier = hero:FindModifierByName("modifier_skill_level")
-  if(skill_level_modifier)then
-    print("Kem item line : 146 stack count "..hero.skill_level)
-    skill_level_modifier:SetStackCount(hero.skill_level)
-  end
+  
   -- bo cac effect o buff-debuff
-  if(hero.class)then
-    for _,modifier in pairs(modifiers_list) do      
-      if(modifier.GainBack)then
-        print("Gain back .."..modifier:GetName())
-        modifier:GainBack()
-      end
-    end  
-  end
+--  if(hero.class)then
+--    for _,modifier in pairs(modifiers_list) do      
+--      if(modifier.GainBack)then
+--        print("Gain back .."..modifier:GetName())
+--        modifier:GainBack()
+--      end
+--    end  
+--  end
   
   --init lai tu cac skill passive
-  UpgradeSkillForHero(hero)
+  
+  --reset
+  
   --them lai cac effect o buff-debuff
-  if(hero.class)then
-    for _,modifier in pairs(modifiers_list) do
-        if(modifier.Apply)then
-          print("Reapply .."..modifier:GetName())
-          modifier:Apply()
-        end
-    end  
-  end
-  for _,modifier in pairs(modifiers_list) do
-    if(modifier.DeclareFunctions)then
-      --print("Refreshing "..modifier:GetName().." duration = "..modifier:GetDuration().." remain = "..modifier:GetRemainingTime())
-      modifier:OnRefresh(nil)
-    end
-  end
+  
   
 end
-function kem_items_modifier:OnCreated( params ) 
-    local item = self:GetAbility()
-    local hero = self:GetParent()
-    if IsServer() then --this should be only run on server.
+
+function kem_items_modifier:GetItemData()
+  local item = self:GetAbility()
+  local hero = self:GetParent()
+  if IsServer() then --this should be only run on server.
         local carryWeapon = false
         for _,modifiers in ipairs(hero:FindAllModifiers()) do
           if(modifiers.item_type)then
@@ -185,6 +178,8 @@ function kem_items_modifier:OnCreated( params )
           UpdatePlayerDataForHero(hero)
           return
         end
+        
+        
         if(itemname=="item_book")then
           kemPrint("Buy book")
           local tempAbility = hero:FindAbilityByName("skill_tutien_xuyenvantien")
@@ -209,34 +204,11 @@ function kem_items_modifier:OnCreated( params )
         
         
         self.resist = self:GetNumber("resist")
-        local skill_level = self:GetNumber("skill_level")
         
-        if(skill_level>0)then
-          hero.skill_level = hero.skill_level+skill_level
-          self:SkillChange(hero)
-        end
         
-        hero.resist_metal = hero.resist_metal+self.resist+self:GetNumber("resist_physical")
-        hero.resist_wood = hero.resist_wood +self.resist+self:GetNumber("resist_poison")
-        hero.resist_fire = hero.resist_fire+self.resist+self:GetNumber("resist_fire")
-        hero.resist_water = hero.resist_water+self.resist+self:GetNumber("resist_water")
-        hero.resist_earth = hero.resist_earth+self.resist+self:GetNumber("resist_lightning")
+        self.skill_level = self:GetNumber("skill_level")
         
-        hero.accuracy_point = hero.accuracy_point+ self:GetNumber("accuracy_point")
-        hero.evade_point = hero.evade_point+ self:GetNumber("evade")--ne tranh
         
-        hero.physic_amplify = hero.physic_amplify+ self:GetNumber("physic_amplify")/100--vat cong them vao
-        hero.element_amplify = hero.element_amplify+ self:GetNumber("element_amplify")/100--vat cong them vao
-        
-        hero.weapon_element_damage = hero.weapon_element_damage + self:GetNumber("weapon_element_damage")
-        hero.weapon_physical_damage = hero.weapon_physical_damage + self:GetNumber("weapon_physical_damage")
-        hero.weapon_poison_damage = hero.weapon_poison_damage + self:GetNumber("weapon_poison_damage")        
-        hero.critical_damage = hero.critical_damage + self:GetNumber("critical_damage")
-        hero.critical_chance = hero.critical_chance + self:GetNumber("critical_chance")
-        hero.hp_drain = hero.hp_drain + self:GetNumber("hp_drain")/100
-        hero.mp_drain = hero.mp_drain + self:GetNumber("mp_drain")/100
-        hero.damage_to_mp = hero.damage_to_mp + self:GetNumber("damage_to_mp")/100
-
     
     end
     --MODIFIER REGISTERED VALUE
@@ -247,23 +219,93 @@ function kem_items_modifier:OnCreated( params )
     self.mp = self:GetNumber("mp")
     self.hp_regen= self:GetNumber("hp_regen")
     self.mp_regen= self:GetNumber("mp_regen")
-    if(IsServer())then
-
-      kemPrint("Got New Item, Call update line 235 item =  "..self:GetAbility():GetAbilityName())
-
-      UpdatePlayerDataForHero(hero)
-    end
     
 end
 
 
-function kem_items_modifier:OnRefresh( params ) --When ever the unit takes damage this is called
-    if IsServer() then --this should be only run on server.
+function kem_items_modifier:ApplyStat()
+    local hero = self:GetParent()
+    hero.skill_level = hero.skill_level+self.skill_level
+    hero.resist_metal = hero.resist_metal+self.resist+self:GetNumber("resist_physical")
+    hero.resist_wood = hero.resist_wood +self.resist+self:GetNumber("resist_poison")
+    hero.resist_fire = hero.resist_fire+self.resist+self:GetNumber("resist_fire")
+    hero.resist_water = hero.resist_water+self.resist+self:GetNumber("resist_water")
+    hero.resist_earth = hero.resist_earth+self.resist+self:GetNumber("resist_lightning")
+    
+    hero.accuracy_point = hero.accuracy_point+ self:GetNumber("accuracy_point")
+    hero.evade_point = hero.evade_point+ self:GetNumber("evade")--ne tranh
+    
+    hero.physic_amplify = hero.physic_amplify+ self:GetNumber("physic_amplify")/100--vat cong them vao
+    print("229 ea = "..hero.element_amplify.." self = "..self:GetNumber("element_amplify"))
+    hero.element_amplify = hero.element_amplify+ self:GetNumber("element_amplify")/100--vat cong them vao
+    print("231 ea = "..hero.element_amplify)
+    print("Add element damage = "..self:GetNumber("weapon_element_damage"))
+    hero.weapon_element_damage = hero.weapon_element_damage + self:GetNumber("weapon_element_damage")
+    hero.weapon_physical_damage = hero.weapon_physical_damage + self:GetNumber("weapon_physical_damage")
+    hero.weapon_poison_damage = hero.weapon_poison_damage + self:GetNumber("weapon_poison_damage")        
+    hero.critical_damage = hero.critical_damage + self:GetNumber("critical_damage")
+    hero.critical_chance = hero.critical_chance + self:GetNumber("critical_chance")
+    hero.hp_drain = hero.hp_drain + self:GetNumber("hp_drain")/100
+    hero.mp_drain = hero.mp_drain + self:GetNumber("mp_drain")/100
+    local basic_damage = self:GetNumber("basic_damage")
+    print("Basic damage = "..basic_damage)
+    hero.basic_damage_percent = hero.basic_damage_percent + self:GetNumber("basic_damage")
+    hero.damage_to_mp = hero.damage_to_mp + self:GetNumber("damage_to_mp")/100
+
+    
+    
+end
+function kem_items_modifier:OnCreated( params ) 
+    self:GetItemData()
+    local hero = self:GetParent()
+    if(IsServer())then
         
+      self:ApplyStat()
+      print("Call skill change")
+      self:SkillChange(hero)
+      if(hero)then
+      kemPrint("Got New Item, Call update line 235 item =  "..self:GetAbility():GetAbilityName().." of hero "..hero:GetUnitName())
+      else
+      kemPrint("!!!! Got New Item, Call update line 235 item =  "..self:GetAbility():GetAbilityName().." of hero nil !!!")
+      end
+      
+
+      UpdatePlayerDataForHero(hero)
     end
 end
 
-function kem_items_modifier:OnDestroy() --When ever the unit takes damage this is called
+function kem_items_modifier:GainBackStat()
+  local hero = self:GetParent()
+ 
+  hero.skill_level = hero.skill_level-self.skill_level
+  hero.resist_metal = hero.resist_metal-self.resist-self:GetNumber("resist_physical")
+  hero.resist_wood = hero.resist_wood -self.resist-self:GetNumber("resist_poison")
+  hero.resist_fire = hero.resist_fire-self.resist-self:GetNumber("resist_fire")
+  hero.resist_water = hero.resist_water-self.resist-self:GetNumber("resist_water")
+  hero.resist_earth = hero.resist_earth-self.resist-self:GetNumber("resist_lightning")
+  
+  
+  hero.accuracy_point = hero.accuracy_point- self:GetNumber("accuracy_point")
+  hero.evade_point = hero.evade_point- self:GetNumber("evade")--ne tranh
+  
+  hero.physic_amplify = hero.physic_amplify- self:GetNumber("physic_amplify")/100--vat cong them vao
+  print("313 rm ea = "..hero.element_amplify.." self = "..self:GetNumber("element_amplify"))
+  hero.element_amplify = hero.element_amplify- self:GetNumber("element_amplify")/100
+  print("315 rm ea = "..hero.element_amplify)
+  print("Remove element damage = "..self:GetNumber("weapon_element_damage"))
+  hero.weapon_element_damage = hero.weapon_element_damage - self:GetNumber("weapon_element_damage")
+  hero.weapon_physical_damage = hero.weapon_physical_damage - self:GetNumber("weapon_physical_damage")
+  hero.weapon_poison_damage = hero.weapon_poison_damage - self:GetNumber("weapon_poison_damage")        
+  hero.critical_damage = hero.critical_damage - self:GetNumber("critical_damage")
+  hero.critical_chance = hero.critical_chance - self:GetNumber("critical_chance")
+  hero.hp_drain = hero.hp_drain - self:GetNumber("hp_drain")/100
+  hero.mp_drain = hero.mp_drain - self:GetNumber("mp_drain")/100
+  
+  hero.basic_damage_percent = hero.basic_damage_percent - self:GetNumber("basic_damage")
+
+end
+
+function kem_items_modifier:OnDestroy() 
     if IsServer() then --this should be only run on server.
         print("Droping item,removing modifier")
         local hero = self:GetParent()
@@ -281,42 +323,17 @@ function kem_items_modifier:OnDestroy() --When ever the unit takes damage this i
         end
         local hero = self:GetParent()
         if(self.data==nil)then
-
-          kemPrint("Call update 188 kem item")
-
+          kemPrint("Call update 188 kem item = nil !!!!!!!!!!!!!!")
           UpdatePlayerDataForHero(hero)
           return
         end
         if(hero.resist_metal==nil)then
           return
         end
-        local skill_level = self:GetNumber("skill_level")
-        
-        if(skill_level>0)then
-          hero.skill_level = hero.skill_level-skill_level
-          self:SkillChange(hero)
-        end
-      
-        hero.resist_metal = hero.resist_metal-self.resist-self:GetNumber("resist_physical")
-        hero.resist_wood = hero.resist_wood -self.resist-self:GetNumber("resist_poison")
-        hero.resist_fire = hero.resist_fire-self.resist-self:GetNumber("resist_fire")
-        hero.resist_water = hero.resist_water-self.resist-self:GetNumber("resist_water")
-        hero.resist_earth = hero.resist_earth-self.resist-self:GetNumber("resist_lightning")
         
         
-        hero.accuracy_point = hero.accuracy_point- self:GetNumber("accuracy_point")
-        hero.evade_point = hero.evade_point- self:GetNumber("evade")--ne tranh
-        
-        hero.physic_amplify = hero.physic_amplify- self:GetNumber("physic_amplify")/100--vat cong them vao
-        hero.element_amplify = hero.element_amplify- self:GetNumber("element_amplify")/100
-        hero.weapon_element_damage = hero.weapon_element_damage - self:GetNumber("weapon_element_damage")
-        hero.weapon_physical_damage = hero.weapon_physical_damage - self:GetNumber("weapon_physical_damage")
-        hero.weapon_poison_damage = hero.weapon_poison_damage - self:GetNumber("weapon_poison_damage")        
-        hero.critical_damage = hero.critical_damage - self:GetNumber("critical_damage")
-        hero.critical_chance = hero.critical_chance - self:GetNumber("critical_chance")
-        hero.hp_drain = hero.hp_drain - self:GetNumber("hp_drain")/100
-        hero.mp_drain = hero.mp_drain - self:GetNumber("mp_drain")/100
-
+        self:GainBackStat()
+        self:SkillChange(hero)
         kemPrint("Call update on Destroy 214 kem item "..self:GetAbility():GetAbilityName())
 
         UpdatePlayerDataForHero(hero)

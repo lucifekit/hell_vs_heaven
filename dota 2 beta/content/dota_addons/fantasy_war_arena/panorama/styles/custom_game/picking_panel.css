@@ -1,0 +1,2 @@
+.picking_panel_wrapper { width : 800px;height:600px;background-color:#ffffff;border:1px solid #000;transition-duration: 1.0s;transition-property:opacity;}
+.hidden{visibility: collapse;}

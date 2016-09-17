@@ -76,7 +76,7 @@ local max_target = math.floor(3+0.2*skill_level)
    effect_chance = chance_to_burn*100,
    effect_time = burn_time,
    maxTarget = max_target,
-   iVisionTeamNumber = caster : GetTeamNumber(), 
+   iVisionTeamNumber = caster:GetTeamNumber(), 
    UnitTest = GeneralUnitTest,
    OnUnitHit = function(proj, unit) 
    --unit:EmitSound(SETTING_HIT_SOUND)

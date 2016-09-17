@@ -12,14 +12,15 @@ function modifier_chuongcai_hoatbatluuthu:GetEffectName()
 end
 function modifier_chuongcai_hoatbatluuthu:DeclareFunctions()
 local funcs = {
-   --MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT
+   MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT
 }
 return funcs
 end
 
---function modifier_chuongcai_hoatbatluuthu:GetModifierAttackSpeedBonus_Constant( params)
---return self.atk_speed
---end
+function modifier_chuongcai_hoatbatluuthu:GetModifierMoveSpeedBonus_Constant( params)
+  
+    return self.speed
+end
 
 --function modifier_chuongcai_hoatbatluuthu:CheckState()
    --local state = {
@@ -32,9 +33,10 @@ end
 function modifier_chuongcai_hoatbatluuthu:Apply()
    local p = self:GetParent()
    local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
+   local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
+   self.speed = (10+skill_level*3)*settings.speed_base
    if(IsServer())then
-      local settings = CustomNetTables:GetTableValue( "kem_settings", "global")
-      self.speed = (10+skill_level*3)*settings.speed_base
+      
    end
 end
 

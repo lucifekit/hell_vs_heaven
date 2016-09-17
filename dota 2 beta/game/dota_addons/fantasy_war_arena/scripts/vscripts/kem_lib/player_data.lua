@@ -63,14 +63,97 @@ function UpgradeStat(playerID)
     hero.accuracy_point  = hero.stat_tp*4
     hero.hero_level = hero:GetLevel()
 
-    CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(playerID), "update_stat", {playerID=playerID,hero=hero,msg="54"})
+    CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(playerID), "update_stat", {playerID=playerID,hero=hero,msg="player data 54"})
 
     
   end
 end
 function UpgradeSkillForHero(hero)
-  
+  print("72 upgrade skill for hero called")
   UpgradeSkill(hero:GetPlayerID())
+end
+function ResetStat(hero)
+     hero.skill_level = 0
+  hero.hero_level = hero:GetLevel()
+  hero.physic_amplify  = 1 -- vat cong ngoai them vao tinh theo %
+  hero.element_amplify  = 1 -- vat cong noi vao tinh theo %
+
+
+
+  --caster.attribute_amplify_element
+  hero.weapon_element_damage  = 0 -- ngu hanh vu khi
+  hero.weapon_physical_damage  = 0 -- sat thuong diem tu vu khi cac kieu
+  hero.weapon_poison_damage = 0 -- doc sat
+  
+  hero.skill_element_damage  = 0 -- ngu hanh chieu thuc, co the la vat cong ngoai luon
+  hero.skill_physical_damage = 0 --vat cong ngoai cua chieu thuc
+  hero.skill_poison_damage   = 0 -- doc sat
+  
+  --hero.skill_tree_add_percent  = 0.0 -- ko can thiet?
+  hero.basic_damage_percent  = 0.0 -- phat huy luc tan cong co ban
+  hero.skill_amplify = 0 -- ho tro ky nang
+  --chance
+  --print("Init set chance = 0 "..hero:GetUnitName())
+  hero.critical_chance  = 0     --diem chi mang
+  hero.critical_damage  = 1.8   --sat thuong chi mang gay ra
+  hero.critical_damage_resist = 0 --sat thuong chi mang nhan vao
+  hero.reduce_poison_time  = 0.0  --giam thoi gian trung doc
+  
+  hero.evade_point  = hero.stat_tp*4
+  hero.accuracy_point  = hero.stat_tp*4 --chinh xac
+  hero.accuracy_chance  = 1 -- diem danh trung (%)
+  hero.bypass_evade  = 0 --bo qua ne tranh
+  -- hieu suat phuc hoi:Giam thoi gian phuc hoi, tick giua cac thoi gian phuc hoi, tang sinh luc hoi moi tick
+  hero.hpregen_multi  = 0.0
+  --hero.mregen_multi  = 0.0
+  hero.mpregen_multi = 0.0
+  
+  hero.hp_drain  = 0
+  hero.mp_drain  = 0
+  
+  hero.physic_evade = 0
+  hero.element_evade = 0
+
+  
+  hero.return_damage_resist  = 0 -- chong phan don
+  hero.damage_to_mp = 0.0 -- sat thuong chuyen hoa thanh noi luc
+
+  
+  --DEFENSE
+  hero.resist_metal = 0
+  hero.resist_wood = 0
+  hero.resist_fire = 0
+  hero.resist_water = 0
+  hero.resist_earth = 0
+  --STATUS EFFECT
+  hero.effect_burn_add_percent  = 0
+  hero.effect_burn_resist_percent  = 0
+  hero.effect_burn_add_time  = 0
+  hero.effect_burn_reduce_time  = 0
+  
+  hero.effect_slow_add_percent  = 0
+  hero.effect_slow_resist_percent  = 0
+  hero.effect_slow_add_time  = 0
+  hero.effect_slow_reduce_time  = 0
+  
+  hero.effect_stun_add_percent  = 0
+  hero.effect_stun_resist_percent  = 0
+  hero.effect_stun_add_time  = 0
+  hero.effect_stun_reduce_time  = 0
+  
+  hero.effect_weak_add_percent  = 0
+  hero.effect_weak_resist_percent  = 0
+  hero.effect_weak_add_time  = 0
+  hero.effect_weak_reduce_time  = 0
+  
+  hero.effect_maim_add_percent  = 0
+  hero.effect_maim_resist_percent  = 0
+  hero.effect_maim_add_time  = 0
+  hero.effect_maim_reduce_time  = 0
+  
+  hero.effect_paralized_resist_percent = 0
+  hero.effect_fear_resist_percent = 0
+  hero.effect_knockback_resist_percent = 0
 end
 function UpgradeSkill(playerID)
 
@@ -78,69 +161,48 @@ function UpgradeSkill(playerID)
   local hero = HERO_OF_PLAYER[playerID]
   
   if hero then
-    kemPrint("have hero")  
-
-    hero.hero_level = hero:GetLevel()
-  --ATTACKING DATA
-    hero.skill_element_damage = 0
-    --hero.skill_physical_damage = 0
-    hero.skill_poison_damage = 0
+    kemPrint("player data line 81 - upgrade skill - have hero, resetting stat")  
+    ResetStat(hero)
     
+    -- cong lai item truoc vi item co anh huong den skill level
     
-    hero.basic_damage_percent = 0
-    hero.physic_amplify  = 1
-    hero.element_amplify  = 1  
+    --cong lai item
+    local modifiers_list = hero:FindAllModifiers()
     
-    hero.physic_evade = 0
-    hero.element_evade = 0
+    for _,modifier in pairs(modifiers_list) do
+      if(modifier.GetItemData)then
+          modifier:ApplyStat()
+      end
+    end
     
-    hero.return_damage_resist  = 0
-    
-    hero.accuracy_chance = 1
-    hero.bypass_evade  = 0 --bo qua ne tranh
-    --print("Upgrade skill set chance = 0 "..hero:GetUnitName())
-    hero.critical_chance  = 0.0
-    hero.critical_damage=1.8
-    
-    hero.reduce_poison_time = 0.0--giam thoi gian trung doc
-    
---    hero.extra_hp_percentage = 0.0
---    hero.extra_mp_percentage = 0.0
-    
-    hero.hpregen_multi = 0.0
-    hero.mpregen_multi = 0.0
-    
-  --STATUS EFFECT DATA  
-    hero.effect_burn_add_percent  = 0
-    hero.effect_burn_resist_percent  = 0
-    hero.effect_burn_add_time  = 0
-    hero.effect_burn_reduce_time  = 0
-    
-    hero.effect_slow_add_percent  = 0
-    hero.effect_slow_resist_percent  = 0
-    hero.effect_slow_add_time  = 0
-    hero.effect_slow_reduce_time  = 0
-    
-    hero.effect_stun_add_percent  = 0
-    hero.effect_stun_resist_percent  = 0
-    hero.effect_stun_add_time  = 0
-    hero.effect_stun_reduce_time  = 0
-    
-    hero.effect_weak_add_percent  = 0
-    hero.effect_weak_resist_percent  = 0
-    hero.effect_weak_add_time  = 0
-    hero.effect_weak_reduce_time  = 0
-    
-    hero.effect_maim_add_percent  = 0
-    hero.effect_maim_resist_percent  = 0
-    hero.effect_maim_add_time  = 0
-    hero.effect_maim_reduce_time  = 0
-    
-    hero.effect_paralized_resist_percent = 0
-    hero.effect_fear_resist_percent = 0
-    hero.effect_knockback_resist_percent = 0
-    
-    
+    local skill_level_modifier = hero:FindModifierByName("modifier_skill_level")
+    if(skill_level_modifier)then
+      print("Kem item line : 134 stack count "..hero.skill_level)
+      skill_level_modifier:SetStackCount(hero.skill_level)
+    end
+    --cong lai cac modifier co refresh anh huong toi cac stat
+    for _,modifier in pairs(modifiers_list) do
+      if(modifier.DeclareFunctions)then
+        --print("Refreshing "..modifier:GetName().." duration = "..modifier:GetDuration().." remain = "..modifier:GetRemainingTime())
+        if(modifier.Update)then
+        else
+          --ko co update thi moi refresh
+          modifier:OnRefresh(nil)
+        end
+        
+      end
+    end
+    -- cong lai cac modifier co apply
+    if(hero.class)then
+      
+      for _,modifier in pairs(modifiers_list) do
+          if(modifier.Apply)then
+            print("Reapply .."..modifier:GetName())
+            modifier:Apply()
+          end
+      end  
+    end
+    -- cong lai skill
     for i=0,hero:GetAbilityCount()-1 do
       local tempAbility = hero:GetAbilityByIndex(i)
       if(tempAbility)then
@@ -321,10 +383,11 @@ function UpgradeSkill(playerID)
       end
       
     end
-
-    kemPrint("Send update stat "..playerID)
+    
+    
+    kemPrint("Send update stat for player "..playerID.." got "..hero.stat_point)
     hero.as = math.ceil(hero:GetAttackSpeed()*100-100)
-    CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(playerID), "update_stat", {playerID=playerID,hero=hero,msg="298"})
+    CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(playerID), "update_stat", {playerID=playerID,hero=hero,msg="player_data 298"})
 
     --CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(playerID), "update_skill", {playerID=playerID,hero=hero})
   end
@@ -407,20 +470,10 @@ function CreateDataForPlayer(playerID)
   hero:AddNewModifier(hero,nil , "modifier_skill_level",{})
   
   hero.stat_tp = 50
-
   Kem_Attributes:ModifyBonuses(hero)
-  
-  
   hero.hero_image= hero:GetUnitName()
   hero.hero_name= hero:GetUnitName()  
   hero.jump_time = 0
-  
-  
-  
-
- 
-  
-  
   
   hero.stat_sm  = hero:GetAgility()
   hero.stat_tp  = hero.stat_tp -- 1 than phap = 4 ne tranh, 4 chinh xac
@@ -433,119 +486,27 @@ function CreateDataForPlayer(playerID)
   hero.stat_spend_on_sm = 0
   hero.auto_sm = 0
   if(heroData["auto_sm"])then
-
     hero.auto_sm = heroData["auto_sm"]/100
-    --kemPrint("Auto_SM = "..hero.auto_sm.." - "..heroData["auto_sm"])
-
   end
   
   hero.stat_spend_on_tp = 0
-   hero.auto_tp = 0
+  hero.auto_tp = 0
   if(heroData["auto_tp"])then
-
     hero.auto_tp= heroData["auto_tp"]/100
-
   end
   hero.stat_spend_on_sk = 0
    hero.auto_sk = 0
   if(heroData["auto_sk"])then
-
     hero.auto_sk = heroData["auto_sk"]/100
-
   end
   hero.stat_spend_on_nc = 0
-   hero.auto_nc = 0
+  hero.auto_nc = 0
   if(heroData["auto_nc"])then
-
     hero.auto_nc = heroData["auto_nc"]/100
-
   end
   --damage
   
-  hero.physic_amplify  = 1 -- vat cong ngoai them vao tinh theo %
-  hero.element_amplify  = 1 -- vat cong noi vao tinh theo %
-
-
-
-  --caster.attribute_amplify_element
-  hero.weapon_element_damage  = 0 -- ngu hanh vu khi
-  hero.weapon_physical_damage  = 0 -- sat thuong diem tu vu khi cac kieu
-  hero.weapon_poison_damage = 0 -- doc sat
-  
-  hero.skill_element_damage  = 0 -- ngu hanh chieu thuc, co the la vat cong ngoai luon
-  hero.skill_physical_damage = 0 --vat cong ngoai cua chieu thuc
-  hero.skill_poison_damage   = 0 -- doc sat
-  
-  --hero.skill_tree_add_percent  = 0.0 -- ko can thiet?
-  hero.basic_damage_percent  = 0.0 -- phat huy luc tan cong co ban
-  hero.skill_amplify = 0
-  --chance
-  --print("Init set chance = 0 "..hero:GetUnitName())
-  hero.critical_chance  = 0     --diem chi mang
-  hero.critical_damage  = 1.8   --sat thuong chi mang gay ra
-  hero.critical_damage_resist = 0 --sat thuong chi mang nhan vao
-  hero.reduce_poison_time  = 0.0  --giam thoi gian trung doc
-  
-  hero.evade_point  = hero.stat_tp*4
-  hero.accuracy_point  = hero.stat_tp*4 --chinh xac
-  hero.accuracy_chance  = 1 -- diem danh trung (%)
-  hero.bypass_evade  = 0 --bo qua ne tranh
-  -- hieu suat phuc hoi : giam thoi gian phuc hoi, tick giua cac thoi gian phuc hoi, tang sinh luc hoi moi tick
-  hero.hpregen_multi  = 0.0
-  hero.manaregen_multi  = 0.0
-  
-  hero.hp_drain  = 0
-  hero.mp_drain  = 0
-  
-  hero.physic_evade = 0
-  hero.element_evade = 0
-  
-  hero.return_physic_damage  = 0
-  hero.return_magical_damage  = 0
-  
-  hero.return_damage_resist  = 0
-  hero.damage_to_mp = 0.0
-  --hero.damage_block  = 0
-  --hero.damage_block_max  = 0
-  
---  hero.extra_hp_percentage = 0.0
---  hero.extra_mp_percentage = 0.0
-  
-  --DEFENSE
-  hero.resist_metal = 0
-  hero.resist_wood = 0
-  hero.resist_fire = 0
-  hero.resist_water = 0
-  hero.resist_earth = 0
-  --STATUS EFFECT
-  hero.effect_burn_add_percent  = 0
-  hero.effect_burn_resist_percent  = 0
-  hero.effect_burn_add_time  = 0
-  hero.effect_burn_reduce_time  = 0
-  
-  hero.effect_slow_add_percent  = 0
-  hero.effect_slow_resist_percent  = 0
-  hero.effect_slow_add_time  = 0
-  hero.effect_slow_reduce_time  = 0
-  
-  hero.effect_stun_add_percent  = 0
-  hero.effect_stun_resist_percent  = 0
-  hero.effect_stun_add_time  = 0
-  hero.effect_stun_reduce_time  = 0
-  
-  hero.effect_weak_add_percent  = 0
-  hero.effect_weak_resist_percent  = 0
-  hero.effect_weak_add_time  = 0
-  hero.effect_weak_reduce_time  = 0
-  
-  hero.effect_maim_add_percent  = 0
-  hero.effect_maim_resist_percent  = 0
-  hero.effect_maim_add_time  = 0
-  hero.effect_maim_reduce_time  = 0
-  
-  hero.effect_paralized_resist_percent = 0
-  hero.effect_fear_resist_percent = 0
-  hero.effect_knockback_resist_percent = 0
+  ResetStat(hero)
   
   hero.player_name  = PlayerResource:GetPlayerName(playerID)
     if hero.player_name  == "" then -- This normally happens in dev tools
@@ -554,6 +515,9 @@ function CreateDataForPlayer(playerID)
   hero.canDive = function()
     if(hero:HasModifier("modifier_prepare"))then
       return false
+    end
+    if(hero:HasModifier("modifier_kem_moving"))then
+    
     end
     if hero:IsStunned() or hero:IsHexed() or hero:IsFrozen() or hero:IsNightmared() or hero:IsOutOfGame() then
     -- Interrupt the ability
@@ -566,7 +530,7 @@ function CreateDataForPlayer(playerID)
     --PrintTable(self)
     local atk_perseconds = hero:GetAttacksPerSecond()
     local general_cooldown =  1/atk_perseconds
-    for i = 0,6 do 
+    for i = 0,11 do 
        local tempAbility = hero:GetAbilityByIndex(i)
        if(tempAbility)then
          local currentCooldown = tempAbility:GetCooldownTimeRemaining()

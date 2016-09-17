@@ -1,0 +1,20 @@
+"skill_aow_mehontieu_truyhondoatmenh"
+{
+   "ID"  "12407"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "35"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "templar_assassin_refraction"
+   "ScriptFile"          "heroes_abilities/aow_mehontieu/skill_aow_mehontieu_truyhondoatmenh"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "700"
+   "precache"
+   {
+   }
+}

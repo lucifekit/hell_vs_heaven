@@ -94,6 +94,7 @@ function GameMode:_InitGameMode()
   
   CustomGameEventManager:RegisterListener( "level_up_ability", Dynamic_Wrap(GameMode, "LevelUpAbility"))
   CustomGameEventManager:RegisterListener( "up_stat", Dynamic_Wrap(GameMode, "UpStat"))
+  CustomGameEventManager:RegisterListener( "clear_target", Dynamic_Wrap(GameMode, "ClearTarget"))
   CustomGameEventManager:RegisterListener( "up_stat_auto", Dynamic_Wrap(GameMode, "UpStatAuto"))
   CustomGameEventManager:RegisterListener( "open_panel", Dynamic_Wrap(GameMode, "OpenPanel"))
   CustomGameEventManager:RegisterListener( "mark_inited_js", Dynamic_Wrap(GameMode, "MarkInitedJS"))

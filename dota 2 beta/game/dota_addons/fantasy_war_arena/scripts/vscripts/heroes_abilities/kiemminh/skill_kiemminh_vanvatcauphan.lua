@@ -164,7 +164,7 @@ local explode_max_target = 2
               fDistance       = SETTING_SPEED*SETTING_PROJ_DURATION, -- di chuyen toi da 1500 pixel
               fExpireTime     = SETTING_PROJ_DURATION, -- thoi gian teo
               fGroundOffset   = 40, -- chi dung voi zCheck, lockGround
-              nChangeMax      = 10, -- so lan toi da thay doi huong'
+              
               
               fStartRadius    = 80,
               fEndRadius      = 80,

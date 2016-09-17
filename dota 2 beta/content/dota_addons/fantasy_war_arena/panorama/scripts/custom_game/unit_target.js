@@ -360,6 +360,7 @@ function setCustomTargetImage(path){
 		$('#TargetImage').SetHasClass("hidden",false);
 		$('#TargetHeroImage').SetHasClass("hidden",true);
 }
+
 // Handle Left Button events
 function OnLeftButtonPressed()
 {
@@ -375,9 +376,10 @@ function OnLeftButtonPressed()
 	var targetIndex = GetMouseCastTarget();
 	if ( targetIndex === -1 )
 	{
-		//cast vao dat
+		//cast vao mat dat
 		if ( GameUI.IsShiftDown() )
 		{
+			GameEvents.SendCustomGameEventToServer( "clear_target", {unit: Players.GetPlayerHeroEntityIndex( Players.GetLocalPlayer() )} );
 			var castAbility = getAbilityToBeCast();
 			var castAbilityIndex = Entities.GetAbility( Players.GetPlayerHeroEntityIndex( Players.GetLocalPlayer() ), castAbility );
 			BeginAttackState( 0, castAbility, -1 );
@@ -707,9 +709,16 @@ function QuitDebugMode(){
 	$.Msg("Quit debug mode");
 	debug=false;
 }
+function SetLockTarget(data){
+	//set_lock
+	$.Msg("Set Lock Target");
+	var target_idx = data.target_idx;
+	UpdateTarget(target_idx);
+}
 (function () {
 	//enter_debug_mode
 	//print("Register DEBUG EVENT");
 	GameEvents.Subscribe( "enter_debug_mode", DebugMode);
 	GameEvents.Subscribe( "quit_debug_mode", QuitDebugMode);
+	GameEvents.Subscribe( "set_lock", SetLockTarget);
 })();

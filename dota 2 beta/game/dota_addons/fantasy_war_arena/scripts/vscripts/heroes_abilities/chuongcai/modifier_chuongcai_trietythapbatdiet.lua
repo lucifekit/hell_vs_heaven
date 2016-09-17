@@ -22,13 +22,15 @@ function modifier_chuongcai_trietythapbatdiet:OnTakeDamage( params)
         if(damage_taken>0)then
           --PrintTable(params)
           --print("Deal back damage")
-          if(params.damage_flags~=DOTA_DAMAGE_FLAG_REFLECTION)then
-            if(math.random(0,100)<self.chance_to_active)then
-              StatusEffectHandler:KnockBack(params.unit,params.unit:GetAbsOrigin(),params.attacker,self.chance_to_knockback,0.2,self.knockback_range)
+          if(self:GetAbility():IsCooldownReady())then
+            if(params.damage_flags~=DOTA_DAMAGE_FLAG_REFLECTION)then
+              if(math.random(0,100)<self.chance_to_active)then
+                StatusEffectHandler:KnockBack(params.unit,params.unit:GetAbsOrigin(),params.attacker,self.chance_to_knockback,0.2,self.knockback_range)
+                self:GetAbility():StartCooldown(0.33)
+              end
             end
-              
-            
           end
+          
           
         end
       end

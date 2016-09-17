@@ -36,7 +36,7 @@ function modifier_chuongcai_tuydiepcuongvu:Apply()
     
     ---- DRAGON WINE
 local reduce_damage = math.ceil(1.5*skill_level)
-self.incoming_damage = reduce_damage 
+self.incoming_damage = -reduce_damage 
 
     
    end

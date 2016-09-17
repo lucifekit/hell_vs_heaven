@@ -3,6 +3,10 @@ require('kem_lib/kem')
 --------------------------------------------------------------------------------
 SETTING_SKILL_MODIFIER = "modifier_tutien_meanhtung"
 SETTING_CAST_SOUND = "Hero_Luna.Taunt.Leap"
+SETTING_FLY_TIME = 0.15
+SETTING_EFFECT = "particles/units/heroes/hero_spectre/spectre_spectral_dagger.vpcf"
+SETTING_START_EFFECT = "particles/econ/items/phantom_assassin/phantom_assassin_arcana_elder_smith/pa_arcana_phantom_strike_start.vpcf"
+SETTING_END_EFFECT = "particles/edited_particle/tu_tien/mat_end.vpcf"
 LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/tutien/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
 function skill_tutien_meanhtung:GetManaCost()
    local caster = self:GetCaster()
@@ -41,6 +45,7 @@ function skill_tutien_meanhtung:OnSpellStart()
    local range = (target_point-caster_position):Length2D()
    if(range>max_range)then
     target_point = caster_position+max_range*angleBetweenCasterAndTarget
+    range = max_range
    end
    local canMove = true
    local canFind = GridNav:CanFindPath(caster_position, target_point)
@@ -60,10 +65,33 @@ function skill_tutien_meanhtung:OnSpellStart()
     return
    end
    caster:EmitSound(SETTING_CAST_SOUND)
-   Timers:CreateTimer(0.5,function() 
-    self:GetCaster():RemoveGesture(ACT_DOTA_CAST_ABILITY_1)
-   end )
+   FxPoint(SETTING_START_EFFECT,caster_position,0.5)
+   Projectiles:CreateProjectile({
+       EffectName      = SETTING_EFFECT,
+       Ability         = self,
+       vSpawnOrigin    = caster_position+Vector(0,0,100),
+       fDistance     = range,
+       fStartRadius    = 140,
+       fEndRadius      = 140,
+       Source        = caster,
+       bHasFrontalCone   = true,
+       bReplaceExisting  = false,
+       fExpireTime     = SETTING_FLY_TIME,--GameRules:GetGameTime() +100,--
+       GroundBehavior = PROJECTILES_NOTHING,
+       UnitBehavior  = PROJECTILES_NOTHING,
+       vVelocity     = angleBetweenCasterAndTarget*(range/SETTING_FLY_TIME),--angleBetweenCasterAndTarget,
+       bProvidesVision   = true,
+       numHit  = 0,
+       iVisionRadius   = 200,
+       iVisionTeamNumber = caster:GetTeamNumber(), 
+       UnitTest = GeneralUnitTest,
+       OnFinish = function(proj, unit)             
+           caster:RemoveGesture(ACT_DOTA_CAST_ABILITY_1)
+           caster:SetOrigin(target_point)
+           FxPoint(SETTING_END_EFFECT,target_point,0.5)
+           FindClearSpaceForUnit(caster,caster:GetAbsOrigin(),true)
+     end
+  })
+
    
-   caster:SetOrigin(target_point)
-   FindClearSpaceForUnit(caster,caster:GetAbsOrigin(),true)
 end

@@ -8,7 +8,7 @@
 
 require('kem_lib/kem')
 SETTING_FX_DAMAGE = "particles/edited_particle/msg_damage.vpcf"
-SETTING_FX_EVADE = "particles/msg_fx/msg_evade.vpcf"
+SETTING_FX_EVADE = "particles/fx_evade.vpcf"
 SETTING_CRITICAL_BASE = 1000
 if not DamageHandler then
   DamageHandler = class({})
@@ -40,6 +40,8 @@ BUFF_TUYDIEPCUONGVU = "modifier_chuongcai_tuydiepcuongvu"
 BUFF_DOANCANNHAN = "modifier_tutien_doancannhan"
 BUFF_DOANCANNHAN_COOLDOWN = "modifier_tutien_doancannhan_cooldown"
 BUFF_DOANCANNHAN_ACTIVE = "modifier_tutien_doancannhan_active"
+BUFF_TRUYHONDOATMENH = "modifier_aow_mehontieu_truyhondoatmenh"
+
 FX_DOANCANNHAN = "particles/econ/items/luna/luna_lucent_ti5/luna_eclipse_impact_moonfall.vpcf"
 
 LinkLuaModifier(BUFF_DOANCANNHAN_ACTIVE,"heroes_abilities/tutien/"..BUFF_DOANCANNHAN_ACTIVE, LUA_MODIFIER_MOTION_NONE )
@@ -62,6 +64,11 @@ end
 
 
 function DamageHandler:OnHit(attacker,target)
+if(attacker:HasModifier(BUFF_TRUYHONDOATMENH))then
+      local buff_truyhon = attacker:FindModifierByName(BUFF_TRUYHONDOATMENH)
+      buff_truyhon:ActiveOnHit(target)
+      
+    end
   if(attacker:HasModifier(BUFF_SOANH))then
       local buff_soanh = attacker:FindModifierByName(BUFF_SOANH)
       buff_soanh:ActiveOnHit(target)
@@ -100,7 +107,7 @@ function DamageHandler:CalculateMiss(attacker,target)
         --kemPrint("Accuracy = "..accuracy.." bypass ="..attacker.bypass_evade.." Evade = "..targetEvade.." Chance to hit= "..chance_to_hit.."%".." proc = "..proc)
         
         if(proc>chance_to_hit)then
-
+          print(proc.." > "..chance_to_hit.." accuracy = "..accuracy.."/"..accuracy.."+"..targetEvade)
           --truot
           return true
         end
@@ -117,6 +124,9 @@ function DamageHandler:MissileHandler(missile_data)
 
     return
   end
+  local miss_function = missile_data.miss_function or function()
+    return
+  end
   local missed = false
   
   if(projectile.maxTarget)then
@@ -127,7 +137,7 @@ function DamageHandler:MissileHandler(missile_data)
     end
   end
 
-  local chance_to_hit = 100
+  --local chance_to_hit = 100
 
   if not missed then
     --Tinh neu la ngoai cong thi kiem tra ne tranh, chinh xac cac kieu 
@@ -153,7 +163,11 @@ function DamageHandler:MissileHandler(missile_data)
       pcall(hit_function,projectile,target)
     end
   else
-      kemPrint("Missed "..chance_to_hit.."%")
+    if(miss_function)then
+      --kemPrint("Calling hit function")
+      pcall(miss_function,projectile,target)
+    end
+      kemPrint("No miss function, Missed")
           local numberIndex = ParticleManager:CreateParticle( SETTING_FX_EVADE, PATTACH_OVERHEAD_FOLLOW, target )
           ParticleManager:SetParticleControl( numberIndex, 1, Vector( 6, 0, 0 ) )
           ParticleManager:SetParticleControl( numberIndex, 2, Vector( 1, 1, 0 ) )
@@ -210,9 +224,9 @@ function DamageHandler:ApplyDamage(whoDealDamage,byWhichAbility,whoTakeDamage,AD
   if(whoDealDamage.is_physical)then
     --neu la ngoai cong
     --neu co vu khi doc sat
-    if(damage_magic~=ELEMENT_WOOD)then
+    if(damage_element~=ELEMENT_WOOD)then
       if(whoDealDamage.weapon_poison_damage>0)then
-
+        print("vu khi doc sat "..damage_magic.." vs wood = "..ELEMENT_WOOD.." va la physical")
         PoisonHandler:ApplyPoison(whoDealDamage,whoTakeDamage,byWhichAbility,0.5,5,whoDealDamage.weapon_poison_damage,{})
       end
     end
@@ -574,7 +588,7 @@ function DamageHandler:GetDamage(data)
   
   local add_element =   (basic_damage)  * (att_magic_value*element_amplify)--phat huy luc tan cong co ban
   add_element = add_element + weapon_element_damage -- sat thuong tu vu khi 
-  add_element = add_element + skill_element_damage*(1+skill_amplify)--sat thuong chieu thuc noi tai
+  add_element = add_element + skill_element_damage*basic_damage--sat thuong chieu thuc noi tai
   
   local min_element = add_element + element_damage_min*(1+skill_amplify)
   min_element = (1+skill_tree_amplify_damage)*min_element
@@ -583,8 +597,8 @@ function DamageHandler:GetDamage(data)
   max_element = (1+skill_tree_amplify_damage)*max_element
   
   --print("Physic calculate = ".."("..basic_damage.."+"..skill_tree_amplify_damage.."+"..skill_amplify..")  * (("..att_physic_value..")*("..physic_amplify.."+"..skill_physical_damage_per..")+"..physical_damage..")  = "..physic_min)
-  print("Magic calculate = ".."("..basic_damage.."*"..att_magic_value.."*"..element_amplify..")".." + weapon["..weapon_element_damage.."] "..
-  "+ skill [ (1+"..skill_amplify..")  * "..skill_element_damage..")] ====* ["..(1+skill_tree_amplify_damage).."] = "..min_element)
+  --kemPrint("Magic calculate = ".."("..basic_damage.."*"..att_magic_value.."*"..element_amplify..")".." + weapon["..weapon_element_damage.."] "..
+  --"+ skill [ ("..basic_damage..")  * "..skill_element_damage..")] + min["..element_damage_min.."* (1+"..skill_amplify..") ]====* ["..(1+skill_tree_amplify_damage).."] = "..min_element)
   
   --PrintTable(caster)
   --kemPrint("Physic : "..skill_physical_damage_per.."+"..attribute_amplify_physic.." = "..physic_min)
@@ -633,13 +647,26 @@ function DamageHandler:DamageAreaParams(whoDealDamage,byWhichAbility,where,radiu
           maxTarget = maxTarget-1
           --print("Found victim "..victim:GetUnitName())
           if(DamageHandler:CalculateMiss(whoDealDamage,victim))then
-            
+            --miss
+            local numberIndex = ParticleManager:CreateParticle( SETTING_FX_EVADE, PATTACH_OVERHEAD_FOLLOW, victim )
+            ParticleManager:SetParticleControl( numberIndex, 1, Vector( 6, 0, 0 ) )
+            ParticleManager:SetParticleControl( numberIndex, 2, Vector( 1, 1, 0 ) )
+            ParticleManager:SetParticleControl( numberIndex, 3, Vector( 255,25,25 ) )
+            ParticleManager:ReleaseParticleIndex(numberIndex)
           else
             --print("Damage---------")
             if(damageUnitTable[victim]==nil)then
               damageUnitTable[victim]=1
               --print("Deal damage to "..victim:GetUnitName())
               DamageHandler:ApplyDamage(whoDealDamage,byWhichAbility,victim,damage,crit,damage_element,"")
+              if(type(custom)=="table")then
+                if(custom["action"]=="status_effect")then
+                  local effect_type = custom["effect_type"]
+                  local effect_chance = custom["effect_chance"]
+                  local effect_time = custom["effect_time"]
+                  StatusEffectHandler:ApplyEffect(whoDealDamage,victim,effect_type,effect_chance,effect_time)
+                end
+              end
             else
               --print("Cancel---existed")
             end

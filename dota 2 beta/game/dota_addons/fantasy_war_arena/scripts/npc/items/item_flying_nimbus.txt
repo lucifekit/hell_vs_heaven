@@ -172,7 +172,7 @@
 		"02"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"bonus_movement_speed"		"150"
+			"bonus_movement_speed"		"200"
 		}
 	}
 	"OnSpellStart"
@@ -217,7 +217,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"item_datadriven"
-	"ID"							"5005" 
+	"ID"							"15005" 
 	}
 	
 	
@@ -409,7 +409,7 @@
 		"02"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"bonus_movement_speed"		"200"
+			"bonus_movement_speed"		"250"
 		}
 	}
 	"OnSpellStart"
@@ -446,6 +446,225 @@
 	"precache"
     {
       "particle"              "particles/edited_particle/skywing.vpcf"      
+    }
+  }
+  
+  
+  
+  ////////////=========================================================================================================
+  "item_legionwing_inactive"
+  {
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"5011" 
+	
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"Model"							"models/props_gameplay/boots_of_speed.mdl"
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"item_skywing_inactive"
+	"AbilityCooldown" "3"
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"15000"
+	"ItemShopTags"					"move_speed"
+	"ItemQuality"					"component"
+	"ItemAliases"					"flying nimbus"
+	"SideShop"						"1"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"1000"
+		}
+	}
+	"OnSpellStart"
+	{		
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/items/flyingnimbus.lua"
+			"Function"				"ActiveLegionwing"
+		}	
+		"FireSound"
+		{
+			"EffectName"		"DOTA_Item.PhaseBoots.Activate"
+			"Target"			"CASTER"
+		}
+	}
+	"Modifiers"
+	{
+		"modifier_legionwing_inactive"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			//"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_health"
+			}
+		}
+	}
+	"precache"
+    {
+      "particle"              "particles/econ/items/legion/legion_fallen/legion_fallen_ambient_alt.vpcf"      
+    }
+  }
+"item_legionwing"
+  {
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"5012" 
+	
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"Model"							"models/props_gameplay/boots_of_speed.mdl"
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"item_skywing_active"
+	"AbilityCooldown" "3"
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"15000"
+	"ItemShopTags"					"move_speed"
+	"ItemQuality"					"component"
+	"ItemAliases"					"legion wing"
+	"SideShop"						"1"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+
+			"bonus_health"			"1000"
+
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_movement_speed"		"300"
+		}
+	}
+	"OnSpellStart"
+	{		
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/items/flyingnimbus.lua"
+			"Function"				"DeActiveLegionwing"
+		}	
+	}
+	"Modifiers"
+	{
+		"modifier_legionwing"
+		{
+			"Passive"			"1"
+			"IsHidden"			"0"
+			"OverrideAnimation"	"ACT_DOTA_IDLE"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_health"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
+
+				"MODIFIER_PROPERTY_VISUAL_Z_DELTA"				"200"
+
+			}
+			"States"
+			{
+				"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
+
+			}
+			"OnCreated"
+            {
+                "AttachEffect"
+                {
+                    "Target"			"CASTER"
+                    "EffectName"		"particles/econ/items/legion/legion_fallen/legion_fallen_press.vpcf"
+                    "EffectAttachType"	"follow_origin"
+                }
+            }
+		}
+	}
+	"precache"
+    {
+      "particle"              "particles/econ/items/legion/legion_fallen/legion_fallen_press.vpcf"      
+    }
+  }
+  "item_legionwing_no_disable"
+  {
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"5013" 
+	
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"Model"							"models/items/vengefulspirit/forsaken_wings_shoulder/forsaken_wings_shoulder.mdl"
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"item_skywing_active"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"15000"
+	"ItemShopTags"					"move_speed"
+	"ItemQuality"					"component"
+	"ItemAliases"					"legion wing"
+	"SideShop"						"1"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"1000"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_movement_speed"		"300"
+		}
+	}
+	"OnSpellStart"
+	{		
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/items/flyingnimbus.lua"
+			"Function"				"DeActiveLegionwing"
+		}	
+	}
+	"Modifiers"
+	{
+		"modifier_legionwing_no_disable"
+		{
+			"Passive"			"1"
+			"IsHidden"			"0"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_health"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
+			}
+			"OnCreated"
+            {
+                
+                "AttachEffect"
+                {
+                    "Target"			"CASTER"
+                    "EffectName"		"particles/edited_particle/legionwing.vpcf"
+                    "EffectAttachType"	"follow_origin"
+                }
+            }
+		}
+	}
+	"precache"
+    {
+      "particle"              "particles/edited_particle/legionwing.vpcf"      
     }
   }
   

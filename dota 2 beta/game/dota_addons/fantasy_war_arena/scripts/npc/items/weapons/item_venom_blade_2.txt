@@ -1,0 +1,593 @@
+//============PSYCHIC BLADE===============
+	"item_psychic_blade"
+	{
+		"ID"              "7060"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"epic"
+		"AbilityTextureName"      "item_silver_edge"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "240"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"attack_speed"  "28"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "160"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "350"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "65"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_damage"  "0"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "0"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"skill_level"  "0"
+			}
+			"09"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "10"
+			}
+		}
+	}
+	"item_psychic_blade_lv_1"
+	{
+		"ID"              "7061"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"epic"
+		"AbilityTextureName"      "item_silver_edge"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "270"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"attack_speed"  "29"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "172"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "385"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "65"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_damage"  "0"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "0"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"skill_level"  "0"
+			}
+			"09"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "15"
+			}
+		}
+	}
+	"item_psychic_blade_lv_2"
+	{
+		"ID"              "7062"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"epic"
+		"AbilityTextureName"      "item_silver_edge"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "300"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"attack_speed"  "31"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "184"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "420"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "65"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_damage"  "0"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "0"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"skill_level"  "0"
+			}
+			"09"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "20"
+			}
+		}
+	}
+	"item_psychic_blade_lv_3"
+	{
+		"ID"              "7063"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"epic"
+		"AbilityTextureName"      "item_silver_edge"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "330"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"attack_speed"  "32"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "196"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "455"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "65"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_damage"  "0"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "0"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"skill_level"  "0"
+			}
+			"09"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "25"
+			}
+		}
+	}
+	"item_psychic_blade_lv_4"
+	{
+		"ID"              "7064"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"epic"
+		"AbilityTextureName"      "item_silver_edge"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "360"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"attack_speed"  "34"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "208"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "490"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "65"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_damage"  "65"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "0"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"skill_level"  "0"
+			}
+			"09"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "30"
+			}
+		}
+	}
+	"item_psychic_blade_lv_5"
+	{
+		"ID"              "7065"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"epic"
+		"AbilityTextureName"      "item_silver_edge"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "390"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"attack_speed"  "35"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "220"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "525"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "65"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_damage"  "65"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "0"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"skill_level"  "0"
+			}
+			"09"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "35"
+			}
+		}
+	}
+	"item_psychic_blade_lv_6"
+	{
+		"ID"              "7066"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"epic"
+		"AbilityTextureName"      "item_silver_edge"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "420"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"attack_speed"  "37"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "232"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "560"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "65"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_damage"  "65"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "20"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"skill_level"  "0"
+			}
+			"09"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "40"
+			}
+		}
+	}
+	"item_psychic_blade_lv_7"
+	{
+		"ID"              "7067"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"epic"
+		"AbilityTextureName"      "item_silver_edge"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "450"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"attack_speed"  "38"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "244"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "595"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "65"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_damage"  "65"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "20"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"skill_level"  "0"
+			}
+			"09"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"exp"  "45"
+			}
+		}
+	}
+	"item_psychic_blade_max"
+	{
+		"ID"              "7068"
+		"BaseClass"           	  "item_lua"
+		"ScriptFile"                    "items/items.lua"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"				"epic"
+		"AbilityTextureName"      "item_silver_edge"
+		"ItemCost"            "0"
+		"HomeShop"            "0"
+		"SecretShop"            "1"
+		"ItemShareability"        "ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"        "weapon"
+		"ItemInitialCharges" "0"
+		"ItemDisplayCharges" "0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp"  "480"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"attack_speed"  "40"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_amplify"  "256"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weapon_poison_damage"  "630"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "65"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_damage"  "65"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "20"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"skill_level"  "1"
+			}
+		}
+	}
+	"item_recipe_psychic_blade"
+	{
+		"ID"              "7069"
+		"BaseClass"           "item_datadriven"
+		"ItemRecipe"          "1"
+		"ItemCost"            "0"
+		"ItemResult"          "item_psychic_blade"
+		"ItemRequirements"
+		{
+			"01"  "item_venom_blade_max;item_crystal;"
+		}
+	}

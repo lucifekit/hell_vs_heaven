@@ -481,7 +481,7 @@ function GameMode:LevelUpAbility(keys)
    
    --UpdatePlayerData(PlayerID)
 
-   CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(PlayerID), "update_stat", {playerID=PlayerID,hero=hero,msg="event 463"})
+   CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(PlayerID), "update_stat", {playerID=PlayerID,hero=hero,msg="msg event 463"})
    CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(PlayerID), "learned_skill", {playerID=PlayerID,hero=hero,ability=keys.ability})
       
    --CustomGameEventManager:Send_ServerToPlayer(player, "update_skill", {player = PlayerID ,hero = hero,msg="event#478 learn ability"})
@@ -500,8 +500,10 @@ function GameMode:OnPlayerLevelUp(keys)
   local level = keys.level
   local playerID = player:GetPlayerID()
   local hero = HERO_OF_PLAYER[playerID]
-  
+  local str = "From "..hero.stat_point
   hero.stat_point =hero.stat_point +20
+  str = str.." to "..hero.stat_point
+  print(str)
   hero.stat_gain = hero.stat_gain +20 
   hero.skill_point =hero.skill_point + 1
   hero.hero_level = hero:GetLevel()
@@ -519,7 +521,7 @@ function GameMode:UpStatAuto(keys)
   
 
   local hero = HERO_OF_PLAYER[PlayerID]
-
+  print("Update stat auto "..hero.stat_point)
   if(hero.stat_point>0)then
     local stat_gain = hero.stat_gain
     local stat_spend_on_sm=hero.stat_spend_on_sm
@@ -532,7 +534,7 @@ function GameMode:UpStatAuto(keys)
     
     if(hero.stat_point>0)then
       local stat_should_spend_on_sm = stat_gain*hero.auto_sm
-      --kemPrint("SM : "..stat_should_spend_on_sm.." | "..stat_spend_on_sm)
+      kemPrint("SM : "..stat_should_spend_on_sm.." | "..stat_spend_on_sm)
 
       if(stat_should_spend_on_sm>stat_spend_on_sm)then
         local stat_will_spend_on_sm=math.min(stat_should_spend_on_sm-stat_spend_on_sm,hero.stat_point)
@@ -545,7 +547,7 @@ function GameMode:UpStatAuto(keys)
     
     if(hero.stat_point>0)then
       local stat_should_spend_on_sk = stat_gain*hero.auto_sk
-
+      kemPrint("SK : "..stat_should_spend_on_sk.." | "..stat_spend_on_sk)
       if(stat_should_spend_on_sk>stat_spend_on_sk)then
         local stat_will_spend_on_sk=math.min(stat_should_spend_on_sk-stat_spend_on_sk,hero.stat_point)
         hero.stat_point = hero.stat_point-stat_will_spend_on_sk
@@ -557,7 +559,7 @@ function GameMode:UpStatAuto(keys)
     
     if(hero.stat_point>0)then
       local stat_should_spend_on_nc = stat_gain*hero.auto_nc
-
+      kemPrint("NC : "..stat_should_spend_on_nc.." | "..stat_spend_on_nc)
       if(stat_should_spend_on_nc>stat_spend_on_nc)then
         local stat_will_spend_on_nc=math.min(stat_should_spend_on_nc-stat_spend_on_nc,hero.stat_point)
         hero.stat_point = hero.stat_point-stat_will_spend_on_nc
@@ -569,13 +571,13 @@ function GameMode:UpStatAuto(keys)
     
     if(hero.stat_point>0)then
       local stat_should_spend_on_tp = stat_gain*hero.auto_tp
-
+      kemPrint("TP : "..stat_should_spend_on_tp.." | "..stat_spend_on_tp)
       if(stat_should_spend_on_tp>stat_spend_on_tp)then
         local stat_will_spend_on_tp=math.min(stat_should_spend_on_tp-stat_spend_on_tp,hero.stat_point)
         hero.stat_point = hero.stat_point-stat_will_spend_on_tp
         --hero:ModifyAgility(stat_will_spend_on_tp)
         hero.stat_tp = hero.stat_tp+stat_will_spend_on_tp
-        hero.stat_spend_on_tp = hero.stat_spend_on_sm+stat_spend_on_tp
+        hero.stat_spend_on_tp = hero.stat_spend_on_tp+stat_spend_on_tp
       end
     end
     EmitSoundOnClient("ui.crafting_gem_applied", player)
@@ -583,6 +585,7 @@ function GameMode:UpStatAuto(keys)
   else
     EmitSoundOnClient("General.Cancel", player)
   end
+  print("After Update stat auto "..hero.stat_point)
 end
 function GameMode:UpStat(keys)
   DebugPrint('[KEM_BAREBONES] Up stat')
@@ -658,7 +661,14 @@ function GameMode:UpStat(keys)
   --CustomGameEventManager:Send_ServerToPlayer(player, "AbilityUp", {playerId=PlayerID})
   --CustomGameEventManager:Send_ServerToPlayer(player, "ability_tree_upgrade", {playerId=PlayerID})
 end
-
+function GameMode:ClearTarget(keys)
+  local unitID = keys.unit
+  local unit = EntIndexToHScript(unitID)
+  if(unit)then
+    print("Clear target for "..unit:GetUnitName())
+    unit.lockTarget = nil
+  end
+end
 function GameMode:OpenPanel(keys)
   DebugPrint('[KEM_BAREBONES] Open Panel')
   local PlayerID = keys.playerID

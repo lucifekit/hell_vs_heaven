@@ -1,0 +1,39 @@
+"skill_aow_mehontieu_mehontieu_basic"
+{
+   "ID"  "12402"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "6"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "dark_seer_vacuum"
+   "ScriptFile"          "heroes_abilities/aow_mehontieu/skill_aow_mehontieu_mehontieu_basic"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // BASIC TALENT
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"accuracy_chance"  "55 85 115 145 175"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"attack_speed"  "7 9 11 13 15"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_amplify"  "15 30 45 60 75"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"critical_chance"  "26 32 38 44 50"
+		}
+	}
+   
+}

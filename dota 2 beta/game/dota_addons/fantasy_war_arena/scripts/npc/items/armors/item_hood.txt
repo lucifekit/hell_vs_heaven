@@ -13,8 +13,6 @@
 		"ItemShareability"        "ITEM_NOT_SHAREABLE"
 		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemShopTags"        "armors"
-		"ItemInitialCharges" "0"
-		"ItemDisplayCharges" "1"
 		"AbilitySpecial"
 		{
 			"01"
@@ -36,11 +34,6 @@
 			{
 				"var_type"  "FIELD_INTEGER"
 				"mp_regen"  "7"
-			}
-			"05"
-			{
-				"var_type"  "FIELD_INTEGER"
-				"exp"  "15"
 			}
 		}
 	}

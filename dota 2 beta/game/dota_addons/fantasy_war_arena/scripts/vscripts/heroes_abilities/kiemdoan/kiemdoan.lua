@@ -256,8 +256,8 @@ local stun_time = 1
               fDistance       = SETTING_LMTK_SWORD_FLY_SPEED*SETTING_LMTK_SWORD_FLY_TIME, -- di chuyen toi da 1500 pixel
               fExpireTime     = SETTING_LMTK_SWORD_FLY_TIME, -- thoi gian teo
               fGroundOffset   = 40, -- chi dung voi zCheck, lockGround
-              nChangeMax      = 10, -- so lan toi da thay doi huong'
               
+              draw            = true,
               fStartRadius    = 80,
               fEndRadius      = 80,
               

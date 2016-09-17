@@ -23,18 +23,14 @@
 		"01"
 		{
 			"var_type"  "FIELD_INTEGER"
-			"movement_speed"  "26 32 38 44 50 56 62 68 74 80"
+			"movement_speed"  "32 40 47 55 62 70 77 85 92 100"
 		}
 		"02"
 		{
 			"var_type"  "FIELD_INTEGER"
-			"duration"  "300"
-		}
-		"03"
-		{
-			"var_type"  "FIELD_FLOAT"
-			"slow_time_reduce"  "22.5 35.0 47.5 60.0 72.5 85.0 97.5 110.0 122.5 135.0"
+			"slow_time_reduce"  "22 35 47 60 72 85 97 110 122 135"
 		}
 	}
+
    
 }

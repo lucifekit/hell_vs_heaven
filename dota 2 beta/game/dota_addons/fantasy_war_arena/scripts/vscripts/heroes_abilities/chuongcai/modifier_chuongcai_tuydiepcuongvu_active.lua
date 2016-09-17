@@ -29,10 +29,11 @@ function modifier_chuongcai_tuydiepcuongvu_active:GainBack()
    local p = self:GetParent()
    local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
    if(IsServer())then
-      p.tdcv_drunk_basic_damage = 0
-      p.tdcv_drunk_skill_damage = 0
+      
       p.basic_damage_percent = p.basic_damage_percent+p.tdcv_drunk_basic_damage
       p.skill_amplify = p.skill_amplify+p.tdcv_drunk_skill_damage
+      p.tdcv_drunk_basic_damage = 0
+      p.tdcv_drunk_skill_damage = 0
       UpdatePlayerDataForHero(p)
    end
 end

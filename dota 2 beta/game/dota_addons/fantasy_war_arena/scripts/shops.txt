@@ -52,6 +52,7 @@
     
     "item"    "item_flying_nimbus_inactive"
     "item"	  "item_skywing_inactive"
+    //"item"	  "item_legionwing_inactive"
     "item"	  "item_book"
     
    
@@ -73,12 +74,20 @@
 	"item"    "item_swift_knife"
 	"item"	  "item_venom_blade"
 	"item"    "item_evil_blade"
+	//upgrade
+	"item"    "item_butterfly_dagger"
+	"item" 	  "item_psychic_blade"	
+	"item"    "item_demon_staff"
   }
         
   "magics"      
   {
-    "item"	  "item_flame_sword"
+    "item"	  "item_flame_sword"    
     "item"	  "item_mana_blade"
+    //upgrade
+    "item"	  "item_ruby_staff"
+    "item"    "item_drain_blade"
+    
   }
     
   // Level 3 - Purple Recipes 
@@ -96,6 +105,11 @@
     "item"    "item_lightning_hammer"
     "item"    "item_wukong_bar"
     "item"	  "item_metal_lance"
+    //upgrade
+    "item"    "item_storm_hammer"
+    "item"    "item_steel_halberd"
+    "item"    "item_hurricane_partisan"
+    
   }
     
   // Level 4 - Orange / Orb / Artifacts       

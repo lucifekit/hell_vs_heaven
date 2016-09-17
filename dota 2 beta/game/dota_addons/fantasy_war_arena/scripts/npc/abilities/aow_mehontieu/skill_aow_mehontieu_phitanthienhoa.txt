@@ -1,0 +1,71 @@
+"skill_aow_mehontieu_phitanthienhoa"
+{
+   "ID"  "12409"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "45"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "skill_mehontieu_phitanthienhoa"
+   "ScriptFile"          "heroes_abilities/aow_mehontieu/skill_aow_mehontieu_phitanthienhoa"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "900"
+   "precache"
+   {
+   }
+   
+   // FLYING FLOWER
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"basic_damage"  "40.8 41.5 42.3 43.0 43.8 44.5 45.3 46.0 46.8 47.5"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_damage_amplify"  "53 56 59 62 65 68 71 74 77 80"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "93 121 149 177 205 233 261 289 317 345"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "120 165 210 255 300 345 390 435 480 525"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_slow"  "16.5 18.0 19.5 21.0 22.5 24.0 25.5 27.0 28.5 30.0"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"slow_time"  "2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_maim"  "16 17 18 19 20 21 22 23 24 25"
+		}
+		"08"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time"  "1"
+		}
+		"09"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "3"
+		}
+	}
+   
+}

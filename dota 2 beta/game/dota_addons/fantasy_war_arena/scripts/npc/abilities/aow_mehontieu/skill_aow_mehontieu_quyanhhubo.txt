@@ -1,0 +1,14 @@
+"skill_aow_mehontieu_quyanhhubo"
+{
+   "ID"  "12403"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "7"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "templar_assassin_meld"
+   "ScriptFile"          "heroes_abilities/aow_mehontieu/skill_aow_mehontieu_quyanhhubo"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+}

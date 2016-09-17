@@ -75,6 +75,10 @@
 			m_CollisionGroupName = "DEBRIS"
 			m_nRefCP1 = 3
 		},
+		{
+			_class = "C_OP_MaxVelocity"
+			m_flMaxVelocity = 1500.0
+		},
 	]
 	m_Initializers = 
 	[
@@ -104,10 +108,19 @@
 	m_Children = 
 	[
 		{
-			m_ChildRef = resource:"particles/edited_particle/tu_tien/tldv_missile.vpcf"
+			m_ChildRef = resource:"particles/edited_particle/tu_tien/tldv_missile_tracking.vpcf"
 		},
 		{
 			m_ChildRef = resource:"particles/edited_particle/tu_tien/xvt_effect.vpcf"
+		},
+	]
+	m_ForceGenerators = 
+	[
+		{
+			_class = "C_OP_AttractToControlPoint"
+			m_fForceAmount = 1000000.0
+			m_fFalloffPower = 0.0
+			m_nControlPointNumber = 1
 		},
 	]
 }

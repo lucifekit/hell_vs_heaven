@@ -13,6 +13,8 @@ SETTING_PHVT_FLY_TIME = 1
 SETTING_PHVT_HIT_EFFECT = "particles/units/heroes/hero_abaddon/abaddon_aphotic_shield_explosion.vpcf"
 SETTING_CAST_SOUND = "Hero_Abaddon.DeathCoil.Target"
 SETTING_HIT_SOUND = "Hero_Abaddon.Attack"
+SETTING_MOVING_MODIFIER = "modifier_kem_moving"
+LinkLuaModifier(SETTING_MOVING_MODIFIER,"modifiers/"..SETTING_MOVING_MODIFIER, LUA_MODIFIER_MOTION_NONE )
 SETTING_STACK_MODIFIER = "modifier_chiennhan_phihongvotich_stack"
 LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/chiennhan/"..SETTING_SKILL_MODIFIER, LUA_MODIFIER_MOTION_NONE )
 function skill_chiennhan_phihongvotich:GetManaCost()
@@ -139,7 +141,7 @@ local burn_time = 2+0.2*skill_level
         
       } ) 
 
-
+   caster:AddNewModifier(caster,self,SETTING_MOVING_MODIFIER,{})
    Timers:CreateTimer(0.01,function()
     local canMove =true
     if(tick==0)then
@@ -148,7 +150,7 @@ local burn_time = 2+0.2*skill_level
     if(not caster:canDive())then
       canMove = false
     end
-   
+    
     if(canMove)then
         --move
         --local gh = GetGroundHeight(caster:GetOrigin(),caster)
@@ -158,6 +160,7 @@ local burn_time = 2+0.2*skill_level
         return SETTING_TICK
     else
         PHVT_Missile:Destroy()
+        caster:RemoveModifierByName(SETTING_MOVING_MODIFIER)
         caster:RemoveGesture(ACT_DOTA_CAST_ABILITY_4)
         local co = caster:GetOrigin()
         local gh = GetGroundHeight(caster:GetOrigin(),caster)

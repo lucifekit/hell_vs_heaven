@@ -31,7 +31,10 @@ function modifier_kiemcon_nguynguyconlon:OnTakeDamage(params)
           if(current_stack<self.max_stacks)then
             
             --modifier:ForceRefresh()
-            modifier:IncrementStackCount()
+            if(modifier)then
+              modifier:IncrementStackCount()
+            end
+            
             
             
 --            Timers:CreateTimer(SETTING_STACK_DURATION,function()

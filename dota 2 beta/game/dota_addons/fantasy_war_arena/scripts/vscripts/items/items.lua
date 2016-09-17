@@ -517,3 +517,159 @@ function item_magical_amplify:GetIntrinsicModifierName() return "kem_items_modif
 -- SECRET BOOK
 if item_book == nil then item_book = class({}) end
 function item_book:GetIntrinsicModifierName() return "kem_items_modifier" end
+
+-- VAMPIRE BLADE
+if item_drain_blade == nil then item_drain_blade = class({}) end
+function item_drain_blade:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_drain_blade_lv_1 == nil then item_drain_blade_lv_1 = class({}) end
+function item_drain_blade_lv_1:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_drain_blade_lv_2 == nil then item_drain_blade_lv_2 = class({}) end
+function item_drain_blade_lv_2:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_drain_blade_lv_3 == nil then item_drain_blade_lv_3 = class({}) end
+function item_drain_blade_lv_3:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_drain_blade_lv_4 == nil then item_drain_blade_lv_4 = class({}) end
+function item_drain_blade_lv_4:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_drain_blade_lv_5 == nil then item_drain_blade_lv_5 = class({}) end
+function item_drain_blade_lv_5:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_drain_blade_lv_6 == nil then item_drain_blade_lv_6 = class({}) end
+function item_drain_blade_lv_6:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_drain_blade_lv_7 == nil then item_drain_blade_lv_7 = class({}) end
+function item_drain_blade_lv_7:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_drain_blade_max == nil then item_drain_blade_max = class({}) end
+function item_drain_blade_max:GetIntrinsicModifierName() return "kem_items_modifier" end
+-- RUBY STAFF
+if item_ruby_staff == nil then item_ruby_staff = class({}) end
+function item_ruby_staff:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_ruby_staff_lv_1 == nil then item_ruby_staff_lv_1 = class({}) end
+function item_ruby_staff_lv_1:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_ruby_staff_lv_2 == nil then item_ruby_staff_lv_2 = class({}) end
+function item_ruby_staff_lv_2:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_ruby_staff_lv_3 == nil then item_ruby_staff_lv_3 = class({}) end
+function item_ruby_staff_lv_3:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_ruby_staff_lv_4 == nil then item_ruby_staff_lv_4 = class({}) end
+function item_ruby_staff_lv_4:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_ruby_staff_lv_5 == nil then item_ruby_staff_lv_5 = class({}) end
+function item_ruby_staff_lv_5:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_ruby_staff_lv_6 == nil then item_ruby_staff_lv_6 = class({}) end
+function item_ruby_staff_lv_6:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_ruby_staff_lv_7 == nil then item_ruby_staff_lv_7 = class({}) end
+function item_ruby_staff_lv_7:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_ruby_staff_max == nil then item_ruby_staff_max = class({}) end
+function item_ruby_staff_max:GetIntrinsicModifierName() return "kem_items_modifier" end
+
+-- HURRICANE PARTISAN
+if item_hurricane_partisan == nil then item_hurricane_partisan = class({}) end
+function item_hurricane_partisan:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_hurricane_partisan_lv_1 == nil then item_hurricane_partisan_lv_1 = class({}) end
+function item_hurricane_partisan_lv_1:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_hurricane_partisan_lv_2 == nil then item_hurricane_partisan_lv_2 = class({}) end
+function item_hurricane_partisan_lv_2:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_hurricane_partisan_lv_3 == nil then item_hurricane_partisan_lv_3 = class({}) end
+function item_hurricane_partisan_lv_3:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_hurricane_partisan_lv_4 == nil then item_hurricane_partisan_lv_4 = class({}) end
+function item_hurricane_partisan_lv_4:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_hurricane_partisan_lv_5 == nil then item_hurricane_partisan_lv_5 = class({}) end
+function item_hurricane_partisan_lv_5:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_hurricane_partisan_lv_6 == nil then item_hurricane_partisan_lv_6 = class({}) end
+function item_hurricane_partisan_lv_6:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_hurricane_partisan_lv_7 == nil then item_hurricane_partisan_lv_7 = class({}) end
+function item_hurricane_partisan_lv_7:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_hurricane_partisan_max == nil then item_hurricane_partisan_max = class({}) end
+function item_hurricane_partisan_max:GetIntrinsicModifierName() return "kem_items_modifier" end
+
+-- STEEL HALBERD
+if item_steel_halberd == nil then item_steel_halberd = class({}) end
+function item_steel_halberd:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_steel_halberd_lv_1 == nil then item_steel_halberd_lv_1 = class({}) end
+function item_steel_halberd_lv_1:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_steel_halberd_lv_2 == nil then item_steel_halberd_lv_2 = class({}) end
+function item_steel_halberd_lv_2:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_steel_halberd_lv_3 == nil then item_steel_halberd_lv_3 = class({}) end
+function item_steel_halberd_lv_3:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_steel_halberd_lv_4 == nil then item_steel_halberd_lv_4 = class({}) end
+function item_steel_halberd_lv_4:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_steel_halberd_lv_5 == nil then item_steel_halberd_lv_5 = class({}) end
+function item_steel_halberd_lv_5:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_steel_halberd_lv_6 == nil then item_steel_halberd_lv_6 = class({}) end
+function item_steel_halberd_lv_6:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_steel_halberd_lv_7 == nil then item_steel_halberd_lv_7 = class({}) end
+function item_steel_halberd_lv_7:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_steel_halberd_max == nil then item_steel_halberd_max = class({}) end
+function item_steel_halberd_max:GetIntrinsicModifierName() return "kem_items_modifier" end
+-- STORM HAMMER
+if item_storm_hammer == nil then item_storm_hammer = class({}) end
+function item_storm_hammer:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_storm_hammer_lv_1 == nil then item_storm_hammer_lv_1 = class({}) end
+function item_storm_hammer_lv_1:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_storm_hammer_lv_2 == nil then item_storm_hammer_lv_2 = class({}) end
+function item_storm_hammer_lv_2:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_storm_hammer_lv_3 == nil then item_storm_hammer_lv_3 = class({}) end
+function item_storm_hammer_lv_3:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_storm_hammer_lv_4 == nil then item_storm_hammer_lv_4 = class({}) end
+function item_storm_hammer_lv_4:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_storm_hammer_lv_5 == nil then item_storm_hammer_lv_5 = class({}) end
+function item_storm_hammer_lv_5:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_storm_hammer_lv_6 == nil then item_storm_hammer_lv_6 = class({}) end
+function item_storm_hammer_lv_6:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_storm_hammer_lv_7 == nil then item_storm_hammer_lv_7 = class({}) end
+function item_storm_hammer_lv_7:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_storm_hammer_max == nil then item_storm_hammer_max = class({}) end
+function item_storm_hammer_max:GetIntrinsicModifierName() return "kem_items_modifier" end
+-- DEMON STAFF
+if item_demon_staff == nil then item_demon_staff = class({}) end
+function item_demon_staff:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_demon_staff_lv_1 == nil then item_demon_staff_lv_1 = class({}) end
+function item_demon_staff_lv_1:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_demon_staff_lv_2 == nil then item_demon_staff_lv_2 = class({}) end
+function item_demon_staff_lv_2:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_demon_staff_lv_3 == nil then item_demon_staff_lv_3 = class({}) end
+function item_demon_staff_lv_3:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_demon_staff_lv_4 == nil then item_demon_staff_lv_4 = class({}) end
+function item_demon_staff_lv_4:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_demon_staff_lv_5 == nil then item_demon_staff_lv_5 = class({}) end
+function item_demon_staff_lv_5:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_demon_staff_lv_6 == nil then item_demon_staff_lv_6 = class({}) end
+function item_demon_staff_lv_6:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_demon_staff_lv_7 == nil then item_demon_staff_lv_7 = class({}) end
+function item_demon_staff_lv_7:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_demon_staff_max == nil then item_demon_staff_max = class({}) end
+function item_demon_staff_max:GetIntrinsicModifierName() return "kem_items_modifier" end
+-- MASAMUNE
+if item_butterfly_dagger == nil then item_butterfly_dagger = class({}) end
+function item_butterfly_dagger:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_butterfly_dagger_lv_1 == nil then item_butterfly_dagger_lv_1 = class({}) end
+function item_butterfly_dagger_lv_1:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_butterfly_dagger_lv_2 == nil then item_butterfly_dagger_lv_2 = class({}) end
+function item_butterfly_dagger_lv_2:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_butterfly_dagger_lv_3 == nil then item_butterfly_dagger_lv_3 = class({}) end
+function item_butterfly_dagger_lv_3:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_butterfly_dagger_lv_4 == nil then item_butterfly_dagger_lv_4 = class({}) end
+function item_butterfly_dagger_lv_4:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_butterfly_dagger_lv_5 == nil then item_butterfly_dagger_lv_5 = class({}) end
+function item_butterfly_dagger_lv_5:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_butterfly_dagger_lv_6 == nil then item_butterfly_dagger_lv_6 = class({}) end
+function item_butterfly_dagger_lv_6:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_butterfly_dagger_lv_7 == nil then item_butterfly_dagger_lv_7 = class({}) end
+function item_butterfly_dagger_lv_7:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_butterfly_dagger_max == nil then item_butterfly_dagger_max = class({}) end
+function item_butterfly_dagger_max:GetIntrinsicModifierName() return "kem_items_modifier" end
+-- PSYCHIC BLADE
+if item_psychic_blade == nil then item_psychic_blade = class({}) end
+function item_psychic_blade:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_psychic_blade_lv_1 == nil then item_psychic_blade_lv_1 = class({}) end
+function item_psychic_blade_lv_1:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_psychic_blade_lv_2 == nil then item_psychic_blade_lv_2 = class({}) end
+function item_psychic_blade_lv_2:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_psychic_blade_lv_3 == nil then item_psychic_blade_lv_3 = class({}) end
+function item_psychic_blade_lv_3:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_psychic_blade_lv_4 == nil then item_psychic_blade_lv_4 = class({}) end
+function item_psychic_blade_lv_4:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_psychic_blade_lv_5 == nil then item_psychic_blade_lv_5 = class({}) end
+function item_psychic_blade_lv_5:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_psychic_blade_lv_6 == nil then item_psychic_blade_lv_6 = class({}) end
+function item_psychic_blade_lv_6:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_psychic_blade_lv_7 == nil then item_psychic_blade_lv_7 = class({}) end
+function item_psychic_blade_lv_7:GetIntrinsicModifierName() return "kem_items_modifier" end
+if item_psychic_blade_max == nil then item_psychic_blade_max = class({}) end
+function item_psychic_blade_max:GetIntrinsicModifierName() return "kem_items_modifier" end
+

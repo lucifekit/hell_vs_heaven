@@ -91,7 +91,7 @@ local volley_poison = 205+12*skill_level
        duration        = SETTING_POISON_TIME,
        maxTarget = max_target,
        
-       iVisionTeamNumber = caster : GetTeamNumber(), 
+       iVisionTeamNumber = caster:GetTeamNumber(), 
        UnitTest = GeneralUnitTest,
        OnUnitHit = function(proj, unit) 
        --unit:EmitSound(SETTING_HIT_SOUND)
@@ -145,7 +145,7 @@ local volley_poison = 205+12*skill_level
                duration        = SETTING_POISON_TIME,
                maxTarget = max_target,
                
-               iVisionTeamNumber = caster : GetTeamNumber(), 
+               iVisionTeamNumber = caster:GetTeamNumber(), 
                UnitTest = GeneralUnitTest,
                OnUnitHit = function(proj, unit) 
                --unit:EmitSound(SETTING_HIT_SOUND)

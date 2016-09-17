@@ -32,6 +32,10 @@ function skill_khinhcong:OnSpellStart()
   local owner = caster:GetOwner()
   
   local playerID = caster:GetPlayerID()
+  local hero_elements = LoadKeyValues("scripts/kv/hero_element.kv")
+  local hero_name = caster:GetUnitName()
+  local heroData = hero_elements[hero_name]
+  
   
   --Neu dang jump thi quit
   if caster:HasModifier( SETTING_MODIFIER_KHINHCONG_JUMPING ) then
@@ -66,7 +70,18 @@ function skill_khinhcong:OnSpellStart()
   local angle_from_caster_to_target = math.atan2(target_point.y-casterOrigin.y, target_point.x-casterOrigin.x ) 
 
   local point_difference_normalized = (target_point - casterOrigin)
-  local distance = math.min(SETTING_JUMP_MAX_LENGTH+math.max(500,(caster.jump_time*10)),(target_point - casterOrigin):Length2D())
+  local max_range = SETTING_JUMP_MAX_LENGTH
+  if(heroData["jump_type"])then
+    if(heroData["jump_type"]=="aow_nhc")then
+      max_range = heroData["jump_distance"]
+    end
+  end
+  
+  local max_range_exp = math.min(500,(caster.jump_time*10))
+  local max_range_can_jump = max_range+max_range_exp
+  local jump_distance = (target_point - casterOrigin):Length2D()
+  
+  local distance = math.min(max_range_can_jump,jump_distance)
   
   if distance<SETTING_JUMP_DISTANCE_MIN then
     
@@ -91,6 +106,15 @@ function skill_khinhcong:OnSpellStart()
     jump_height = SETTING_JUMP_HEIGHT_FAR
     jump_duration= SETTING_JUMP_DURATION_FAR
   end
+  
+  if(heroData["jump_type"])then
+    if(heroData["jump_type"]=="aow_nhc")then
+      jump_height = 0
+      jump_duration = 0.33
+    end
+  end
+  
+  
   self:StartCooldown(jump_duration)
 
   --caster:SetAngles(point_difference_normalized.x,point_difference_normalized.y,0)

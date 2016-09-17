@@ -19,6 +19,7 @@
 		},
 		{
 			m_ChildRef = resource:"particles/edited_particle/tu_tien/xvt_arrow.vpcf"
+			m_bDisableChild = true
 		},
 		{
 			m_ChildRef = resource:"particles/edited_particle/tu_tien/xvt_arc.vpcf"

@@ -1,0 +1,14 @@
+"skill_aow_mehontieu_thanhondiendao"
+{
+   "ID"  "12412"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "60"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "templar_assassin_refraction_damage"
+   "ScriptFile"          "heroes_abilities/aow_mehontieu/skill_aow_mehontieu_thanhondiendao"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+}

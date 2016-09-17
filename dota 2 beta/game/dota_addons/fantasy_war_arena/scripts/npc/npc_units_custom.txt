@@ -239,6 +239,7 @@
 	    "Model"           "models/creeps/neutral_creeps/n_creep_black_dragon/n_creep_black_dragon.vmdl"
 	    "SoundSet"          "Creep_Good_Range"
 	    "Level"           "10"
+	    "ModelScale"		"0.7"
 	    "StatusHealth"        "22000"
 	    "AttackDamageMin"     "145"
 	    "AttackDamageMax"     "195"

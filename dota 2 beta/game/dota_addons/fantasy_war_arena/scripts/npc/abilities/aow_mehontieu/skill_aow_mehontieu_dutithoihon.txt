@@ -1,0 +1,41 @@
+"skill_aow_mehontieu_dutithoihon"
+{
+   "ID"  "12404"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "8"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "spectre_haunt"
+   "ScriptFile"          "heroes_abilities/aow_mehontieu/skill_aow_mehontieu_dutithoihon"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "700"
+   "precache"
+   {
+   }
+   
+   // SKY WALK
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"movement_speed"  "32 40 47 55 62 70 77 85 92 100"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"boost_chance"  "30 35 40 45 50 55 60 65 70 75"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"movement_boost"  "7.5 15.0 22.5 30.0 37.5 45.0 52.5 60.0 67.5 75.0"
+		}
+	}
+   
+}

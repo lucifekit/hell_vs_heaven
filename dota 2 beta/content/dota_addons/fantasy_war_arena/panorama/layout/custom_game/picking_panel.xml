@@ -1,0 +1,14 @@
+<root>
+  <styles>
+    <include src="s2r://panorama/styles/dotastyles.vcss_c" />
+    <include src="s2r://panorama/styles/custom_game/picking_panel.vcss_c" />
+  </styles>
+  <scripts>
+    <include src="s2r://panorama/scripts/custom_game/picking_panel.vjs_c" /> 
+  </scripts>
+  <Panel hittest="false" class="picking_panel_wrapper">      
+      <Button id="LightButton" onactivate="OnClickLightButton()">
+		        <DOTAAbilityImage id="AbilityToggleButtonImage" abilityname="omniknight_purification" />
+	    </Button>
+  </Panel>
+</root>

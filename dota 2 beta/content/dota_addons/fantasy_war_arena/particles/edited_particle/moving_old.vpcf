@@ -1,0 +1,34 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_ConstantColor = [ 232, 245, 202, 255 ]
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_RemapSpeedtoCP"
+			m_flInputMax = 500.0
+			m_nOutControlPointNumber = 1
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/windrunner/windrunner_cape_cascade/windrunner_windrun_blur_cascade.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/windrunner/windrunner_cape_cascade/windrunner_windrun_burst_cascade.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/edited_particle/moving_afterimage_cascade.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/windrunner/windrunner_cape_cascade/windrunner_windrun_fire_cascade.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/edited_particle/aow_mehontieu/dtth_feet_effects_cascade_c.vpcf"
+			m_bDisableChild = true
+		},
+	]
+}

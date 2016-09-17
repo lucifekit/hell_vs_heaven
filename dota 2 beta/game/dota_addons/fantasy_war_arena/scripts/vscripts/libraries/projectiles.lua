@@ -106,6 +106,7 @@ end
 function Projectiles:CreateProjectile(projectile)
   -- set defaults
   projectile.vVelocity = projectile.vVelocity or Vector(0,0,0)
+  --print(projectile.vVelocity)
   projectile.fDistance = projectile.fDistance or 1000
   projectile.fStartRadius = projectile.fStartRadius or 100
   projectile.fEndRadius = projectile.fEndRadius or 100
@@ -261,6 +262,7 @@ function Projectiles:CreateProjectile(projectile)
   function projectile:SetVelocity(newVel, newPos)
     
     if projectile.changes > 0 then
+      --print("yeah changes >0")
       projectile.changes = projectile.changes - 1
       projectile.vel = newVel / 30
       projectile.changeTime = GameRules:GetGameTime() + projectile.fChangeDelay

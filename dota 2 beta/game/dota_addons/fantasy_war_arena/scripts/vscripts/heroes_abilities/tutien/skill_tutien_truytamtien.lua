@@ -91,12 +91,13 @@ local max_target = 3
    duration        = SETTING_POISON_TIME,
    maxTarget = max_target,
    
-   iVisionTeamNumber = caster : GetTeamNumber(), 
+   iVisionTeamNumber = caster:GetTeamNumber(), 
    UnitTest = GeneralUnitTest,
    OnUnitHit = function(proj, unit) 
    --unit:EmitSound(SETTING_HIT_SOUND)
    DamageHandler:MissileHandler({attacker=proj.Source,target=unit,projectile=proj,hit_function=function(proj,unit)
       DamageHandler:ApplyDamage(proj.Source, proj.Ability, unit, proj.damage, proj.crit, ELEMENT_WOOD, {})
+      print("call apply poison "..proj.poison)
       PoisonHandler:ApplyPoison(proj.Source,unit,proj.Ability,proj.period,proj.duration,proj.poison,{})
       StatusEffectHandler:ApplyEffect(proj.Source, unit, proj.effect, proj.effect_chance, proj.effect_time)
       StatusEffectHandler:ApplyEffect(proj.Source, unit, EFFECT_WEAK,chance_to_weak*100, weak_time)

@@ -4,7 +4,9 @@ modifier_khinhcong_jumping_lua = class({})
 function modifier_khinhcong_jumping_lua:IsPurgable()
   return false
 end
-
+function modifier_khinhcong_jumping_lua:GetEffectName()
+  return "particles/edited_particle/moving.vpcf"
+end
 --------------------------------------------------------------------------------
 
 function modifier_khinhcong_jumping_lua:OnCreated( kv )

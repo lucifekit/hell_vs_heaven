@@ -19,10 +19,5 @@ function skill_kiemdoan_thiennambophap:OnSpellStart()
   local caster = self:GetCaster()
   caster:AddNewModifier(caster, self, SETTING_SKILL_MODIFIER,{duration = 120})
   caster:CalculateStatBonus()
-  
-    UpdatePlayerData(caster:GetPlayerID())
-  
-  
-  
-  
- end
+  UpdatePlayerData(caster:GetPlayerID())
+end

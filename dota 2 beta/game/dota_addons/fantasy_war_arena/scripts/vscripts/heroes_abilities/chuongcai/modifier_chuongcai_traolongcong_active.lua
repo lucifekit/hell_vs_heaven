@@ -37,15 +37,17 @@ function modifier_chuongcai_traolongcong_active:GainBack()
    local p = self:GetParent()
    local skill_level = self:GetAbility():GetLevel()+GetSkillLevel(p)
    if(IsServer())then
-      p.tlc_resist_return_damage = 0
-      p.tlc_active_damage = 0
-      p.tlc_active_skill = 0
-      p.tlc_active_drain = 0
+      
       
       p.basic_damage_percent = p.basic_damage_percent-p.tlc_active_damage
       p.skill_amplify = p.skill_amplify-p.tlc_active_skill
       p.hp_drain = p.hp_drain-p.tlc_active_drain
       p.return_damage_resist = p.return_damage_resist -p.tlc_resist_return_damage
+      
+      p.tlc_resist_return_damage = 0
+      p.tlc_active_damage = 0
+      p.tlc_active_skill = 0
+      p.tlc_active_drain = 0
       UpdatePlayerDataForHero(p)
    end
 end
