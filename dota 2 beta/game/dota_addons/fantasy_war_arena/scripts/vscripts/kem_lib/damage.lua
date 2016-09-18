@@ -41,7 +41,10 @@ BUFF_DOANCANNHAN = "modifier_tutien_doancannhan"
 BUFF_DOANCANNHAN_COOLDOWN = "modifier_tutien_doancannhan_cooldown"
 BUFF_DOANCANNHAN_ACTIVE = "modifier_tutien_doancannhan_active"
 BUFF_TRUYHONDOATMENH = "modifier_aow_mehontieu_truyhondoatmenh"
-
+BUFF_THIENLYTRUYHON = "modifier_aow_mehontieu_thienlytruyhon"
+BUFF_LUCHOPKINH = "modifier_aow_mehontieu_luchopkinh"
+BUFF_QUYANHHUBO = "modifier_aow_mehontieu_quyanhhubo"
+BUFF_DEFENSE = "modifier_defense"
 FX_DOANCANNHAN = "particles/econ/items/luna/luna_lucent_ti5/luna_eclipse_impact_moonfall.vpcf"
 
 LinkLuaModifier(BUFF_DOANCANNHAN_ACTIVE,"heroes_abilities/tutien/"..BUFF_DOANCANNHAN_ACTIVE, LUA_MODIFIER_MOTION_NONE )
@@ -59,33 +62,33 @@ function DamageHandler:OnCrititcal(whoDealDamage,whoTakeDamage)
      FxPoint(FX_DOANCANNHAN,whoTakeDamage:GetOrigin(),1)
      StatusEffectHandler:ApplyEffect(whoDealDamage,whoTakeDamage,EFFECT_IMMOBILE,100,3)
   end
+   if(whoDealDamage:HasModifier(BUFF_THIENLYTRUYHON))then
+      local modifier = whoDealDamage:FindModifierByName(BUFF_THIENLYTRUYHON)
+      modifier:OnCriticalHit(whoTakeDamage)
+  end
 end
 
 
 
 function DamageHandler:OnHit(attacker,target)
-if(attacker:HasModifier(BUFF_TRUYHONDOATMENH))then
-      local buff_truyhon = attacker:FindModifierByName(BUFF_TRUYHONDOATMENH)
-      buff_truyhon:ActiveOnHit(target)
+  for _,modifier in ipairs(attacker:FindAllModifiers()) do
+    --print("on hit "..modifier:GetName())
+    if(modifier.ActiveOnHit)then
       
-    end
-  if(attacker:HasModifier(BUFF_SOANH))then
-      local buff_soanh = attacker:FindModifierByName(BUFF_SOANH)
-      buff_soanh:ActiveOnHit(target)
-      
-    end
-  if(attacker:HasModifier(BUFF_BITOTHANHPHONG))then
-      local buff_bitothanhphong = attacker:FindModifierByName(BUFF_BITOTHANHPHONG)
-      buff_bitothanhphong:ActiveOnHit(target)
-      
+      modifier:ActiveOnHit(target)
+    end 
   end
-  if(attacker:HasModifier(BUFF_THOITHUALUCLONG))then
-    local buff = attacker:FindModifierByName(BUFF_THOITHUALUCLONG)
-    buff:ActiveOnHit(target)
-  end  
-  if(attacker:HasModifier(BUFF_TUYDIEPCUONGVU))then
-    local buff = attacker:FindModifierByName(BUFF_TUYDIEPCUONGVU)
-    buff:ActiveOnHit(target)
+  if(target:HasModifier(BUFF_DEFENSE))then
+      for _,modifier in ipairs(target:FindAllModifiers()) do
+        if(modifier.OnDefense)then
+          modifier:OnDefense()
+        end 
+      end
+  end
+  
+  if(target:HasModifier(BUFF_LUCHOPKINH))then
+    local buff = target:FindModifierByName(BUFF_LUCHOPKINH)
+    buff:ActiveOnTakeHit(attacker)
   end
 end
 function DamageHandler:CalculateMiss(attacker,target)
@@ -107,12 +110,35 @@ function DamageHandler:CalculateMiss(attacker,target)
         --kemPrint("Accuracy = "..accuracy.." bypass ="..attacker.bypass_evade.." Evade = "..targetEvade.." Chance to hit= "..chance_to_hit.."%".." proc = "..proc)
         
         if(proc>chance_to_hit)then
-          print(proc.." > "..chance_to_hit.." accuracy = "..accuracy.."/"..accuracy.."+"..targetEvade)
+          --print(proc.." > "..chance_to_hit.." accuracy = "..accuracy.."/"..accuracy.."+"..targetEvade)
           --truot
           return true
         end
+        
+        if(target.physic_evade)then
+          if(target.physic_evade>0)then
+            local proc_physic = math.random(0,100)
+            if(proc_physic<=target.physic_evade)then
+              print("Physical evade ")
+              return true
+            end
+          end
+        end
+        
+      else
+        --noi cong
+        if(target.element_evade)then
+          if(target.element_evade>0)then
+            local proc_element = math.random(0,100)
+            if(proc_element<=target.element_evade)then
+              print("Element evade ")
+              return true
+            end
+          end
+        end
+        
       end
-    end
+  end
   return false
 end
 function DamageHandler:MissileHandler(missile_data)
@@ -167,7 +193,7 @@ function DamageHandler:MissileHandler(missile_data)
       --kemPrint("Calling hit function")
       pcall(miss_function,projectile,target)
     end
-      kemPrint("No miss function, Missed")
+          --kemPrint("No miss function, Missed")
           local numberIndex = ParticleManager:CreateParticle( SETTING_FX_EVADE, PATTACH_OVERHEAD_FOLLOW, target )
           ParticleManager:SetParticleControl( numberIndex, 1, Vector( 6, 0, 0 ) )
           ParticleManager:SetParticleControl( numberIndex, 2, Vector( 1, 1, 0 ) )
@@ -330,6 +356,10 @@ function DamageHandler:ApplyDamage(whoDealDamage,byWhichAbility,whoTakeDamage,AD
       if(custom["flag"])then
         if(custom["flag"]=="reflect")then
           damageTable.damage_flag = DOTA_DAMAGE_FLAG_REFLECTION
+        end
+        if(custom["flag"]=="no_director")then
+          print("Set flag = no director ")
+          damageTable.damage_flag = DOTA_DAMAGE_FLAG_NO_DIRECTOR_EVENT
         end
       end
     end
@@ -659,6 +689,8 @@ function DamageHandler:DamageAreaParams(whoDealDamage,byWhichAbility,where,radiu
               damageUnitTable[victim]=1
               --print("Deal damage to "..victim:GetUnitName())
               DamageHandler:ApplyDamage(whoDealDamage,byWhichAbility,victim,damage,crit,damage_element,"")
+              DamageHandler:OnHit(whoDealDamage,victim)
+              
               if(type(custom)=="table")then
                 if(custom["action"]=="status_effect")then
                   local effect_type = custom["effect_type"]

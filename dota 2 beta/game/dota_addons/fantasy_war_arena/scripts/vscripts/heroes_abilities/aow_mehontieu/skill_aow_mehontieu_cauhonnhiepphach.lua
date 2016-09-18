@@ -19,7 +19,7 @@ LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/aow_mehontieu/"..SETTIN
 function skill_aow_mehontieu_cauhonnhiepphach:GetManaCost()
    local caster=self:GetCaster()
    local skill_level=self:GetLevel()+GetSkillLevel(caster)
-   return 25+skill_level*0
+   return skill_level*5
 end
 
 function skill_aow_mehontieu_cauhonnhiepphach:GetCooldown()
@@ -50,8 +50,8 @@ local basic_damage = 0.4+0.01*skill_level
 local physical_damage_amplify = 0+0.08*skill_level
 local element_damage_min = 25+18*skill_level
 local element_damage_max = 33+35*skill_level
-local chance_to_slow = 0.15+0.025*skill_level
-local slow_time = 2+0.1*skill_level
+local chance_to_maim = 0.15+0.025*skill_level
+local maim_time = 1
 local max_target = 3
    
    
@@ -104,9 +104,9 @@ local max_target = 3
        iVisionRadius   = 200,
        damage = damageInfo,
        crit = critInfo,
-       effect = EFFECT_SLOW,
-       effect_chance = chance_to_slow*100,
-       effect_time = slow_time,
+       effect = EFFECT_MAIM,
+       effect_chance = chance_to_maim*100,
+       effect_time = maim_time,
        maxTarget = max_target,
        iVisionTeamNumber = caster:GetTeamNumber(), 
        UnitTest = GeneralUnitTest,
@@ -118,7 +118,7 @@ local max_target = 3
             dh_modifier:IncrementStackCount()
           end
           unit:EmitSound(SETTING_HIT_SOUND)
-          DamageHandler:ApplyDamage(proj.Source, proj.Ability, unit, proj.damage, proj.crit, ELEMENT_WATER, {})
+          DamageHandler:ApplyDamage(proj.Source, proj.Ability, unit, proj.damage, proj.crit, ELEMENT_METAL, {})
           StatusEffectHandler:ApplyEffect(proj.Source, unit, proj.effect, proj.effect_chance, proj.effect_time)
           proj:Destroy()
        end,miss_function=function(proj)

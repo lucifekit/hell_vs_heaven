@@ -9,7 +9,7 @@ SETTING_HIT_SOUND = "Hero_TemplarAssassin.PsiBlade.Resonance"
 function skill_aow_mehontieu_phitanthienhoa:GetManaCost()
    local caster=self:GetCaster()
    local skill_level=self:GetLevel()+GetSkillLevel(caster)
-   return 25+skill_level*0
+   return 25+skill_level*10
 end
 
 function skill_aow_mehontieu_phitanthienhoa:GetCooldown()
@@ -37,8 +37,7 @@ local basic_damage = 0.4+0.0075*skill_level
 local physical_damage_amplify = 0.5+0.03*skill_level
 local element_damage_min = 65+28*skill_level
 local element_damage_max = 75+45*skill_level
-local chance_to_slow = 0.15+0.015*skill_level
-local slow_time = 2+0.1*skill_level
+
 local chance_to_maim = 0.15+0.01*skill_level
 local maim_time = 1
 local max_target = 3
@@ -93,9 +92,6 @@ local max_target = 3
          iVisionRadius   = 200,
          damage = damageInfo,
          crit = critInfo,
-         effect = EFFECT_SLOW,
-         effect_chance = chance_to_slow*100,
-         effect_time = slow_time,
          maim_chance = chance_to_maim*100,
          maim_time = maim_time,
          maxTarget = max_target,
@@ -105,8 +101,8 @@ local max_target = 3
          
          DamageHandler:MissileHandler({attacker=proj.Source,target=unit,projectile=proj,hit_function=function(proj,unit)
            unit:EmitSound(SETTING_HIT_SOUND)
-           DamageHandler:ApplyDamage(proj.Source, proj.Ability, unit, proj.damage, proj.crit, ELEMENT_WATER, {})
-           StatusEffectHandler:ApplyEffect(proj.Source, unit, proj.effect, proj.effect_chance, proj.effect_time)
+           DamageHandler:ApplyDamage(proj.Source, proj.Ability, unit, proj.damage, proj.crit, ELEMENT_METAL, {})
+           --StatusEffectHandler:ApplyEffect(proj.Source, unit, proj.effect, proj.effect_chance, proj.effect_time)
            StatusEffectHandler:ApplyEffect(proj.Source, unit, EFFECT_MAIM, proj.maim_chance, proj.maim_time)
            --StatusEffectHandler:ApplyEffect(proj.Source, unit, EFFECT_BURN, chance_to_burn, burn_time)
            proj:Destroy()

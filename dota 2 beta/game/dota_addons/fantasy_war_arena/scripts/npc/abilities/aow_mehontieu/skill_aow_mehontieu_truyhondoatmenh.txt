@@ -17,4 +17,24 @@
    "precache"
    {
    }
+   // SOUL CATCHER
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"attack_speed"  "2 4 6 8 10 12 14 16 18 20"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"critical_chance"  "70 90 110 130 150 170 190 210 230 250"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"soul_capture_reduce_damage"  "1"
+		}
+	}
+   
 }

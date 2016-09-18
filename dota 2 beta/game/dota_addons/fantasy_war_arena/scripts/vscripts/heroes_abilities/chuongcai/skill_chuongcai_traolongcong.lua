@@ -6,7 +6,7 @@ LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/chuongcai/"..SETTING_SK
 function skill_chuongcai_traolongcong:OnUpgrade()
   local caster = self:GetCaster()
   caster:AddNewModifier(caster, self, SETTING_SKILL_MODIFIER, {})
-  caster: CalculateStatBonus()
+  caster:CalculateStatBonus()
   UpgradeSkill(caster:GetPlayerID())
   -- DRAGON BLOOD
 --local paralyze_chance = 0.05+0.03*skill_level

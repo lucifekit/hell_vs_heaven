@@ -96,6 +96,7 @@ function Battle_Step_1_Prepare()
           if(HERO_OF_PLAYER[i])then
             local tempHero = HERO_OF_PLAYER[i]
             tempHero:RemoveModifierByName("modifier_khinhcong_jumping_lua")
+            tempHero:RemoveModifierByName("modifier_battle_hunger")
             tempHero:AddNewModifier(tempHero,nil,"modifier_prepare",{duration=75})
             tempHero:SetOrigin(teleport_center)
             FindClearSpaceForUnit(tempHero,teleport_center,true)

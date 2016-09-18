@@ -7,7 +7,7 @@ LinkLuaModifier(SETTING_SKILL_MODIFIER,"heroes_abilities/tutien/"..SETTING_SKILL
 function skill_tutien_doancannhan:OnUpgrade()
   local caster = self:GetCaster()
   caster:AddNewModifier(caster, self, SETTING_SKILL_MODIFIER, {})
-  caster: CalculateStatBonus()
+  caster:CalculateStatBonus()
   UpgradeSkill(caster:GetPlayerID())
 end
 function skill_tutien_doancannhan:GetCooldown()

@@ -14,13 +14,13 @@ function skill_aow_mehontieu_mehontieu_master:GetSkillAmplify()
   local skill_level = self:GetLevel()+GetSkillLevel(caster)
   return skill_level*0.02
 end
-function skill_aow_mehontieu_mehontieu_master:GetWeakInflictTime()
+function skill_aow_mehontieu_mehontieu_master:GetMaimInflictTime()
   local caster = self:GetCaster()
   local skill_level = self:GetLevel()+GetSkillLevel(caster)
   return skill_level*16
 end
 
-function skill_aow_mehontieu_mehontieu_master:GetStunResistTime()
+function skill_aow_mehontieu_mehontieu_master:GetWeakResistTime()
   local caster = self:GetCaster()
   local skill_level = self:GetLevel()+GetSkillLevel(caster)
   return skill_level*24
@@ -31,7 +31,7 @@ end
 function skill_aow_mehontieu_mehontieu_master:OnUpgrade()
   local caster = self:GetCaster()
   caster:AddNewModifier(caster, self, SETTING_SKILL_MODIFIER, {})
-  caster: CalculateStatBonus()
+  caster:CalculateStatBonus()
   UpgradeSkill(caster:GetPlayerID())
 end
 

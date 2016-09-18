@@ -9,6 +9,8 @@ TEAM_POINT[DOTA_TEAM_BADGUYS] = 0
 TEAM_POINT[DOTA_TEAM_NEUTRALS] = 0
 HERO_READY = {}
 GAME_STATE = 0
+LinkLuaModifier("modifier_battle_hunger","modifiers/modifier_battle_hunger",LUA_MODIFIER_MOTION_NONE)
+
 -- Cleanup a player when they leave
 function GameMode:OnDisconnect(keys)
   DebugPrint('[BAREBONES] Player Disconnected ' .. tostring(keys.userid))
@@ -130,6 +132,21 @@ function GameMode:Think_InitializePlayerHero( hPlayerHero )
   if(Battle_Time)then
     hPlayerHero:SetOrigin(hPlayerHero.battle_position)
     hPlayerHero:AddNewModifier(hPlayerHero,nil,"modifier_prepare",{duration=5})
+  else
+    print("HERO CREATED "..hPlayerHero:GetUnitName())
+    if(hPlayerHero:GetTeam()==DOTA_TEAM_GOODGUYS)then
+      print("good guy")
+      local targetEntities_2 = Entities:FindAllByName("heaven_teleport") 
+      local target_point_2 = targetEntities_2[1]:GetAbsOrigin()
+      target_point_2 = Vector(target_point_2.x+math.random(-500,500),target_point_2.y+math.random(-500,500),128)
+      hPlayerHero:AddNewModifier(hPlayerHero,nil,"modifier_battle_hunger",{duration=60,x=target_point_2.x,y=target_point_2.y})
+    end
+    if(hPlayerHero:GetTeam()==DOTA_TEAM_BADGUYS)then
+      local targetEntities_2 = Entities:FindAllByName("hell_teleport") 
+      local target_point_2 = targetEntities_2[1]:GetAbsOrigin()
+      target_point_2 = Vector(target_point_2.x+math.random(-500,500),target_point_2.y+math.random(-500,500),128)
+      hPlayerHero:AddNewModifier(hPlayerHero,nil,"modifier_battle_hunger",{duration=60,x=target_point_2.x,y=target_point_2.y})
+    end
   end
 
 end

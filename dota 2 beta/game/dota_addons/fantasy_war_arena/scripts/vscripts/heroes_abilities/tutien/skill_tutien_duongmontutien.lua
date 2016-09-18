@@ -24,7 +24,7 @@ end
 function skill_tutien_duongmontutien:OnUpgrade()
   local caster = self:GetCaster()
   caster:AddNewModifier(caster, self, SETTING_SKILL_MODIFIER, {})
-  caster: CalculateStatBonus()
+  caster:CalculateStatBonus()
   UpgradeSkill(caster:GetPlayerID())
   -- BASIC TALENT
 --local accuracy_chance = 25+20*skill_level

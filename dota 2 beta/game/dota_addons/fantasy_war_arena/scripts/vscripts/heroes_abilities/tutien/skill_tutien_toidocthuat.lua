@@ -25,7 +25,7 @@ end
 function skill_tutien_toidocthuat:OnUpgrade()
   local caster = self:GetCaster()
   caster:AddNewModifier(caster, self, SETTING_SKILL_MODIFIER, {})
-  caster: CalculateStatBonus()
+  caster:CalculateStatBonus()
   UpgradeSkill(caster:GetPlayerID())
   -- ENVENOM
 --local physical_amplify = 0.2+0.07*skill_level

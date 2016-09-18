@@ -12,8 +12,8 @@ function modifier_aow_mehontieu_dutithoihon:GetEffectName()
 end
 function modifier_aow_mehontieu_dutithoihon:DeclareFunctions()
 local funcs = {
-   MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT,
-   MODIFIER_EVENT_ON_TAKEDAMAGE
+   MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT
+   
 }
 return funcs
 end
@@ -23,14 +23,10 @@ function modifier_aow_mehontieu_dutithoihon:GetModifierMoveSpeedBonus_Constant( 
 end
 
 LinkLuaModifier("modifier_aow_mehontieu_dutithoihon_active","heroes_abilities/aow_mehontieu/modifier_aow_mehontieu_dutithoihon_active",LUA_MODIFIER_MOTION_NONE)
-function modifier_aow_mehontieu_dutithoihon:OnTakeDamage(params)
+function modifier_aow_mehontieu_dutithoihon:OnDefense()
   if(IsServer())then
-    if(params.unit==self:GetParent())then
-        if(math.random(0,100)<self.active_chance)then
-          params.unit:AddNewModifier(params.unit,self:GetAbility(),"modifier_aow_mehontieu_dutithoihon_active",{duration=30})
-        end
-    end
-    
+    print("Defense success du ti thoi hon")
+    self:GetParent():AddNewModifier(self:GetParent(),self:GetAbility(),"modifier_aow_mehontieu_dutithoihon_active",{duration=60})
   end
 end
 

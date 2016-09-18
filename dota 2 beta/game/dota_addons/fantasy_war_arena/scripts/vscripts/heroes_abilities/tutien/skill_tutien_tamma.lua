@@ -19,7 +19,7 @@ end
 function skill_tutien_tamma:OnUpgrade()
   local caster = self:GetCaster()
   caster:AddNewModifier(caster, self, SETTING_SKILL_MODIFIER, {})
-  caster: CalculateStatBonus()
+  caster:CalculateStatBonus()
   UpgradeSkill(caster:GetPlayerID())
   -- EXPERT TALENT
 --local attack_speed = math.floor(10+1.6*skill_level)

@@ -28,11 +28,6 @@
 		}
 		"02"
 		{
-			"var_type"  "FIELD_INTEGER"
-			"boost_chance"  "30 35 40 45 50 55 60 65 70 75"
-		}
-		"03"
-		{
 			"var_type"  "FIELD_FLOAT"
 			"movement_boost"  "7.5 15.0 22.5 30.0 37.5 45.0 52.5 60.0 67.5 75.0"
 		}

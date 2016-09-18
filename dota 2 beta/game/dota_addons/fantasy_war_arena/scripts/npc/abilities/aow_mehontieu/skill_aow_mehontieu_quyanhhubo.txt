@@ -11,4 +11,24 @@
    "precache"
    {
    }
+   // [IT] SEVEN LIMITATION - THAT TUYET KINH
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"attack_count"  "10 9 8 7 6"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"hp_recover"  "1 2 3 4 5"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"mp_recover"  "1 2 3 4 5"
+		}
+	}
+   
 }

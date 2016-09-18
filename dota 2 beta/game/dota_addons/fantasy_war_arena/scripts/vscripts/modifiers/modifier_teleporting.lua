@@ -69,6 +69,7 @@ function modifier_kemtele:OnDestroy()
       local unit = self:GetParent()
       unit:SetOrigin(Vector(self.x,self.y,128))
       FindClearSpaceForUnit(unit,unit:GetAbsOrigin(),true)
+      unit:RemoveModifierByName("modifier_battle_hunger")
       unit:Stop()
     end
   end

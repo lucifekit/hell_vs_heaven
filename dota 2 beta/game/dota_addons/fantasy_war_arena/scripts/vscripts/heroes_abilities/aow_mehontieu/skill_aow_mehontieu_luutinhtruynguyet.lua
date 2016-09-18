@@ -11,7 +11,7 @@ SETTING_HIT_SOUND = "Hero_TemplarAssassin.Refraction.Damage"
 function skill_aow_mehontieu_luutinhtruynguyet:GetManaCost()
    local caster=self:GetCaster()
    local skill_level=self:GetLevel()+GetSkillLevel(caster)
-   return 25+skill_level*0
+   return skill_level*2
 end
 
 function skill_aow_mehontieu_luutinhtruynguyet:GetCooldown()
@@ -42,8 +42,8 @@ local basic_damage = 0.85
 local physical_damage_amplify = 0+0.08*skill_level
 local element_damage_min = 40+32*skill_level
 local element_damage_max = 55+39*skill_level
-local chance_to_slow = 0.15+0.025*skill_level
-local slow_time = 2+0.1*skill_level
+local chance_to_maim = 0.15+0.025*skill_level
+local maim_time = 1
 local max_target = 4
    
    
@@ -65,13 +65,13 @@ local max_target = 4
         byWhichAbility = self,
         radius = 200,
         damage = damageInfo,
-        damage_element = ELEMENT_WATER,
+        damage_element = ELEMENT_METAL,
         crit = critInfo,
         custom = {
           action="status_effect",
-          effect_type=EFFECT_SLOW,
-          effect_chance=chance_to_slow*100,
-          effect_time=slow_time
+          effect_type=EFFECT_MAIM,
+          effect_chance=chance_to_maim*100,
+          effect_time=maim_time
         }
       }
    
@@ -109,12 +109,7 @@ local max_target = 4
        bProvidesVision   = true,
        numHit  = 0,
        iVisionRadius   = 200,
-       damage = damageInfo,
-       crit = critInfo,
-       effect = EFFECT_SLOW,
-       effect_chance = chance_to_slow*100,
-       effect_time = 1,
-       maxTarget = 2,
+
        iVisionTeamNumber = caster:GetTeamNumber(), 
        UnitTest = GeneralUnitTest,
        OnUnitHit = function(proj, unit) 

@@ -24,7 +24,8 @@ function PoisonHandler:ApplyPoison(caster,target,ability,period,duration,damage,
             attacker = caster,
             ability = ability,
             damage_type = DAMAGE_TYPE_PURE,
-            victim = target
+            victim = target,
+            damage_flag = 1000
           }
           local tempDamage = damage
           local debugMsg = "damage = "..damage
@@ -59,7 +60,7 @@ function PoisonHandler:ApplyPoison(caster,target,ability,period,duration,damage,
               element_def = resist_value/(resist_value+256)
           end
           damageTable.damage = damageTable.damage*(1-element_def)
-          print(debugMsg)
+          --print(debugMsg)
           --kemPrint("Poison target has  "..target:GetHealth().." hp, dealing "..tempDamage.."/"..damageTable.damage.." damage")
           ApplyDamage(damageTable)
           --show damage system

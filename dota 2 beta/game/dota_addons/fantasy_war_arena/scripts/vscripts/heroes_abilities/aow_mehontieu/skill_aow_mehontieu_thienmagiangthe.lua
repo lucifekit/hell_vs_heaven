@@ -51,6 +51,7 @@ local max_target = 7
    local soul_catcher_stack = 0
    if(soul_catcher_modifer)then
     soul_catcher_stack = soul_catcher_modifer:GetStackCount()
+    --soul_catcher_modifer:SetStackCount(soul_catcher_stack/2)
     caster:RemoveModifierByName("modifier_aow_mehontieu_doathon")
    end
    local damage1Data = {
@@ -69,7 +70,8 @@ local max_target = 7
         where = target_point,
         radius = SETTING_RADIUS,
         damage = DamageHandler:GetDamage(damage1Data),
-        damage_element = ELEMENT_WATER,
+        damage_element = ELEMENT_METAL,
+        maxTarget = 7,
         crit = critInfo,
         custom = {
           action="status_effect",
@@ -82,7 +84,7 @@ local max_target = 7
    
    --end damage setting
    
-   for i=0,14 do
+   for i=0,6 do
     Timers:CreateTimer(i*0.33,function()
       FxPointControl(SETTING_EFFECT,cast_point,1.5,{[1]=caster_position,[4]=Vector(SETTING_RADIUS,SETTING_RADIUS,1)})
       SoundPoint(SETTING_POINT_SOUND,cast_point,0.5,caster:GetTeam())

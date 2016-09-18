@@ -31,7 +31,7 @@ end
 function skill_chuongcai_gianglongchuong:OnUpgrade()
   local caster = self:GetCaster()
   caster:AddNewModifier(caster, self, SETTING_SKILL_MODIFIER, {})
-  caster: CalculateStatBonus()
+  caster:CalculateStatBonus()
   UpgradeSkill(caster:GetPlayerID())
   -- MASTER TALENT
 --local basic_damage = 0+0.02*skill_level

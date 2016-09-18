@@ -1,4 +1,5 @@
 modifier_aow_mehontieu_doathon = class({})
+--
 require('kem_lib/kem')
 function modifier_aow_mehontieu_doathon:IsHidden()
    return false

@@ -27,7 +27,7 @@ end
 function skill_aow_mehontieu_mehontieu_basic:OnUpgrade()
   local caster = self:GetCaster()
   caster:AddNewModifier(caster, self, SETTING_SKILL_MODIFIER, {})
-  caster: CalculateStatBonus()
+  caster:CalculateStatBonus()
   UpgradeSkill(caster:GetPlayerID())
   -- BASIC TALENT
 --local accuracy_chance = 25+30*skill_level

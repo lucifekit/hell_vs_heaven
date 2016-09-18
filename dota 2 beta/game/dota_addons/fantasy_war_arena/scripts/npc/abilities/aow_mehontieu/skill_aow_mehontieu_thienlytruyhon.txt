@@ -11,4 +11,20 @@
    "precache"
    {
    }
+   
+   // [IT] SIX DIRECTIONS
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"critical_damage"  "20 30 40 50 60"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"dexterity_multiple"  "3 6 9 12 15"
+		}
+	}
+   
 }

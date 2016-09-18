@@ -6,6 +6,9 @@ end
 function modifier_immobile:GetEffectName()
   return "particles/units/heroes/hero_oracle/oracle_fortune_purge_root_pnt.vpcf"
 end
+function modifier_immobile:GetTexture()
+  return "lone_druid_spirit_bear_entangle"
+end
 
 function modifier_immobile:CheckState()
   local state = {

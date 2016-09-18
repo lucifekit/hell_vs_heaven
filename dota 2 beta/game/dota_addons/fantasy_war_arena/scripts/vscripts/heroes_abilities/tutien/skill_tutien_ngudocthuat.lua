@@ -22,7 +22,7 @@ end
 function skill_tutien_ngudocthuat:OnUpgrade()
   local caster = self:GetCaster()
   caster:AddNewModifier(caster, self, SETTING_SKILL_MODIFIER, {})
-  caster: CalculateStatBonus()
+  caster:CalculateStatBonus()
   UpgradeSkill(caster:GetPlayerID())
   -- MASTER POISON
 --local poison_damage = 0+20*skill_level

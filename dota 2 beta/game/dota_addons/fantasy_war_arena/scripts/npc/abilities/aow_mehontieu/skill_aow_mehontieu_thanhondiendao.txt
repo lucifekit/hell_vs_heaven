@@ -5,10 +5,52 @@
    "RequiredLevel"          "60"
    "MaxLevel"				 "5"
    "LevelsBetweenUpgrades"  "1"
-   "AbilityTextureName"      "templar_assassin_refraction_damage"
+   "AbilityTextureName"      "witch_doctor_paralyzing_cask"
    "ScriptFile"          "heroes_abilities/aow_mehontieu/skill_aow_mehontieu_thanhondiendao"
    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
    "precache"
    {
+   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_templar_assassin.vsndevts"
    }
+   // FIVE POISON DART
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"stack_require"  "9 8 7 6 5"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "110 120 130 140 150"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_damage_amplify"  "90 105 120 135 150"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "456 600 744 888 1032"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "739 935 1131 1327 1523"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"immobile_chance"  "60 70 80 90 100"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"immobile_duration"  "2.3 2.6 2.9 3.2 3.5"
+		}
+	}
+
+   
 }

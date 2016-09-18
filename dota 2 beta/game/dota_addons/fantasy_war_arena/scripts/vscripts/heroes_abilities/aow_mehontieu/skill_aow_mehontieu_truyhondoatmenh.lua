@@ -12,7 +12,7 @@ end
 function skill_aow_mehontieu_truyhondoatmenh:GetCooldown()
    local caster=self:GetCaster()
    local skill_level=self:GetLevel()+GetSkillLevel(caster)
-   return 60-3*skill_level
+   return 35-2*skill_level
 end
 
 function skill_aow_mehontieu_truyhondoatmenh:OnAbilityPhaseStart()
@@ -30,6 +30,6 @@ function skill_aow_mehontieu_truyhondoatmenh:OnSpellStart()
    local target_point = self:GetCursorPosition()
    local angleBetweenCasterAndTarget = (target_point - caster_position):Normalized()
    caster:EmitSound("Hero_TemplarAssassin.Refraction")
-   caster:AddNewModifier(caster,self,SETTING_SKILL_MODIFIER,{duration=20} ):SetStackCount(10)
+   caster:AddNewModifier(caster,self,SETTING_SKILL_MODIFIER,{duration=20})
    --self:PayManaCost()
 end
