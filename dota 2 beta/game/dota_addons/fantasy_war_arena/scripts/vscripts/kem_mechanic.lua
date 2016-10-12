@@ -286,6 +286,7 @@ function AllPlayerLoaded()
 
     --kemPrint("All played loaded done")
 end
+LinkLuaModifier("modifier_mango","modifiers/items/modifier_mango",LUA_MODIFIER_MOTION_NONE)
 
 function HandleHeroCreated(hero)
   --kemPrint("Handling hero create")
@@ -302,9 +303,12 @@ function HandleHeroCreated(hero)
   local hero_name = hero:GetUnitName()
   --------------------
   -- This line for example will set the starting gold of every hero to 500 unreliable gold
+  --------------
+   
+  print("Set gold = 1000")
   hero:SetGold(1000, false)
 
-
+ 
   hero:UpgradeAbility(hero:GetAbilityByIndex(0))--skill 1
   
   --kemPrint(hero:GetUnitName())
@@ -629,7 +633,16 @@ function OnSkillUsed(keys)
       if(hero.skillCooldown) then
         --hero:AddExperience(200,0,false,false)
         --hero:HeroLevelUp(true)
-        hero:skillCooldown()
+        if(abilityname=="skill_khinhcong")then
+          if(hero.khinhcong_cooldown)then
+            hero:skillCooldown()
+          else
+            
+          end
+        else
+          hero:skillCooldown()
+        end
+        
       end
       
         if(IsInToolsMode())then
@@ -726,6 +739,7 @@ function KemChat(keys,playerID)
                   hero:HeroLevelUp(false)
                 end
                 hero:SetGold(500000, false)
+                print("#742 event sendCommand : enter debug")
                 CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(playerID), "enter_debug_mode", {playerID=playerID})
                 for i = 1,12 do
                   hero:GetAbilityByIndex(i):SetLevel(5)
@@ -804,6 +818,7 @@ function KemChat(keys,playerID)
              if(IsInToolsMode())then
                 kemPrint("ENTER DEBUG")
                  PlayerResource:SetCameraTarget( playerID,nil )
+                 print("#821 event sendCommand : enter debug")
                 CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(playerID), "enter_debug_mode", {playerID=playerID})
              end
            end
@@ -811,6 +826,7 @@ function KemChat(keys,playerID)
            if(command=="-quitdebug" or command=="-qd")then
              if(IsInToolsMode())then
                 kemPrint("QUIT DEBUG")
+                print("#829 event sendCommand : quit debug")
                 CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(playerID), "quit_debug_mode", {playerID=playerID})
              end
            end
@@ -964,6 +980,33 @@ function KemChat(keys,playerID)
                     end
           end
         end
+        if(command=="-model")then
+          if(IsInToolsMode())then
+            local model_slot = tonumber(s)
+            
+            local model = hero:FirstMoveChild()
+            local idx =0
+            while model ~= nil do                
+                if model:GetClassname() == "dota_item_wearable" then
+                    if(idx==model_slot)then
+                      model:AddEffects(EF_NODRAW) -- Set model hidden
+                    end
+                    idx=idx+1                    
+                end
+                model = model:NextMovePeer()
+            end
+            Timers:CreateTimer(2,function()
+              local model = hero:FirstMoveChild()
+              while model ~= nil do                
+                  if model:GetClassname() == "dota_item_wearable" then
+                      model:RemoveEffects(EF_NODRAW) -- Set model hidden
+  
+                  end
+                  model = model:NextMovePeer()
+              end
+            end)
+          end
+        end
         if(command=="-health")then
            if(IsInToolsMode())then
                   local level = tonumber(s)
@@ -976,7 +1019,12 @@ function KemChat(keys,playerID)
                   end
           end
         end
-        
+        if(command=="-camera")then
+          if(IsInToolsMode())then
+            local distance = tonumber(s)
+            GameMode:SetCameraDistanceOverride( distance )
+          end
+        end
         if(command=="-q")then
           if(hero)then
             if(qX==-1)then

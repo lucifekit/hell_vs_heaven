@@ -925,6 +925,573 @@
 		}
 	   
 	}
+	"skill_aow_truyhontrao_daimaccohon"
+	{
+	   "ID"  "11309"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "45"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "skill_aow_truyhontrao_daimaccohon"
+	   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_daimaccohon"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "1000"
+	   "precache"
+	   {
+	   	"particle" "particles/units/heroes/hero_ember_spirit/ember_spirit_sleightoffist_trail.vpcf"
+	   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts"
+	   }
+	   // DESERTED STORM
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "58 61 64 67 70 73 76 79 82 85"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_damage_amplify"  "80 85 90 95 100 105 110 115 120 125"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_min"  "378 421 464 507 550 593 636 679 722 765"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_max"  "416 468 520 572 624 676 728 780 832 884"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_maim"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_time"  "1"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"chance_to_knockback"  "40 50 60 70 80 90 100 110 120 130"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"knockback_distance"  "120 140 160 180 200 220 240 260 280 300"
+			}
+			"09"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_target"  "5"
+			}
+		}
+	   
+	}
+	"skill_aow_truyhontrao_daodoantinhchung"
+	{
+	   "ID"  "11301"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "1"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "juggernaut_blade_dance"
+	   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_daodoantinhchung"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "250"
+	   "precache"
+	   {
+	   }
+	   // HEARTLESS BLADE
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "42 50 57 65 72 80 87 95 102 110"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_damage_amplify"  "37 52 67 82 97 112 127 142 157 172"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_min"  "43 71 99 127 155 183 211 239 267 295"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_max"  "55 87 119 151 183 215 247 279 311 343"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_maim"  "16.5 18.0 19.5 21.0 22.5 24.0 25.5 27.0 28.5 30.0"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_time"  "1"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_target"  "5"
+			}
+		}
+	   
+	}
+	"skill_aow_truyhontrao_huyennguyenkinh"
+	{
+	   "ID"  "11306"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "30"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "doom_bringer_doom"
+	   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_huyennguyenkinh"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // DARK CHAOS
+		"AbilitySpecial"
+		{
+				"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"hp_increase"  "8 16 24 32 40"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"basic_damage_per_stack"  "2.1 2.2 2.3 2.4 2.5"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_stack"  "6 7 8 9 10"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stack_duration"  "80 90 100 110 120"
+			}
+		}
+	   
+	}
+	"skill_aow_truyhontrao_huyetvutinhphong"
+	{
+	   "ID"  "11305"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "9"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "juggernaut_blade_fury"
+	   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_huyetvutinhphong"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "1000"
+	   "precache"
+	   {
+	   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
+	   }
+	   // BLADE FURY
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "46 47 48 49 50 51 52 53 54 55"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_damage_amplify"  "66 77 88 99 110 121 132 143 154 165"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_min"  "163 191 219 247 275 303 331 359 387 415"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_max"  "195 237 279 321 363 405 447 489 531 573"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"bleed_physical_amplify"  "50"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"bleed_stack_basic_damage"  "2 3 4 5 6 7 8 9 10 11"
+			}
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"bleed_stack_element_damage"  "27 29 31 33 35 37 39 41 43 45"
+			}
+			"08"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"chance_to_maim"  "15.5 16.0 16.5 17.0 17.5 18.0 18.5 19.0 19.5 20.0"
+			}
+			"09"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_time"  "1"
+			}
+			"10"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_target"  "5"
+			}
+		}
+	   
+	}
+	"skill_aow_truyhontrao_mianhkinhhong"
+	{
+	   "ID"  "11311"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "10"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "shredder_timber_chain"
+	   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_mianhkinhhong"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "700"
+	   "precache"
+	   {
+	   }
+	   
+	   // BLUR CHAIN
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "75 80 85 90 95"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_damage_amplify"  "73 81 89 97 105"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"chance_to_immobile"  "40 55 70 85 100"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"immobile_time"  "2.1 2.2 2.3 2.4 2.5"
+			}
+		}
+	   
+	}
+	"skill_aow_truyhontrao_quytraothamu"
+	{
+	   "ID"  "11303"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "7"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "skill_aow_truyhontrao_quytraothamu"
+	   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_quytraothamu"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "1200"
+	   "precache"
+	   {
+	   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts"
+	   }
+	   
+	   // BLOODY CHAIN
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"chain_length"  "600 700 800 900 1000"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"chain_speed"  "1800"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"spin_time"  "0.5"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"fall_time"  "2.2 2.4 2.6 2.8 3.0"
+			}
+		}
+	   
+	}
+	"skill_aow_truyhontrao_sattamthanhphan"
+	{
+	   "ID"  "11312"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "60"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "juggernaut_omni_slash"
+	   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_sattamthanhphan"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "AbilityCastPoint"        "0.03"
+	   "AbilityCastRange"        "800"
+	   "precache"
+	   {
+	   	"particle" "particles/units/heroes/hero_ember_spirit/ember_spirit_sleightoffist_trail.vpcf"
+	   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts"
+	   }
+	   // KILLING WILL
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "70 85 100 115 130"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_damage_amplify"  "85 95 105 115 125"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_min"  "421 507 593 679 765"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"element_damage_max"  "468 572 676 780 884"
+			}
+			"05"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"chance_to_maim"  "20 25 30 35 40"
+			}
+			"06"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_time"  "1"
+			}	
+			"07"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"max_target"  "7"
+			}
+		}
+	   
+	}
+	"skill_aow_truyhontrao_thiendiavotinh"
+	{
+	   "ID"  "11304"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "8"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "bloodseeker_rupture"
+	   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_thiendiavotinh"
+	   "HotKeyOverride"    ""
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	   "precache"
+	   {
+	   }
+	}
+	"skill_aow_truyhontrao_thientamcong"
+	{
+	   "ID"  "11307"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "35"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "bloodseeker_thirst"
+	   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_thientamcong"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // SEVEN STRIKE
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stack_chance"  "13 16 19 22 25 28 31 34 37 40"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"stack_duration"  "12 14 16 18 20 22 24 26 28 30"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"agility_per_stack"  "25 30 35 40 45 50 55 60 65 70"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_FLOAT"
+				"hp_lost_damage"  "3.5 4.0 4.5 5.0 5.5 6.0 6.5 7.0 7.5 8.0"
+			}
+		}
+	   
+	}
+	"skill_aow_truyhontrao_truyhontrao_basic"
+	{
+	   "ID"  "11302"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "6"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "centaur_double_edge"
+	   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_truyhontrao_basic"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // BASIC TALENT
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_chance"  "70 90 110 130 150"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"physical_amplify"  "20 35 50 65 80"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"critical_chance"  "26 32 38 44 50"
+			}
+		}
+	   
+	}
+	"skill_aow_truyhontrao_truyhontrao_expert"
+	{
+	   "ID"  "11308"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "40"
+	   "MaxLevel"				 "10"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "ursa_fury_swipes"
+	   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_truyhontrao_expert"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	   // EXPERT TALENT
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_chance_increase"  "24 38 52 66 80 94 108 122 136 150"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"accuracy_chance"  "55 60 65 70 75 80 85 90 95 100"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weak_chance_resist"  "24 38 52 66 80 94 108 122 136 150"
+			}
+		}
+	   
+	}
+	"skill_aow_truyhontrao_truyhontrao_master"
+	{
+	   "ID"  "11310"
+	   "BaseClass"             "ability_lua"
+	   "RequiredLevel"          "50"
+	   "MaxLevel"				 "5"
+	   "LevelsBetweenUpgrades"  "1"
+	   "AbilityTextureName"      "doom_bringer_infernal_blade"
+	   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_truyhontrao_master"
+	   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	   "precache"
+	   {
+	   }
+	// MASTER TALENT
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"basic_damage"  "2 4 6 8 10"
+			}
+			"02"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"skill_amplify"  "2 4 6 8 10"
+			}
+			"03"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"maim_time_increase"  "20 35 50 65 80"
+			}
+			"04"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"weak_time_reduce"  "24 48 72 96 120"
+			}
+		}
+	
+	   
+	}
 	"boss"
 	{
 		 "ID"  "90000"

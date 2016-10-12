@@ -153,7 +153,7 @@ local max_target = 2
           end})
           
           
-          --CreateEffectOnPoint(SETTING_NTTP_HIT_EFFECT,unit:GetAbsOrigin(),0.5)
+          
         end
         
       } )

@@ -649,7 +649,7 @@ GameUI.SetMouseCallback( function( eventName, arg ) {
 } );
 
 GameUI.SetCameraPitchMax( 55 );
-GameUI.SetCameraDistance( 2000);
+GameUI.SetCameraDistance( 1000);
 
 // Alternate camera settings
 if ( 0 )
@@ -657,49 +657,10 @@ if ( 0 )
 {
 	$.Msg("509");
 	GameUI.SetCameraPitchMax( 45 );
-	GameUI.SetCameraDistance( 2000 );
+	GameUI.SetCameraDistance( 1000 );
 	GameUI.SetCameraLookAtPositionHeightOffset( 50 );
 }
-/*
-function OnExecuteAbility1ButtonPressed( cmdName )
-{
-	$.Msg( "ExecuteAbility1 as " + cmdName ); 
-	var order = {
-		AbilityIndex : Entities.GetAbility( Players.GetPlayerHeroEntityIndex( Players.GetLocalPlayer() ), 1 ),
-		QueueBehavior : OrderQueueBehavior_t.DOTA_ORDER_QUEUE_NEVER,
-		ShowEffects : false,
-		OrderType : dotaunitorder_t.DOTA_UNIT_ORDER_CAST_NO_TARGET
-	};
-	var abilityBehavior = Abilities.GetBehavior( order.AbilityIndex );
-	if ( abilityBehavior & DOTA_ABILITY_BEHAVIOR.DOTA_ABILITY_BEHAVIOR_POINT )
-	{
-		order.OrderType = dotaunitorder_t.DOTA_UNIT_ORDER_CAST_POSITION;
-		order.Position = GetMouseCastPosition( order.AbilityIndex );
-	}
 
-	Game.PrepareUnitOrders( order );
-}
-*/
-/*
-var nParticleIndex = -1;
-function OnTestButtonPressed()
-{
-	$.Msg( "Test button pressed." );
-	var localHeroIndex = Players.GetPlayerHeroEntityIndex( Players.GetLocalPlayer() );
-	nParticleIndex = Particles.CreateParticle( "particles/generic_gameplay/generic_stunned.vpcf", ParticleAttachment_t.PATTACH_OVERHEAD_FOLLOW, localHeroIndex );
-}
-
-function OnTestButtonReleased()
-{
-	$.Msg( "Test button released." ); 
-	Particles.DestroyParticleEffect( nParticleIndex, true );
-}
-*/
-/*
-Game.AddCommand( "CustomGameExecuteAbility1", OnExecuteAbility1ButtonPressed, "", 0 );
-Game.AddCommand( "+CustomGameTestButton", OnTestButtonPressed, "", 0 );
-Game.AddCommand( "-CustomGameTestButton", OnTestButtonReleased, "", 0 );
-*/
 var debug = false
 function DebugMode(){
 	$.Msg("Enter debug mode");
@@ -722,3 +683,14 @@ function SetLockTarget(data){
 	GameEvents.Subscribe( "quit_debug_mode", QuitDebugMode);
 	GameEvents.Subscribe( "set_lock", SetLockTarget);
 })();
+function DefenseOn(){
+	$.Msg("Defense On");
+	GameEvents.SendCustomGameEventToServer( "defense_on", {unit: Players.GetPlayerHeroEntityIndex( Players.GetLocalPlayer() )} );
+			
+}
+function DefenseOff(){
+	$.Msg("Defense Off");	
+	GameEvents.SendCustomGameEventToServer( "defense_off", {unit: Players.GetPlayerHeroEntityIndex( Players.GetLocalPlayer() )} );
+}
+Game.AddCommand( "+Defense", DefenseOn, "", 0 );
+Game.AddCommand( "-Defense", DefenseOff, "", 0 );

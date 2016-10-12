@@ -1,0 +1,76 @@
+"skill_aow_truyhontrao_huyetvutinhphong"
+{
+   "ID"  "11305"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "9"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "juggernaut_blade_fury"
+   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_huyetvutinhphong"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "1000"
+   "precache"
+   {
+   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
+   }
+   // BLADE FURY
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "46 47 48 49 50 51 52 53 54 55"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_damage_amplify"  "66 77 88 99 110 121 132 143 154 165"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "163 191 219 247 275 303 331 359 387 415"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "195 237 279 321 363 405 447 489 531 573"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"bleed_physical_amplify"  "50"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"bleed_stack_basic_damage"  "2 3 4 5 6 7 8 9 10 11"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"bleed_stack_element_damage"  "27 29 31 33 35 37 39 41 43 45"
+		}
+		"08"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_maim"  "15.5 16.0 16.5 17.0 17.5 18.0 18.5 19.0 19.5 20.0"
+		}
+		"09"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time"  "1"
+		}
+		"10"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "5"
+		}
+	}
+   
+}

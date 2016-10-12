@@ -16,6 +16,31 @@ function GetSkillLevel(hero)
     --return 0
 end
 
+function HideModel(hero,model_slot,time)
+    local idx =0
+    
+    local model = hero:FirstMoveChild()
+    while model ~= nil do                
+        if model:GetClassname() == "dota_item_wearable" then
+            if(idx==model_slot)then
+              model:AddEffects(EF_NODRAW) -- Set model hidden
+            end
+            idx=idx+1                    
+        end
+        model = model:NextMovePeer()
+    end
+    
+    Timers:CreateTimer(time,function()
+      local model = hero:FirstMoveChild()
+      while model ~= nil do                
+          if model:GetClassname() == "dota_item_wearable" then
+              model:RemoveEffects(EF_NODRAW) -- Set model hidden
+          end
+          model = model:NextMovePeer()
+      end
+    end)
+end
+
 function GetTargetAndLock(abilityData)
   local caster = abilityData:GetCaster()
   local hTarget = abilityData:GetCursorTarget()
@@ -23,6 +48,7 @@ function GetTargetAndLock(abilityData)
   if(hTarget)then
       caster.lockTarget = hTarget
       --setLock
+      print("#51 sendCommand : set_lock")
       CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(caster:GetPlayerID()), "set_lock", {playerID=caster:GetPlayerID(),target_idx=result:entindex()})
    else
       --an nut skill vao mat dat
@@ -36,6 +62,7 @@ function GetTargetAndLock(abilityData)
               --print("Cast range : "..castRange)            
               if((caster.lockTarget:GetOrigin()-caster:GetOrigin()):Length2D()<=castRange)then
                 result = caster.lockTarget
+                print("#65 sendCommand : set_lock")
                 CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(caster:GetPlayerID()), "set_lock", {playerID=caster:GetPlayerID(),target_idx=result:entindex()})
                 --setLock
               else
@@ -56,6 +83,7 @@ function GetTargetAndLock(abilityData)
    end
    return result
 end
+
 function IsShortRangeAttack(attacker,target)
   if(not attacker:IsAlive())then
     return false
@@ -65,6 +93,25 @@ function IsShortRangeAttack(attacker,target)
   end
   return (attacker:GetOrigin()-target:GetOrigin()):Length2D()<240
 end
+
+LinkLuaModifier("modifier_defense_break","modifiers/modifier_defense_break", LUA_MODIFIER_MOTION_NONE )
+
+function BreakDefense(unit,breaker,break_function)  
+  if(unit:HasModifier("modifier_defense"))then
+    print("Remove defense modifier")
+    unit:RemoveModifierByName("modifier_defense")
+    FxPoint("particles/units/heroes/hero_batrider/batrider_flamebreak_explosion.vpcf",unit:GetOrigin(),0.5)
+    print("Add defense break modifier")
+    unit:AddNewModifier(breaker,nil,"modifier_defense_break",{duration=80})
+    print("Done")
+    if(break_function)then
+        --kemPrint("Calling hit function")
+        pcall(break_function,breaker,unit)
+      end
+  end
+  
+end
+
 function ReturnDamage(target,ability,attacker,damage,return_amount)
   print("Damage = "..damage)
   local damage_return = damage*return_amount
@@ -149,6 +196,19 @@ function BuffAllies(caster,ability,buff,duration,center,aoe)
     end
   end
 end
+
+function BuffEnemies(caster,ability,buff,duration,center,aoe)
+  local group = FindUnitsInRadius(caster:GetTeam(), center, nil, aoe, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, 0, false )
+  if #group > 0 then
+    for _,unit in pairs(group) do
+      if(not unit==caster)then
+        unit:AddNewModifier(caster, ability,buff, { duration = duration } )
+      end
+    end
+  end
+end
+
+
 function FxPointRelease(effect,point,control)
   local hit_effect = ParticleManager:CreateParticle(effect, PATTACH_WORLDORIGIN, nil)
   ParticleManager:SetParticleControl( hit_effect, 0, point)     
@@ -208,13 +268,40 @@ function SoundPoint(sound,point,time,team)
             })
 end
 
-function CreateEffectOnPoint(effect,point,time)
-  local hit_effect = ParticleManager:CreateParticle(effect, PATTACH_WORLDORIGIN, nil)
-  ParticleManager:SetParticleControl( hit_effect, 0, point)     
-  --ParticleManager:SetParticleControl( hit_effect, 3, unit:GetAbsOrigin()+Vector(0,0,50))
-  Timers:CreateTimer(0.5,function() 
-      ParticleManager:DestroyParticle(hit_effect,true)
-  end)
+function explode(p,d)
+  local t, ll
+  t={}
+  ll=0
+  if(#p == 1) then return {p} end
+    while true do
+      l=string.find(p,d,ll,true) -- find the next d in the string
+      if l~=nil then -- if "not not" found then..
+        table.insert(t, string.sub(p,ll,l-1)) -- Save it in our array.
+        ll=l+1 -- save just after where we found it for searching next time.
+      else
+        table.insert(t, string.sub(p,ll)) -- Save what's left in our array.
+        break -- Break at end, as it should be, according to the lua manual.
+      end
+    end
+  return t
+end
+function split(str, pat)
+   local t = {}  -- NOTE: use {n = 0} in Lua-5.0
+   local fpat = "(.-)" .. pat
+   local last_end = 1
+   local s, e, cap = str:find(fpat, 1)
+   while s do
+      if s ~= 1 or cap ~= "" then
+   table.insert(t,cap)
+      end
+      last_end = e+1
+      s, e, cap = str:find(fpat, last_end)
+   end
+   if last_end <= #str then
+      cap = str:sub(last_end)
+      table.insert(t, cap)
+   end
+   return t
 end
 function testingEffect(caster,effect)
   local caster_point = caster:GetOrigin()

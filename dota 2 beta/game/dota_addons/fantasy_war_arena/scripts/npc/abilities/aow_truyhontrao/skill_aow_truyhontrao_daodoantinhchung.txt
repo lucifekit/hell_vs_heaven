@@ -1,0 +1,60 @@
+"skill_aow_truyhontrao_daodoantinhchung"
+{
+   "ID"  "11301"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "1"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "juggernaut_blade_dance"
+   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_daodoantinhchung"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "250"
+   "precache"
+   {
+   }
+   // HEARTLESS BLADE
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "42 50 57 65 72 80 87 95 102 110"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_damage_amplify"  "37 52 67 82 97 112 127 142 157 172"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "43 71 99 127 155 183 211 239 267 295"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "55 87 119 151 183 215 247 279 311 343"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_maim"  "16.5 18.0 19.5 21.0 22.5 24.0 25.5 27.0 28.5 30.0"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time"  "1"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "5"
+		}
+	}
+   
+}

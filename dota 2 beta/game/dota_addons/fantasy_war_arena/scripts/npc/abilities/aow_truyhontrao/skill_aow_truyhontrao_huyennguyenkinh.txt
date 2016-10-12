@@ -1,0 +1,39 @@
+"skill_aow_truyhontrao_huyennguyenkinh"
+{
+   "ID"  "11306"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "30"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "doom_bringer_doom"
+   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_huyennguyenkinh"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // DARK CHAOS
+	"AbilitySpecial"
+	{
+			"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"hp_increase"  "8 16 24 32 40"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"basic_damage_per_stack"  "2.1 2.2 2.3 2.4 2.5"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_stack"  "6 7 8 9 10"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"stack_duration"  "80 90 100 110 120"
+		}
+	}
+   
+}

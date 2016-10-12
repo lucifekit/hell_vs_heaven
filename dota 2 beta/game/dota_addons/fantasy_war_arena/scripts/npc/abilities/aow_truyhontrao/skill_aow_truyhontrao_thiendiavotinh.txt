@@ -1,0 +1,18 @@
+"skill_aow_truyhontrao_thiendiavotinh"
+{
+   "ID"  "11304"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "8"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "bloodseeker_rupture"
+   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_thiendiavotinh"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "precache"
+   {
+   }
+}

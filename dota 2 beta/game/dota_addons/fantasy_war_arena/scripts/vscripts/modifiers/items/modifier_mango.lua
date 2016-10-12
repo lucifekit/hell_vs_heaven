@@ -2,14 +2,13 @@ modifier_mango = class({})
 --------------------------------------------------------------------------------
 
 SETTING_REGEN = 50
+function modifier_mango:IsHidden()
+  return true
+end
 function modifier_mango:RemoveOnDeath()
   return true
 end
-function modifier_mango:GetEffectName()
 
-  return "particles/units/heroes/hero_warlock/warlock_shadow_word_buff.vpcf"
-
-end
 function modifier_mango:GetEffectAttachType()
   return "follow_origin"
 end
@@ -20,9 +19,7 @@ end
 function modifier_mango:IsPassive()
   return false
 end
-function modifier_mango:IsHidden()
-  return false
-end
+
 function modifier_mango:IsBuff()
   return false
 end
@@ -33,7 +30,8 @@ function modifier_mango:IsPurgeable()
   return false
 end
 function modifier_mango:OnIntervalThink()
-
+    --heal toi da 20% hp/mp
+    
     local hpRegen = math.min(self.hp_per_tick,self:GetCaster():GetMaxHealth()*0.2)
     local mpRegen = math.min(self.mp_per_tick,self:GetCaster():GetMaxMana()*0.2)
     self.target:SetHealth(self.target:GetHealth()+hpRegen)

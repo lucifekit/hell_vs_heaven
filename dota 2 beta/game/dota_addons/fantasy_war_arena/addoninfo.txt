@@ -21,6 +21,12 @@
           "Command"   "+CloseBook"
           "Name"      "Close Book"
       }
+       "03"
+      {
+          "Key"       "T"//SHIFT OK
+          "Command"   "+Defense"
+          "Name"      "Defense"
+      }
   }
 //  "desert_duo"
 //  {

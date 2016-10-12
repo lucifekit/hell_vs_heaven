@@ -8,7 +8,7 @@ EFFECT_FEAR = "modifier_fear"
 EFFECT_IMMOBILE = "modifier_immobile"
 EFFECT_PARALIZED = "modifier_paralized"
 EFFECT_KNOCKBACK = "modifier_knockback"
-
+EFFECT_FALL = "modifier_fall"
 LinkLuaModifier(EFFECT_MAIM,"modifiers/"..EFFECT_MAIM, LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier(EFFECT_SLOW,"modifiers/"..EFFECT_SLOW, LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier(EFFECT_BURN,"modifiers/"..EFFECT_BURN, LUA_MODIFIER_MOTION_NONE )
@@ -17,6 +17,7 @@ LinkLuaModifier(EFFECT_STUN,"modifiers/"..EFFECT_STUN, LUA_MODIFIER_MOTION_NONE 
 LinkLuaModifier(EFFECT_FEAR,"modifiers/"..EFFECT_FEAR, LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier(EFFECT_IMMOBILE,"modifiers/"..EFFECT_IMMOBILE, LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier(EFFECT_PARALIZED,"modifiers/"..EFFECT_PARALIZED, LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier(EFFECT_FALL,"modifiers/"..EFFECT_FALL, LUA_MODIFIER_MOTION_NONE )
 if not StatusEffectHandler then
   StatusEffectHandler = class({})
 end
@@ -160,6 +161,11 @@ function StatusEffectHandler:ApplyEffect(caster,unit,effect,chance,time)
       end
   end
   
+  if(effect==EFFECT_FALL)then
+      if(unit.effect_fall_resist_percent)then
+        resist_chance = resist_chance+ unit.effect_fall_resist_percent
+      end
+  end
   
   local modi_chance = inflict_chance-resist_chance
   --local real_chance = math.abs(modi_chance)*100/((math.abs(modi_chance)+SETTING_EFFECT_BASE))
@@ -318,9 +324,10 @@ function StatusEffectHandler:KnockBack(caster,start_point,unit,chance,knockback_
           center_z = start_point.z
         }
         --kemPrint("add modifier knockback "..knockback_duration.."s distance = "..knockback_distance)
-    
+    print("Knock back 327 "..knockback_distance)
     unit:AddNewModifier( caster, nil, EFFECT_KNOCKBACK, knockbackModifierTable )
 
-
+  else
+    print("Knock back missed "..chance.." resist chance "..resist_chance)
   end
 end

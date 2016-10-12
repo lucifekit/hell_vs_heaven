@@ -23,6 +23,7 @@ function modifier_aow_mehontieu_dutithoihon:GetModifierMoveSpeedBonus_Constant( 
 end
 
 LinkLuaModifier("modifier_aow_mehontieu_dutithoihon_active","heroes_abilities/aow_mehontieu/modifier_aow_mehontieu_dutithoihon_active",LUA_MODIFIER_MOTION_NONE)
+
 function modifier_aow_mehontieu_dutithoihon:OnDefense()
   if(IsServer())then
     print("Defense success du ti thoi hon")

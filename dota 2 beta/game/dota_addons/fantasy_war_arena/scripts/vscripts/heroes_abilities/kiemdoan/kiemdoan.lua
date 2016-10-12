@@ -257,7 +257,7 @@ local stun_time = 1
               fExpireTime     = SETTING_LMTK_SWORD_FLY_TIME, -- thoi gian teo
               fGroundOffset   = 40, -- chi dung voi zCheck, lockGround
               
-              draw            = true,
+              
               fStartRadius    = 80,
               fEndRadius      = 80,
               

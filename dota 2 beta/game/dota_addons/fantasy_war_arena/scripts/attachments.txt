@@ -1,65 +1,99 @@
 "Attachments"
 {
-	"models/heroes/axe/axe.vmdl"
+	"models/heroes/juggernaut/juggernaut.vmdl"
 	{
-		"attach_weapon"
+		"attach_hitloc"
 		{
-			"models/items/faceless_void/battlefury/battlefury.vmdl"
+			"models/items/pudge/pudge_skeleton_hook_body.vmdl"
 			{
-				"scale"		"2"
-				"pitch"		"-50"
-				"roll"		"28"
-				"ZPos"		"-63"
-				"YPos"		"111"
+				"scale"		"1"
+				"pitch"		"300"
+				"roll"		"450"
+				"ZPos"		"-25"
+				"YPos"		"0"
+				"yaw"		"-150"
+				"XPos"		"0"
+			}
+		}
+		"attach_sword"
+		{
+			"models/items/pudge/pudge_skeleton_hook_body.vmdl"
+			{
+				"scale"		"1"
+				"pitch"		"0"
+				"roll"		"0"
+				"ZPos"		"-5"
+				"YPos"		"0"
 				"yaw"		"0"
 				"XPos"		"0"
 			}
-			"models/items/wraith_king/winterblight_weapon/winterblight_weapon.vmdl"
+		}
+	}
+	"models/heroes/zeus/zeus.vmdl"
+	{
+		"attach_hitloc"
+		{
+			"models/heroes/zeus/zeus_hair_arcana.vmdl"
 			{
-				"scale"		"2.2999999523163"
+				"scale"		"1"
+				"pitch"		"0"
+				"roll"		"0"
+				"yaw"		"0"
 				"YPos"		"0"
-				"pitch"		"-140"
 				"ZPos"		"0"
-				"roll"		"30"
-				"yaw"		"180"
-				"XPos"		"70"
+				"XPos"		"0"
 			}
 		}
+	}
+	"models/heroes/antimage/antimage.vmdl"
+	{
 		"attach_hitloc"
 		{
 			"models/props_gameplay/red_box.vmdl"
 			{
-				"scale"		"1.2999999523163"
+				"scale"		"1.1000000238419"
 				"pitch"		"-70"
 				"roll"		"0"
 				"yaw"		"-135"
-				"YPos"		"0"
+				"YPos"		"-17"
 				"ZPos"		"0"
 				"XPos"		"-13"
 			}
-			"models/heroes/tiny_04/tiny04_deathsim.vmdl"
+			"models/particle/snowball.vmdl"
 			{
-				"Animation"		"tiny04_deathsim_anim"
-				"scale"		"1"
-				"pitch"		"0"
-				"roll"		"0"
-				"ZPos"		"0"
-				"YPos"		"0"
-				"yaw"		"0"
-				"XPos"		"0"
+				"scale"		"0.30000001192093"
+				"pitch"		"-113"
+				"roll"		"131"
+				"yaw"		"45"
+				"YPos"		"-27"
+				"ZPos"		"112"
+				"XPos"		"-65"
 			}
 		}
-		"attach_origin"
+		"attach_h2"
 		{
-			"models/props_gameplay/red_box.vmdl"
+			"models/particle/snowball.vmdl"
 			{
-				"scale"		"2"
-				"pitch"		"0"
+				"scale"		"0.30000001192093"
+				"pitch"		"105"
+				"roll"		"-90"
+				"yaw"		"-90"
+				"YPos"		"-50"
+				"ZPos"		"-19"
+				"XPos"		"-80"
+			}
+		}
+		"attach_h1"
+		{
+			"models/particle/snowball.vmdl"
+			{
+				"scale"		"0.30000001192093"
+				"pitch"		"-113"
 				"roll"		"0"
 				"yaw"		"0"
-				"YPos"		"0"
-				"ZPos"		"0"
-				"XPos"		"0"
+				"YPos"		"97"
+				"ZPos"		"-19"
+				"XPos"		"60"
 			}
 		}
 	}
@@ -75,58 +109,6 @@
 			}
 		}
 	}
-	"models/heroes/antimage/antimage.vmdl"
-	{
-		"attach_hitloc"
-		{
-			"models/props_gameplay/red_box.vmdl"
-			{
-				"scale"		"1.1000000238419"
-				"pitch"		"-70"
-				"roll"		"0"
-				"ZPos"		"0"
-				"YPos"		"-17"
-				"yaw"		"-135"
-				"XPos"		"-13"
-			}
-			"models/particle/snowball.vmdl"
-			{
-				"scale"		"0.30000001192093"
-				"pitch"		"-113"
-				"roll"		"131"
-				"ZPos"		"112"
-				"YPos"		"-27"
-				"yaw"		"45"
-				"XPos"		"-65"
-			}
-		}
-		"attach_h2"
-		{
-			"models/particle/snowball.vmdl"
-			{
-				"scale"		"0.30000001192093"
-				"pitch"		"105"
-				"roll"		"-90"
-				"ZPos"		"-19"
-				"YPos"		"-50"
-				"yaw"		"-90"
-				"XPos"		"-80"
-			}
-		}
-		"attach_h1"
-		{
-			"models/particle/snowball.vmdl"
-			{
-				"scale"		"0.30000001192093"
-				"pitch"		"-113"
-				"roll"		"0"
-				"ZPos"		"-19"
-				"YPos"		"97"
-				"yaw"		"0"
-				"XPos"		"60"
-			}
-		}
-	}
 	"models/heroes/dragon_knight/dragon_knight.vmdl"
 	{
 		"attach_attack1"
@@ -136,25 +118,89 @@
 				"scale"		"1.7999999523163"
 				"pitch"		"180"
 				"roll"		"10"
-				"ZPos"		"-90"
-				"YPos"		"120"
 				"yaw"		"190"
+				"YPos"		"120"
+				"ZPos"		"-90"
 				"XPos"		"0"
 			}
 		}
 	}
-	"models/heroes/zeus/zeus.vmdl"
+	"models/heroes/axe/axe.vmdl"
 	{
+		"attach_weapon"
+		{
+			"models/items/wraith_king/winterblight_weapon/winterblight_weapon.vmdl"
+			{
+				"scale"		"2.2999999523163"
+				"YPos"		"0"
+				"pitch"		"-140"
+				"yaw"		"180"
+				"roll"		"30"
+				"ZPos"		"0"
+				"XPos"		"70"
+			}
+			"models/items/faceless_void/battlefury/battlefury.vmdl"
+			{
+				"scale"		"2"
+				"pitch"		"-50"
+				"roll"		"28"
+				"yaw"		"0"
+				"YPos"		"111"
+				"ZPos"		"-63"
+				"XPos"		"0"
+			}
+		}
 		"attach_hitloc"
 		{
-			"models/heroes/zeus/zeus_hair_arcana.vmdl"
+			"models/props_gameplay/red_box.vmdl"
 			{
+				"scale"		"1.2999999523163"
+				"pitch"		"-70"
+				"roll"		"0"
+				"ZPos"		"0"
+				"YPos"		"0"
+				"yaw"		"-135"
+				"XPos"		"-13"
+			}
+			"models/heroes/tiny_04/tiny04_deathsim.vmdl"
+			{
+				"Animation"		"tiny04_deathsim_anim"
 				"scale"		"1"
+				"pitch"		"0"
+				"roll"		"0"
+				"yaw"		"0"
+				"YPos"		"0"
+				"ZPos"		"0"
+				"XPos"		"0"
+			}
+		}
+		"attach_origin"
+		{
+			"models/props_gameplay/red_box.vmdl"
+			{
+				"scale"		"2"
 				"pitch"		"0"
 				"roll"		"0"
 				"ZPos"		"0"
 				"YPos"		"0"
 				"yaw"		"0"
+				"XPos"		"0"
+			}
+		}
+	}
+	
+	"models/heroes/juggernaut/juggernaut.vmdl"
+	{
+		"attach_hitloc"
+		{
+			"models/items/pudge/pudge_skeleton_hook_body.vmdl"
+			{
+				"scale"		"1"
+				"pitch"		"-60"
+				"roll"		"90"
+				"ZPos"		"-25"
+				"YPos"		"0"
+				"yaw"		"210"
 				"XPos"		"0"
 			}
 		}

@@ -333,8 +333,8 @@ function modifier_boss_heaven:Cast100(target)
   local caster = self:GetParent()
   local caster_point = caster:GetOrigin()
   local target_point = target:GetOrigin()
-  caster_point.z = 150
-  target_point.z = 150
+  caster_point.z = 50
+  target_point.z = 50
   local angleBetweenCasterAndTarget = (target_point-caster_point):Normalized()
   local distanceBetwwenCasterAndTarget = (target_point-caster_point):Length2D()
   

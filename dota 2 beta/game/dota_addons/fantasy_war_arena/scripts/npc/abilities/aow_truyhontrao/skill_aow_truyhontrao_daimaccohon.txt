@@ -1,0 +1,72 @@
+"skill_aow_truyhontrao_daimaccohon"
+{
+   "ID"  "11309"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "45"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "skill_aow_truyhontrao_daimaccohon"
+   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_daimaccohon"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "1000"
+   "precache"
+   {
+   	"particle" "particles/units/heroes/hero_ember_spirit/ember_spirit_sleightoffist_trail.vpcf"
+   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts"
+   }
+   // DESERTED STORM
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "58 61 64 67 70 73 76 79 82 85"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_damage_amplify"  "80 85 90 95 100 105 110 115 120 125"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "378 421 464 507 550 593 636 679 722 765"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "416 468 520 572 624 676 728 780 832 884"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"chance_to_maim"  "17.5 20.0 22.5 25.0 27.5 30.0 32.5 35.0 37.5 40.0"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time"  "1"
+		}
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_knockback"  "40 50 60 70 80 90 100 110 120 130"
+		}
+		"08"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"knockback_distance"  "120 140 160 180 200 220 240 260 280 300"
+		}
+		"09"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "5"
+		}
+	}
+   
+}

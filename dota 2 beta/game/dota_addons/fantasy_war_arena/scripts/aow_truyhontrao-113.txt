@@ -1,0 +1,16 @@
+﻿class=aow_truyhontrao
+id=113
+index=0
+type=False
+skill-0=daodoantinhchung,False,False,True,False
+skill-1=truyhontrao_basic,True,False,False,True
+skill-2=quytraothamu,False,False,False,True
+skill-3=thiendiavotinh,False,True,False,True
+skill-4=huyetvutinhphong,False,False,True,False
+skill-5=huyennguyenkinh,True,False,False,True
+skill-6=thientamcong,True,False,False,True
+skill-7=truyhontrao_expert,True,False,False,True
+skill-8=daimaccohon,False,False,False,False
+skill-9=truyhontrao_master,True,False,False,True
+skill-10=mianhkinhhong,False,False,False,True
+skill-11=thatsattamkinh,True,False,False,True

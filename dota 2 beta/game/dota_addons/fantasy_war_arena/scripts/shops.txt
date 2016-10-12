@@ -6,7 +6,7 @@
     "item"    "item_hp_small"
     "item"    "item_hp_big"
     "item"    "item_hp_ultra"
-    "item"    "item_mango"
+    //"item"    "item_mango"
 	"item"    "item_exp"
 	"item"    "item_exp_10"
 	"item"    "item_ward_observer"

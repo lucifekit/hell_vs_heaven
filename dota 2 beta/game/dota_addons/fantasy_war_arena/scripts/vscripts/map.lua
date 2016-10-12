@@ -59,8 +59,8 @@ function StartTeleportHeavenHome(trigger)
     target_point_2 = Vector(target_point_2.x+math.random(-500,500),target_point_2.y+math.random(-500,500),128)
     hero:Stop()
     hero:AddNewModifier(hero,nil,"modifier_immobile",{duration=1})
-    hero:AddNewModifier(hero,nil,"modifier_kemtele",{duration=5,x=target_point.x,y=target_point.y})
-    hero:AddNewModifier(hero,nil,"modifier_battle_hunger",{duration=60,x=target_point_2.x,y=target_point_2.y})
+    hero:AddNewModifier(hero,nil,"modifier_kemtele",{duration=5,x=target_point.x,y=target_point.y,home=1,home_x=target_point_2.x,home_y=target_point_2.y})
+    print("Add battle hunger")
   end
   
   --kemPrint("Added modifier")
@@ -86,8 +86,8 @@ function StartTeleportHellHome(trigger)
       
     hero:Stop()
     hero:AddNewModifier(hero,nil,"modifier_immobile",{duration=1})
-    hero:AddNewModifier(hero,nil,"modifier_kemtele",{duration=5,x=target_point.x,y=target_point.y})
-    hero:AddNewModifier(hero,nil,"modifier_battle_hunger",{duration=60,x=target_point_2.x,y=target_point_2.y})
+    hero:AddNewModifier(hero,nil,"modifier_kemtele",{duration=5,x=target_point.x,y=target_point.y,home=1,home_x=target_point_2.x,home_y=target_point_2.y})
+    --hero:AddNewModifier(hero,nil,"modifier_battle_hunger",{duration=60,x=target_point_2.x,y=target_point_2.y})
     
   end
   

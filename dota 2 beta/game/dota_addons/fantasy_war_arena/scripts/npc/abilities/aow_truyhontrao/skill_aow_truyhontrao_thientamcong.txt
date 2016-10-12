@@ -1,0 +1,39 @@
+"skill_aow_truyhontrao_thientamcong"
+{
+   "ID"  "11307"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "35"
+   "MaxLevel"				 "10"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "bloodseeker_thirst"
+   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_thientamcong"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // SEVEN STRIKE
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"stack_chance"  "6 7 8 9 10 11 12 13 14 15"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"stack_duration"  "16 17 18 19 20 21 22 23 24 25"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"agility_per_stack"  "25 30 35 40 45 50 55 60 65 70"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"hp_lost_damage"  "3.5 4.0 4.5 5.0 5.5 6.0 6.5 7.0 7.5 8.0"
+		}
+	}
+   
+}

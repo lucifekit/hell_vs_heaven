@@ -1,0 +1,46 @@
+"skill_aow_truyhontrao_mianhkinhhong"
+{
+   "ID"  "11311"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "10"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "shredder_timber_chain"
+   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_mianhkinhhong"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "700"
+   "precache"
+   {
+   }
+   
+   // BLUR CHAIN
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "75 80 85 90 95"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_damage_amplify"  "73 81 89 97 105"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_immobile"  "40 55 70 85 100"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_FLOAT"
+			"immobile_time"  "2.1 2.2 2.3 2.4 2.5"
+		}
+	}
+   
+}

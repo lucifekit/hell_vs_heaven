@@ -98,7 +98,7 @@ local max_target = 4
        bDestroyImmediate = false,--endcap
        bRecreateOnChange = false,
        
-       --draw=true,
+       
        bHasFrontalCone   = true,
        bReplaceExisting  = false,
        

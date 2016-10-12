@@ -490,6 +490,7 @@ function modifier_boss_dieptinh:Ulti_2(caster,target)
         }
       }
       --kemPrint("84 : Call damage group")
+
       DamageHandler:DamageGroup(damageGroupData)
 end
 --TRUE LOVE

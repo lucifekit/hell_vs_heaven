@@ -119,8 +119,8 @@ function modifier_boss_hell:NormalAttack(target)
   local caster = self:GetParent()
   local caster_point = caster:GetOrigin()
   local target_point = target:GetOrigin()
-  caster_point.z = 150
-  target_point.z = 150
+  caster_point.z = 50
+  target_point.z = 50
   local angleBetweenCasterAndTarget = (target_point-caster_point):Normalized()
   local distanceBetwwenCasterAndTarget = (target_point-caster_point):Length2D()
   
@@ -137,8 +137,8 @@ function modifier_boss_hell:NormalAttack(target)
         Ability         = nil,
         vSpawnOrigin    = spawn_point,
         fDistance     =  1000,
-        fStartRadius    = 100,
-        fEndRadius      = 100,
+        fStartRadius    = 110,
+        fEndRadius      = 110,
         Source        = caster,
         bHasFrontalCone   = true,
         bReplaceExisting  = false,
@@ -239,7 +239,7 @@ function modifier_boss_hell:Cast90(target)
   local damageAreaData = {
         whoDealDamage = caster,
         byWhichAbility = self,
-        radius = 100,
+        radius = 110,
         damage =damageInfo,
         crit = critInfo,
         damage_element = ELEMENT_FIRE,
@@ -302,8 +302,8 @@ function modifier_boss_hell:Cast100(target)
         Ability         = nil,
         vSpawnOrigin    = caster_point+Vector(math.random(-150,150),math.random(-150,150),0),
         fDistance     =  1000,
-        fStartRadius    = 100,
-        fEndRadius      = 100,
+        fStartRadius    = 110,
+        fEndRadius      = 110,
         Source        = caster,
         bHasFrontalCone   = true,
         bReplaceExisting  = false,

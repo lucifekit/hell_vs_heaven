@@ -171,7 +171,7 @@ local explode_max_target = 2
               
               bGroundLock     = false,--ko lock ground nua ( co the thay doi do cao -- (optional)
               bMultipleHits   = false,--default, ko hit nhieu lan (optional)
-              --draw            = true, --default false (optional)
+              
               fRehitDelay     = 10, -- (optional)
               
               

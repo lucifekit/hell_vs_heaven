@@ -1,0 +1,34 @@
+"skill_aow_truyhontrao_truyhontrao_basic"
+{
+   "ID"  "11302"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "6"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "centaur_double_edge"
+   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_truyhontrao_basic"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+   // BASIC TALENT
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"accuracy_chance"  "70 90 110 130 150"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_amplify"  "20 35 50 65 80"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"critical_chance"  "26 32 38 44 50"
+		}
+	}
+   
+}

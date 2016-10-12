@@ -103,7 +103,7 @@ local max_target = math.floor(2+0.2*skill_level)
          fStartRadius    = 120,
          fEndRadius      = 120,
          
-         draw = true,
+         
          Source        = caster,
          bHasFrontalCone   = false,
          bReplaceExisting  = false,

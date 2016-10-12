@@ -63,7 +63,7 @@ local max_target = 3
         bHasFrontalCone   = true,
         bReplaceExisting  = false,
         fExpireTime     = SETTING_FLY_TIME,--GameRules:GetGameTime() +100,--
-        bDraw = true,
+        
         GroundBehavior = PROJECTILES_NOTHING,
         UnitBehavior  = PROJECTILES_NOTHING,
         vVelocity     = angleBetweenCasterAndTarget*SETTING_FLY_SPEED,--angleBetweenCasterAndTarget,

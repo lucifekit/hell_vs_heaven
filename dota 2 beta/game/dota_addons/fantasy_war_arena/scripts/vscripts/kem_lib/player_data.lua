@@ -1,6 +1,8 @@
 -- playerhero.lua
 -- manages player data
 LinkLuaModifier("modifier_khinhcong_lua", "modifiers/modifier_khinhcong_lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_parry", "modifiers/modifier_parry", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_angry", "modifiers/modifier_angry", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_game_speed", "modifiers/modifier_game_speed", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_skill_level", "modifiers/modifier_skill_level", LUA_MODIFIER_MOTION_NONE)
 STAT_SM = 0
@@ -42,6 +44,7 @@ function UpdatePlayerData(playerID)
     if ready then
 
       --kemPrint("==================Sending update player data "..playerID.."====================")
+      print("#45 player sendCommand : update_stat and skill")
       CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(playerID), "update_stat", {playerID=playerID,hero=hero,msg="update player data 34"})
       CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(playerID), "update_skill", {playerID=playerID,hero=hero})
     else
@@ -62,7 +65,7 @@ function UpgradeStat(playerID)
     hero.evade_point  = hero.stat_tp*4
     hero.accuracy_point  = hero.stat_tp*4
     hero.hero_level = hero:GetLevel()
-
+    print("#66 sendCommand : update_stat")
     CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(playerID), "update_stat", {playerID=playerID,hero=hero,msg="player data 54"})
 
     
@@ -387,6 +390,7 @@ function UpgradeSkill(playerID)
     
     kemPrint("Send update stat for player "..playerID.." got "..hero.stat_point)
     hero.as = math.ceil(hero:GetAttackSpeed()*100-100)
+    print("#391 sendCommand : update_stat")
     CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(playerID), "update_stat", {playerID=playerID,hero=hero,msg="player_data 298"})
 
     --CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(playerID), "update_skill", {playerID=playerID,hero=hero})
@@ -422,6 +426,8 @@ function CreateDataForPlayer(playerID)
   local hero_elements = LoadKeyValues("scripts/kv/hero_element.kv")
   local hero_name = hero:GetUnitName()
   local heroData = hero_elements[hero_name]
+  
+  
   --PrintTable(heroData)
   hero.element = heroData["element"] or ELEMENT_NONE
   hero.class   = heroData["class"] or ""
@@ -433,6 +439,12 @@ function CreateDataForPlayer(playerID)
       kemPrint("Skill slot "..i.." : "..tempAbi:GetAbilityName())
     end
   end
+  if(heroData["attach_point_1"])then
+    hero.attach_point_1 = heroData["attach_point_1"]
+    hero.attach_model_1 = heroData["attach_model_1"]
+    Attachments:AttachProp(hero, heroData["attach_point_1"], heroData["attach_model_1"], 1.0)
+  end
+  
   if(heroData["effect_1"]) then
     --kemPrint("adding "..heroData["effect_1"])
 
@@ -454,6 +466,10 @@ function CreateDataForPlayer(playerID)
      hero.is_physical = false
      hero.is_magical = true
   end
+  hero.khinhcong_cooldown=true
+  if(heroData['jump_type']=="aow_nhc")then
+     hero.khinhcong_cooldown=false
+  end
   if(heroData["horse_disable_ability"]==1)then
     local khinhcong_ability = hero:AddAbility("skill_khinhcong")
     hero:UpgradeAbility(khinhcong_ability)
@@ -465,7 +481,8 @@ function CreateDataForPlayer(playerID)
       hero:AddNewModifier(hero,khinhcong_ability , "modifier_khinhcong_lua",{max_count = 10,start_count = 10,replenish_time = kc_time})
     end
   end
-  
+  hero:AddNewModifier(hero,nil , "modifier_parry",{max_count = 50,start_count = 50,replenish_time = 2})--2 giay tang 1 diem
+  hero:AddNewModifier(hero,nil , "modifier_angry",{max_count = 80,start_count = 0,replenish_time = 2})--3 giay giam 1 diem
   hero:AddNewModifier(hero,nil,"modifier_game_speed",{})
   hero:AddNewModifier(hero,nil , "modifier_skill_level",{})
   
@@ -524,6 +541,13 @@ function CreateDataForPlayer(playerID)
       return false
     end
     return true
+  end
+  hero.isDisabled = function()
+    if hero:IsStunned() or hero:IsHexed() or hero:IsFrozen() or hero:IsNightmared() or hero:IsOutOfGame() then
+    -- Interrupt the ability
+      return true
+    end
+    return false
   end
   hero.skillCooldown = function()
 

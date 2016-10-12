@@ -10,6 +10,7 @@ TEAM_POINT[DOTA_TEAM_NEUTRALS] = 0
 HERO_READY = {}
 GAME_STATE = 0
 LinkLuaModifier("modifier_battle_hunger","modifiers/modifier_battle_hunger",LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_defense","modifiers/modifier_defense",LUA_MODIFIER_MOTION_NONE)
 
 -- Cleanup a player when they leave
 function GameMode:OnDisconnect(keys)
@@ -128,7 +129,7 @@ function GameMode:Think_InitializePlayerHero( hPlayerHero )
     
     --CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerID), "update_skill", {player = nPlayerID ,data = data})
   end
-
+  hPlayerHero:AddNewModifier(hPlayerHero,nil,"modifier_mango",{})
   if(Battle_Time)then
     hPlayerHero:SetOrigin(hPlayerHero.battle_position)
     hPlayerHero:AddNewModifier(hPlayerHero,nil,"modifier_prepare",{duration=5})
@@ -497,7 +498,7 @@ function GameMode:LevelUpAbility(keys)
    
    
    --UpdatePlayerData(PlayerID)
-
+   print("#501 event sendCommand : update_stat and learned skill")
    CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(PlayerID), "update_stat", {playerID=PlayerID,hero=hero,msg="msg event 463"})
    CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(PlayerID), "learned_skill", {playerID=PlayerID,hero=hero,ability=keys.ability})
       
@@ -517,10 +518,10 @@ function GameMode:OnPlayerLevelUp(keys)
   local level = keys.level
   local playerID = player:GetPlayerID()
   local hero = HERO_OF_PLAYER[playerID]
-  local str = "From "..hero.stat_point
+  local str = "Stat Point From "..hero.stat_point
   hero.stat_point =hero.stat_point +20
   str = str.." to "..hero.stat_point
-  print(str)
+  --print(str)
   hero.stat_gain = hero.stat_gain +20 
   hero.skill_point =hero.skill_point + 1
   hero.hero_level = hero:GetLevel()
@@ -532,6 +533,7 @@ function GameMode:OnPlayerLevelUp(keys)
   --UpdatePlayerData(playerID) 
   
 end
+
 function GameMode:UpStatAuto(keys)
   local PlayerID = keys.playerID
   local player = PlayerResource:GetPlayer(PlayerID)
@@ -686,6 +688,31 @@ function GameMode:ClearTarget(keys)
     unit.lockTarget = nil
   end
 end
+
+function GameMode:DefenseOn(keys)
+  local unitID = keys.unit
+  local unit = EntIndexToHScript(unitID)
+  if(unit)then
+    if(unit:HasModifier("modifier_parry"))then
+      local parry_modifier = unit:FindModifierByName("modifier_parry")
+      if(parry_modifier)then
+        if(parry_modifier:GetStackCount()>0)then
+          unit:AddNewModifier(unit,nil,"modifier_defense",{})        
+        end
+      end
+    end
+    
+  end
+end
+
+
+function GameMode:DefenseOff(keys)
+  local unitID = keys.unit
+  local unit = EntIndexToHScript(unitID)
+  if(unit)then
+    unit:RemoveModifierByName("modifier_defense")
+  end
+end
 function GameMode:OpenPanel(keys)
   DebugPrint('[KEM_BAREBONES] Open Panel')
   local PlayerID = keys.playerID
@@ -694,6 +721,6 @@ function GameMode:OpenPanel(keys)
   local panel = keys.panel
 
   kemPrint("Lua Event receive : Open panel "..panel)
-
+  print("#501 event sendCommand : open panel")
   CustomGameEventManager:Send_ServerToPlayer(player, "open_panel", {panel=panel})
 end

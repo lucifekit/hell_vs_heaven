@@ -17,7 +17,9 @@ GOLD_TICK_TIME = 1                      -- How long should we wait in seconds be
 
 RECOMMENDED_BUILDS_DISABLED = true     -- Should we disable the recommened builds for heroes
 CAMERA_DISTANCE_OVERRIDE = 1400.0       -- How far out should we allow the camera to go?  1134 is the default in Dota
-
+if(IsInToolsMode())then
+  CAMERA_DISTANCE_OVERRIDE = 1400.0
+end
 MINIMAP_ICON_SIZE = 1                   -- What icon size should we use for our heroes?
 MINIMAP_CREEP_ICON_SIZE = 1             -- What icon size should we use for creeps?
 MINIMAP_RUNE_ICON_SIZE = 1              -- What icon size should we use for runes?

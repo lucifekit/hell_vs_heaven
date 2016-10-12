@@ -99,6 +99,8 @@ function GameMode:_InitGameMode()
   CustomGameEventManager:RegisterListener( "open_panel", Dynamic_Wrap(GameMode, "OpenPanel"))
   CustomGameEventManager:RegisterListener( "mark_inited_js", Dynamic_Wrap(GameMode, "MarkInitedJS"))
   CustomGameEventManager:RegisterListener( "inited_ability_book", Dynamic_Wrap(GameMode, "InitedAbilityBook"))
+  CustomGameEventManager:RegisterListener( "defense_on", Dynamic_Wrap(GameMode, "DefenseOn"))
+  CustomGameEventManager:RegisterListener( "defense_off", Dynamic_Wrap(GameMode, "DefenseOff"))
   --ListenToGameEvent("dota_tutorial_shop_toggled", Dynamic_Wrap(GameMode, 'OnShopToggled'), self)
 
   --ListenToGameEvent('player_spawn', Dynamic_Wrap(GameMode, 'OnPlayerSpawn'), self)

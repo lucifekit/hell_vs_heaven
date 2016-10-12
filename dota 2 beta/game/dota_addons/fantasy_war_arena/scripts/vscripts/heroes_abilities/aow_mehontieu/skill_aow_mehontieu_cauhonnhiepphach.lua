@@ -46,10 +46,10 @@ function skill_aow_mehontieu_cauhonnhiepphach:OnSpellStart()
    --self:PayManaCost()
    
    -- STARSHATTER
-local basic_damage = 0.4+0.01*skill_level
-local physical_damage_amplify = 0+0.08*skill_level
-local element_damage_min = 25+18*skill_level
-local element_damage_max = 33+35*skill_level
+local basic_damage = 0.8+0.02*skill_level
+local physical_damage_amplify = 0+0.16*skill_level
+local element_damage_min = 50+36*skill_level
+local element_damage_max = 66+70*skill_level
 local chance_to_maim = 0.15+0.025*skill_level
 local maim_time = 1
 local max_target = 3
@@ -75,7 +75,7 @@ local max_target = 3
     cp1 = hTarget:GetOrigin()+Vector(0,0,50)
    end
    
-   for i = 0,1 do
+   for i = 0,0 do
     Timers:CreateTimer(i*0.5,function()
       caster_position  = caster:GetOrigin()
       local newAngle   = (target_point - caster_position):Normalized()
@@ -119,6 +119,9 @@ local max_target = 3
           end
           unit:EmitSound(SETTING_HIT_SOUND)
           DamageHandler:ApplyDamage(proj.Source, proj.Ability, unit, proj.damage, proj.crit, ELEMENT_METAL, {})
+          BreakDefense(unit,proj.Source,function(breaker,target)
+          
+          end)
           StatusEffectHandler:ApplyEffect(proj.Source, unit, proj.effect, proj.effect_chance, proj.effect_time)
           proj:Destroy()
        end,miss_function=function(proj)

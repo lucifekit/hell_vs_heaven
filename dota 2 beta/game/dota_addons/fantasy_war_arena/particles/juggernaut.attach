@@ -1,0 +1,21 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	_class = "CVattachmentList"
+	m_name = ""
+	m_attachments = 
+	[
+		{
+			m_name = "attach_lefthand"
+			m_influences = 
+			[
+				{
+					m_influenceName = "mid_0_L"
+					m_vTranslationOffset = [ 0.0, 0.0, 0.0 ]
+					m_vRotationOffset = [ 0.0, 0.0, 0.0 ]
+					m_flWeight = 1.0
+					m_bRoot = false
+				},
+			]
+		},
+	]
+}

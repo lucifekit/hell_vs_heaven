@@ -1,0 +1,62 @@
+"skill_aow_truyhontrao_sattamthanhphan"
+{
+   "ID"  "11312"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "60"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "juggernaut_omni_slash"
+   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_sattamthanhphan"
+   "HotKeyOverride"    ""
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
+   "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+   "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+   "AbilityCastPoint"        "0.03"
+   "AbilityCastRange"        "800"
+   "precache"
+   {
+   	"particle" "particles/units/heroes/hero_ember_spirit/ember_spirit_sleightoffist_trail.vpcf"
+   	"soundfile" "soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts"
+   }
+   // KILLING WILL
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "70 85 100 115 130"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"physical_damage_amplify"  "85 95 105 115 125"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_min"  "421 507 593 679 765"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"element_damage_max"  "468 572 676 780 884"
+		}
+		"05"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"chance_to_maim"  "20 25 30 35 40"
+		}
+		"06"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time"  "1"
+		}	
+		"07"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"max_target"  "7"
+		}
+	}
+   
+}

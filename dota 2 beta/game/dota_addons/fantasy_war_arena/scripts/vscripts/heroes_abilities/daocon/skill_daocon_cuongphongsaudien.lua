@@ -85,7 +85,7 @@ local stun_time = 1
             StatusEffectHandler:ApplyEffect(proj.Source,unit,proj.effect,proj.effect_chance,proj.effect_time)
             
             CreateEffectOnUnit(SETTING_HPP_HIT_EFFECT,unit,0.5)
-            CreateEffectOnPoint(SETTING_HPP_HIT_EFFECT,unit:GetAbsOrigin(),0.5)
+            FxPoint(SETTING_HPP_HIT_EFFECT,unit:GetAbsOrigin(),0.5)
           end})
           
           

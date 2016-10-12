@@ -1,0 +1,40 @@
+"skill_aow_truyhontrao_truyhontrao_master"
+{
+   "ID"  "11310"
+   "BaseClass"             "ability_lua"
+   "RequiredLevel"          "50"
+   "MaxLevel"				 "5"
+   "LevelsBetweenUpgrades"  "1"
+   "AbilityTextureName"      "doom_bringer_infernal_blade"
+   "ScriptFile"          "heroes_abilities/aow_truyhontrao/skill_aow_truyhontrao_truyhontrao_master"
+   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+   "precache"
+   {
+   }
+// MASTER TALENT
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"basic_damage"  "2 4 6 8 10"
+		}
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"skill_amplify"  "2 4 6 8 10"
+		}
+		"03"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"maim_time_increase"  "20 35 50 65 80"
+		}
+		"04"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"weak_time_reduce"  "24 48 72 96 120"
+		}
+	}
+
+   
+}

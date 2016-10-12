@@ -70,7 +70,7 @@ end
 
 
 
-function DamageHandler:OnHit(attacker,target)
+function DamageHandler:OnHit(attacker,target,ability)
   for _,modifier in ipairs(attacker:FindAllModifiers()) do
     --print("on hit "..modifier:GetName())
     if(modifier.ActiveOnHit)then
@@ -90,6 +90,12 @@ function DamageHandler:OnHit(attacker,target)
     local buff = target:FindModifierByName(BUFF_LUCHOPKINH)
     buff:ActiveOnTakeHit(attacker)
   end
+  if(ability)then
+    if(ability.ActiveOnHit)then
+      ability:ActiveOnHit(target)
+    end
+  end
+  
 end
 function DamageHandler:CalculateMiss(attacker,target)
   if (attacker.inited) then
@@ -108,6 +114,10 @@ function DamageHandler:CalculateMiss(attacker,target)
         local chance_to_hit =( (accuracy*accuracy_chance) / (accuracy*accuracy_chance+targetEvade) ) *100
         local proc = math.random(0,100)
         --kemPrint("Accuracy = "..accuracy.." bypass ="..attacker.bypass_evade.." Evade = "..targetEvade.." Chance to hit= "..chance_to_hit.."%".." proc = "..proc)
+        
+        if(target:HasModifier("modifier_fall"))then
+          return false
+        end
         
         if(proc>chance_to_hit)then
           --print(proc.." > "..chance_to_hit.." accuracy = "..accuracy.."/"..accuracy.."+"..targetEvade)
@@ -153,6 +163,7 @@ function DamageHandler:MissileHandler(missile_data)
   local miss_function = missile_data.miss_function or function()
     return
   end
+  local no_miss = projectile.no_miss or false
   local missed = false
   
   if(projectile.maxTarget)then
@@ -167,9 +178,13 @@ function DamageHandler:MissileHandler(missile_data)
 
   if not missed then
     --Tinh neu la ngoai cong thi kiem tra ne tranh, chinh xac cac kieu 
-    if(DamageHandler:CalculateMiss(attacker,target))then
-      missed = true
+    if(no_miss)then
+    else
+      if(DamageHandler:CalculateMiss(attacker,target))then
+        missed = true
+      end
     end
+    
     
   end    
   --
@@ -181,7 +196,7 @@ function DamageHandler:MissileHandler(missile_data)
     --   
     --        DOAN THI - SO ANH
     --
-    self:OnHit(attacker,target)
+    self:OnHit(attacker,target,projectile.Ability)
     
     --kemPrint("hit function "..type(hit_function))
     if(hit_function)then
@@ -567,6 +582,17 @@ function DamageHandler:GetDamage(data)
   local element_damage_max = data.element_damage_max
   
   local basic_damage = data.skill_basic_damage_percent
+  local buff_current = caster:FindAllModifiers()
+            
+  for _,modifier in ipairs(buff_current) do
+    if(modifier.GetBasicDamage)then
+      local add_basic = modifier:GetBasicDamage()
+      --print("Add basic : "..add_basic)
+      basic_damage =basic_damage +  add_basic
+    end
+  end
+  
+  
   -- luc tan cong co ban
   local hero_basic_attack_damage_percent = caster.basic_damage_percent or 1
   basic_damage = basic_damage+hero_basic_attack_damage_percent
@@ -656,13 +682,17 @@ function DamageHandler:DamageArea(data)
   local custom = data.custom
   local maxTarget = data.maxTarget or 3
   local damageUnitTable = data.damageUnitTable or {}
+  
   if(crit==nil)then
     print(byWhichAbility:GetAbilityName().." nil crit info")
   end
   DamageHandler:DamageAreaParams(whoDealDamage,byWhichAbility,where,radius,damage,crit,damage_element,maxTarget,damageUnitTable,custom)
 end
+LinkLuaModifier("modifier_aow_truyhontrao_bleed","heroes_abilities/aow_truyhontrao/modifier_aow_truyhontrao_bleed",LUA_MODIFIER_MOTION_NONE)
 function DamageHandler:DamageAreaParams(whoDealDamage,byWhichAbility,where,radius,damage,crit,damage_element,maxTarget,damageUnitTable,custom)
-
+    --custom[action]=status_effect thi can effect_type,effect_chance,effect_time
+    --custom[modifier] la modifier name, can modifier_duration va modifier_increase_stack_count
+    --custom[call]-->call
                      --damage
                      --local group = FindUnitsInRadius(owner:GetTeam(), point, nil, radius, int teamFilter, int typeFilter, int flagFilter, int order, bool canGrowCache)
                      --ability:GetAbilityTargetTeam(), ability:GetAbilityTargetType(), DOTA_UNIT_TARGET_FLAG_NONE, 0, false
@@ -678,6 +708,7 @@ function DamageHandler:DamageAreaParams(whoDealDamage,byWhichAbility,where,radiu
           --print("Found victim "..victim:GetUnitName())
           if(DamageHandler:CalculateMiss(whoDealDamage,victim))then
             --miss
+            kemPrint("Area miss")
             local numberIndex = ParticleManager:CreateParticle( SETTING_FX_EVADE, PATTACH_OVERHEAD_FOLLOW, victim )
             ParticleManager:SetParticleControl( numberIndex, 1, Vector( 6, 0, 0 ) )
             ParticleManager:SetParticleControl( numberIndex, 2, Vector( 1, 1, 0 ) )
@@ -685,19 +716,46 @@ function DamageHandler:DamageAreaParams(whoDealDamage,byWhichAbility,where,radiu
             ParticleManager:ReleaseParticleIndex(numberIndex)
           else
             --print("Damage---------")
+            kemPrint("Area trung")
             if(damageUnitTable[victim]==nil)then
+              kemPrint("Area code")
               damageUnitTable[victim]=1
               --print("Deal damage to "..victim:GetUnitName())
+              print("Area apply damage")
               DamageHandler:ApplyDamage(whoDealDamage,byWhichAbility,victim,damage,crit,damage_element,"")
-              DamageHandler:OnHit(whoDealDamage,victim)
+              DamageHandler:OnHit(whoDealDamage,victim,byWhichAbility)
               
               if(type(custom)=="table")then
+                print("check status effect")
                 if(custom["action"]=="status_effect")then
                   local effect_type = custom["effect_type"]
                   local effect_chance = custom["effect_chance"]
                   local effect_time = custom["effect_time"]
                   StatusEffectHandler:ApplyEffect(whoDealDamage,victim,effect_type,effect_chance,effect_time)
                 end
+                print("check modifier")
+                if(custom["modifier"])then
+                  --add modifier
+                  --LinkLuaModifier("modifier_aow_mehontieu_dutithoihon_active","heroes_abilities/aow_mehontieu/modifier_aow_mehontieu_dutithoihon_active",LUA_MODIFIER_MOTION_NONE)
+                  print("add modifier "..custom["modifier"])
+                  local modifier = victim:AddNewModifier(whoDealDamage,byWhichAbility,custom["modifier"],{duration=tonumber(custom["modifier_duration"])})
+                  if(modifier)then
+                    if(custom["modifier_increase_stack_count"])then
+                      modifier:IncrementStackCount()
+                    end
+                  else
+                    print("add failed")
+                  end
+                                      
+                end
+                print("Check callback")
+                if(custom["callback"])then
+                  print("Have callback")
+                  pcall(custom["callback"],whoDealDamage,victim)
+                else
+                  print("not Have callback")
+                end
+                
               end
             else
               --print("Cancel---existed")

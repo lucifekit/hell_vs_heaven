@@ -54,7 +54,13 @@ function modifier_kemtele:OnCreated(kv)
   if(IsServer())then
     self.x = kv.x
     self.y = kv.y
-    self.interupted = false  
+    self.interupted = false
+    if(kv.home)then
+      self.home = kv.home  
+      self.home_x = kv.home_x
+      self.home_y = kv.home_y
+    end
+    
   end
   
 end
@@ -69,7 +75,19 @@ function modifier_kemtele:OnDestroy()
       local unit = self:GetParent()
       unit:SetOrigin(Vector(self.x,self.y,128))
       FindClearSpaceForUnit(unit,unit:GetAbsOrigin(),true)
-      unit:RemoveModifierByName("modifier_battle_hunger")
+      --Remove
+      print("Remove battle hunger")
+      if(self.home)then
+        if(self.home==1)then
+          unit:AddNewModifier(unit,nil,"modifier_battle_hunger",{duration=60,x=self.home_x,y=self.home_y})
+        else
+          unit:RemoveModifierByName("modifier_battle_hunger")
+        end
+      else
+        unit:RemoveModifierByName("modifier_battle_hunger")
+      end
+      
+      
       unit:Stop()
     end
   end
